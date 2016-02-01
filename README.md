@@ -1,14 +1,15 @@
 # MMP 310: Multimedia Programming II
 
-###Schedule Spring 2016
+###Schedule 
+Spring 2016
 Monday and Wednesday 5:30pm - 7:10pm
 
 Fiterman 1006
 
-Professor Owen Roberts
-email: oroberts at bmcc dot cuny dot edu
-Office S622C
-Office Hours: Monday, Wednesday, Thursday 4pm - 5pm
+Professor Owen Roberts  
+email: oroberts at bmcc dot cuny dot edu  
+Office S622C  
+Office Hours: Monday, Wednesday, Thursday 4pm - 5pm  
 
 ###Course Description
 Credits: 3
