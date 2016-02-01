@@ -5,12 +5,12 @@ Monday and Wednesday 5:30pm - 7:10pm
 Fiterman 1006
 
 Professor Owen Roberts  
-email: oroberts at bmcc dot cuny dot edu  
+Email: oroberts at bmcc dot cuny dot edu  
 Office S622C  
 Office Hours: Monday, Wednesday, Thursday 4pm - 5pm  
 
 ###Course Description
-Credits: 3
+Credits: 3  
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web based multimedia presentation.
 
 Course site: [github.com/owenroberts/mmp310/](https://github.com/owenroberts/mmp310/)
@@ -37,7 +37,7 @@ Grading is based on successful completion of all assignments, class participatio
 	- This semester the final will be a browser based video game or interactive artwork.
 	- In class presentation and critique.
 
-Assignments will be posted on GitHub with URLs submitted via Blackboard.  Grades and comments will be posted on Blackboard.
+Assignments will be posted on GitHub with URLs submitted via Blackboard.  Grades and comments will be posted on Blackboard.  
 20% credit will be taken off any assignments handed in late.
 
 ###Software
@@ -75,7 +75,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Object oriented JavaScript
 
 ###Schedule
-**Week 1: Introductions
+**Week 1: Introductions**
 - Introduce class and syllabus
 - In class refresher exercise
 - Quick reivew of HTML, CSS and JavaScript, file structure, web architecture
