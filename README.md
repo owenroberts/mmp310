@@ -18,7 +18,7 @@ This course introduces the basic concepts of programming for multimedia. Student
 Course site: [github.com/owenroberts/mmp310/](https://github.com/owenroberts/mmp310/)
 
 Basic Skills: English 095 or ESL 062, ACR 094
-Prerequesites: MMP 100, MMP 210
+Prerequesites: MMP 100, MMP 210  
 Corequesites: MAT 051
 
 ###Attendance
@@ -52,9 +52,6 @@ There is no official textbook for this class.
 Students interested in text book resources may explore these options:
 - [Murach's jQuery](https://www.murach.com/shop/murach-s-jquery-detail)
 
-- [JavaScript & jQuery](http://javascriptbook.com/)
-- [Eloquent JavaScript](http://eloquentjavascript.net/)
-- [JavaScript Best Practices](http://www.thinkful.com/learn/javascript-best-practices-1/)
 
 ###Computer Labs
 Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it)
