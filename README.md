@@ -77,6 +77,6 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 ###Schedule
 **Week 1: Introductions**
 - Introduce class and syllabus
-- In class refresher exercise
+- [In class refresher exercise](https://github.com/owenroberts/mmp310/tree/master/week1)
 - Quick reivew of HTML, CSS and JavaScript, file structure, web architecture
 - Assignment 1: Exploring UI Design
