@@ -17,8 +17,8 @@ This course introduces the basic concepts of programming for multimedia. Student
 
 Course site: [github.com/owenroberts/mmp310/](https://github.com/owenroberts/mmp310/)
 
-Basic Skills: English 095 or ESL 062, ACR 094
-Prerequesites: MMP 100, MMP 210 <br>
+Basic Skills: English 095 or ESL 062, ACR 094  
+Prerequesites: MMP 100, MMP 210  
 Corequesites: MAT 051
 
 ###Attendance
