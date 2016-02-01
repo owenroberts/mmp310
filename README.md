@@ -1,9 +1,8 @@
 # MMP 310: Multimedia Programming II
 
 ###Schedule 
-Spring 2016
-Monday and Wednesday 5:30pm - 7:10pm
-
+Spring 2016  
+Monday and Wednesday 5:30pm - 7:10pm  
 Fiterman 1006
 
 Professor Owen Roberts  
