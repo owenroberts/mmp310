@@ -1,6 +1,5 @@
 # MMP 310: Multimedia Programming II
 
-###Schedule 
 Spring 2016  
 Monday and Wednesday 5:30pm - 7:10pm  
 Fiterman 1006
@@ -39,6 +38,7 @@ Grading is based on successful completion of all assignments, class participatio
 	- In class presentation and critique.
 
 Assignments will be posted on GitHub with URLs submitted via Blackboard.  Grades and comments will be posted on Blackboard.
+20% credit will be taken off any assignments handed in late.
 
 ###Software
 - Text Editors: [Sublime](http://www.sublimetext.com/3) or [Brackets](http://brackets.io/)
@@ -74,7 +74,8 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Web applications
 - Object oriented JavaScript
 
-###Week 1: Introductions
+###Schedule
+**Week 1: Introductions
 - Introduce class and syllabus
 - In class refresher exercise
 - Quick reivew of HTML, CSS and JavaScript, file structure, web architecture
