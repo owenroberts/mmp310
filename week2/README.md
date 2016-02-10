@@ -33,7 +33,7 @@ Steps to set up a GitHub account and git repo for your classwork:
 **README.md**
 - README.md is a file that can be added to the git repo that will appear on your GitHub page and explain what the repo is for (these notes are an example of a README.md file ;)
 - README.md uses Markdown, which is a special way of writing HTML
-- [Here's a Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) but you don't need to know if for class
+- [Here's a Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) but you won't be graded on Markdown
 - Example README.md:
 
 <pre><code>#MMP 210 Classwork
