@@ -21,6 +21,27 @@ Steps to set up a GitHub account and git repo for your classwork:
 - Look at changes in the GitHub Desktop app
 - Commit and Publish!
 
+**Adding a .gitignore file**
+- On the root level of your projet, create a new document and save it as `.gitignore`
+- For now this will have only one line:  
+
+```
+.DS_Store
+```
+- Commit the change and push the revision.
+
+**README.md**
+- README.md is a file that can be added to the git repo that will appear on your GitHub page and explain what the repo is for (these notes are an example of a README.md file ;)
+- README.md uses Markdown, which is a special way of writing HTML
+- [Here's a Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) but you don't need to know if for class
+- Example README.md:
+
+<pre><code>#MMP 210 Classwork
+This is all of my classwork for MMP 210
+- [Week 1](week1/)
+- [Week 2](week2/)</code></pre>
+
+
 *Next week we'll use GitHub Pages to see our work live online.*
 
 **What is [git](https://git-scm.com/)?**
