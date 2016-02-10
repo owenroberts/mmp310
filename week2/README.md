@@ -12,7 +12,7 @@
 Steps to set up a GitHub account and git repo for your classwork:
 - Sign up for a GitHub account: [https://github.com/join?source=header-home](https://github.com/join?source=header-home)
 - Open the GitHub Desktop app and login using **GitHub Desktop > Preferences > Accounts**
-- Create a repo with the + dropdown
+- Create a repo with the `+` dropdown
 - Set the repo folder to your MMP 210 classwork folder
 - Type a message like "initial commit" and commit your project
 - Click Publish
