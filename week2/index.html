@@ -21,16 +21,6 @@
 			padding:0.25em;
 			border-radius: 0.1em;
 		}
-		code, pre {
-			color:darkblue;
-			background:#f9f9f9;
-			padding:0.1em 0.25em;
-			border-radius: 0.2em;
-			/*border:1px solid blue;*/
-		}
-		hb {
-			color:blue;
-		}
 	</style>
 </head>
 <body>
@@ -48,7 +38,7 @@
 		</div>
 		<div class="slide">
 			<p>Start by typing into the console.</p>
-			<p><code><hb>></hb> document</code></p>
+			<p><code><c></c> document</code></p>
 			<p>Look familiar?  This is our HTML document, interpreted as a node structure by the Document Object Model.</p>
 		</div>
 
@@ -62,22 +52,20 @@
 
 		<div class="slide">
 			<p>Okay, let's try a couple more lines: </p>
-			<p><pre><hb>></hb> document.body
-<hb>></hb> document.body.style
-<hb>></hb> document.body.style.color = "purple";</pre></p>
-			<p>
+			<pre><code><c></c> document.body
+<c></c> document.body.style
+<c></c> document.body.style.color = "purple";</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>Try this:</p> 
-			<pre><hb>></hb> document.write("Hello world!");</pre>
+			<pre><c></c> document.write("Hello world!");</pre>
 		</div>
 		<div class="slide">
-			<p>Oops!</p>
 			<p>We could write our entire HTML document this way, but its easier to write some HTML and then modify it with JavaScript.</p>
-			<pre><hb>></hb> var elem = document.createElement("h1");
-<hb>></hb> elem.innerHTML = "JavaScript is kewl!";
-<hb>></hb> document.body.appendChild(elem);</code></pre>
+			<pre><code><c></c> var elem = document.createElement("h1");
+<c></c> elem.innerHTML = "JavaScript is kewl!";
+<c></c> document.body.appendChild(elem);</code></pre>
 		</div>
 
 		<!--  variables, how js treats numbers, strings booleans -->
@@ -90,18 +78,18 @@
 		</div>
 
 		<div class="slide">
-			<pre>> var x</pre>
+			<pre><code><c></c> var x</code></pre>
 (Oh, also, semicolons are "optional in JavaScript", but it's usually better to use them.)
-<pre><hb>></hb> x = 10;
-<hb>></hb> x++;
-<hb>></hb> x;
-<hb>></hb> x += 10;
-<hb>></hb> x = x + 10;
-<hb>></hb> x = "ten";
-<hb>></hb> x = "10";
-<hb>></hb> x++;
-<hb>></hb> x = false;
-<hb>></hb> typeof x;</pre>
+<pre><code><c></c> x = 10;
+<c></c> x++;
+<c></c> x;
+<c></c> x += 10;
+<c></c> x = x + 10;
+<c></c> x = "ten";
+<c></c> x = "10";
+<c></c> x++;
+<c></c> x = false;
+<c></c> typeof x;</code></pre>
 		</div>
 
 		<div class="slide">
@@ -130,15 +118,15 @@
 		<div class="slide">
 			<h2>Button</h2>
 			<p>Button may the simplest form element:</p>
-			<pre>&lt;button id="sumbit"&gt;Click me.&lt;/button&gt;</pre>
+			<pre><code>&lt;button id="sumbit"&gt;Click me.&lt;/button&gt;</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>There are a lot of ways we can writes scripts to detect when the button is clicked.  This is a type of event, and we'll talk more in depth about events next week.  For now, let's write a very simple <code>event handler</code> to tell our program the button is clicked.</p>
-			<pre>var submit = document.getElementById("submit");
+			<pre><code>var submit = document.getElementById("submit");
 submit.onclick = function() {
 	console.log(this);
-};</pre>
+};</code></pre>
 		</div>
 
 		<div class="slide">
@@ -154,43 +142,43 @@ submit.onclick = function() {
 		<div class="slide">
 			<h2>Input</h2>
 			<p>There are many different types of <code>input</code>.  Today we'll just use a text input:</p>
-			<pre>&lt;input id="name" type="text" placeholder="Input name" /&gt;</pre>
+			<pre><code>&lt;input id="name" type="text" placeholder="Input name" /&gt;</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>We can use JavaScript to grad the value the user types in:</p>
-			<pre>submit.onclick = function() {
+			<pre><code>submit.onclick = function() {
 	var name = document.getElementById("name").value;
-};</pre>
+};</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>A <code>textarea</code> is a resizable <code>input</code> for text.</p>
-			<pre>&lt;textarea id="email" placeholder="Input email" /&gt;</pre>
+			<pre><code>&lt;textarea id="email" placeholder="Input email" /&gt;</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>A <code>select</code> element creates a dropdown input using the <code>option</code> element.</p>
-			<pre>&lt;select id="borough"&gt;
+			<pre><code>&lt;select id="borough"&gt;
 	&lt;option&gt;Bronx&lt;/option&gt;
 	&lt;option&gt;Brooklyn&lt;/option&gt;
 	&lt;option&gt;Manhattan&lt;/option&gt;
 	&lt;option&gt;Queens&lt;/option&gt;
 	&lt;option&gt;Staten Island&lt;/option&gt;
-&lt;/select&gt;</pre>
+&lt;/select&gt;</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>Traditionally, we can place all of these elements into a <code>form</code> element, but we are not using any database or remote requests at this point, so we'll just use the elements and JavaScript to interact with them:</p>
-			<pre>submit.onclick = function() {
+			<pre><code>submit.onclick = function() {
 	var name = document.getElementById("name").value;
 	var email = document.getElementById("email").value;
 	var borough = document.getElementById("borough").value;
 	console.log(name, email, test);
 	var message = document.getElementById("message");
-	message.innerHTML = "Hello " + name + " from 
+	message.innerHTML = "Hello " + name + " from "
 	 + borough + ", welcome to my website.";
-};</pre>
+};</code></pre>
 		</div>
 
 		<div class="slide">

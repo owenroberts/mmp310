@@ -118,19 +118,19 @@
 		</div>
 		<div class="slide">
 			<p>There are three ways to include CSS styles in an HTML document.</p>
-			<p>External stylesheets are linked into the HTML page by a tag.  These styles can be applied to multiple HTML pages: <br><code>&lt;link rel="stylesheet" href="style.css" type="text/css" /&gt;</code></p>
+			<p>External stylesheets are linked into the HTML page by a tag.  These styles can be applied to multiple HTML pages: </p>
+			<pre><code>&lt;link rel="stylesheet" href="style.css" type="text/css" /&gt;</code></pre>
 		</div>
 		<div class="slide">
 			<p>Internal stylesheets can be added anywhere inside of an HTML document, using the <code>style</code> tag, but are typically found in the <code>&lt;head&gt;</code> section.  These styles will only apply to elements on a single page, but will apply to all elements of that page.</p>
 			<pre><code>&lt;style&gt;
 	a { color: pink; }
 	a:hover { color: blue; }
-&lt;/style&gt;
-			</code></pre>
+&lt;/style&gt;</code></pre>
 		</div>
 		<div class="slide">
 			<p>Inline styles are added inside of an HTML element as an attribute and will apply to that element only.</p>
-			<p><code>&lt;div style="background:blue;padding:5px;"&gt;&lt;/div&gt;</code></p>
+			<pre><code>&lt;div style="background:blue;padding:5px;"&gt;&lt;/div&gt;</code></pre>
 		</div>
 
 		<div class="slide">
@@ -175,14 +175,14 @@
 		<div class="slide">
 			<h2>Nested selectors </h2></strong></p>
 			<p>We can also use the relationships between HTML elements to create styles.  An element that is a child of another element can be selected with a space between two selector tags.  For example, the following HTML:</p>
-			<pre>&lt;ul&gt;
+			<pre><code>&lt;ul&gt;
   &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+&lt;/ul&gt;</code></pre>
 		</div>
 		<div class="slide">
 			<p>Can be styled with the following rules:</p>
-			<pre>ul {
+			<pre><code>ul {
   width:200px;
   height:20px;
   list-style:none;
@@ -198,7 +198,7 @@ ul li a {
 
 ul li a:hover {
   color:darkblue;
-}</pre>
+}</code></pre>
 		</div>
 		<div class="slide">
 			<p>There are selectors for other relationships beyond the ancestor/parent to descendant/child.  See all of the possibilities for <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors" target="_blank">selectors here</a>.</p>
@@ -287,7 +287,7 @@ margin-left:5px;</code></pre>
 		<div class="slide">
 			<h2>Transition and animation</h2>
 			<p>CSS3 has introduced experimental features which have gained near universal support for doing simple animations and transition with CSS, which used to only be available with JavaScript.</p>
-			<pre>a:hover { transition: color 1s ease-in-out; }</pre>
+			<pre><code>a:hover { transition: color 1s ease-in-out; }</code></pre>
 			<p>Animations use the same transition syntax with keyframes.</p>
 			<li><a href="http://css3.bradshawenterprises.com/transitions/" target="blank">Transitions</a></li>
 			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="blank">Animations</a></li>
@@ -299,8 +299,10 @@ margin-left:5px;</code></pre>
 			<h2>Comments</h2>
 			<p>In code, comments are sections of the program that are not read by the compiler.  Different languages use different conventions to separate comments within the language of the program.  These are used by developers to note what the code is doing for other developers or for future reference.</p>
 			<p>It's extremely important to comment your code with useful comments.</p>
-			<p>In HTML, a comment can be written using this syntax: <br><code>&lt;!--  COMMENT TEXT GOES HERE --></code></p>
-			<p>In CSS, comments use this syntax: <code>/* COMMENT IS HERE */</code>
+			<p>In HTML, a comment can be written using this syntax:</p>
+			<pre><code>&lt;!--  COMMENT TEXT GOES HERE --></code></pre>
+			<p>In CSS, comments use this syntax:</p>
+			<pre><code>/* COMMENT IS HERE */</code></pre>
 		</div>
 
 		<div class="slide">
