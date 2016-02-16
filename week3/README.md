@@ -1,5 +1,7 @@
-[JavaScript input & variables](https://owenroberts.github.io/mmp310/week2/index.html)
+[JavaScript functions](https://owenroberts.github.io/mmp310/week3/index.html)
 <h2>Assignment 3: Mad libs</h2>
+<li><a href="http://www.madglibs.com/index.php" target="blank">Example</a></li>
+
 
 ##Setting up GitHub Pages
 - Last week, using the GitHub app didn't work that well, so we're going to switch to using a Brackets extension
@@ -19,9 +21,8 @@
 - Once you have created the new branch, you need to press the **Git Push** button on the far right
 - Leave the default setup, fill in your username and password and hit **Okay**
 - It may take a few minutes, but soon GitHub will publish your work at a new URL, something like: **username**.github.io/**projectname**
-- You should see your project working here
 
-- Once you have created this branch you will need to update your workflow to include it.  Generally, it is a good idea to make new changes on the **master** branch and then `rebase` your **gh-pages** branch, which updates it with all of the commits from the master.
+- Once you have created this branch you will need to update your workflow to include it.  Generally, it is a good idea to make new changes on the **master** branch and then `rebase` your **gh-pages** branch, which updates it with all of the commits from the master
 - Brackets Git does not appear to have a button to rebase, so the easiest way to do this for now is to switch to the **gh-pages** branch and then click the **Terminal console** button on the right
 - This will open a terminal window.  Don't panic.
 - Just type this line `git rebase master`
