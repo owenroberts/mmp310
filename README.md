@@ -89,3 +89,8 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Git & GitHub
 - [Class notes](https://owenroberts.github.io/mmp310/week2/index.html)
 - [Assignment 2: JavaScript input](https://github.com/owenroberts/mmp310/tree/master/week2)
+
+**Week 3: GitHub Pages & JS functions**
+- JavaScript functions
+- GitHub Pages
+- Assignment 3: Mad libs
