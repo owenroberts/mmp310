@@ -1,7 +1,10 @@
-[JavaScript functions](https://owenroberts.github.io/mmp310/week3/index.html)
-<h2>Assignment 3: Mad libs</h2>
-<li><a href="http://www.madglibs.com/index.php" target="blank">Example</a></li>
+[JavaScript datatypes](https://owenroberts.github.io/mmp310/week3/index.html)
 
+<h2>Assignment 3: Arrays</h2>
+<ul>
+	<li>Rewrite your program from Assignment 2 using an array instead of individual variables</li>
+	<li>Post your project on GitHub and sumbit a new URL via Blackboard</li>
+</ul>
 
 ##Setting up GitHub Pages
 - Last week, using the GitHub app didn't work that well, so we're going to switch to using a Brackets extension
