@@ -44,16 +44,22 @@
 <c></c>x++;
 <c></c>console.log(x);
 <c></c>typeof x;</code></pre>
-      		<p>In JavaScript does not differentiate between integers and floating point numbers, such as <code>1</code> and <code>1.5</code>.</p>
-      		<p>JavaScript can also convert strings that have only numeric characters into numbers for us, which is a nice thing for new programmers, but can get a little hairy.</p>
+		</div>
+		<div class="slide">
+      		<p>JavaScript does not differentiate between integers and floating point numbers, such as <code>1</code> and <code>1.5</code>.</p>
+      		<!-- <p>JavaScript can also convert strings that have only numeric characters into numbers for us, which is a nice thing for new programmers, but can get a little hairy.</p> -->
       		<p><code>NaN</code> means "Not a Number".  You will get that if you try to evaluate a string that cannot be parsed to a number.  You can test for <code>NaN</code> using the <code>isNaN()</code> function.</p>
-      		<pre><code><c></c> isNaN(NaN);</code></pre>
+      		<pre><code><c></c> isNaN(NaN);
+<c></c> isNaN("hello world");
+<c></c> isNaN("7"); // why doesn't this return false?</code></pre>
       	</div>
 		
 		<!-- string -->
 		<div class="slide">
       		<h2>Strings</h2>
-			<p>Strings in JavaScript are sequences of characters, using Unicode they are represented by a 16-bit number.  Characters are written as strings with the length of one.  Strings provide <code>length</code>, a property that returns the length of the string.</p>
+			<p>Strings in JavaScript are sequences of characters, using Unicode they are represented by a 16-bit number, for example: <code>"Hello world."</code> or <code>"string"</code>.  Characters are written as strings with the length of one.  Strings provide <code>length</code>, a property that returns the length of the string.</p>
+		</div>
+		<div class="slide">
 			<pre><code><c></c>"Hello World".length</code></pre>
 			<p>Strings also have some built in methods like <code>charAt()</code> and <code>replace()</code> which help us do evaluation and manipulation.</p>
 			<pre><code><c></c>"Hello World".charAt(0);</code></pre>
@@ -86,11 +92,17 @@
 		<!-- arrays -->
 		<div class="slide">
 			<h2>Arrays</h2>
-			<p>An <code>array</code> is an object that contains a list of variables, such as this:</p>
-			<pre><code>var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];</code></pre>  
-			<p>In JavaScript, the items in an array can have any datatype, like a number, string, boolean, or even another arrary.  In other languages, the data in an array usually are all of the same type.  The elements of an array are accessed by their index number, starting with zero.</p>
+			<p>An <code>array</code> is an object that contains a list of values or variables:</p>
+			<pre><code><c></c>var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];
+<c></c>var decades = [1980, 1990, 2000, 2010, 2020];</code></pre>
+		</div>
+		<div class="slide">
+			<p>In JavaScript, the items in an array can have any datatype, like a number, string, boolean, or even another arrary.  In other languages, the data in an array usually are all of the same type.  The elements of an array are accessed by their index number, starting with <code>[0]</code>.</p>
+		</div>
+
+		<div class="slide">
 			<p><code>imgs[0]</code> will return <code>"cat.jpg"</code>.  Like strings, arrays have a <code>length</code> property.  Try creating an array, reading from the list, and returning the length:</p>
-			<pre><code><c></c>myArray = ["cat", "dog", "alligator"];
+			<pre><code><c></c>var myArray = ["cat", "dog", "alligator"];
 <c></c>myArray.length;
 <c></c>myArray[0];
 <c></c>myArray[2];</code></pre>
@@ -98,7 +110,7 @@
 
 		<div class="slide">
 			<h2>Adding elements to an array</h2>
-			<pre><code><c></c>imgs = ["cat", "dog", "bird"];
+			<pre><code><c></c>var imgs = ["cat", "dog", "bird"];
 <c></c>imgs[3] = "alligator";
 <c></c>imgs.push("lion");
 <c></c>imgs.pop();</code></pre>		
@@ -107,7 +119,7 @@
 		<div class="slide">
 			<h2>Null and undefined</h2>
 			<p>JavaScript uses <code>null</code> and <code>undefined</code> as distinct values.  <code>null</code> indicates a purposely unassigned value.  <code>undefined</code> indicates a variable that has been instantiated but not assigned with a value.</p>
-			<pre><code><c></c>console.log(y);;
+			<pre><code><c></c>console.log(y);
 <c></c>var x;
 <c></c>console.log(x);</code>
 		</div>
