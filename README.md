@@ -91,6 +91,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - [Assignment 2: JavaScript input](https://github.com/owenroberts/mmp310/tree/master/week2)
 
 **Week 3: GitHub Pages & JS datatypes**
-- JavaScript datatypes
+- [JavaScript datatypes]([JavaScript datatypes](https://owenroberts.github.io/mmp310/week3/index.html)
+)
 - GitHub Pages
-- Assignment 3: Mad libs
+- Assignment 3: Array
