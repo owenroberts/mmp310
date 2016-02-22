@@ -26,8 +26,11 @@
 - It may take a few minutes, but soon GitHub will publish your work at a new URL, something like: **username**.github.io/**projectname**
 
 - Once you have created this branch you will need to update your workflow to include it.  Generally, it is a good idea to make new changes on the **master** branch and then `rebase` your **gh-pages** branch, which updates it with all of the commits from the master
+- You can also rebase the **master** if you make changes to **gh-pages** first
 - Brackets Git does not appear to have a button to rebase, so the easiest way to do this for now is to switch to the **gh-pages** branch and then click the **Terminal console** button on the right
 - This will open a terminal window.  Don't panic.
-- Just type this line `git rebase master`
+- Just type this line `git rebase master` if you committed new changes on the master branch
+- Or `git rebase gh-pages` if you're updating master
 - This will fast forward your **gh-pages** branch to match your **master** branch
 - You can then push the **gh-pages** branch to update the public site
+- Make sure to push your changes!  `rebase` only changes the .git repo on your computer
