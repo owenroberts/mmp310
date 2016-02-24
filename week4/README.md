@@ -1,6 +1,7 @@
 [JavaScript functions](https://owenroberts.github.io/mmp310/week4/index.html)
 
-<h2>Assignment 4: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)</h2>
+<h2>Assignment 4: Magic 8 Ball</h2>
+[Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
 <ul>
 	<li>Recreate the Magic 8 Ball game using JavaScript</li>
 	<li>Magic 8 Ball works by answering Yes/No questions</li>
