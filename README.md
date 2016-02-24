@@ -13,9 +13,9 @@ Office Hours: Monday, Wednesday, Thursday 4pm - 5pm
 Credits: 3  
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web based multimedia presentation.
 
-Course site: [github.com/owenroberts/mmp310/](https://github.com/owenroberts/mmp310/)
-Notes: [http://owenroberts.github.io/mmp310/](http://owenroberts.github.io/mmp310/)
-Examples: [http://owenroberts.github.io/mmp310/classwork/](http://owenroberts.github.io/mmp310/classwork/)
+Course site: [github.com/owenroberts/mmp310/](https://github.com/owenroberts/mmp310/)  
+Notes: [http://owenroberts.github.io/mmp310/](http://owenroberts.github.io/mmp310/)  
+Examples: [http://owenroberts.github.io/mmp310/classwork/](http://owenroberts.github.io/mmp310/classwork/)  
 
 Basic Skills: English 095 or ESL 062, ACR 094  
 Prerequesites: MMP 100, MMP 210  
