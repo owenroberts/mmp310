@@ -14,6 +14,8 @@ Credits: 3
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web based multimedia presentation.
 
 Course site: [github.com/owenroberts/mmp310/](https://github.com/owenroberts/mmp310/)
+Notes: [http://owenroberts.github.io/mmp310/](http://owenroberts.github.io/mmp310/)
+Examples: [http://owenroberts.github.io/mmp310/classwork/](http://owenroberts.github.io/mmp310/classwork/)
 
 Basic Skills: English 095 or ESL 062, ACR 094  
 Prerequesites: MMP 100, MMP 210  
@@ -93,4 +95,8 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 **Week 3: GitHub Pages & JS datatypes**
 - [JavaScript datatypes](https://owenroberts.github.io/mmp310/week3/index.html)
 - GitHub Pages
-- Assignment 3: Array
+- Assignment 3: Arrays
+
+**Week 4: Functions**
+- [JavaScript functions](https://owenroberts.github.io/mmp310/week4/index.html)
+- Assignment 4: Magic 8 Ball
