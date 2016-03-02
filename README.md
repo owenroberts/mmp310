@@ -102,6 +102,5 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - [Arrays, math, random](https://owenroberts.github.io/mmp310/week4/arrays.html)
 - Assignment 4: Magic 8 Ball
 
-**Week 4: Functions**
-- [JavaScript loops](https://owenroberts.github.io/mmp310/week4/index.html)
-- Assignment 4: Magic 8 Ball
+**Week 5: Logic**
+- [JavaScript logic](https://owenroberts.github.io/mmp310/week4/index.html)

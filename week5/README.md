@@ -1,13 +1,8 @@
-[JavaScript functions](https://owenroberts.github.io/mmp310/week4/index.html)  
-[Arrays, math, random](https://owenroberts.github.io/mmp310/week4/array.html)  
+[JavaScript logic](https://owenroberts.github.io/mmp310/week5/index.html)  
 
-<h2>Assignment 4: Magic 8 Ball</h2>
-[Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
-<ul>
-	<li>Recreate the Magic 8 Ball game using JavaScript</li>
-	<li>Magic 8 Ball works by answering Yes/No questions</li>
-	<li>Your program will need to take a users question and respond with one of the classic Magic 8 Ball responses (or you can write your own responses)</li>
-	<li>Use CSS to design the interface</li>
-	<li>Bonus: Animate the response in some way</li>
-	<li>Bonus: Make responses the include the input in some way</li>
-</ul>
+**Assignment 4: Gameshow Quiz**
+- Present the user with a series of True/False or multiple choice questions...
+	- Is the sky blue?
+	- What is the capital of Latvia?
+- Evaluate the users input and assign a reward or punishment (points, a message)
+- Ask at least three separate questions.
