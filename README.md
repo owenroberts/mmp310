@@ -103,4 +103,4 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Assignment 4: Magic 8 Ball
 
 **Week 5: Logic**
-- [JavaScript logic](https://owenroberts.github.io/mmp310/week4/index.html)
+- [JavaScript logic](https://owenroberts.github.io/mmp310/week5/index.html)
