@@ -107,6 +107,10 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Assignment 5: Quiz show
 
 **Week 6: Document Object Model & events**
-- [DOM]()
-- [Events]()
-- Assignment 6: 
+- [DOM](https://owenroberts.github.io/mmp310/week6/index.html)  
+- [JS Events](https://owenroberts.github.io/mmp310/week6/events.html)  
+- Assignment 6: Task list
+
+**Week 7: Loops**
+- [Loops](https://owenroberts.github.io/mmp310/week6/index.html)  
+- Assignment 7: 

@@ -74,30 +74,30 @@
 			<pre><code><c></c>var newslide = document.createElement("div");
 <c></c>newslide.className = "slide";
 <c></c>newslide.id = "newslide";
-<c></c>document.appendChild(newslide);</code></pre>
+<c></c>document.body.appendChild(newslide);</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>And removing them:</p>
 			<pre><code><c></c>var newslide = document.getElementById("newslide");
-<c></c>document.removeChild(newslide);</code></pre>
+<c></c>document.body.removeChild(newslide);</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>We can access child and parent nodes:</p>
 			<pre><code><c></c>var c = document.querySelector("#container");
-<c></c>console.log(document.firstChild);
-<c></c>console.log(document.lastChild);
-<c></c>console.log(document.childNodes);</code></pre>
+<c></c>console.log(c.firstChild);
+<c></c>console.log(c.lastChild);
+<c></c>console.log(c.childNodes);</code></pre>
 
 		</div>
 
 		<div class="slide">
 			<p>And get the parent node or sibbling node:</p>
-			<pre><code><c></c>var children = document.childNodes;
-<c></c>children[0].parentNode;
-<c></c>children[0].previousSibling;
-<c></c>children[0].nextSibling;</code></pre>
+			<pre><code><c></c>var children = c.childNodes;
+<c></c>console.log(children[0].parentNode);
+<c></c>console.log(children[0].previousSibling);
+<c></c>console.log(children[0].nextSibling);</code></pre>
 		</div>
 
 		<div class="slide">
@@ -135,13 +135,22 @@
 <c></c>newslide.className = "slide";
 <c></c>newslide.innerHTML = "This is a new slide!";
 <c></c>newslide.style.color = "red";
-<c></c>document.appendChild(newslide);</code></pre>
+<c></c>c.appendChild(newslide);</code></pre>
 		</div>
 
 		<div class="slide">
 			<p>You can access any style in any element:</p>
 			<pre><code><c></c>var c = document.getElementById("container");
 <c></c>c.style.color = "green";</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Add an image to the document:</p>
+			<pre><code><c></c>var img = new Image();
+<c></c>img.src = "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg";
+<c></c>var elem = document.createElement("div");
+<c></c>elem.appendChild(img);
+<c></c>c.appendChild(elem);</code></pre>
 		</div>
 
 
