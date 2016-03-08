@@ -105,3 +105,8 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 **Week 5: Logic**
 - [JavaScript logic](https://owenroberts.github.io/mmp310/week5/index.html)
 - Assignment 5: Quiz show
+
+**Week 6: Document Object Model & events**
+- [DOM]()
+- [Events]()
+- Assignment 6: 
