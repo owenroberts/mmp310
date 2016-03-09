@@ -122,7 +122,76 @@
 }
 console.log(x);</code></pre>
 		</div>
+		<div class="slide">
+			<h2>else if and switch</h2>
+			<p>Often there will be a set of conditions to test rather than a simple <code>if {} else {}</code> statement with a binary condition.</p>
+			<p>In these cases we can use <code>else if</code> to catch other conditions, or a <code>switch</code> statement.</p>
+		</div>
 
+		<div class="slide">
+			<pre><code>
+<c></c>var compare = function(n1, n2) {
+	if (n1 == n2) {
+		console.log("The values are equal.");
+	} else if (n1 < n2) {
+		console.log(n1 + " is less than " + n2);
+	} else {
+		console.log(n1 + " is greater than " + n2);
+	}
+};
+<c></c>compare(0, 10);
+<c></c>compare(1, 0);
+<c></c>compare(5, 5);</code></pre>
+		</div>
+
+		<div class="slide">
+			<pre><code><c></c>var x = 0;
+<c></c>var y = 1;
+<c></c>var z = 2;
+<c></c>switch(0) {
+	case x:
+		console.log("the value is x");
+	break;
+
+	case y:
+		console.log("the value is y");
+	break;
+
+	default:
+		console.log("does not match a value");
+	break;
+}</code></pre>
+			<p><code>switch</code> is not used often because the pattern is easily replicated with an <code>object</code> (which we'll learn in a few weeks).</p>
+		</div>
+
+
+		<div class="slide">
+			<h2>Logical operators - AND and OR</h2>
+			<p>There are a number of logical statements that help us evaluate more complex statements.  We can use <code>&&</code> and <code>||</code> to add statements to our condition.  <code>&&</code> requires all statements to evaluate true, reading left to right.  <code>||</code> requires one of the statements on either side to be true.</p>
+       	</div>
+       	<div class="slide">
+	        <pre><code><c></c>true && false
+<c></c>7 == "7" && NaN != 1
+<c></c>false || true
+<c></c>7 === "7" || 1 == 1 && !(false)</code></pre>
+	        <p>We can also uses parathesis <code>()</code> to nest logic rules.</p>
+	        <pre><code><c></c>( true && true || false ) && true</code></pre>
+        </div>
+        		<div class="slide">
+			<pre><code><c></c>var x = 0;
+<c></c>var width = 5;
+<c></c>var start = true;
+<c></c>var incrementX = function() {
+	if (x < width && start) {
+		x++;
+	} else if (x > 0) {
+		if (start) start = false;
+		x--;
+	}
+	console.log(x);
+};
+incrementX();</code></pre>
+		</div>
 		
 </body>
 </html>

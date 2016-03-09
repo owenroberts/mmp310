@@ -82,7 +82,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - [In class refresher exercise](https://github.com/owenroberts/mmp310/tree/master/week1)
 - Quick reivew of HTML, CSS and JavaScript, file structure, web architecture
 - [HTML / CSS Review](https://owenroberts.github.io/mmp310/week1/index.html)
-- Assignment 1: Exploring UI Design
+- Assignment 1: Review - Create a web page
 
 **Week 2: Intro to JavaScript & GitHub**
 - JavaScript 
@@ -104,3 +104,12 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 
 **Week 5: Logic**
 - [JavaScript logic](https://owenroberts.github.io/mmp310/week5/index.html)
+- Assignment 5: Quiz show
+
+**Week 6: Document Object Model & events**
+- [DOM](https://owenroberts.github.io/mmp310/week6/index.html)  
+- [JS Events](https://owenroberts.github.io/mmp310/week6/events.html)  
+- Assignment 6: Task list
+
+**Week 7: Loops**
+- [Loops](https://owenroberts.github.io/mmp310/week6/index.html)  
