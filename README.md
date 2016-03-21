@@ -78,9 +78,9 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Object oriented JavaScript
 
 ###Schedule
-**Week 1: Introductions**
+**Week 1: Introduction**
 - Introduce class and syllabus
-- [In class refresher exercise](https://github.com/owenroberts/mmp310/tree/master/week1)
+- [In class refresher exercise](week1/)
 - Quick reivew of HTML, CSS and JavaScript, file structure, web architecture
 - [HTML / CSS Review](https://owenroberts.github.io/mmp310/week1/index.html)
 - Assignment 1: Review - Create a web page
@@ -90,8 +90,8 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 	- input
 	- variables
 - Git & GitHub
-- [Class notes](https://owenroberts.github.io/mmp310/week2/index.html)
-- [Assignment 2: JavaScript input](https://github.com/owenroberts/mmp310/tree/master/week2)
+- [Intro to JavaScript](https://owenroberts.github.io/mmp310/week2/index.html)
+- [Assignment 2: JavaScript input](week2/)
 
 **Week 3: GitHub Pages & JS datatypes**
 - [JavaScript datatypes](https://owenroberts.github.io/mmp310/week3/index.html)
@@ -115,3 +115,46 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 **Week 7: Loops**
 - [Loops](https://owenroberts.github.io/mmp310/week6/index.html)  
 - Assignment 7: Random password
+
+**Week 8**
+- Measuring time
+- Midterm Project
+	- Option 1: Create a Twitter-like micro blog interface
+		- Create a User
+		- Write tweets with a limited number of characters
+		- Display tweets with user name and time
+	- Option 2: Simple JavaScript game
+		- Write a more advanced quiz show program (at least 10 questions, working score)
+		- Memory game [Example](http://mark-rolich.github.io/MemoryGame.js/)
+		- Hangman [Example](http://codepen.io/cathydutton/pen/ldazc)
+		- Madlibs [Example](http://www.backwardsteps.com/madlibs/)
+		- Propose another game format to me
+	- All projects must have their own stylesheets and completed styles, no defaults!!
+
+**Week 9: jQuery**
+- Intro to jQuery
+- Midterm workshop
+
+**Week 10: Objects**
+- JavaScript Objects
+- Midterm presentations
+
+**Week 11: JSON * APIs**
+- JavaScript APIs
+- JSON
+- Final Project
+
+**Week 12: Libraries**
+- Libraries TBA
+- Final project workshop
+
+**Week 13: Libraries Part 2**
+- Libraries TBA
+- Final project workshop
+
+**Week 14: Review**
+- JavaScript review
+- Final project workshop
+
+**Week 15: Finals**
+- Final project presentations
