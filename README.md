@@ -139,7 +139,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - JavaScript Objects
 - Midterm presentations
 
-**Week 11: JSON * APIs**
+**Week 11: JSON & APIs**
 - JavaScript APIs
 - JSON
 - Final Project
