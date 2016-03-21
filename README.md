@@ -113,7 +113,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Assignment 6: Task list
 
 **Week 7: Loops**
-- [Loops](https://owenroberts.github.io/mmp310/week6/index.html)  
+- [Loops](https://owenroberts.github.io/mmp310/week7/index.html)  
 - Assignment 7: Random password
 
 **Week 8**
