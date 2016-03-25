@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<title>MMP 310</title>
+	<meta charset="utf-8" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
+	<script src="../slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
+	<script src="../slides/p5.min.js"></script>
+	<script src="../slides/bkg.js"></script>
+	<script src="../slides/slides.js"></script>
+</head>
+<body>
+	<div id="container" class="slides">
+		<div class="slide">
+			<h1>JavaScript time</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week8">Week 8</a></p>
+		</div>
+
+		<div class="slide">
+			<p>There are cases in programming where you want something to take a certain amount of time to happen, or wait for a certain amount of time to execute.</p>
+			<p>In JavaScript, there are a few functions that can help us keep track of time.</p>
+		</div>
+
+		<div class="slide">
+			<p>The most simple example is the function <code>Date();</code></p>
+			<pre><code><c></c>Date();
+<c></c>Date.now();</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>JavaScript also has timers, including <code>setTimeout</code> and <code>setInterval</code>.</p>
+			<p><code>setTimeout</code> delays the execution of a function for a specified amount of time measured in milliseconds.</p>
+			<pre><code><c></c>var delayedGreeting = function() {
+	alert("Hello world!");
+};
+<c></c>setTimeout(delayedGreeting, 1000);</code></pre>
+		</div>
+		<div class="slide">
+			<p>We can save a timeout as a variables and use that variable to cancel it.</p>
+			<pre><code><c></c>var delayedGreeting = function() {
+	alert("Hello world!");
+};
+<c></c>var g = setTimeout(delayedGreeting, 1000);
+<c></c>clearTimeout(g);</code></pre>
+		</div>
+        
+
+	</div>	
+</body>
+</html>

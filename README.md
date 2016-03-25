@@ -117,7 +117,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Assignment 7: Random password
 
 **Week 8**
-- JavaScript time
+- [JavaScript time](https://owenroberts.github.io/mmp310/week8/)  
 - Midterm Project
 	- Option 1: Create a Twitter-like micro blog interface
 		- Create a User
