@@ -28,13 +28,23 @@
 		</div>
 
 		<div class="slide">
-			<p>The most simple example is the function <code>Date();</code></p>
+			<p>We can get the time using the object <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="blank">Date();</a></code> and it's methods:</p>
 			<pre><code><c></c>Date();
-<c></c>Date.now();</code></pre>
+<c></c>Date.now();
+<c></c>var today = new Date(Date());
+<c></c>today.getDate();
+<c></c>today.getDay();
+<c></c>today.getFullYear();
+<c></c>today.getHours();
+<c></c>today.getMillliseconds();
+<c></c>today.getMonth();
+<c></c>today.getSeconds();
+<c></c>today.getTime();
+<c></c>var yesterday = new Date("Sun Mar 27 2016");</code></pre>
 		</div>
 
 		<div class="slide">
-			<p>JavaScript also has timers, including <code>setTimeout</code> and <code>setInterval</code>.</p>
+			<p>JavaScript also has timers, including <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout" target="blank">setTimeout</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval" target="blank">setInterval</a></code>.</p>
 			<p><code>setTimeout</code> delays the execution of a function for a specified amount of time measured in milliseconds.</p>
 			<pre><code><c></c>var delayedGreeting = function() {
 	alert("Hello world!");
@@ -48,6 +58,18 @@
 };
 <c></c>var g = setTimeout(delayedGreeting, 1000);
 <c></c>clearTimeout(g);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p><code>setInterval</code> is used to execute a function repeatedly at a specific interval.</p>
+			<p>We can create a count down as an example:</p>
+			<pre><code><c></c>var count = 100;
+<c></c>var countdown = function() {
+	if (count == 0) clearInterval(countdownInterval);
+	console.log(count);
+	count--;
+};
+<c></c>var countdownInterval = setInterval(countdown, 100);</code></pre>
 		</div>
         
 
