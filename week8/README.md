@@ -1,4 +1,5 @@
 [Time](https://owenroberts.github.io/mmp310/week8/)  
+[Time example](http://owenroberts.github.io/mmp310/classwork/week9/)
 
 **Midterm Project**
 - Option 1: Create a Twitter-like micro blog interface
