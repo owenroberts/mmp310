@@ -132,7 +132,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 	- All projects must have their own stylesheets and completed styles, no defaults!!
 
 **Week 9: jQuery**
-- Intro to jQuery
+- [Intro to jQuery](https://owenroberts.github.io/mmp310/week9/)  
 - Midterm workshop
 
 **Week 10: Objects**
