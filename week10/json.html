@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<title>MMP 310</title>
+	<meta charset="utf-8" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
+	<script src="../slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
+	<script src="../slides/p5.min.js"></script>
+	<script src="../slides/bkg.js"></script>
+	<script src="../slides/slides.js"></script>
+</head>
+<body>
+	<div id="container" class="slides">
+		<div class="slide">
+			<h1>JSON</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week10/">Week 10</a></p>
+		</div>
+
+		<div class="slide">
+			<p>JSON stands for JavaScript Object Notation.</p>
+			<p>JSON is a data format that is designed to be easy to read, modify and transmit between a front end web client and it's back end server.</p>
+			<p>In the next few weeks we'll learn how to use JSON with APIs to grab data from resources around the web.  Today we'll just learn the basics.</p>
+		</div>
+
+		<div class="slide">
+			<p>Last week we made a slideshow that used two arrays to keep track of the image path and label for each slide:</p>
+			<pre><code>var imgs = [
+    "cat1.jpg", 
+    "cat2.jpg", 
+    "cat3.jpg"
+];
+var labels = [
+    "I am cat.",
+    "I'm wearing a sweater.",
+    "I'm hungry."
+];</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>This is a good way to organize data for something simple, but if we had many more slides, or added new slides to the slideshow, we would always have to make sure to updates both the imgs and slides arrays.</p>
+			<p>A better way to organize this data is as an object:</p>
+			<pre><code>var slides = [
+	{
+		img: "cat1.jpg",
+		label: "I am a cat."
+	},
+	{	
+		img: "cat2.jpg",
+		label: "I'm wearing a sweater."
+	},
+	{
+		img: "cat3.jpg",
+		label: "I'm hungry."
+	}
+];</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>This way we can loop over one slides array, instead of both the imgs and labels arrays:</p>
+			<pre><code>for (var i = 0; i < slides.length; i++) {
+    var s = slides[i];
+    var $d = $("&lt;div&gt;")
+        .attr("id", "s"+i)
+        .addClass("slide");
+
+    var $img = $("&lt;img&gt;")
+        .attr("src", "imgs/" + s.img);
+    
+    var $label = $("&lt;div&gt;")
+        .addClass("label")
+        .html(s.img);
+    
+    $d.append($img).append($label);
+    
+    $slideshow.append($d);
+    slide.elem = $d;
+}</pre></code>
+		</div>
+
+		<div class="slide">
+			<p>Writing JSON is similar to creating an object like this within a JavaScript document, but JSON can be written as it's own file and then loaded into JavaScript, allowing you to separate the data and functionality of the program.</p>
+			<p><strong>slides.json</strong> might look like this:</p>
+			<pre><code>{ slides: [
+	{
+		img: "cat1.jpg",
+		label: "I am a cat."
+	},
+	{	
+		img: "cat2.jpg",
+		label: "I'm wearing a sweater."
+	},
+	{
+		img: "cat3.jpg",
+		label: "I'm hungry."
+	}
+]};</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>That information can be loaded into a program using the jQuery function <code>$.getJSON()</code>.</p>
+			<p><code>getJSON</code> is a asynchronous funtion, meaning that it happens in parallel with the main program thread.  Because of this, we have to make sure that the JSON data is available to the function it is being used in, typically by implementing with in the callback funciton of a <code>getJSON</code> call.  A callback function is a function that's passed into to another function to execute once that function has finished executing.  A callback in this case is useful because we can tell the program to only execute our code once the function has been called.</p>
+			<pre><code>$.getJSON("slides.json", function( data ) {
+	console.log(data);
+});</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>For our demo today, we'll create a JSON file with information about our class GitHub pages and populate a webpage with that information.</p>
+		</div>
+
+	</div>	
+</body>
+</html>

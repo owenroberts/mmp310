@@ -135,7 +135,8 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Midterm workshop
 
 **Week 10: Objects**
-- JavaScript Objects
+- [JavaScript Objects](https://owenroberts.github.io/mmp310/week10/)
+- [JSON](https://owenroberts.github.io/mmp310/week10/json.html)
 - Midterm presentations
 
 **Week 11: JSON & APIs**
