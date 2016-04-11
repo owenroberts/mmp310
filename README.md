@@ -140,7 +140,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Midterm presentations
 
 **Week 11: JSON & APIs**
-- JavaScript APIs & JSON
+- [JavaScript APIs & JSON](https://owenroberts.github.io/mmp310/week11/)
 - Final Project
 	- Can be in groups of 2 or invididual
 	- Using API data for a web application
@@ -148,6 +148,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 		- Data visualization: using maps or API data
 		- User interface for task list or app using localStorage
 	- Stylesheet for project must include styles for every element used 
+	- [Example APIs](https://github.com/toddmotto/public-apis)
 
 **Week 12: Libraries**
 - Libraries TBA
