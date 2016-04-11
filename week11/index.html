@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title>MMP 310</title>
+	<meta charset="utf-8" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
+	<script src="../slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
+	<script src="../slides/p5.min.js"></script>
+	<script src="../slides/bkg.js"></script>
+	<script src="../slides/slides.js"></script>
+</head>
+<body>
+	<div id="container" class="slides">
+		<div class="slide">
+			<h1>JavaScript APIs</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week11/">Week 11</a></p>
+		</div>
+
+		<div class="slide">
+			<p>API stands for <note>Application Programming Interface</note>.</p>
+			<p>APIs are used to provide a set of protocols and patterns for building software and applications.  Often they allow programmers to interact with a specific database, hardware or software.</p>
+			<p>We're going to look at a very simple API today, the <a href="http://omdbapi.com/" target="blank">Open Movie Database</a>, a resource for movie information and media that is built on user contributions.  The OMDb is a (mostly) free resource, and full access can be gained by donating money (this is just for poster images).</p>
+		</div>
+
+		<div class="slide">
+			<p>Simple OMBd synatax:</p>
+			<pre><code>http://www.omdbapi.com/?t=Space Jam</code></pre>
+			<p>Paste that into the browser window and you will see some simple JSON.</p>
+		</div>
+
+		<div class="slide">
+			<p>To use that in our own webpage, we can use a jQuery <code>$.getJSON</code> request:</p>
+			<pre><code><c></c>$.getJSON('http://www.omdbapi.com/?t=Space Jam', function(json){  
+  console.log(json);
+});</code></pre>
+			
+		</div>
+		<div class="slide">
+			<p>We can use this information as part of our quiz show or another application.</p>
+			<pre><code><c></c>$.getJSON('http://www.omdbapi.com/?t=Jurassic Park', function(json){  
+  console.log(json);
+});</code></pre>
+		</div>
+	</div>	
+</body>
+</html>
