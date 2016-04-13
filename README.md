@@ -141,6 +141,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 
 **Week 11: JSON & APIs**
 - [JavaScript APIs & JSON](https://owenroberts.github.io/mmp310/week11/)
+- [JavaScript localStorage](https://owenroberts.github.io/mmp310/week11/localstorage.html)
 - Final Project
 	- Can be in groups of 2 or invididual
 	- Using API data for a web application
