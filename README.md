@@ -152,8 +152,19 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 	- [Example APIs](https://github.com/toddmotto/public-apis)
 
 **Week 12: Libraries**
-- Libraries TBA
-- Final project workshop
+- [d3 intro](https://owenroberts.github.io/mmp310/week12/)
+- Final project proposal
+	- Submit blog post of PDF document with:
+		- Group members (if group)
+		- Type of project: Game, data visualization, user interface
+		- Libraries, APIs being used
+		- Project goals
+			- User audience
+			- Program outline
+		- Design theme
+			- Color scheme
+			- Typography
+			- Layout
 
 **Week 13: Libraries Part 2**
 - Libraries TBA
