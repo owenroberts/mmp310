@@ -87,7 +87,7 @@ if ( player.collide(platform) ) {
 		</div>
 
 		<div class="slide">
-			<p>For the last part, let's add an obstacle.</p>
+			<p>To make it more interesting, let's add an obstacle.</p>
 			<pre><code>var obstacle; // global var
 // instantiate in setup
 obstacle = createSprite(300, height, 60, 40);
@@ -95,6 +95,27 @@ obstacle = createSprite(300, height, 60, 40);
 if ( player.collide(obstacle) ) {
 	player.remove();
 }</code></pre>
+		</div>
+		
+		<div class="slide">
+			<p>Now we need to make the player jump to avoid the obstacle. Start with a global jump value (how high the player will jump) and a boolean to keep track if the player is jumping:</p>
+			<pre><code>var jump = 20;
+var jumping = false;</code></pre>
+			<p>Then, after applying gravity and testing if the player is on the platform, add a key listener for the jump and apply the jump force to the y axis:</p>
+			<pre><code>if ( keyDown( "space" ) && !jumping ) {
+	player.velocity.y -= jump;
+	jumping = true;
+}</code></pre>
+			<p>We only want to let the player jump if it's on the ground.  Otherwise the player would be able to fly!</p>
+		</div>
+		
+		<div class="slide">
+			<p>Then, we need to reset the jumping boolean if the player lands again:</p>
+			<pre><code>if ( player.collide( platform ) ) {
+	player.velocity.y = 0;
+	if (jumping) jumping = false;
+}</code></pre>
+			<p>When the player hits the platform, we ask if it was jumping, and if it was, we set jumping back to false.  This way the player can jump again.</p>
 		</div>
 
 	</div>
