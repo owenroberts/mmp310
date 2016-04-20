@@ -153,6 +153,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 
 **Week 12: Libraries**
 - [d3 intro](https://owenroberts.github.io/mmp310/week12/)
+- [p5 play intro](https://owenroberts.github.io/mmp310/week12/play.html)
 - Final project proposal
 	- Submit blog post of PDF document with:
 		- Group members (if group)

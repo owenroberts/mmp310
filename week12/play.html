@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<title>MMP 310</title>
+	<meta charset="utf-8" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
+	<script src="../slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
+	<script src="../slides/p5.min.js"></script>
+	<script src="../slides/bkg.js"></script>
+	<script src="../slides/slides.js"></script>
+</head>
+<body>
+	<div id="container" class="slides">
+		<div class="slide">
+			<h1>Intro to p5.play</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week12/">Week 12</a></p>
+		</div>
+
+		<div class="slide">
+			<p><a href="http://p5play.molleindustria.org/" target="blank">p5.play</a> is a extension of the JavaScript library p5 that contains support for animation, collision detection, keyboard interactions and other uses for simple game development.  We'll look at some simple examples to get started building a 2d game.</p>
+			<p>If you are unfamiliar with p5, checkout their site here: <a href="http://p5js.org/" target="blank">p5js.org</a>.  p5 is a canvas graphics library based on the Processing programming language.</p>
+		</div>
+
+		<div class="slide">
+			<p>We'll start by downloading the p5 and p5.play libraries and adding them to a new HTML project:</p>
+			<pre><code>&lt;body&gt;
+	&lt;script src="p5.min.js"&gt;&lt;/script&gt;
+	&lt;script src="p5.play.js"&gt;&lt;/script&gt;
+	&lt;script src="game.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Today we'll start simple.  First we'll create a basic p5 setup:</p>
+			<pre><code>function setup() {
+	createCanvas(720,360);
+}
+
+function draw() {
+	background("black");  
+}</code></pre>
+		</div>
+
+		<div class="slide">
+			<p><strong>p5.play</strong> uses <strong>sprites</strong> as a basic unit for characters.  Let's start by adding a player sprite:</p>
+			<pre><code>var player; // global object</code></pre>
+			<p>Set the position and size of the player in <code>setup</code>:</p>
+			<pre><code>player = createSprite(100, 100, 40, 40);</code></pre>
+			<p>Draw sprites in the <code>draw</code> function:</p>
+			<pre><code>drawSprites();</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>We can move our player sprite back and forth using the <code>.velocity</code> property.</p>
+			<p>Add a global speed variable:</p>
+			<pre><code>var speed = 0.5;</code></pre>
+			<p>In draw, detect if the player is pressing a key, and move the player:</p>
+			<pre><code>if ( keyWentDown("a") ) {
+	player.velocity.x -= speed;
+} else if ( keyWentDown("d") ) {
+	player.velocity.x += speed;
+}</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Then we can add gravity, first with a global var:</p>
+			<pre><code>var gravity = 1;</code></pre>
+			<p>Then apply it to the player in <code>draw</code>:</p>
+			<pre><code>player.velocity.y += gravity;</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Now let's add a platform and a collision detector so the player doesn't disappear:</p>
+			<pre><code>var platform; // global var
+// instantiate in setup
+platform = createSprite(width/2, height, width, 20); 
+//detect collision after gravity in draw
+if ( player.collide(platform) ) {
+	player.velocity.y = 0;
+}</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>For the last part, let's add an obstacle.</p>
+			<pre><code>var obstacle; // global var
+// instantiate in setup
+obstacle = createSprite(300, height, 60, 40);
+// if player collides with obstacle, remove player
+if ( player.collide(obstacle) ) {
+	player.remove();
+}</code></pre>
+		</div>
+
+		<div class="slide">
+
+		</div>
+
+		<div class="slide">
+
+		</div>
+
+
+	</div>
+</body>
+</html>
