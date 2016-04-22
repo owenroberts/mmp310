@@ -1,35 +1,37 @@
 //7d1f0e0afb5a3b0cd31cc8f89013abf5
-
-
-$.ajax({
-
-	url: "http://apilayer.net/api/historical?access_key=7d1f0e0afb5a3b0cd31cc8f89013abf5&date=2000-03-31",
-	success: function(data) { 
-		console.log(data);
-	},
-	error: function() { console.log("error"); }
-});
-
-
-var data = [270, 100, 200, 150, 160, 80];
-var colors = ["lightblue", "blue", "lightgreen", "green"];
-
+var months = ["January", "February", "March"];
 var svg = d3.select('#chart')
 	.append('svg')
-	.attr('width', 800)
-	.attr('height', 500);
-d3.select("svg").selectAll("circle")
-	.data(data)
-	.enter().append("circle")
-	.attr("cy", 100)
-	.attr("r", 10 )
-	.attr("cx", 0)
-	.transition()
-	.duration(2000)
-	.attr("cx", function(d) { return d; })
-	;
+	.attr('width', 600)
+	.attr('height', 200);
+var colors = ["blue", "green", "lightgreen"];
 
-d3.xml("cat.svg", "image/svg+xml", function(xml) {  
+var getMonth = function(mo) {
+	
+	return months.indexOf(mo) + 1;
+};
+
+var updateData = function() {
+	var date = $('#year')[0].value + "-0" + getMonth($('#month')[0].value) + "-01";
+	$.ajax({
+		url: "http://apilayer.net/api/historical?access_key=7d1f0e0afb5a3b0cd31cc8f89013abf5&base=CNY&currencies=USD,CNY,EUR&date="+date,
+		success: function(data) { 
+			console.log(data);
+			updateGraphic(data.quotes);
+		},
+		error: function() { console.log("error"); }
+	});
+};
+
+
+var updateGraphic = function(quotes) {
+	var data = [];
+	for (var c in quotes) {
+		data.push( quotes[c] );
+	}
+	console.log(data);
+
+	d3.xml("cat.svg", "image/svg+xml", function(xml) {  
 	var cat = document.importNode(xml.documentElement, true);
 	svg.selectAll('g')
 		.data(data)
@@ -37,9 +39,16 @@ d3.xml("cat.svg", "image/svg+xml", function(xml) {
 		.each(function(){ 
 			this.appendChild(cat.cloneNode(true)); 
 		})
-		.attr('transform', function(d) { return 'translate(' + d + ',100)'; } )
 		.transition()
-		.duration(2000)
+		.duration(1000)
+		.attr('transform', function(d, i) { return 'translate(' + (d*100) + ',100)'; } )
 		.attr("fill", function(d, i) { return colors[i % colors.length]})
 		;
-});
+	});
+};
+
+
+var update = $('#update');
+update.on('click', updateData);
+
+

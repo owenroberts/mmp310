@@ -10,8 +10,8 @@
 
 	<style>
 	 	#chart {
-    		width:800px;
-    		height:500px;
+    		width:600px;
+    		height:200px;
     		border:1px solid lightgray;
     		color:white;
   		}
@@ -21,6 +21,35 @@
 </head>
 <body>
 	<div id="chart"></div>
+	<div id="currency">
+		<select>
+			<option selected="true">USD</option>
+		</select>
+		<select class="cur">
+			<option>USD</option>
+			<option selected="true">CNY</option>
+			<option>EURO</option>
+		</select>
+		<select class="cur">
+			<option>USD</option>
+			<option>CNY</option>
+			<option selected="true">EURO</option>
+		</select>
+	</div>
+	<div id="date">
+		<select id="year">
+			<option>2012</option>
+			<option>2013</option>
+			<option>2014</option>
+			<option>2015</option>
+		</select>
+		<select id="month">
+			<option>January</option>
+			<option>February</option>
+			<option>March</option>
+		</select>
+	</div>
+	<input type="button" value="Update" id="update">
 	<script src="app.js"></script>
 </body>
 </html>
