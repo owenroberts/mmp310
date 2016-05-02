@@ -1,18 +1,53 @@
-//https://www.dashingd3js.com/svg-basic-shapes-and-d3js
 var w = 600;
 var h = 200;
 var svg = d3.select('#chart')
 	.append('svg')
-	.attr('width', 600)
-	.attr('height', 200);
+	.attr('width', w)
+	.attr('height', h);
 var colors = ["blue", "green", "lightgreen"];
-
-
+var minYear = 1950;
+var maxYear = 2020;
+var minRating = 0;
+var maxRating = 5;
 
 var mapVal = function(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 
+/* years */
+for (var year = minYear; year < maxYear; year += 5) {
+	svg.append("line")
+		.attr({
+			x1: mapVal(year, minYear, maxYear, 0, w),
+			y1: 0,
+			x2: mapVal(year, minYear, maxYear, 0, w),
+			y2: h,
+			stroke: "lightgray"
+		});
+	svg.append("text")
+			.text(year)
+			.attr({x: mapVal(year, minYear, maxYear, 0, w), y:h, fill:"lightgray", font:"Helvetica"})
+		;
+}
+
+/* rating */
+for (var rating = 0; rating < 5; rating++) {
+	svg.append("line")
+		.attr({
+			x1: 0,
+			y1: mapVal(rating, 0, 5, h, 0),
+			x2: w,
+			y2: mapVal(rating, 0, 5, h, 0),
+			stroke: "lightgray"
+		});
+}
+
+var title = svg.append("text")
+	.attr({
+		fill:"black",
+		x: 10,
+		y: 10
+	})
 
 var updateData = function() {
 	var dir = $('#director')[0].value;
@@ -26,38 +61,46 @@ var updateData = function() {
 };
 
 var updateGraphic = function(movies) {
+	console.log(movies);
 	var data = [];
-	var min = 2020, max = 0;
 	for (var movie in movies) {
 		data.push({
 			year: movies[movie].release_year,
-			rating: movies[movie].rating
+			rating: movies[movie].rating,
+			title: movies[movie].show_title
 		});
-		if (movies[movie].release_year < min) min = movies[movie].release_year;
-		if (movies[movie].release_year > max) max = movies[movie].release_year;
 	}
 
-	console.log(min, max);
+	var circles = svg.selectAll('circle')
+		.data(data);
 
-		svg.selectAll('circle')
-			.data(data)
-			.enter().append('circle')
-			.attr("fill", function(d, i) { return colors[i % colors.length]})
-			.transition()
-			.duration(1000)
-			.attr('cx', function(d, i) {
-				var mappedYear = mapVal(d.year, min, max, 0, w - 20);
-				return mappedYear ; 
-			} )
-			.attr('cy', function(d, i) {
-				var mappedRating = mapVal(d.rating, 0, 5, h, 0);
-				return mappedRating ; 
-			} )
-			
-			.attr("r", 20)
+	circles.transition()	
+		.attr('cx', function(d) {
+			return mapVal(d.year, minYear, maxYear, 0, w); 
+		})
+		.attr('cy', function(d) {
+			return mapVal(d.rating, 0, 5, h, 0); 
+		})
+		;
 
-			;
+	circles.enter().append('circle')
+		.on("mouseover", function(d) {
+			title.text(d.title);
+		})
+		.attr("fill", function(d, i) { return colors[i % colors.length]})
+		.attr({"cx": 0, "cy": h})
+		.transition()
+		.attr('cx', function(d) {
+			return mapVal(d.year, minYear, maxYear, 0, w); 
+		})
+		.attr('cy', function(d) {
+			return mapVal(d.rating, 0, 5, h, 0); 
+		})
+		.attr("r", 5)
 
+		;
+
+	circles.exit().remove();
 };
 
 
