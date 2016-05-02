@@ -1,38 +1,69 @@
-//7d1f0e0afb5a3b0cd31cc8f89013abf5
-var months = ["January", "February", "March"];
+//https://www.dashingd3js.com/svg-basic-shapes-and-d3js
+var w = 600;
+var h = 200;
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+var countries = [];
 var svg = d3.select('#chart')
 	.append('svg')
 	.attr('width', 600)
-	.attr('height', 200);
+	.attr('height', 250);
 var colors = ["blue", "green", "lightgreen"];
-
+var cat;
+d3.xml("cat.svg", "image/svg+xml", function(xml) {  
+	cat = document.importNode(xml.documentElement, true);
+});
 var getMonth = function(mo) {
-	
 	return months.indexOf(mo) + 1;
 };
 
+var mapVal = function(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
+svg.append("line")	
+	.attr({x1: 0, y1: 1, x2: w, y2: 1, stroke:"lightgray"});
+
+
+
 var updateData = function() {
-	var date = $('#year')[0].value + "-0" + getMonth($('#month')[0].value) + "-01";
+	var base = $('#base')[0].value;
+
 	$.ajax({
-		url: "http://apilayer.net/api/historical?access_key=7d1f0e0afb5a3b0cd31cc8f89013abf5&base=CNY&currencies=USD,CNY,EUR&date="+date,
-		success: function(data) { 
-			console.log(data);
-			updateGraphic(data.quotes);
+		url: "http://api.fixer.io/latest?base="+base,
+		success: function(data) {
+			updateGraphic(data.rates);
 		},
 		error: function() { console.log("error"); }
 	});
 };
 
 
-var updateGraphic = function(quotes) {
+var updateGraphic = function(rates) {
+	console.log(rates);
 	var data = [];
-	for (var c in quotes) {
-		data.push( quotes[c] );
+	var min = 100, max = 0;
+	for (var country in rates) {
+		if (rates[country] < 100) {
+			data.push({
+				country: country,
+				rate: rates[country]
+			});
+			if (rates[country] < min) min = rates[country];
+			if (rates[country] > max) max = rates[country];
+		}
+		
 	}
-	console.log(data);
 
-	d3.xml("cat.svg", "image/svg+xml", function(xml) {  
-	var cat = document.importNode(xml.documentElement, true);
+	console.log(min, max);
+
+	var unit = mapVal(1, min, max, h, 0);
+	svg.select("line")
+		.transition()
+		.duration(2000)
+		.attr({x1: 0, y1: unit, x2: w, y2: unit, stroke:"lightgray"});
+
+
 	svg.selectAll('g')
 		.data(data)
 		.enter().append('g')
@@ -41,10 +72,13 @@ var updateGraphic = function(quotes) {
 		})
 		.transition()
 		.duration(1000)
-		.attr('transform', function(d, i) { return 'translate(' + (d*100) + ',100)'; } )
+		.attr('transform', function(d, i) {
+			var mapped = mapVal(d.rate, min, max, 0, h);
+			return 'translate(' + i * w/data.length + ', ' + (h - mapped) + ') scale(0.3)'; 
+		} )
 		.attr("fill", function(d, i) { return colors[i % colors.length]})
 		;
-	});
+	
 };
 
 

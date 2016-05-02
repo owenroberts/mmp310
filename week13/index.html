@@ -18,8 +18,28 @@
 <body>
 	<div id="container" class="slides">
 		<div class="slide">
-			<h1>d3 + api</h1>
-			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week12/">Week 12</a></p>
+			<h1>d3 + API</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week13/">Week 13</a></p>
+		</div>
+
+		
+
+		<div class="slide">
+			<p>To generate the HTML for the all of the countries that could be selected as the base currency, I'll run the script to generate the HTML once and then copy and paste it from the inspector into my HTML page.  This way I don't have to load it every time:
+			<pre><code>$.ajax({
+	url: "http://api.fixer.io/latest",
+	success: function(data) {
+		for (var country in data.rates) {
+			var option = $('<option>')
+				.attr({value:country})
+				.text(country);
+				
+			$("#base").append(option);
+		}
+	},
+	error: function() { console.log("error"); }
+});</option></code>
+			<p>The default base is "EUR", so I added that one manually.</p>
 		</div>
 
 		

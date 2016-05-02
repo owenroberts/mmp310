@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Intro to D3</title>
+	<title>d3 + API</title>
 	<meta charset="utf-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 	<script src="d3.min.js"></script>
 
 	<style>
@@ -21,35 +20,11 @@
 </head>
 <body>
 	<div id="chart"></div>
-	<div id="currency">
-		<select>
-			<option selected="true">USD</option>
-		</select>
-		<select class="cur">
-			<option>USD</option>
-			<option selected="true">CNY</option>
-			<option>EURO</option>
-		</select>
-		<select class="cur">
-			<option>USD</option>
-			<option>CNY</option>
-			<option selected="true">EURO</option>
-		</select>
+	<div>
+		<input id="director" placeholder="Search director">
 	</div>
-	<div id="date">
-		<select id="year">
-			<option>2012</option>
-			<option>2013</option>
-			<option>2014</option>
-			<option>2015</option>
-		</select>
-		<select id="month">
-			<option>January</option>
-			<option>February</option>
-			<option>March</option>
-		</select>
-	</div>
+
 	<input type="button" value="Update" id="update">
-	<script src="app.js"></script>
+	<script src="movies.js"></script>
 </body>
 </html>

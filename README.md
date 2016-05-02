@@ -168,7 +168,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 			- Layout
 
 **Week 13: Libraries Part 2**
-- Libraries TBA
+- [d3 with API data](https://owenroberts.github.io/mmp310/week13/)
 - Final project workshop
 
 **Week 14: Review**
