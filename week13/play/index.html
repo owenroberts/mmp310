@@ -20,10 +20,17 @@ function setup() {
 	player = createSprite(100, 100, 40, 40);
 	platform = createSprite(width/2, height, width, 20);
 	obstacle = createSprite(300, height, 60, 40);
+    
+    var player_sprites = loadSpriteSheet("player.png", 128, 128, 8);
+    var player_walk = loadAnimation(player_sprites);
+    
+    player.addAnimation("walk", player_walk);
 }
 
 function draw() {
 	background("black");
+    
+    
 
 	if ( keyDown("a") ) {
 		player.velocity.x -= speed;
