@@ -8,57 +8,86 @@
 	<script src="p5.min.js"></script>
 	<script src="p5.play.js"></script>
 	<script>
-var player;
-var speed = 0.1;
+var player
+var player_walk_sprites, player_walk, player_stand_sprites, player_stand;
+
+var speed = 5;
 var slow = 0.07;
 var gravity = 0.1;
-var jump = 4;
-var platform;
-var obstacle;
+var jump = 6;
+var jumping = true;
+var platform, ground;
+var obstacle, fire;
+
+var groundX = 0;
+
+function preload() {
+	player_walk_sprites = loadSpriteSheet("player.png", 128, 128, 8);
+	player_walk = loadAnimation(player_walk_sprites);
+	player_stand_sprites = loadSpriteSheet("player.png", 128, 128, 1);
+	player_stand = loadAnimation(player_stand_sprites);
+
+	fire = loadImage("fire.png");
+	ground = loadImage("ground.png");
+}
+
 function setup() {
-	createCanvas(720,360);
-	player = createSprite(100, 100, 40, 40);
-	platform = createSprite(width/2, height, width, 20);
-	obstacle = createSprite(300, height, 60, 40);
-    
-    var player_sprites = loadSpriteSheet("player.png", 128, 128, 8);
-    var player_walk = loadAnimation(player_sprites);
-    
-    player.addAnimation("walk", player_walk);
+	createCanvas(1024,360);
+	
+	player = createSprite(100, 10);
+	player.addAnimation("walk", player_walk);
+	player.addAnimation("stand", player_stand);
+	player.setCollider("circle", 0, 0, 64, 64);
+
+	platform = createSprite(width/2, height, width*2, 20);
+	platform.addImage(ground);
+
+	
+	obstacle = createSprite(400, height);
+	obstacle.addImage(fire);
+	obstacle.setCollider("circle", 0, 0, 64, 64);
+
 }
 
 function draw() {
 	background("black");
-    
-    
 
-	if ( keyDown("a") ) {
-		player.velocity.x -= speed;
-	} else if ( keyDown("d") ) {
-		player.velocity.x += speed;
-	} else {
-		if (player.velocity.x > 0) {
-			player.velocity.x -= slow;
-		} else if (player.velocity.x < 0) {
-			player.velocity.x += slow;
-		}
+	
+
+	if ( keyDown("space") && !jumping) {
+		player.velocity.y -= jump;
+		jumping = true;
 	}
 
-	if ( keyWentDown("space") ) {
-		player.velocity.y -= jump;
+	if ( keyDown("d")) {
+		obstacle.position.x -= speed;
+		platform.position.x -= speed;
+		if (!jumping) player.changeAnimation("walk");
+		else player.changeAnimation("stand");
+	} else {
+		player.changeAnimation("stand");
 	}
 
 	player.velocity.y += gravity;
+
+	if (platform.position.x < 0) platform.position.x = width/2;
+	if (obstacle.position.x < -obstacle.width/2) obstacle.position.x = random(width, 2*width);
+
 	
 	if ( player.collide(platform) ) {
 		player.velocity.y = 0;
+		jumping = false;
 	}
 
 	if ( player.collide(obstacle) ) {
-		player.remove();
+		player.position.x = 100;
+		player.position.y = 0;
+		player.velocity.x = 0;
 	}
 
 	drawSprites();
+
+	
 }
 
 	</script>
