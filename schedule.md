@@ -17,7 +17,7 @@ dek: Schedule with class notes & assignments
 	- Download [this archive](week1/example/example.zip)
 	- Do not edit HTML file
 	- Use CSS and JavaScript files
-	- Create a design using images, colors, font styles and interactivity
+	- Create a design/collage using images, colors, font styles and interactivity
 	- We will choose a theme in class
 	- Upload to GitHub Pages later
 - [Intro to command line / Git](week1/git.html)

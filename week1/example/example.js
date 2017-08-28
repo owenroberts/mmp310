@@ -1,1 +1,1 @@
-/* javascript goes here */
+/* javascript  */
