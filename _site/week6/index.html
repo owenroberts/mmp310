@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+	<title>MMP 310 - Week 6</title>
+	<meta charset="utf-8" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
+	<script src="../slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
+	<script src="../slides/p5.min.js"></script>
+	<script src="../slides/bkg.js"></script>
+	<script src="../slides/slides.js"></script>
+</head>
+<body>
+	<div id="container" class="slides">
+		<div class="slide">
+			<h1>Document Object Model</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week6">Week 6</a></p>
+		</div>
+
+		<div class="slide">
+			<p>Start here:</p>
+			<pre><code><c></c>document</code></pre>
+			<p>Look familiar?  This is our HTML document, interpreted as a node structure by the Document Object Model.</p>
+			<p>We'll discuss <code>objects</code> in a couple of weeks (sounds like I say that a lot huh?), but for now, we just need to know that objects have methods and properties (like arrays, which we talk about last week, which are objects, like everything else in JavaScript... but we don't really know what objects are...)</p>
+		</div>
+
+		<!--  writing stuff to dom / what is the dom? -->
+		<div class="slide">
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="blank">DOM</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples" target="blank">DOM Examples</a></li>
+			</ul>
+		</div>
+
+		<div class="slide">
+			<p>Okay, let's try a couple more lines:</p> 
+			<pre><code><c></c>document.body
+<c></c>document.body.style
+<c></c>document.body.style.color = "purple";</code></pre>
+		</div>
+			
+		<div class="slide">
+			<p>We could write our entire HTML document this way...</p>
+			<pre><code><c></c>var elem = document.createElement("h1");
+<c></c>elem.innerHTML = "JavaScript is kewl!";
+<c></c>document.body.appendChild(elem);</code></pre>
+ 			<p>...but its easier to write some HTML and then modify it with JavaScript.</p>
+		</div>
+
+		<div class="slide">
+			<p>For every node in the DOM, there are many <note>properties</note> and <note>methods</note> we can use to create, remove and modify elements of our HTML document.</p>
+		</div>
+		<div class="slide">
+			<p>Referencing elements in the DOM:</p>
+			<pre><code><c></c>document.getElementById("container");
+<c></c>document.getElementsByClassName("slide");
+<c></c>document.getElementsByTagName("p");
+<c></c>document.querySelector(".slide");
+<c></c>document.querySelector("#container");
+<c></c>document.querySelector(".banana");</code></pre>
+		</div>
+		<div class="slide">
+			<p><note>Note</note> the spelling and punctuation of these methods, they have to be written exactly right.</p>
+			<p><code>.getElement</code> is for ids, vs <code>.getElements</code> for class and tag names</p>
+		</div>
+
+		<div class="slide">
+			<p>Creating and appending elements to DOM:</p>
+			<pre><code><c></c>var newslide = document.createElement("div");
+<c></c>newslide.className = "slide";
+<c></c>newslide.id = "newslide";
+<c></c>document.body.appendChild(newslide);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>And removing them:</p>
+			<pre><code><c></c>var newslide = document.getElementById("newslide");
+<c></c>document.body.removeChild(newslide);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>We can access child and parent nodes:</p>
+			<pre><code><c></c>var c = document.querySelector("#container");
+<c></c>console.log(c.firstChild);
+<c></c>console.log(c.lastChild);
+<c></c>console.log(c.childNodes);</code></pre>
+
+		</div>
+
+		<div class="slide">
+			<p>And get the parent node or sibbling node:</p>
+			<pre><code><c></c>var children = c.childNodes;
+<c></c>console.log(children[0].parentNode);
+<c></c>console.log(children[0].previousSibling);
+<c></c>console.log(children[0].nextSibling);</code></pre>
+		</div>
+
+		<div class="slide">
+			<style>
+		        div.elements {
+		          	border:2px dashed #f3f;
+		          	outline:1px solid lightgray;
+		          	margin:10px 20px;
+		          	padding:2px;
+		          	background:#fafafa;
+		        }
+		     </style>
+			<div id="element" class="elements" style="margin-left:0">Ancestor
+	          	<div class="elements">Parent
+	            	<div class="elements">Sibling</div>
+	            	<div class="elements" style="background:blue">Main
+	              		<div class="elements">Child
+	                		<div class="elements">Descendent</div>
+	                		<div class="elements">Descendent</div>
+	              		</div>
+	             	 	<div class="elements">Child
+	                		<div class="elements">Descendent</div>
+	                		<div class="elements">Descendent</div>
+	              		</div>
+	            	</div>
+	           		<div class="elements">Sibling</div>
+	    		</div>
+	    	</div>
+		</div>
+
+
+		<div class="slide">
+			<p>Creating and modifying style and content:</p>
+			<pre><code><c></c>var newslide = document.createElement("div");
+<c></c>newslide.className = "slide";
+<c></c>newslide.innerHTML = "This is a new slide!";
+<c></c>newslide.style.color = "red";
+<c></c>c.appendChild(newslide);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>You can access any style in any element:</p>
+			<pre><code><c></c>var c = document.getElementById("container");
+<c></c>c.style.color = "green";</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Add an image to the document:</p>
+			<pre><code><c></c>var img = new Image();
+<c></c>img.src = "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg";
+<c></c>var elem = document.createElement("div");
+<c></c>elem.appendChild(img);
+<c></c>c.appendChild(elem);</code></pre>
+		</div>
+
+
+
+
+		<div class="slide">
+			<p>The DOM also supports many <note>events</note>, which we will discuss in the <a href="events.html">next section</a>.</p>
+		</div>
+
+	</div>	
+</body>
+</html>

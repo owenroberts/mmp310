@@ -1,0 +1,63 @@
+---
+layout: slides
+title: MMP 310 
+week: 1
+dek: Publishing with GitHub
+---
+<div class="slide">
+	<h2>Getting started</h2>
+	<p>Using GitHub as a publishing tool helps us do a few things:</p>
+	<ul>
+		<li>Learn git!  This is a very valuable and marketable tool.</li>
+		<li>Collaborate easily.</li>
+		<li>Publish simple webpages online for free.</li>
+	</ul>
+</div>
+<div class="slide">
+	<h2>What is <a href="https://github.com/" target="blank">GitHub</a>?</h2>
+	<ul>
+		<li>Hosting for git repositories</li>
+		<li>Social network for code</li>
+	</ul>
+</div>
+<div class="slide">
+	<p>Sign up at <a href="http://github.com" target="blank">GitHub.com</a></p>
+	<img src="github/signup.png">
+	<p>Use an email you can check, you will have to confirm your email.</p>
+</div>
+
+<div class="slide">
+	<img src="github/create.png">
+</div>
+
+<div class="slide">
+	<img src="github/name.png" alt="name">	
+	<p>Add a repo name, description and initialize with a README.md</p>
+</div>
+
+<div class="slide">
+	<img src="github/readme.png">
+</div>
+
+<div class="slide">
+	<img src="github/remote.png" alt="">
+	<p>Copy the remote address from the "Clone or download" dropdown.</p>
+	<p>We will add this remote to our repo using the <code>git remote add origin</code> command in Terminal.</p>
+</div>
+
+<div class="slide">
+	<p>We're going to use <a href="https://pages.github.com/" target="blank">GitHub Pages</a> to publish the repo.</p>
+	<p>Navigate to the Settings tab on the GitHub repo page and scroll down to the to the GitHub Pages section.  Click the dropdown under <note>Source</note> and choose the <note>master</note> branch.</p>
+	<img src="github/master.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Your website will be published at the URL <code>&lt;username&gt;.github.io/&lt;reponame&gt;</code> where your username is you GitHub acount and the repo name is whatever you named your repository.</p>
+	<img src="github/names.png" alt="">
+	<img src="github/url.png" alt="">
+</div>
+
+<div class="slide">
+	<p>When you make changes to your site, you can use <code>git commit</code> to add a new snapshot to your repo and then <code>push</code> the changes to the <code>remote</code> GitHub repo, and it will publish the new version.</p>
+	<p>Remember to always write a new commit message that describes the changes you have made.</p>
+</div>

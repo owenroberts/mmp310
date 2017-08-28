@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+	<title>MMP 310 - Week 4</title>
+	<meta charset="utf-8" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../slides/highlight/github-gist.css" type="text/css" />
+	<script src="../slides/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<link rel="stylesheet" href="../slides/slides.css" type="text/css" />
+	<script src="../slides/p5.min.js"></script>
+	<script src="../slides/bkg.js"></script>
+	<script src="../slides/slides.js"></script>
+</head>
+<body>
+	<div id="container" class="slides">
+		<div class="slide">
+			<h1>Arrays, math, random</h1>
+			<p><a href="https://github.com/owenroberts/mmp310">MMP 310</a> > <a href="https://github.com/owenroberts/mmp310/tree/master/week4">Week 4</a></p>
+		</div>
+
+		<div class="slide">
+			<p>When we covered datatypes, we talked about <note>arrays</note> and how to get and set the elements in an array.  Arrays also have methods and properties that help us manipulate them.</p>
+			<p>A <note>method</note> is a function that is associated with an object.</p>
+			<p>A <note>property</note> is a variable value associated with an object.</p>
+			<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="blank">Array on MDN</a></li></ul>
+		</div>
+
+		<div class="slide">
+			<pre><code><c></c>var a = ["cat", "dog", "alligator"];
+<c></c>console.log(a.length);
+<c></c>var i = a.indexOf("dog");
+<c></c>console.log(i);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p><code>.length</code> is a property, because it just stores one value, the number of elements in the array.</p>
+			<p><code>.indexOf()</code> is a method, because, like a function, it takes an argument and runs a block of code which returns a value.</p>
+			<pre><code>console.log(a.indexOf);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Like the <note>array</note> object, JavaScript also has a <note>Math</note> global object, which contains basic methods for manipulating numbers.</p>
+			<p>We can use the Math object to generate random numbers.</p>
+			<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="blank">Math</a></li></ul>
+		</div>
+		<div class="slide">
+			<p><code>Math.random()</code> generates a random number between 0 and 1.</p>
+			<pre><code><c></c>var n = Math.random();
+<c></c>console.log(n);
+<c></c>a[n];
+<c></c>a[0];</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Floating point numbers are not very useful for getting an element from an array, which indexes by ints.</p>
+			<p>We can use another Math method, <code>Math.floor()</code> to round the number down:</p>
+			<pre><code><c></c>var n = Math.floor(Math.Random());
+<c></c>console.log(n);
+<c></c>a[n];</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>We need to adjust the range of our random values.  Instead of a number between 0 and 1, we want a number between 0 (the first index of the array) and the last index of the array, or <code>array.length</code></p>
+			<pre><code><c></c>var n = Math.floor(Math.random() * a.length));
+<c></c>console.log(n);
+<c></c>a[n];</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>This is a common pattern in JavaScript.</p>
+			<pre><code><c></c>var a = ["cat", "dog", "alligator"];
+<c></c>a[Math.floor(Math.random() * a.length)];</code></pre>
+
+	</div>
+</body>
+</html>

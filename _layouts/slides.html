@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title>{{page.title}} - Week {{page.week}}</title>
+{% include meta.html %}
+{% include base.html %}
+{% include slides.html %}
+</head>
+<body>
+	<div id="container" class="slides language-js">
+		<div class="slide">
+			<h1>{{page.dek}}</h1>
+			<p><a href="{{site.github.url}}/">MMP 310</a> > <a href="{{site.github.url}}/schedule.html#week-{{page.week}}">Week {{page.week}}</a></p>
+		</div>
+		{{ content }}
+	</div>
+</body>  
+</html>  

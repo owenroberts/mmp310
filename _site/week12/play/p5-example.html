@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intro to p5.play</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script src="p5.min.js"></script>
+	<script src="p5.play.js"></script>
+	<script>
+var player;
+var speed = 0.1;
+var slow = 0.07;
+var gravity = 0.1;
+var jump = 4;
+var platform;
+var obstacle, fire;
+function setup() {
+	createCanvas(720,360);
+	player = createSprite(100, 100, 40, 40);
+	platform = createSprite(width/2, height, width, 20);
+	obstacle = createSprite(300, height, 60, 40);
+}
+
+function draw() {
+	background("black");
+
+	if ( keyDown("a") ) {
+		player.velocity.x -= speed;
+	} else if ( keyDown("d") ) {
+		player.velocity.x += speed;
+	} else {
+		if (player.velocity.x > 0) {
+			player.velocity.x -= slow;
+		} else if (player.velocity.x < 0) {
+			player.velocity.x += slow;
+		}
+	}
+
+	if ( keyWentDown("space") ) {
+		player.velocity.y -= jump;
+	}
+
+	player.velocity.y += gravity;
+	
+	if ( player.collide(platform) ) {
+		player.velocity.y = 0;
+	}
+
+	if ( player.collide(obstacle) ) {
+		player.remove();
+	}
+
+	drawSprites();
+}
+
+	</script>
+</body>
+</html>
