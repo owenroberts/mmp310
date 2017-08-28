@@ -16,6 +16,8 @@ The class notes, schedule and assignments are all found here.
 <a href="https://docs.google.com/document/d/1JE20usDOF3X6s2_0kL1T2oNvCwpqa74U5mKGhw4AfAI/edit?usp=sharing
 " target="blank">Class syllabus</a>
 
+<a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
+
 ## Fall 2017
 
 - Instructor: Owen Roberts
