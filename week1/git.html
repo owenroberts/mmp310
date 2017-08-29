@@ -2,51 +2,16 @@
 layout: slides
 title: MMP 310
 week: 1
-dek: Git, GitHub, Command line
+dek: Command line & Git
 ---
 
 <div class="slide">
-	<h2>What is <a href="https://git-scm.com/" target="blank">Git</a>?</h2>
-	<ul>
-		<li>Source code management system</li>
-		<li>Distributed version control system</li>
-		<li>A collaboration tool for developers</li>
-		<li>"Version control" means it keeps track of the changes and contributions to a code base or set of files</li>
-		<li>"Distributed" means all users have a copy of the code repository</li>
-	</ul>
-</div>
-
-
-
-<div class="slide">
-	<h2>Where is Git?</h2>
-	<p>Git is a group of files that are hidden on your computer.</p>
-	<img src="git/hiddenfiles.png" alt="">
-	<p>When you create a new Git repository, Git will create a <code>.git</code> folder, which is hidden by default.  So you don't have to think about Git when you're looking at your project, but you know it's there. A set of files is referred to as a <code>repo</code> or <code>repository</code>.</p>
-</div>
-
-<div class="slide">
-	<h2>How to use Git</h2>
-	<ul>
-		<li>Git is written to be used on the Linux command line, but because it is free and open source there are tools like GitHub that use interfaces to interact with git.</li>
-		<li>Command line requires learning a little Unix but it's typically the best and most efficient way to interact with Git.  It's also the only way to access all of Git's features.</li>
-		<li>GitHub's web interface allows the user to download, upload and edit code as well as forking and branching.</li>
-		<li>GitHub's desktop client is a GUI interface for Git that is a little limited but can be a good place to start for visual learners</li>
-	</ul>
-</div>
-
-<!-- <div class="slide">
-	<p>GitHub has an interface to upload files that will act like a command line commit by tracking changes.  You can upload new files and write a commit message.</p>
-	<img src="git/upload.png" alt="">
-</div>
-
-<div class="slide">
-	<p>GitHub also has a <a href="https://desktop.github.com/" target="blank">Desktop client</a>.  The functionality is limited, but you can do basic things like sync your files, write commit messages and view your history.  This can be a good interface for visual students to start using.</p>
-	<img src="git/client.png" alt="">
-</div> -->
-
-<div class="slide">
 	<h2>Command line basics</h2>
+	<p>On OSX, the command line is accessed through the Terminal program.</p>
+	<img src="git/terminal_finder.png" alt="">
+</div>
+
+<div class="slide">
 	<p>The command line is the only interface that offers the full functionality of Git.  Using the command line requires some basic familiarity with <a href="http://www.ee.surrey.ac.uk/Teaching/Unix/unixintro.html" target="blank">Unix</a> and Git commands.</p>
 	<img src="git/terminal.png" alt="terminal image">
 </div>
@@ -109,6 +74,50 @@ dek: Git, GitHub, Command line
 </div>
 
 <div class="slide">
+	<h2>What is <a href="https://git-scm.com/" target="blank">Git</a>?</h2>
+	<ul>
+		<li>Source code management system</li>
+		<li>Distributed version control system</li>
+		<li>A collaboration tool for developers</li>
+		<li>"Version control" means it keeps track of the changes and contributions to a code base or set of files</li>
+		<li>"Distributed" means all users have a copy of the code repository</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h2>How to use Git</h2>
+	<ul>
+		<li>Git is written to be used on the Linux command line, but because it is free and open source there are tools like GitHub that use interfaces to interact with git.</li>
+		<li>Command line requires learning a little Unix but it's typically the best and most efficient way to interact with Git.  It's also the only way to access all of Git's features.</li>
+		<li>GitHub's web interface allows the user to download, upload and edit code as well as forking and branching.</li>
+		<li>GitHub's desktop client is a GUI interface for Git that is a little limited but can be a good place to start for visual learners</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h2>Where is Git?</h2>
+	<p>Git is a group of files that are hidden on your computer.</p>
+	<img src="git/hiddenfiles.png" alt="">
+	<p>When you create a new Git repository, Git will create a <code>.git</code> folder, which is hidden by default.  So you don't have to think about Git when you're looking at your project, but you know it's there. A set of files is referred to as a <code>repo</code> or <code>repository</code>.</p>
+</div>
+
+
+
+<!-- <div class="slide">
+	<p>GitHub has an interface to upload files that will act like a command line commit by tracking changes.  You can upload new files and write a commit message.</p>
+	<img src="git/upload.png" alt="">
+</div>
+
+<div class="slide">
+	<p>GitHub also has a <a href="https://desktop.github.com/" target="blank">Desktop client</a>.  The functionality is limited, but you can do basic things like sync your files, write commit messages and view your history.  This can be a good interface for visual students to start using.</p>
+	<img src="git/client.png" alt="">
+</div> -->
+
+
+
+
+
+<div class="slide">
 	<h2>Essential Git commands</h2>
 	<pre><code>$ git init</code></pre>
 	<p>Use git init to initialize a new repository inside the root directory of the repo.</p>
@@ -120,160 +129,6 @@ dek: Git, GitHub, Command line
 	<p>Git status prints the current branch, changes staged for commit, changes to be committed, and any merge errors.  Use <note>git status</note> liberally.</p>
 	<img src="git/status.png" alt="">
 </div>
-
-<div class="slide">
-	<pre><code>$ git log</code></pre>
-	<p>Git log will print previous commits.  There are a lot of helpful options for this command.  You can modify Git commands with Unix parameters.  Parameters are written with one or two dashes and the parameter abbreviation or name.  ie: <note>-v or --version</note>.  To find the options for a specific command use <note>--help</note> or <note>-h</note></p>
-	<pre><code class="html">$ git log -1 // logs most recent commit
-$ git log -2 // two most recent commits
-$ git log -p // shows difference in commits
-</code></pre>
-	<p>More on log: <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" target="blank">Viewing the Commit History</a></p>
-</div>
-		
-<div class="slide">
-	<pre><code>$ git add &lt;path&gt;</code></pre>
-	<p>Git add is used to stage files.  Git keeps track of any files that are added, modified or deleted in the root directory.  In order to commit those changes they must first be staged by adding.</p>
-	<pre><code>$ git add . // adds all new and modified files
-$ git rm &lt;path&gt; // removes files
-$ git add -A // includes manually deleted files
-$ git add &lt;path&gt; // commit specific file or directory
-$ git add index.html
-$ git add css/</code></pre>
-</div>
-
-<div class="slide">
-	<pre><code>$ git commit</code></pre>
-	<p>Commits staged files.  Each commit is referred to as a <note>snapshot</note>.  Snapshots are given unique identifier strings.</p>
-	<pre><code class="html">$ git commit -a // includes modifications to tracked files
-$ git commit -m "initial commit" // adds commit message as parameter</code></pre>
-</div>
-
-<div class="slide">
-	<div data-src="git/master.json"></div>
-	<p>By default each commit will be on the master branch.</p>
-</div>
-
-<!-- <div class="slide">
-	<pre><code>$ git checkout</code></pre>
-	<p>Branching allows you to work on new parts of your code without changing anything in the master or other branches.  You can create a new branch for a new feature, add commits, and then merge back to your master branch. </p>
-	<pre><code>$ git checkout &lt;branch&gt; // checkout a branch
-$ git checkout -b new_feature // create a branch called "new feature"
-$ git checkout master // return HEAD to master branch
-$ git checkout abc123 // checkout a specific commit on the current branch</code></pre>
-	<p><a href="https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is" target="blank">More on branching</a></p>
-</div> 
-
-<div class="slide">
-	<div data-src="git/newfeature.json"></div>
-	<p>Branching adds a new commit and moves the HEAD to the new branch.</p>
-</div>
-<div class="slide">
-	<div data-src="git/branching.json"></div>
-	<p>Commits can be made on the master branch separately from the feature branch.</p>
-</div>
-
-<div class="slide">
-	<pre><code>$ git merge</code></pre>
-	<p>Once you have finished the new feature, you can merge back to the master branch.</p>
-	<pre><code>$ git checkout master
-$ git merge new_feature</code></pre>
-</div>
-
-<div class="slide">
-	<div data-src="git/merge.json"></div>
-	<p>The merge will create a new snapshot on the master branch.</p>
-</div>
-
-<div class="slide">
-	<pre><code>$ git revert
-$ git revert def567</code></pre>
-	<p>Revert will remove the changes from a specific commit.  If that commit occurred several snapshots previous to the HEAD, it will not effect commits that came afterward.</p>
-</div>
-
-<div class="slide">
-	<pre><code>$ git rebase
-$ git rebase master</code></pre>
-	<p>Rebase will copy all of the commits made after a branch was created to the branch.</p>
-</div>
--->
-
-<div class="slide">
-	<h2>Remotes</h2>
-	<p>Once you have created a GitHub account or hosting on another service, you can use remotes to push and pull your git repository to keep your changes current on you local drive and remote server.</p>
-	<pre><code>$ git remote add &lt;remote-name&gt; &lt;url&gt;</code></pre>
-</div>
-
-<div class="slide">
-	<p>If you created your repo on GitHub, it will give you the remote url:</p>
-	<img src="git/remote.png" alt="">
-</div>
-
-<div class="slide">
-	<p>To clone an existing repository you can find the remote address on the GitHub page for the repo.</p>
-	<img src="git/clone.png" alt="">
-</div>
-
-<div class="slide">
-	<p>Or use the clone command.</p>
-	<pre><code class="html">$ git clone http://github.com/&lt;user-name&gt;/&lt;repo-name&gt;.git</code></pre>
-</div>
-
-<div class="slide">
-	<pre><code>$ git config</code></pre>
-	<p>Config is used to configure your account settings for making commits.</p>
-	<pre><code>$ git config --global user.name = "Owen Roberts"
-$ git config --global user.email = oroberts@bmcc.cuny.edu</code></pre>
-</div>
-
-<div class="slide">
-	<p>Once you configuration is set, use push and pull to download new code and add your changes to the remote repository.  Remember to always pull from the origin before attempting to push.</p>
-	<pre><code class="html">$ git pull &lt;remote-name&gt; &lt;branch&gt;
-$ git pull origin master
-$ git add .
-$ git commit -m "adds new feature"
-$ git push origin master</code></pre>
-</div>
-<!-- 
-<div class="slide">
-	<h2>Collaborating with Git</h2>
-	<p>Git repositories can have collaborators and contributors.</p>
-	<p>A colloborator is a user with full access to the original repository.  The user can push, pull and commit changes without permission from the original owner.</p>
-	<p>A contributor makes a copy of the repository by forking and can submit pull requests to be reviewed and accepted by the original creator.</p>
-</div>
-
-<div class="slide">
-	<p>A colloborator can be added through GitHub.com in Settings.</p>
-	<img src="git/collaborator.png" alt="">
-</div>
-
-<div class="slide">
-	<p>A contributor can fork the project from the original repo.</p>
-	<img src="git/fork.png" alt="">
-	<p>The contributor will have their own master branch to work on and create new branches and commits which will not effect the original repo.</p>
-</div>
-
-<div class="slide">
-	<p>Once the contributor is ready to add their code back into the original, they submit a pull request, which the original repo owner can review the new changes and accept.</p>
-	<img src="git/request.png" alt="">
-</div>
-
-<div class="slide">
-	<p>When working on a forked repo you will often have to merge new code from the original repository.  You can create a separate remote and merge new changes as they are updated.</p>
-	<pre><code class="html">$ git remote add upstream &lt;url&gt;
-$ git merge upstream master</code></pre>
-	<p><a href="https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project" target="blank">More on contributing</a></p>
-</div>
-
-<div class="slide">
-	<p>At some point in this process you encounter merge conflicts.  A merge conflict occurs when Git attempts to merge your files but cannot resolve changes that occur on the same lines.  You will be prompted to fix resolve the conflicts and then create a new commit with the updated code.</p>
-	<pre><code><<<<<<<< HEAD
-&lt;p&gt;Welcome to my website!&lt;/p&gt;
-=======
-&lt;p&gt;Welcome to my butt!!!&lt;/p&gt;
->>>>>>> new_feature/code></code></pre>
-</div>
- -->
 
 <div class="slide">
 	<h2>What files to track</h2>
@@ -292,6 +147,45 @@ documentation/*.mov</code></pre>
 </div>
 
 <div class="slide">
+	<h2>add and commit</h2>
+	<pre><code>$ git add &lt;path&gt;</code></pre>
+	<p>Git add is used to stage files.  Git keeps track of any files that are added, modified or deleted in the root directory.  In order to commit those changes they must first be staged by adding.</p>
+	<pre><code>$ git add . // adds all new and modified files
+$ git rm &lt;path&gt; // removes files
+$ git add -A // includes manually deleted files
+$ git add &lt;path&gt; // commit specific file or directory
+$ git add index.html
+$ git add css/</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code>$ git commit</code></pre>
+	<p>Commits staged files.  Each commit is referred to as a <note>snapshot</note>.  Snapshots are given unique identifier strings.</p>
+	<pre><code class="html">$ git commit -a // includes modifications to tracked files
+$ git commit -m "initial commit" // adds commit message as parameter</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Viewing history</h2>
+	<pre><code>$ git log</code></pre>
+	<p>Git log will print previous commits.  There are a lot of helpful options for this command.  You can modify Git commands with Unix parameters.  Parameters are written with one or two dashes and the parameter abbreviation or name.  ie: <note>-v or --version</note>.  To find the options for a specific command use <note>--help</note> or <note>-h</note></p>
+	<pre><code class="html">$ git log -1 // logs most recent commit
+$ git log -2 // two most recent commits
+$ git log -p // shows difference in commits
+</code></pre>
+	<p>More on log: <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" target="blank">Viewing the Commit History</a></p>
+</div>
+		
+
+<div class="slide">
+	<h2>Branching</h2>
+	<div data-src="git/master.json"></div>
+	<p>By default each commit will be on the master branch.  Branching is a complex subject that we will cover more later in the semester.</p>
+</div>
+
+
+<!-- 
+<div class="slide">
 	<h2>Git hell</h2>
 	<p>At some point every Git user will enter Git hell.  You try to push your new commit but you are told to pull first.  You pull.  You resolve the merge conflicts and commit.  You push.  And you're told to pull.  There are other versions of Git hell but they usually involve some sort of loop where you can't commit or push your changes.</p>
 	<p>Don't feel bad and don't freak out!  Don't delete your repo and start over!</p>
@@ -299,4 +193,4 @@ documentation/*.mov</code></pre>
 	<p>Start on stack overflow and try to describe what happened.</p>
 	<p>If you can't solve it on your own email me and we'll figure it out.</p>
 	<!-- tk hell drawing -->
-</div>
+</div> -->

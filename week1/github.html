@@ -27,29 +27,49 @@ dek: Publishing with GitHub
 </div>
 
 <div class="slide">
+	<img src="github/create_new.png" alt="">
+	<p>Once your account is set up, click the <code>+</code> button in the menu bar to create a new repository.  A repo is a source code repository is a file archive and web hosting facility where a large amount of source code, for software or for web pages, is kept, either publicly or privately. They are often used by open-source software projects and other multi-developer projects to handle various versions.</p>
+</div>
+
+<div class="slide">
 	<img src="github/create.png">
+	<p>Add a repository name and description.  For this class, <code>mmp310</code> or <code>classwork310</code> would be fine.</p>
+</div>
+<div class="slide">
+	<p>Copy the remote location of the repo that appears once it is created:</p>
+	<img src="git/remote.png" alt="">
 </div>
 
 <div class="slide">
-	<img src="github/name.png" alt="name">	
-	<p>Add a repo name, description and initialize with a README.md</p>
-</div>
+	<h2>Remotes</h2>
+	<p>Once you have created a GitHub account or hosting on another service, you can use remotes to push and pull your git repository to keep your changes current on you local drive and remote server.</p>
+	<pre><code>$ git remote add &lt;remote-name&gt; &lt;url&gt;
+$ git remote add origin https://github.com/owenbmcc/classwork310.git</code></pre>
+	<p>We will add this remote to our repo using the <code>git remote add origin</code> command in Terminal.</p>
 
-<div class="slide">
-	<img src="github/readme.png">
 </div>
 
 <div class="slide">
 	<img src="github/remote.png" alt="">
-	<p>Copy the remote address from the "Clone or download" dropdown.</p>
-	<p>We will add this remote to our repo using the <code>git remote add origin</code> command in Terminal.</p>
+	<p>For future references, the GitHub remote is available in the Clone/Download dropdown.</p>
 </div>
 
 <div class="slide">
+	<h2>Git push/pull</h2>
+	<p>Once the remote is set, you can use <code>git push</code> to add your initial commit to the remote repo.</p>
+	<pre><code>$ git push origin master
+$ git push &lt;remote&gt; &lt;branch&gt;</code></pre>
+	<p>If you <code>push</code> changes from another source you need to remember to <code>pull</code> those changes into your repo before editing or you will create conflicts or inconsistencies in your code.  In general, it is always a good idea to <code>git pull</code> before editing code and especially before trying to <code>git push</code>.</p>
+</div>
+
+
+<div class="slide">
+	<h2>GitHub Pages</h2>
 	<p>We're going to use <a href="https://pages.github.com/" target="blank">GitHub Pages</a> to publish the repo.</p>
 	<p>Navigate to the Settings tab on the GitHub repo page and scroll down to the to the GitHub Pages section.  Click the dropdown under <note>Source</note> and choose the <note>master</note> branch.</p>
 	<img src="github/master.png" alt="">
 </div>
+
 
 <div class="slide">
 	<p>Your website will be published at the URL <code>&lt;username&gt;.github.io/&lt;reponame&gt;</code> where your username is you GitHub acount and the repo name is whatever you named your repository.</p>
@@ -61,3 +81,41 @@ dek: Publishing with GitHub
 	<p>When you make changes to your site, you can use <code>git commit</code> to add a new snapshot to your repo and then <code>push</code> the changes to the <code>remote</code> GitHub repo, and it will publish the new version.</p>
 	<p>Remember to always write a new commit message that describes the changes you have made.</p>
 </div>
+
+<div class="slide">
+	<h2>Cloning</h2>
+	<p>In order to work on your code from another computer, you need to clone your repo.  You will make a full copy of your code, which you can edit and then push to the same origin.  Then when you return to class you can <code>pull</code> those changes and continue working.</p>
+	<p>To clone an existing repository you can find the remote address on the GitHub page for the repo.</p>
+	<img src="git/clone.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Or use the clone command.</p>
+	<pre><code class="html">$ git clone http://github.com/&lt;user-name&gt;/&lt;repo-name&gt;.git</code></pre>
+</div>
+
+
+<div class="slide">
+	<h2>config</h2>
+	<pre><code>$ git config</code></pre>
+	<p>Config is used to configure your account settings for making commits.  You may need to update your configuration on a new machine.</p>
+	<pre><code>$ git config --global user.name = "Owen Roberts"
+$ git config --global user.email = oroberts@bmcc.cuny.edu</code></pre>
+</div>
+
+<div class="slide">
+	<p>Once you configuration is set, use push and pull to download new code and add your changes to the remote repository.  Remember to always pull from the origin before attempting to push.</p>
+	<pre><code class="html">$ git pull &lt;remote-name&gt; &lt;branch&gt;
+$ git pull origin master
+$ git add .
+$ git commit -m "adds new feature"
+$ git push origin master</code></pre>
+</div>
+
+
+
+
+
+
+
+
