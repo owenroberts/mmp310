@@ -49,7 +49,7 @@ dek: JavaScript input and variables
 
 <!--  variables, how js treats numbers, strings booleans -->
 <div class="slide">
-	<p>Let's review <code>var</code> real quick.</p>
+	<h2>Let's review <code>var</code> real quick.</h2>
 	<p>In Javascript, every variable is declared as <code>var</code> regardless of what type of information it holds.  Soon we will discuss datatypes as they relate to JavaScript.  JavaScript only works with a few basic variable types: numbers, strings and booleans, along with arrays and objects and functions, which can all be declared with <code>var</code>. </p>
 	<p>Variables in JavaScript are more easily converted into each other.  This is called type coercion and we'll talk about that more next week as well.</p>
 	<p>For now, let's write some variables and then keep going.</p>
@@ -71,15 +71,11 @@ dek: JavaScript input and variables
 </div>
 
 <div class="slide">
-	<p>Okay, that was weird...</p>
-	<p>But actually, very useful in someways and of course easy to write!</p>
-	<p>Tricky, but useful...</p>
-</div>
-
-<div class="slide">
-	<p>Anyway, let's do something useful with that variable.</p>
-	<p>With JavaScript, we can take inputs from the user and use them to modify our website or program in ways that we can't do with just HTML and CSS.</p>
-	<p>Let's look at some JavaScript inputs.</p>
+	<h2>Data storage: var, const, let</h2>
+	<p>Creating a <code>var</code> stores information in the computer's memory with the name of the variable as a short code.  Starting in 2015, JavaScript introduced two new keywords for data storage: <code>const</code> and <code>let</code>.</p>
+	<p><code>const</code> is short for <note>constant</note> and it make prevents the rebinding of values.  This means you can't assign a constant the value of 7 and then change it to 20.  Using different types of data storage improves the efficiency of a programming language, which is something that has been criticized about JavaScript since it's creation.</p>
+	<p>More on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="blank">const</a>.</p>
+	<p><code>let</code> is like <code>var</code> but block scoped.  This is a bit more complicated and we'll discuss it more later in the semester.  In theory, all JavaScript programs should be written using only <code>const</code> and <code>let</code>, but <code>var</code> is still acceptable in many cases and will work fine for many of the projects we do in class (plus I would have to rewrite all of my notes...)</p>
 </div>
 
 
@@ -170,12 +166,12 @@ form
 
 <div class="slide">
 	<pre><code><c></c>var borough = document.createElement("select");
-borough.id = "borough";
-var bronx = document.createElement("option");
-bronx.value = "Bronx";
-bronx.innerText = "Bronx";
-borough.add(bronx);
-document.body.insertBefore(borough, button);</code></pre>
+<c></c>borough.id = "borough";
+<c></c>var bronx = document.createElement("option");
+<c></c>bronx.value = "Bronx";
+<c></c>bronx.innerText = "Bronx";
+<c></c>borough.add(bronx);
+<c></c>document.body.insertBefore(borough, button);</code></pre>
 </div>
 
 <div class="slide">
