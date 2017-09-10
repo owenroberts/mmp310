@@ -1,0 +1,6 @@
+description: mmp 310 class website
+baseurl: /mmp310
+# Exclude these files from your production _site
+exclude:
+  - README.md
+  - update.sh

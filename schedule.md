@@ -13,6 +13,7 @@ dek: Schedule with class notes & assignments
 **Week 1: Introduction**
 - Introduce class and syllabus
 - Quick [reivew](week1/) of HTML, CSS and JavaScript, file structure, web architecture
+	- [Class example](week1/review/)
 - **In class exercise**
 	- Download [this archive](week1/example/example.zip)
 	- Do not edit HTML file
@@ -20,6 +21,7 @@ dek: Schedule with class notes & assignments
 	- Create a design/collage using images, colors, font styles and interactivity
 	- We will choose a theme in class
 	- Upload to GitHub Pages later
+
 - [Intro to command line / Git](week1/git.html)
 - [Publishing with GitHub](week1/github.html)
 - **Assignment 1**
@@ -29,6 +31,16 @@ dek: Schedule with class notes & assignments
 		- Style sheet
 		- Menu with links
 	- Upload site to GitHub to publish with GitHub Pages
+
+## Week 2
+**Input & data storage with variables**
+- Review GitHub publishing
+- [JavaScript input & variables](week2/)
+- **Assignment 2**
+	- Use HTML inputs to get user information
+	- Save the information using JavaScript
+	- Give the user a response that shows their information has been captured
+	- Add a stylesheet with original styling for the form
 
 
 <!-- 
