@@ -10,7 +10,7 @@ dek: Schedule with class notes & assignments
 <!-- {% for i in (1..12) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
  -->
 ## Week 1
-**Week 1: Introduction**
+**Introduction**
 - Introduce class and syllabus
 - Quick [reivew](week1/) of HTML, CSS and JavaScript, file structure, web architecture
 	- [Class example](week1/review/)
@@ -36,7 +36,7 @@ dek: Schedule with class notes & assignments
 **Input & data storage with variables**
 - Review GitHub publishing
 - [JavaScript input & variables](week2/)
-- [JavaScript data types](week2/data.html)
+	- (week2/input/)
 - **Assignment 2**
 	- [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
 	- Create a program that takes information from a user and creates a response that tells a story about that user
@@ -49,6 +49,8 @@ dek: Schedule with class notes & assignments
 
 
 <!-- 
+## Week 3
+- [JavaScript data types](week2/data.html)
 
 week5.2 -- else if -- compound comparisons (&& ||)
 
