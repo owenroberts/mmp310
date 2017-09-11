@@ -18,6 +18,11 @@ dek: JavaScript data types
 	</ul>
 </div>
 
+<div class="slide">
+	<p>All types except for <code>objects</code> are considered "primitive values" because they are immutable.  </p>
+	<p>We'll talk about objects as well as arrays, which are special objects in JavaScript in a subsequent class.</p>
+</div>
+
 <!-- number -->
 <div class="slide">
 	<h2>Numbers</h2>
@@ -60,86 +65,75 @@ dek: JavaScript data types
 <c></c>y + x;
 <c></c>x + +y;
 <c></c>x + Number(y);</code></pre>
-		</div>
+</div>
 
-		<!-- boolean -->
-		<div class="slide">
-			<h2>Booleans</h2>
-			<p>Booleans default to the values <code>true</code> and <code>false</code>.  In JavaScript many values will become <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.  Everything else defaults to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
-			<pre><code><c></c>Boolean("");
+<!-- boolean -->
+<div class="slide">
+	<h2>Booleans</h2>
+	<p>Booleans default to the values <code>true</code> and <code>false</code>.  In JavaScript many values will become <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.  Everything else defaults to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
+	<pre><code><c></c>Boolean("");
 <c></c>Boolean(null);
 <c></c>Boolean(4);</code></pre>
-			<p>We'll use booleans when we start working on logic.</p>
-		</div>
+	<p>We'll use booleans when we start working on logic.</p>
+</div>
 
-		<!-- arrays -->
-		<div class="slide">
-			<h2>Arrays</h2>
-			<p>An <code>array</code> is an object that contains a list of values or variables:</p>
-			<pre><code><c></c>var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];
+<div class="slide">
+	<h2>Null and undefined</h2>
+	<p>JavaScript uses <code>null</code> and <code>undefined</code> as distinct values.  <code>null</code> indicates a purposely unassigned value.  <code>undefined</code> indicates a variable that has been instantiated but not assigned with a value.</p>
+	<pre><code><c></c>console.log(y);
+<c></c>var x;
+<c></c>console.log(x);</code>
+</div>
+
+<!-- arrays -->
+<!-- <div class="slide">
+	<h2>Arrays</h2>
+	<p>An <code>array</code> is an object that contains a list of values or variables:</p>
+	<pre><code><c></c>var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];
 <c></c>var decades = [1980, 1990, 2000, 2010, 2020];</code></pre>
-		</div>
-		<div class="slide">
-			<p>In JavaScript, the items in an array can have any datatype, like a number, string, boolean, or even another arrary.  In other languages, the data in an array usually are all of the same type.  The elements of an array are accessed by their index number, starting with <code>[0]</code>.</p>
-		</div>
+</div>
+<div class="slide">
+	<p>In JavaScript, the items in an array can have any datatype, like a number, string, boolean, or even another arrary.  In other languages, the data in an array usually are all of the same type.  The elements of an array are accessed by their index number, starting with <code>[0]</code>.</p>
+</div>
 
-		<div class="slide">
-			<p><code>imgs[0]</code> will return <code>"cat.jpg"</code>.  Like strings, arrays have a <code>length</code> property.  Try creating an array, reading from the list, and returning the length:</p>
-			<pre><code><c></c>var myArray = ["cat", "dog", "alligator"];
+<div class="slide">
+	<p><code>imgs[0]</code> will return <code>"cat.jpg"</code>.  Like strings, arrays have a <code>length</code> property.  Try creating an array, reading from the list, and returning the length:</p>
+	<pre><code><c></c>var myArray = ["cat", "dog", "alligator"];
 <c></c>myArray.length;
 <c></c>myArray[0];
 <c></c>myArray[2];</code></pre>
-		</div>
+</div>
 
-		<div class="slide">
-			<h2>Adding elements to an array</h2>
-			<pre><code><c></c>var imgs = ["cat", "dog", "bird"];
+<div class="slide">
+	<h2>Adding elements to an array</h2>
+	<pre><code><c></c>var imgs = ["cat", "dog", "bird"];
 <c></c>imgs[3] = "alligator";
 <c></c>imgs.push("lion");
 <c></c>imgs.pop();</code></pre>		
-		</div>
+</div> -->
 
-		<div class="slide">
-			<h2>Null and undefined</h2>
-			<p>JavaScript uses <code>null</code> and <code>undefined</code> as distinct values.  <code>null</code> indicates a purposely unassigned value.  <code>undefined</code> indicates a variable that has been instantiated but not assigned with a value.</p>
-			<pre><code><c></c>console.log(y);
-<c></c>var x;
-<c></c>console.log(x);</code>
-		</div>
 
-		<!-- testing type for arrays -->
-		<div class="slide">
-			<h2>Testing type</h2>
-			<p>When using an array, we can assign multiple types of information in one array, so it can be useful to test the type of the array before using the data.</p>
-			<pre><code><c></c>var a = ["hello", "world", 0, 1, 2, 3];
+
+<!-- testing type for arrays -->
+<!-- <div class="slide">
+	<h2>Testing type</h2>
+	<p>When using an array, we can assign multiple types of information in one array, so it can be useful to test the type of the array before using the data.</p>
+	<pre><code><c></c>var a = ["hello", "world", 0, 1, 2, 3];
 <c></c>console.log(typeof a[0]);
 <c></c>console.log(typeof a[4]);
 <c></c>console.log(typeof a[a.length - 1]);</code></pre>
-		</div>
+</div> -->
 
-		<!--  array methods -->
-		<div class="slide">
-			<h2>Array methods</h2>
-			<p>Arrays have some useful methods for manipulation.</p>
-			<pre><code><c></c>var a = ["h", "e", "l", "l", "o"];
+<!--  array methods -->
+<!-- <div class="slide">
+	<h2>Array methods</h2>
+	<p>Arrays have some useful methods for manipulation.</p>
+	<pre><code><c></c>var a = ["h", "e", "l", "l", "o"];
 <c></c>var b = a.join("");
 <c></c>console.log(typeof b);
 <c></c>var c = b.split("");
 <c></c>console.log(typeof c);
 <c></c>Array.isArray(c);
 </code></pre>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2" target="blank">More array methods</a>
-		</div>
-
-		<!-- assignment -->
-
-		<div class="slide">
-			<h2>Assignment 3</h2>
-			<ul>
-				<li>Rewrite your program from Assignment 2 using an array instead of individual variables</li>
-				<li>Post your project on GitHub and sumbit a new URL via Blackboard</li>
-			</ul>
-		</div>
-	</div>
-</body>
-</html>
+	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2" target="blank">More array methods</a>
+</div> -->

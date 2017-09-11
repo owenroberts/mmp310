@@ -36,7 +36,12 @@ dek: Schedule with class notes & assignments
 **Input & data storage with variables**
 - Review GitHub publishing
 - [JavaScript input & variables](week2/)
+- [JavaScript data types](week2/data.html)
 - **Assignment 2**
+	- [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
+	- Create a program that takes information from a user and creates a response that tells a story about that user
+	- The information is usually used in unexpected ways
+	- Use text input or select menus
 	- Use HTML inputs to get user information
 	- Save the information using JavaScript
 	- Give the user a response that shows their information has been captured
@@ -46,6 +51,9 @@ dek: Schedule with class notes & assignments
 <!-- 
 
 week5.2 -- else if -- compound comparisons (&& ||)
+
+- concepts - data, logic, loops, arrays, functions, objects
+- js stuff - dom, events, api/json
 
 loops
 dom
@@ -58,5 +66,30 @@ animation
 threejs?
 game?
 libraries?
+
+seriously need to rework this stuff...
+- no d3 no more p5 stuff
+- maybe another game engine...
+- maybe three.js
+- need to think about order...
+	- data, logic, loops, arrays, function, objects - 
+	- data, logic, functions, loops, arrays, objects - 
+- assignments
+	- madlibs
+		- input, dom, variables, functions
+	- magic 8 ball
+		- input, logic, array
+	- quiz show
+		- input, logic, [array]
+	- timer
+	- user style page
+	- twitter
+	- task list
+	- interactive animation
+	- sol lewitt drawing
+	- json thing
+	- interactive video
+
+	
 
 -->

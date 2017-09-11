@@ -67,7 +67,7 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 - Web applications
 - Object oriented JavaScript
 
-###Schedule
+### Schedule
 **Week 1: Introduction**
 - Introduce class and syllabus
 - [In class refresher exercise](week1/)

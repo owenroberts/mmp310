@@ -6,7 +6,7 @@
 	<li>Post your project on GitHub and sumbit a new URL via Blackboard</li>
 </ul>
 
-##Setting up GitHub Pages
+## Setting up GitHub Pages
 - Last week, using the GitHub app didn't work that well, so we're going to switch to using a Brackets extension
 - Open Brackets, go to **File > Extension Manager...**
 - Search for `"brackets git"` and click **Install** (the one by Martin Zagora)
