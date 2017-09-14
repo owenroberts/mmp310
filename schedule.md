@@ -36,7 +36,7 @@ dek: Schedule with class notes & assignments
 **Input & data storage with variables**
 - Review GitHub publishing
 - [JavaScript input & variables](week2/)
-	- (week2/input/)
+	- [Class example](week2/input/)
 - **Assignment 2**
 	- [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
 	- Create a program that takes information from a user and creates a response that tells a story about that user
