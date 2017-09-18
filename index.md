@@ -1,8 +1,9 @@
 ---
 layout: default
 title: MMP 310 - Home
-desk: Class info, notes and schedule
+dek: Class info, notes and schedule
 ---
+
 # MMP 310: Multimedia Programming II
 
 [Home](index.html) [Schedule](schedule.html)
