@@ -44,6 +44,7 @@ dek: Schedule with class notes & assignments
 ## Week 3
 **Logic**
 - [Data types: Number, String, Boolean](week3/)
+	- [Class Example](https://owenbmcc.github.io/classwork310/input_2/)
 - [Logic](week3/logic.html)
 - **In Class Assignment**
 	- Rewrite Madlibs assignment using a test to verify input
