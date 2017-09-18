@@ -46,12 +46,14 @@ dek: Schedule with class notes & assignments
 - [Data types: Number, String, Boolean](week3/)
 - [Logic](week3/logic.html)
 - **In Class Assignment**
-	- Rewrite Madlib assignment using a test to verify input
+	- Rewrite Madlibs assignment using a test to verify input
 - **Assignment 3: Quiz Program**
 	- Make a quiz with a least three questions
 	- Use `input` or `select` for user input
 	- Use logic to verify user answers and display feedback
 	- Count the total number correct and display results
+	- Extra Credit: Use images as response choices for user
+	- Extra Credit: Give hints to user on wrong response
 
 <!-- 
 
