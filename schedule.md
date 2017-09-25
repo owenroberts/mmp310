@@ -72,6 +72,11 @@ Go to [Home](index.html)
 ## Week 5
 **Loops**
 - [Loops](week5/loops.html)
+- **In class**: Pair programming exercise
+- **Assignment 5: Random password**
+	- Generate a random password for a user using a loop
+	- Program should take a username, number of characters and keyword
+	- Output a randomly generated password with the correct number of characters
 
 <!-- 
 
