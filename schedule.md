@@ -1,14 +1,11 @@
 ---
-layout: default
-title: MMP 210 - Schedule
+layout: main
+title: MMP 310 - Schedule
 dek: Schedule with class notes & assignments
 ---
-# Schedule
 
-[Home](index.html) [Schedule](schedule.html)
+Go to [Home](index.html)
 
-<!-- {% for i in (1..12) %}<a href="#week-{{i}}">Week {{i}}</a> {% endfor %}
- -->
 ## Week 1
 **Introduction**
 - Introduce class and syllabus
@@ -56,28 +53,27 @@ dek: Schedule with class notes & assignments
 	- Extra Credit: Use images as response choices for user
 	- Extra Credit: Give hints to user on wrong response
 
+## Week 4
+**Arrays**
+- [Arrays](week4/array.html)
+- **In Class**
+	- Use an Array to store the correct answers in Quiz program
+- [Math, random](week4/random.html)
+- **Assignment 4: Magic 8 Ball**
+	- [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
+	- Recreate the Magic 8 Ball game using JavaScript
+	- Magic 8 Ball works by answering Yes/No questions
+	- Your program will need to take a users question and respond - with one of the classic Magic 8 Ball responses (or you can write your own responses)
+	- Create an `array` with all possible answers and use `Math.random()` to get a random choice
+	- Use CSS to design the interface
+	- Bonus: Animate the response in some way
+	- Bonus: Make responses the include the input in some way
+
+## Week 5
+**Loops**
+- [Loops](week5/loops.html)
+
 <!-- 
-
-**Data types**
-- [JavaScript data types](week2/data.html)
-- arrays
-- in class, rewrite madlibs with an array?
-- Math, random
-- Magic 8 Ball
-
-OR
-data types 
-booleans and conditionals logic
-use boolean to confirm input
-quiz show
-
-
-
-
-logic 
-drop down/radio buttons
-booleans
-quiz show
 
 loops
 random password generator w parameters
@@ -102,7 +98,7 @@ json
 
 week5.2 -- else if -- compound comparisons (&& ||)
 
-- concepts - data, logic, loops, arrays, functions, objects
+- concepts - data, logic, loops, arrays, functions, objects 
 - js stuff - dom, events, api/json
 
 loops

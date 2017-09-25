@@ -7,12 +7,17 @@
 {% include slides.html %}
 </head>
 <body>
-	<div id="container" class="slides language-js">
-		<div class="slide">
+	<div id="container" class="outline language-js">
+		<div id="title" class="slide">
 			<h1>{{page.dek}}</h1>
-			<p><a href="{{site.url}}{{site.baseurl}}/">MMP 310</a> > <a href="{{site.url}}{{site.baseurl}}/schedule.html#week-{{page.week}}">Week {{page.week}}</a></p>
+			<p><a href="{{site.url}}{{site.baseurl}}/">MMP 210</a> > <a href="{{site.url}}{{site.baseurl}}/schedule.html#week-{{page.week}}">Week {{page.week}}</a></p>
+		</div>
+		<div id="menu">
+			<p><em>Contents</em></p>
+			<ul></ul>
 		</div>
 		{{ content }}
 	</div>
+	<script src="{{site.url}}{{site.baseurl}}/slides/lib/menu.js"></script>
 </body>  
 </html>  

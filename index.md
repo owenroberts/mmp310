@@ -1,17 +1,14 @@
 ---
-layout: default
+layout: main
 title: MMP 310 - Home
 dek: Class info, notes and schedule
 ---
-
-# MMP 310: Multimedia Programming II
-
-[Home](index.html) [Schedule](schedule.html)
 
 This is the class page of MMP 310 at BMCC.
 
 The class notes, schedule and assignments are all found here.
 
+- [Schedule](schedule.html)
 - <a href="https://mmp310.slack.com/" target="blank">Slack channel</a>
 - <a href="https://docs.google.com/document/d/1JE20usDOF3X6s2_0kL1T2oNvCwpqa74U5mKGhw4AfAI/edit?usp=sharing
 " target="blank">Syllabus</a>
