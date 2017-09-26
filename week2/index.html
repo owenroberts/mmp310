@@ -180,7 +180,7 @@ should use getElementById for these examples........
 	<h2>Add it all up</h2>
 	<p>Traditionally, we can place all of these elements into a <code>form</code> element, but we are not using any database or remote requests at this point, so we'll just use the elements and JavaScript to interact with them:</p>
 	<pre><code>button.onclick = function() {
-	var message = document.getElementById("message");
+	var message = document.createElement("p");
 	message.innerHTML = "Hello " + input.value + " from " + borough.value + ", welcome to my website.";
 	document.body.appendChild(message);
 };</code></pre>

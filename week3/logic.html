@@ -1,0 +1,179 @@
+---
+layout: slides
+title: MMP 310
+week: 3
+dek: JavaScript Logic
+---
+
+<div class="slide">
+	<p>Logic is an essential part of computer programming which affords for decisions to be made by the computer based on data or input.  The logic we'll be looking at today is called <em>Boolean logic</em>, which, like the <code>Boolean</code> type itself, is named after George Boole, an English mathemtician who invented boolean algebra, in which all values can be reduced to <code>true</code> or <code>false</code>.  This type of logic is useful in computer science because it is based on a binary number system, in which each bit has a value of 0 or 1.</p>
+</div>
+
+<div class="slide">
+	<h2>Booleans</h2>
+	<p>A <code>boolean</code> is a datatype that can be either <code>true</code> or <code>false</code>.</p>
+	<p>Booleans default to the values <code>true</code> and <code>false</code>.</p>
+	<p>In JavaScript other values will evaluate to <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.  Everything else defaults to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
+	<pre><code><c></c>Boolean(true);
+<c></c>Boolean(false);
+<c></c>Boolean("");
+<c></c>Boolean(null);
+<c></c>Boolean(0);
+<c></c>Boolean(4);</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Logical operators</h2>
+	<p>Using comparison operators, we can test the values of variables to detect if they are equivalent.</p>
+	<p>Let's declare some variables:</p>
+	<pre><code><c></c>var x = 1;
+<c></c>var y = 0;
+<c></c>var z = "1";
+<c></c>var a = 5;</code></pre>
+	<p>And test to see if their value is equivalent:</p>
+	<pre><code><c></c>x == y;
+<c></c>x != y;
+<c></c>x == z;</code></pre>
+
+</div>
+
+<div class="slide">
+	<p>We can evaluate numeric values:</p>
+	<pre><code><c></c>x > y;
+<c></c>x < y;
+<c></c>x >= z;
+<c></c>x <= a;</code></pre>
+
+	<p>We can also test if their type is equivalent:</p>
+	<pre><code><c></c>x === z;
+<c></c>x !== z;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Logical operator defitions</h2>
+	<ul>
+		<li><code>==</code> two values are the same</li>
+		<li><code>!=</code> two values are <strong>not</strong> the same</li>
+		<li><code>></code> value 1 is greater than value 2</li>
+		<li><code><</code> value 1 is less than value 2</li>
+		<li><code>>=</code> value 1 is greater than or equal to value 2</li>
+		<li><code><=</code> value 1 is less than or equal to value 2</li>
+		<li><code>===</code> two values are the same and same type</li>
+		<li><code>!==</code> two values are <strong>not</strong> the same or <strong>not</strong> the same type</li>
+	</ul>
+</div>
+		<div class="slide">
+	<p>We can compare strings as well as numbers.</p>
+	<pre><code><c></c>var x = "hello";
+<c></c>var y = "world";
+
+<c></c>x == y;
+<c></c>x != y;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Conditionals</h2>
+	<p>Using booleans, we can make decision in our program with conditional statements starting with the keyword <code>if</code>:</p>
+	<pre><code><c></c>var answer = "hello world";
+<c></c>if ("hello world" == answer) {
+	console.log("Correct!");
+}
+<c></c>var response = 10;
+<c></c>if (response != answer) {
+	console.log("That's incorrect.");
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can evaluate statements using numbers and strings as well:</p>
+	<pre><code><c></c>var x = 0;
+<c></c>var y = 1;
+<c></c>if (x == y) { 
+	console.log("x is equal to y"); 
+}
+<c></c>if (x < y) { 
+	console.log("x is less than y"); 
+}</code></pre>
+
+	<pre><code><c></c>var a = "hello";
+<c></c>var b = "world";
+<c></c>if (a.length = b.length) { 
+	console.log("hello and world have the same number of characters"); 
+}
+<c></c>if (a == b) { 
+	console.log("hello and world are the same string"); 
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>else</h2>
+	<p>We can use <code>else</code> to tell our program what to do if the conditional is false:</p>
+	<pre><code><c></c>if (a == b) { 
+	console.log("hello and world are the same string"); 
+} else {
+	console.log("hello and world are NOT the same string")
+}</code></pre>
+</div>
+
+
+<div class="slide">
+	<h2>else if</h2>
+	<p><code>else if</code> is to test further conditions that are not covered by a simple <code>else</code>.</p>
+	<pre><code><c></c>if (x == y) {
+	console.log("The values are equal.");
+} else if (x < y) {
+	console.log(x + " is less than " + y);
+} else {
+	console.log(x + " is greater than " + y);
+}</code></pre>
+</div>
+
+<!-- <div class="slide">
+	<h2>switch</h2>
+	<pre><code><c></c>var x = 0;
+<c></c>var y = 1;
+<c></c>var z = 2;
+<c></c>switch(0) {
+	case x:
+		console.log("the value is x");
+	break;
+
+	case y:
+		console.log("the value is y");
+	break;
+
+	default:
+		console.log("does not match a value");
+	break;
+}</code></pre>
+	<p><code>switch</code> is not used often because the pattern is easily replicated with an <code>object</code> (which we'll learn in a few weeks).</p>
+</div> -->
+
+
+<!-- <div class="slide">
+	<h2>Logical operators - AND and OR</h2>
+	<p>There are a number of logical statements that help us evaluate more complex statements.  We can use <code>&&</code> and <code>||</code> to add statements to our condition.  <code>&&</code> requires all statements to evaluate true, reading left to right.  <code>||</code> requires one of the statements on either side to be true.</p>
+	</div>
+	<div class="slide">
+    <pre><code><c></c>true && false
+<c></c>7 == "7" && NaN != 1
+<c></c>false || true
+<c></c>7 === "7" || 1 == 1 && !(false)</code></pre>
+	<p>We can also uses parathesis <code>()</code> to nest logic rules.</p>
+	<pre><code><c></c>( true && true || false ) && true</code></pre>
+</div>
+	<div class="slide">
+	<pre><code><c></c>var x = 0;
+<c></c>var width = 5;
+<c></c>var start = true;
+<c></c>var incrementX = function() {
+	if (x < width && start) {
+		x++;
+	} else if (x > 0) {
+		if (start) start = false;
+		x--;
+	}
+	console.log(x);
+};
+incrementX();</code></pre>
+</div> -->
