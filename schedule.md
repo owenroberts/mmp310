@@ -78,6 +78,7 @@ Go to [Home](index.html)
 	- Generate a random password for a user using a loop
 	- Program should take a username, number of characters and keyword
 	- Output a randomly generated password with the correct number of characters
+	- The password should use the characters in the keyword in some way, but not exactly the same, for example: if keyword = banana, password = 1bAnAnA4u
 
 <!-- 
 

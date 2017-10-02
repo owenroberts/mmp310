@@ -3,7 +3,28 @@ Array.prototype.clone = function() {
 	return this.slice(0);
 };
 
-var clas = [];
+var clas = [
+	"Marlon",
+	"Philip",
+	"Juan",
+	"Kristine",
+	"Lana",
+	"Mark",
+	"Fane",
+	"Lulu",
+	"Islam",
+	"Brendan",
+	"Yoko",
+	"Allan",
+	"Marcus",
+	"Ronald",
+	"Amber",
+	"Sarah",
+	"Cammy",
+	"Liping",
+	"Sarah",
+	"Omotayo"
+		   ];
 
 document.write("Groups" + "<br><br>");
 
@@ -12,7 +33,7 @@ var n = 2;
 while (clas.length > 0) {
 	for (var i = 0; i < n; i++) {
 		var stu = Math.floor( Math.random() * clas.length );
-		document.write(clas[stu]);
+		document.write(clas[stu] + " " );
 		clas.splice(stu, 1);
 	}
 	if (clas.length > 0 && clas.length < n) {
