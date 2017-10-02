@@ -1,5 +1,8 @@
 # MMP 310: Multimedia Programming II
 
+[Course site](https://owenroberts.github.io/mmp310/)
+
+<!-- 
 ### Course Description
 Credits: 3  
 This course introduces the basic concepts of programming for multimedia. Students will learn the principles of object-oriented programming and how to create scripts for the manipulation of graphics, audio and text to construct a web based multimedia presentation.
@@ -169,3 +172,4 @@ For MMP and MMA tutoring, please visit BMCC's [tutoring schedule](http://www.bmc
 
 **Week 15: Finals**
 - Final project presentations
+-->

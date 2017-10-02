@@ -73,6 +73,7 @@ Go to [Home](index.html)
 **Loops**
 - [Loops](week5/loops.html)
 - **In class**: Pair programming exercise
+- **[Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)**
 - **Assignment 5: Random password**
 	- Generate a random password for a user using a loop
 	- Program should take a username, number of characters and keyword
