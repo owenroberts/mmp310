@@ -1,0 +1,83 @@
+---
+layout: slides
+title: MMP 310 
+dek: More Git
+---
+
+<div class="slide">
+	<h2>Branching</h2>
+	<div data-src="drawings/master.json"></div>
+	<p>By default each commit will be on the master branch.  Each time you commit some code you create a new snapshot.  A branch consists of this series of snapshots and tracks the changes that happen between each commit.</p>
+</div>
+
+<div class="slide">
+	<p>Branching allows you to work on new parts of your code without changing anything in the master or other branches.  You can create a new branch for a new feature, add commits, and then merge back to your master branch. </p>
+	<pre><code>$ git checkout &lt;branch&gt; // checkout a branch
+$ git checkout -b new_feature // create a branch called "new feature"
+$ git checkout master // return HEAD to master branch
+$ git checkout abc123 // checkout a specific commit on the current branch</code></pre>
+	<p><a href="https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is" target="blank">More on branching</a></p>
+</div>
+<div class="slide">
+	<div data-src="drawings/newfeature.json"></div>
+	<p>Branching adds a new commit and moves the <code>HEAD</code> to the new branch.</p>
+</div>
+<div class="slide">
+	<div data-src="drawings/branching.json"></div>
+	<p>Commits can be made on the master branch separately from the feature branch.</p>
+</div>
+
+<div class="slide">
+	<h2>Merging</h2>
+	<p>Once you have finished the new feature, you can merge back to the master branch.</p>
+	<pre><code>$ git checkout master
+$ git merge new_feature</code></pre>
+</div>
+
+<div class="slide">
+	<div data-src="drawings/merge.json"></div>
+	<p>The merge will create a new snapshot on the master branch.</p>
+</div>
+
+<div class="slide">
+	<pre><code>$ git revert &lt;commit&gt;
+$ git revert def567</code></pre>
+	<p>Revert will remove the changes from a specific commit.  If that commit occurred several snapshots previous to the <code>HEAD</code>, it will not effect commits that came afterward.</p>
+</div>
+
+<div class="slide">
+	<pre><code>$ git rebase &lt;branch&gt;
+$ git rebase master</code></pre>
+	<p>Rebase will copy all of the commits made after a branch was created to the branch.</p>
+	<p>When you have finished working on a specific branch and you have committed the changes to the master, you may consider deleting the branch to keep your repo clean and organized.</p>
+</div>
+
+<div class="slide">
+	<h2>Collaborating with Git</h2>
+	<p>Git repositories can have <em>collaborators</em> and <em>contributors</em>.</p>
+	<p>A colloborator is a user with full access to the original repository.  The user can push, pull and commit changes without permission from the original owner.</p>
+	<p>A contributor makes a copy of the repository by forking and can submit pull requests to be reviewed and accepted by the original creator.</p>
+</div>
+
+<div class="slide">
+	<p>A colloborator can be added through GitHub.com in Settings.</p>
+	<img src="img/collaborator.png" alt="">
+</div>
+
+<div class="slide">
+	<p>A contributor can fork the project from the original repo.</p>
+	<img src="img/fork.png" alt="">
+	<p>The contributor will have their own master branch to work on and create new branches and commits which will not effect the original repo.</p>
+</div>
+
+<div class="slide">
+	<p>Once the contributor is ready to add their code back into the original, they submit a pull request, which the original repo owner can review the new changes and accept.</p>
+	<img src="img/request.png" alt="">
+</div>
+
+<div class="slide">
+	<p>When working on a forked repo you will often have to merge new code from the original repository.  You can create a separate remote and merge new changes as they are updated.</p>
+	<pre><code class="html">$ git remote add upstream &lt;url&gt;
+$ git merge upstream master</code></pre>
+	<p><a href="https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project" target="blank">More on contributing</a></p>
+</div>

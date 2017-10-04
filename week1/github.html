@@ -47,20 +47,51 @@ dek: Publishing with GitHub
 	<pre><code>$ git remote add &lt;remote-name&gt; &lt;url&gt;
 $ git remote add origin https://github.com/owenbmcc/classwork310.git</code></pre>
 	<p>We will add this remote to our repo using the <code>git remote add origin</code> command in Terminal.</p>
-
 </div>
+
+
 
 <div class="slide">
 	<img src="github/remote.png" alt="">
-	<p>For future references, the GitHub remote is available in the Clone/Download dropdown.</p>
+	<p>For future reference, the GitHub remote is available in the Clone/Download dropdown.</p>
 </div>
 
 <div class="slide">
-	<h2>Git push/pull</h2>
+	<h2>config</h2>
+	<pre><code>$ git config</code></pre>
+	<p>Config is used to configure your account settings for making commits.  You may need to update your configuration on a new machine.</p>
+	<pre><code>$ git config --global user.name = "Owen Roberts"
+$ git config --global user.email = oroberts@bmcc.cuny.edu</code></pre>
+</div>
+
+<div class="slide">
+	<p>Once you configuration is set, use push and pull to download new code and add your changes to the remote repository.  Remember to always pull from the origin before attempting to push.</p>
+	<pre><code class="html">$ git pull &lt;remote-name&gt; &lt;branch&gt;
+$ git pull origin master
+$ git add .
+$ git commit -m "adds new feature"
+$ git push origin master</code></pre>
+</div>
+
+<div class="slide">
+	<h2>git push, pull, fetch</h2>
 	<p>Once the remote is set, you can use <code>git push</code> to add your initial commit to the remote repo.</p>
 	<pre><code>$ git push origin master
 $ git push &lt;remote&gt; &lt;branch&gt;</code></pre>
 	<p>If you <code>push</code> changes from another source you need to remember to <code>pull</code> those changes into your repo before editing or you will create conflicts or inconsistencies in your code.  In general, it is always a good idea to <code>git pull</code> before editing code and especially before trying to <code>git push</code>.</p>
+	<pre><code>// after initial commit, always pull or fetch before pushing
+$ git pull origin master</code></pre>
+	<p><code>pull</code> will pull any commits from the <code>remote</code> that are not in the <em>local</em> commit history.  The difference between <code>pull</code> and <code>fetch</code> is basically a <code>merge</code>.  <code>pull</code> automatically tries to merge the code, <code>fetch</code> gets the code but leaves it for you to perform the merge.</p>
+</div>
+
+<div class="slide">
+	<h2>Conflicts</h2>
+	<p>In some cases if you pull new commits that have different code that what you have in your local version, you will have conflicts that Git cannot reconcile on it's own.  There will be a prompt in the Terminal showing you what files have conflicts and on what line.  When you open the file there will be something like this:</p>
+	<pre><code><<<<<<<< HEAD
+&lt;p&gt;Welcome to my website!&lt;/p&gt;
+=======
+&lt;p&gt;Welcome to my butt!!!&lt;/p&gt;
+>>>>>>> new_feature</code></pre>
 </div>
 
 
@@ -96,22 +127,7 @@ $ git push &lt;remote&gt; &lt;branch&gt;</code></pre>
 </div>
 
 
-<div class="slide">
-	<h2>config</h2>
-	<pre><code>$ git config</code></pre>
-	<p>Config is used to configure your account settings for making commits.  You may need to update your configuration on a new machine.</p>
-	<pre><code>$ git config --global user.name = "Owen Roberts"
-$ git config --global user.email = oroberts@bmcc.cuny.edu</code></pre>
-</div>
 
-<div class="slide">
-	<p>Once you configuration is set, use push and pull to download new code and add your changes to the remote repository.  Remember to always pull from the origin before attempting to push.</p>
-	<pre><code class="html">$ git pull &lt;remote-name&gt; &lt;branch&gt;
-$ git pull origin master
-$ git add .
-$ git commit -m "adds new feature"
-$ git push origin master</code></pre>
-</div>
 
 
 

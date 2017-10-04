@@ -8,6 +8,7 @@ dek: Command line & Git
 <div class="slide">
 	<h2>Command line basics</h2>
 	<p>On OSX, the command line is accessed through the Terminal program.</p>
+	<p>Git does not come with Windows, so you can download <a href="https://git-scm.com/download/win" target="blank">Git for Windows</a> here.  There's also <a href="https://git-for-windows.github.io/" target="blank">Git for Windows with Git Bash</a> which comes with it's own version of the command line.</p>
 	<img src="git/terminal_finder.png" alt="">
 </div>
 
@@ -36,6 +37,7 @@ dek: Command line & Git
 			<td>list contents of directory</td>
 			<td>ls <br>
 			ls -l <br>
+			ls -a <br>
 			ls /Applications/</td>
 		</tr>
 		<tr>
@@ -80,8 +82,8 @@ dek: Command line & Git
 		<li>Source code management system</li>
 		<li>Distributed version control system</li>
 		<li>A collaboration tool for developers</li>
-		<li>"Version control" means it keeps track of the changes and contributions to a code base or set of files</li>
-		<li>"Distributed" means all users have a copy of the code repository</li>
+		<li><em>Version control</em> means it keeps track of the changes and contributions to a code base or set of files</li>
+		<li><em>Distributed</em> means all users have a copy of the code repository</li>
 	</ul>
 </div>
 
@@ -95,15 +97,6 @@ dek: Command line & Git
 	</ul>
 </div>
 
-<div class="slide">
-	<h2>Where is Git?</h2>
-	<p>Git is a group of files that are hidden on your computer.</p>
-	<img src="git/hiddenfiles.png" alt="">
-	<p>When you create a new Git repository, Git will create a <code>.git</code> folder, which is hidden by default.  So you don't have to think about Git when you're looking at your project, but you know it's there. A set of files is referred to as a <code>repo</code> or <code>repository</code>.</p>
-</div>
-
-
-
 <!-- <div class="slide">
 	<p>GitHub has an interface to upload files that will act like a command line commit by tracking changes.  You can upload new files and write a commit message.</p>
 	<img src="git/upload.png" alt="">
@@ -114,10 +107,6 @@ dek: Command line & Git
 	<img src="git/client.png" alt="">
 </div> -->
 
-
-
-
-
 <div class="slide">
 	<h2>Essential Git commands</h2>
 	<pre><code>$ git init</code></pre>
@@ -126,6 +115,15 @@ dek: Command line & Git
 </div>
 
 <div class="slide">
+	<h2>Where is Git?</h2>
+	<p>Git is a group of files that are hidden on your computer.</p>
+	<img src="git/hiddenfiles.png" alt="">
+	<p>To view hidden files on your Mac, type this command into Terminal: <code>defaults write com.apple.finder AppleShowAllFiles YES</code> and then <code>killAll Finder</code>.  This relaunches the Finder with hidden files visible.  Change the flag to <code>NO</code> and repeat to turn them off again.</p>
+	<p>When you create a new Git repository, Git will create a <code>.git</code> folder, which is hidden by default.  So you don't have to think about Git when you're looking at your project, but you know it's there. A set of files is referred to as a <code>repo</code> or <code>repository</code>.</p>
+</div>
+
+<div class="slide">
+	<h2><code>git status</code> is your new best friend</h2>
 	<pre><code>$ git status</code></pre>
 	<p>Git status prints the current branch, changes staged for commit, changes to be committed, and any merge errors.  Use <note>git status</note> liberally.</p>
 	<img src="git/status.png" alt="">
@@ -179,12 +177,13 @@ $ git log -p // shows difference in commits
 
 <div class="slide">
 	<h2>Git hell</h2>
+	<img src="git/hell.gif" alt="">
 	<p>At some point every Git user will enter Git hell.  You try to push your new commit but you are told to pull first.  You pull.  You resolve the merge conflicts and commit.  You push.  And you're told to pull.  There are other versions of Git hell but they usually involve some sort of loop where you can't commit or push your changes.</p>
 	<p>Don't feel bad and don't freak out!  Don't delete your repo and start over!</p>
 	<p>Don't try random Git commands.</p>
 	<p>Start on stack overflow and try to describe what happened.</p>
 	<p>If you can't solve it on your own email me and we'll figure it out.</p>
- tk hell drawing 
+ <!-- tk hell drawing  -->
 </div>
 		
 <!-- 
