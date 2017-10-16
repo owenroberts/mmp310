@@ -101,15 +101,9 @@ Go to [Home](index.html)
 
 more git
 
-functions
-- timer
-
-dom/events
-- kind of already did this with input
-- task list
-
 time
 - twitter style blog
+- timer
 
 jquery
 - blah
