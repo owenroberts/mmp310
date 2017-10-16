@@ -72,7 +72,8 @@ Go to [Home](index.html)
 ## Week 5
 **Loops**
 - [Loops](week5/loops.html)
-- **In class**: Pair programming exercise
+- **Pair Programming**
+	- Recreate [Design human design](http://designhumandesign.media.mit.edu/)
 - **[Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)**
 - **Assignment 5: Random password**
 	- Generate a random password for a user using a loop
@@ -80,12 +81,25 @@ Go to [Home](index.html)
 	- Output a randomly generated password with the correct number of characters
 	- The password should use the characters in the keyword in some way, but not exactly the same, for example: if keyword = banana, password = 1bAnAnA4u
 
+## Week 6
+**Functions**
+- [Functions](week6/functions.html)
+- **Pair Programming**
+	- Write a function that will return a users age
+	- User inputs birth day, month and year
+	- Return correct age
+	- Will it work for today or any day in the future?
+- [DOM & Events](week6/events.html)
+- **Assignment 6: Task List**
+	- Write a program that takes user input and adds a new element to a task list
+	- Use `textarea` or `input` to add tasks to the list
+	- You could write other types of lists as well (favorite movies, songs, etc.)
+	- Add a style.css page with styles for the list 
+	- Bonus: Add a button to cross out or remove completed tasks
+
 <!-- 
 
 more git
-
-loops
-random password generator w parameters
 
 functions
 - timer
