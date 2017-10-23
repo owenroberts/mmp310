@@ -97,7 +97,26 @@ Go to [Home](index.html)
 	- Add a style.css page with styles for the list 
 	- Bonus: Add a button to cross out or remove completed tasks
 
+## Week 7
+**Objects**
+- [Objects](week7/objects.html)
+- **Pair Programming**
+	- Quiz show using objects
+	- Rewrite one of partner's quiz show program (or design a new one)
+	- Use an object for each question to store question and answer
+- [JSON](week7/json.html)
+- **Assignment 7: Comic**
+	- Using object notation, make a comic out of images or drawings with captions
+	- Choose any subject, story, source material
+	- Bonus: Make it interactive
+
+
 <!-- 
+
+week 8 & 9
+midterm
+jquery + json request + giphy
+match game with giphy images
 
 more git
 
@@ -105,25 +124,9 @@ time
 - twitter style blog
 - timer
 
-jquery
-- blah
-
-objects
-
-json
-
-
-week5.2 -- else if -- compound comparisons (&& ||)
-
 - concepts - data, logic, loops, arrays, functions, objects 
 - js stuff - dom, events, api/json
 
-loops
-dom
-events!
-objects
-jquery
-apis
 canvas drawing
 animation
 threejs?
@@ -160,6 +163,4 @@ seriously need to rework this stuff...
 	- hangman
 	- memory game
 	- 
-	
-
 -->

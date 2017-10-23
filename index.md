@@ -1,6 +1,6 @@
 ---
 layout: main
-title: MMP 310 - Home
+title: MMP 310
 dek: Class info, notes and schedule
 ---
 

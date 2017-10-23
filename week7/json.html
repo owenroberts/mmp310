@@ -1,0 +1,120 @@
+---
+layout: slides
+title: MMP 310
+week: 7
+dek: JSON
+---
+
+<div class="slide">
+	<p>JSON stands for JavaScript Object Notation.</p>
+	<p>JSON is a data format that is designed to be easy to read, modify and transmit between a front end web client and it's back end server.</p>
+	<p>In the next few weeks we'll learn how to use JSON with APIs to grab data from resources around the web.  Today we'll just learn the basics.</p>
+</div>
+
+<div class="slide">
+	<p>Image we were to build a slide show with images and captions.  We would want to be able to create each image and caption without having to repeat the same HTML or JavaScript structure over and over.  Using the loops we learned a couple of weeks ago, we can just design the data structure and then use a loop to add the info.</p>
+	<p>One of those objects might look like this:</p>
+	<pre><code>var slide = {
+	image: "cat.jpg",
+	caption: "Hello."
+};</code></pre>
+</div>
+
+<div class="slide">
+	<p>To add more slides we might repeat that design and then add them to an array:</p>
+	<pre><code>var catSlide = {
+	image: "cat.jpg",
+	caption: "I'm a cat!"
+};
+var dogSlide = {
+	image: "dog.jpg",
+	caption: "I'm a dog~"
+};
+var slides = [catSlide, dogSlide];</code></pre>
+</div>
+
+<div class="slide">
+	<p>To simplify this a bit, we can just write all of this data in one big array:</p>
+	<pre><code>var slides = [
+	{
+		img: "cat1.jpg",
+		label: "I am a cat."
+	},
+	{	
+		img: "cat2.jpg",
+		label: "I'm wearing a sweater."
+	},
+	{
+		img: "cat3.jpg",
+		label: "I'm hungry."
+	}
+];</code></pre>
+</div>
+
+<div class="slide">
+	<p>Adding one slide to our slideshow might look something like this:</p>
+	<pre><code>var slide = document.createElement("div");
+var image = new Image();
+var caption = document.createElement("p");
+image.src = slide.image;
+caption.textContent = slide.caption;
+slide.appendChild(image);
+slide.appendChild(caption);
+document.body.appendChild(slide);</code></pre>
+</div>
+
+
+
+<div class="slide">
+	<p>That's a lot to do for one slide, it would be a real pain to do that for 3 or 5 or 10 slides.</p>
+	<p>By using an array with our object data, we can just put that code in a loop:</p>
+	<pre><code>// loop through all slides
+for (var i = 0; i < slides.length; i++) {
+	// get a reference to each slide in the array
+	var s = slides[i];
+	var slide = document.createElement("div");
+	var image = new Image();
+	var caption = document.createElement("p");
+	image.src = s.image;
+	caption.textContent = s.caption;
+	slide.appendChild(image);
+	slide.appendChild(caption);
+	document.body.appendChild(slide);
+}</pre></code>
+</div>
+
+<div class="slide">
+	<p>This is the basic concept behind JSON, which is the principle data format for web applications written in JavaScript.  Next week we'll look at saving JSON files separate from our JavaScript as well as pulling data from different websites to use in our projects, sites such as <a href="https://giphy.com/" target="blank">Giphy</a> and <a href="http://www.omdbapi.com/" target="blank">Open Movie Database</a></p>
+</div>
+
+<!-- 
+<div class="slide">
+	<p>Writing JSON is similar to creating an object like this within a JavaScript document, but JSON can be written as it's own file and then loaded into JavaScript, allowing you to separate the data and functionality of the program.</p>
+	<p><strong>slides.json</strong> might look like this:</p>
+	<pre><code>{ slides: [
+	{
+		img: "cat1.jpg",
+		label: "I am a cat."
+	},
+	{	
+		img: "cat2.jpg",
+		label: "I'm wearing a sweater."
+	},
+	{
+		img: "cat3.jpg",
+		label: "I'm hungry."
+	}
+]};</code></pre>
+</div>
+<div class="slide">
+	<p>That information can be loaded into a program using the jQuery function <code>$.getJSON()</code>.</p>
+	<p><code>getJSON</code> is a asynchronous funtion, meaning that it happens in parallel with the main program thread.  Because of this, we have to make sure that the JSON data is available to the function it is being used in, typically by implementing with in the callback funciton of a <code>getJSON</code> call.  A callback function is a function that's passed into to another function to execute once that function has finished executing.  A callback in this case is useful because we can tell the program to only execute our code once the function has been called.</p>
+	<pre><code>$.getJSON("slides.json", function( data ) {
+	console.log(data);
+});</code></pre>
+</div>
+
+<div class="slide">
+	<p>For our demo today, we'll create a JSON file with information about our class GitHub pages and populate a webpage with that information.</p>
+</div>
+ -->
