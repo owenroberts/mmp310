@@ -53,14 +53,14 @@ var slides = [catSlide, dogSlide];</code></pre>
 
 <div class="slide">
 	<p>Adding one slide to our slideshow might look something like this:</p>
-	<pre><code>var slide = document.createElement("div");
+	<pre><code>var slideElem = document.createElement("div");
 var image = new Image();
 var caption = document.createElement("p");
 image.src = slide.image;
 caption.textContent = slide.caption;
-slide.appendChild(image);
-slide.appendChild(caption);
-document.body.appendChild(slide);</code></pre>
+slideElem.appendChild(image);
+slideElem.appendChild(caption);
+document.body.appendChild(slideElem);</code></pre>
 </div>
 
 
@@ -71,15 +71,15 @@ document.body.appendChild(slide);</code></pre>
 	<pre><code>// loop through all slides
 for (var i = 0; i < slides.length; i++) {
 	// get a reference to each slide in the array
-	var s = slides[i];
-	var slide = document.createElement("div");
+	var slide = slides[i];
+	var slideElem = document.createElement("div");
 	var image = new Image();
 	var caption = document.createElement("p");
-	image.src = s.image;
-	caption.textContent = s.caption;
-	slide.appendChild(image);
-	slide.appendChild(caption);
-	document.body.appendChild(slide);
+	image.src = slide.image;
+	caption.textContent = slide.caption;
+	slideElem.appendChild(image);
+	slideElem.appendChild(caption);
+	document.body.appendChild(slideElem);
 }</pre></code>
 </div>
 
