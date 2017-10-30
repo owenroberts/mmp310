@@ -1,0 +1,105 @@
+---
+layout: slides
+title: MMP 310
+week: 8
+dek: jQuery basics
+---
+
+<div class="slide">
+	<p>jQuery is a JavaScript library that simplifies scripting for HTML pages using DOM element selectors and a set of animations, transitions and other manipulations based on CSS and HTML. jQuery was released in 2006 and has become extremely popular in front end web development. One of the features of jQuery is that it is compatible with all major browsers.</p>
+</div>
+<div class="slide">
+	<p>You can <a href="http://jquery.com/download/" target="blank">download jQuery</a> from their site and attach the file to your HTML pages with a script tag.</p>
+	<p>Google also hosts versions of <code>jQuery</code> and other libraries that can be added with a script tag <a href="https://developers.google.com/speed/libraries/?hl=en#jquery" target="blank">found here</a>.</p>
+	<pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="my-app.js"&gt;&lt;/script&gt;</code></pre>
+	<p>For your JavaScript to use the <code>jQuery</code> object, it must come after <code>jQuery</code> is loaded into your document.</p>
+</div>
+<div class="slide">
+	<p><code>jQuery</code> is an object with a bunch of methods associated with it that act as short cuts for commonly used JavaScript functionality.  <code>$</code> is also a reference to the <code>jQuery</code> boject.  Try typing both in the <code>console</code>. The basic syntax of a <code>jQuery</code> function looks like this:</p>
+	<pre><code>$('selector').method()</code></pre>
+	<p>Like in CSS, the selector refers to an HTML element. The action refers to the script that will be executed on that element.</p>
+</div>
+
+<div class="slide">
+	<h2>Basics</h2>
+	<p data-height="300" data-theme-id="10088" data-slug-hash="wKzKxO" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" data-pen-title="jQuery Ex 1" class="codepen">See the Pen <a href="https://codepen.io/owenroberts/pen/wKzKxO/">jQuery Ex 1</a> by Owen Roberts (<a href="https://codepen.io/owenroberts">@owenroberts</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="slide">
+	<p data-height="300" data-theme-id="10088" data-slug-hash="eemJWy" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" data-pen-title="jQuery Ex 2" class="codepen">See the Pen <a href="https://codepen.io/owenroberts/pen/eemJWy/">jQuery Ex 2</a> by Owen Roberts (<a href="https://codepen.io/owenroberts">@owenroberts</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="slide">
+	<h2>What's the deal with this syntax?</h2>
+	<p><code>jQuery</code> is used for a lot of events and the callback function structure looks similar to but is different from the <code>.addEventListener</code> we've been using up until now. Let's compare.</p>
+	<pre><code>var submit = document.getElementById("button");
+submit.addEventListener("click", <bg>function() {
+	console.log("Hello world!");
+}</bg>);
+// submit.addEventListener("click", <bg>function</bg>);</code></pre>
+	<p>In this syntax, <code>submit</code> is a reference to a HTML element.  The method <code>addEventListener</code> takes to arguments, one is the specific event to look for, <code>"click"</code> and the seconds is the <code>function</code> to execute when the event occurs.  The highlighted function is an anonymous function, it is itself an argument in the <code>addEventListener</code> function that is being declared at the same time.</p>
+</div>
+
+<div class="slide">
+	<p>In <code>jQuery</code> this syntax is similar but shorter:</p>
+	<pre><code>$('#submit').click(<bg>function() {
+	console.log("Hello world!");
+}</bg>);
+$('#submit').click(<bg>function</bg>);</code></pre>
+	<p>Because the anonymous function has an <code>()</code> operator and the <code>{}</code> code block, there are many nested parts, so it can be kind of confusing.</p>
+</div>
+
+<div class="slide">
+	<h2>this</h2>
+	<p>This is a special keyword used in JavaScript (as well as other languages) to refer to the current object.  In JavaScript events, it refers to the HTML element the event listener is bound to.  This is the same in jQuery.  This can be confusing because <code>this</code> and <code>$('selector')</code> are different things.</p>
+	<p data-height="300" data-theme-id="10088" data-slug-hash="vWELRB" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" data-pen-title="jQuery Ex 3: this" class="codepen">See the Pen <a href="https://codepen.io/owenroberts/pen/vWELRB/">jQuery Ex 3: this</a> by Owen Roberts (<a href="https://codepen.io/owenroberts">@owenroberts</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="slide">
+	<h2>Hide and show</h2>
+	<p data-height="268" data-theme-id="10088" data-slug-hash="ojzbvd" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/ojzbvd/'>ojzbvd</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<p data-height="268" data-theme-id="10088" data-slug-hash="merezG" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/merezG/'>merezG</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="slide">
+	<h2>Transition</h2>
+	<p data-height="268" data-theme-id="10088" data-slug-hash="NGRxGP" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/NGRxGP/'>NGRxGP</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<p data-height="268" data-theme-id="10088" data-slug-hash="rOMxOm" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/rOMxOm/'>rOMxOm</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<p data-height="268" data-theme-id="10088" data-slug-hash="LpRGpm" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/LpRGpm/'>LpRGpm</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<p data-height="268" data-theme-id="10088" data-slug-hash="KdgVzM" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/KdgVzM/'>KdgVzM</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<h2>DOM interaction</h2>
+	<p data-height="268" data-theme-id="10088" data-slug-hash="LpRGNr" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/LpRGNr/'>LpRGNr</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<p data-height="268" data-theme-id="10088" data-slug-hash="PPGZGM" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2"  class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/PPGZGM/'>PPGZGM</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="slide">
+	<p data-height="268" data-theme-id="10088" data-slug-hash="bVwEgd" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" class='codepen'>See the Pen <a href='http://codepen.io/owenroberts/pen/bVwEgd/'>bVwEgd</a> by Owen Roberts (<a href='http://codepen.io/owenroberts'>@owenroberts</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+	<script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="slide">
+	<p>Check the <a href="http://api.jquery.com/" target="blank">jQuery docs</a> for much more.</p>
+</div>

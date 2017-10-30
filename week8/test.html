@@ -1,0 +1,93 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+	* { box-sizing: border-box; }
+	#game {
+		width: 600px;
+	}
+
+	.card {
+		width:200px;
+		height:200px;
+		display: inline-block;
+		background:lightblue;
+		border:1px solid blue;
+	}
+	.card img {
+		display: none;
+		width:100%;
+		height:100%;
+	}
+</style>
+
+<input type="text" id="query" placeholder="search"></input>
+<br>
+<div id="game"></div>
+
+<script>
+	$(document).ready(function() {
+		$('#query').on("keypress", function(event){
+			if (event.which == 13) {
+				var query = this.value;
+				var key = "BW6rKqXJOzSESTHHR8G8h1bLcq9LKqyC";
+				var url = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + key + "&limit=6";
+				$.getJSON(url, function(json) {
+
+					var cards = [];
+
+					for (let i = 0; i < json.data.length; i++) {
+						const div = $('<div>')
+							.addClass('card')
+							.attr('data-num', i);
+						const img = json.data[i];
+						const imgElem = $('<img>')
+							.attr('src', img.images.downsized.url)
+							.addClass('not-found');
+						div.append(imgElem);
+						cards.push(div);
+					}
+					for (let i = 0; i < json.data.length; i++) {
+						const div = $('<div>')
+							.addClass('card')
+							.attr('data-num', i);
+						const img = json.data[i];
+						const imgElem = $('<img>')
+							.attr('src', img.images.downsized.url);
+						div.append(imgElem);
+						cards.push(div);
+					}
+					cards.sort(() => 0.5 - Math.random());
+					for (let i = 0; i < cards.length; i++) {
+						$('#game').append(cards[i]);
+					}
+					var clicks = [];
+					var numClicks = 0;
+					var matches = 0;
+					var currentImage;
+					$('.card').on('click', function() {
+						numClicks++;
+						$(this).children().fadeIn();
+						const num = $(this)[0].dataset.num;
+						if (clicks.length == 0) {
+							clicks.push(num);
+							currentImage = $(this).find('img');
+						} else if (clicks.length == 1) {
+							if (clicks[0] == num) {
+								clicks = [];
+								currentImage = undefined;
+								matches++;
+							} else {
+								$(this).children().delay(300).fadeOut();
+								$(currentImage).fadeOut();
+								clicks = [];
+								currentImage = undefined;
+							}
+						}
+						if (matches == 6) {
+							alert("You win!");
+						}
+					});
+				});
+			}
+		});
+	});
+</script>

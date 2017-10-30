@@ -1,0 +1,82 @@
+---
+layout: slides
+title: MMP 310
+week: 8
+dek: JSON API
+---
+
+<div class="slide">
+	<p>API stands for <note>Application Programming Interface</note>.</p>
+	<p>APIs are used to provide a set of protocols and patterns for building software and applications.  Often they allow programmers to interact with a specific database, hardware or software.</p>
+	<p>We're going to look at two simple APIs today, the <a href="http://omdbapi.com/" target="blank">Open Movie Database</a>, a resource for movie information and media that is built on user contributions.  The OMDb is a (mostly) free resource, and full access can be gained by donating money (this is just for poster images).  We'll also look at the <a href="https://developers.giphy.com/" target="blank">Giphy API</a> which requires signing up for a user key but is still free to use.</p>
+</div>
+
+<div class="slide">
+	<h2>OMDb API</h2>
+	<p>Simple OMBd synatax:</p>
+	<pre><code>http://www.omdbapi.com/?t=Space Jam</code></pre>
+	<p>Paste that into the browser window and you will see some simple JSON.</p>
+</div>
+
+<div class="slide">
+	<p>To use that in our own webpage, we can use a jQuery <code>$.getJSON</code> request:</p>
+	<pre><code><c></c>$.getJSON('http://www.omdbapi.com/?t=Space Jam', function(json){  
+  console.log(json);
+});</code></pre>
+</div>
+<div class="slide">
+	<pre><code><c></c>$.getJSON('http://www.omdbapi.com/?t=Jurassic Park', function(json){  
+	console.log(json);
+});</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Giphy API</h2>
+	<p>To use the Giphy API, like many others, you need a developer account and ID.  This is a basic authentication used to prevent over use or spamming of the API by anonymous accounts.  Take a minute to sign up and then we'll look at an example.</p>
+	<p>Once your are signed up, go to your developer profile page.  On the dashbaord you will create a new app, which will create an Api Key for you to use.  Copy that key.</p>
+</div>
+
+<div class="slide">
+	<p>We're going to make a very simple GIF image search app.</p>
+	<p>Starting with the HTML page, all we need is an input box:</p>
+	<pre><code>&lt;input type="text" id="query" placeholder="search"&gt;&lt;/input&gt;</code></pre>
+	<p>We also need jQuery, so attach that as well:</p>
+	<pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="app.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>We're going to use jQuery so let's make sure the <code>document</code> is loaded:</p>
+	<pre><code>$(document).ready(function() {
+	// all code goes here
+});</code></pre>
+</div>
+
+<div class="slide">
+	<p>Next we need to detect when the user has entered text.</p>
+	<pre><code>$('#query').on("keypress", function(event){
+	if (event.which == 13) {
+		var query = this.value;
+		console.log(query);
+	}
+});</code></pre>
+</div>
+
+<div class="slide">
+	<p>Once we have the query, we can use our user key, the Giphy API string and <code>$.getJSON</code> from <code>jQuery</code> to get results.  Let's just log the results first.  Take a look at the object and try to find the source URLs for the images.</p>
+	<pre><code>var key = "YOUR_KEY_HERE";
+var url = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + key + "&limit=20";
+$.getJSON(url, function(json) {
+	console.log(json);
+});</code></pre>
+</div>
+
+<div class="slide">
+	<p>Not we need to loop through the results and create elements to add the images to the HTML document.</p>
+	<pre><code>for (let i = 0; i < json.data.length; i++) {
+	const img = json.data[i];
+	const imgElem = $('&lt;img&gt;')
+		.attr('src', img.images.downsized.url);
+	$('body').append(imgElem);
+}</code></pre>
+</div>

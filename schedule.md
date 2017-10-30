@@ -110,6 +110,22 @@ Go to [Home](index.html)
 	- Choose any subject, story, source material
 	- Bonus: Make it interactive
 
+## Week 8
+**Midterm**
+- [jQuery](week8/jQuery.html)
+- **Pair Programming**
+	- Rewrite the comics assignment with jQuery
+	- Is it easier?  Harder?
+- [JSON API](week8/api.html)
+- **Midterm**
+	- Memory Game ([example](http://mark-rolich.github.io/MemoryGame.js/))
+	- Use the Giphy API to load user searched images
+	- Add two copies of each image to the DOM
+	- User clicks on one image at a time to reveal them
+	- If they get a match the images stay revealed
+	- Add CSS and other features to the game
+
+
 
 <!-- 
 
