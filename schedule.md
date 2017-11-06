@@ -140,7 +140,7 @@ Go to [Home](index.html)
 	- 20: Added features
 		- Keep score
 		- Notify on winning
-		- Add animation to card flip
+		- Add animation to card reveal
 	- 20: User Interface
 		- User enters a search term or selects a category
 		- Designed to make interaction with the game clear
