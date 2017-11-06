@@ -33,28 +33,21 @@
 				$.getJSON(url, function(json) {
 
 					var cards = [];
+					const matchNum = 2;
+					for (let j = 0; j < matchNum; j++) {
+						for (let i = 0; i < json.data.length; i++) {
+							const div = $('<div>')
+								.addClass('card')
+								.attr('data-num', i);
+							const img = json.data[i];
+							const imgElem = $('<img>')
+								.attr('src', img.images.downsized.url)
+								.addClass('not-found');
+							div.append(imgElem);
+							cards.push(div);
+						}
+					}
 
-					for (let i = 0; i < json.data.length; i++) {
-						const div = $('<div>')
-							.addClass('card')
-							.attr('data-num', i);
-						const img = json.data[i];
-						const imgElem = $('<img>')
-							.attr('src', img.images.downsized.url)
-							.addClass('not-found');
-						div.append(imgElem);
-						cards.push(div);
-					}
-					for (let i = 0; i < json.data.length; i++) {
-						const div = $('<div>')
-							.addClass('card')
-							.attr('data-num', i);
-						const img = json.data[i];
-						const imgElem = $('<img>')
-							.attr('src', img.images.downsized.url);
-						div.append(imgElem);
-						cards.push(div);
-					}
 					cards.sort(() => 0.5 - Math.random());
 					for (let i = 0; i < cards.length; i++) {
 						$('#game').append(cards[i]);

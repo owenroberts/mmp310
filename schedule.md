@@ -111,7 +111,7 @@ Go to [Home](index.html)
 	- Bonus: Make it interactive
 
 ## Week 8
-**Midterm**
+**jQuery & JSON API**
 - [jQuery](week8/jQuery.html)
 - **Pair Programming**
 	- Rewrite the comics assignment with jQuery
@@ -125,15 +125,27 @@ Go to [Home](index.html)
 	- If they get a match the images stay revealed
 	- Add CSS and other features to the game
 
-
+## Week 9
+**Midterm**
+- Finish memory game
+- Midterm rubric: 100 total points
+	- 20: JavaScript
+		- No bugs
+		- jQuery and JavaScript used correctly
+		- Loops and if statements used correctly
+	- 20: JSON and API
+		- Working API request
+		- Handle JSON data
+	- 20: Original CSS styles
+	- 20: Added features
+		- Keep score
+		- Notify on winning
+		- Add animation to card flip
+	- 20: User Interface
+		- User enters a search term or selects a category
+		- Designed to make interaction with the game clear
 
 <!-- 
-
-week 8 & 9
-midterm
-jquery + json request + giphy
-match game with giphy images
-
 more git
 
 time
