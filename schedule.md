@@ -145,17 +145,32 @@ Go to [Home](index.html)
 		- User enters a search term or selects a category
 		- Designed to make interaction with the game clear
 
+## Week 10
+**Final Pitch**
+- [Time](week10/time.html)
+- [HTML5 Media](week10/media.html)
+- Final Project Pitch
+	- Present a concept for the final project
+	- Can work inidividual or in pairs
+	- Create a web application using an API
+	- [List of public APIs](https://github.com/toddmotto/public-apis)
+	- Must take user input and return feedback
+	- Can be game, interactive visualization, information based app
+- Example web apps:
+	- [Koalas to the max](http://www.koalastothemax.com/)
+	- [Every satellite orbiting earth](http://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/)
+	- [Design a wig](http://www.vam.ac.uk/designawig)
+	- [Blackjack](http://html5blackjack.net/)
+	- [Pet finder](http://api.emilyhashemi.com/)
+
+
+
 <!-- 
+media - css3 - canvas - 
+
 more git
-
-time
-- twitter style blog
-- timer
-
-- concepts - data, logic, loops, arrays, functions, objects 
-- js stuff - dom, events, api/json
-
 canvas drawing
+css3 animation
 animation
 threejs?
 game?
