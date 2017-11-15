@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MMP 210 - Student Work - Spring 2016
+title: MMP 310 - Student Work - Spring 2016
 ---
 [Student Work](../) [Home](../../)
 
