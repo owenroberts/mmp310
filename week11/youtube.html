@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<head>
+		<title>HTML5 Video Example</title>
+		<meta charset="utf-8" />
+		<style>
+		   body {
+	font-family:Helvetica, sans-serif;
+	line-height: 1.45;
+
+}
+#subtitles {
+	font-size:22px;
+	padding:.25em;
+	margin:.25em 0;
+}
+
+
+#container {
+	margin:0 auto;
+	width:560px;
+	height:315px;
+	position:relative;
+}
+
+#menu {
+	position:absolute;
+	top:10px;
+	z-index:9;
+}
+
+#subtitles {
+	position:absolute;
+	bottom:10px;
+	color:white;
+	text-shadow: 0 0 10px black;
+}
+#catgif {
+	position: absolute;
+	width: 200px;
+	top:20px;
+	right:20px;
+}
+
+button {
+	background: white;
+	border-radius:3px;
+	border:none;
+	font-size:18px;
+	color:blue;
+	cursor:pointer;
+}
+button:hover {
+	color:pink;
+}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<iframe id="player" width="560" height="315" src="http://www.youtube.com/embed/J---aiyznGQ?version=3&enablejsapi=1&controls=0&showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen></iframe> 
+
+			<div id="menu">
+				<button id="play">Play</button>
+				<button id="stop">Stop</button>
+				<button id="jump">Jump ahead 5s</button>
+			</div><br>
+			<div id="subtitles">Subtitles</div>
+			<video id="webcam" autoplay></video>
+			<canvas id="video"></canvas>
+
+		</div>
+		
+		
+		<script type="text/javascript">
+
+			var webcam = document.querySelector('#webcam');
+			var canvas = document.getElementById('video');
+			var context = canvas.getContext('2d');
+
+			navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+				 
+			if (navigator.getUserMedia) { 
+				navigator.getUserMedia({video: true}, videoHandler, videoError);
+			}
+
+			function videoHandler(stream) {
+				webcam.src = window.URL.createObjectURL(stream);
+
+			}
+			function videoError(error) {
+				console.log(error);
+			}
+
+			function mirrorImage() {
+				context.save();
+				context.translate(canvas.width, 0);
+				context.scale(-1,1);
+				context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+				context.restore();
+			}
+
+			webcam.addEventListener("loadedmetadata", function() {
+				canvas.width = webcam.videoWidth;
+				canvas.height = webcam.videoHeight;
+				setInterval(mirrorImage, 1000/60);
+			});
+
+			var tag = document.createElement('script');
+			tag.src = "http://www.youtube.com/iframe_api";
+			var firstTagScript = document.getElementsByTagName('script')[0];
+			firstTagScript.parentNode.insertBefore(tag, firstTagScript);
+			var player;
+			var subtitles = ["Hello!", "I'm a cat!", "Goodbye!"];
+			var obj = [
+				{
+					text: "Hello",
+					time: 1,
+					duration: 1
+				},
+				{
+					text: "I'm a cat",
+					time: 2,
+					duration: 1
+				},
+				{
+					text: "Goodbye!",
+					time: 4,
+					duration: 2
+				}
+			]
+			var currentSubTitle = 0;
+			var subtitleDiv = document.getElementById("subtitles");
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					events: {
+					    'onReady': onPlayerReady,
+					}
+				});
+			}
+			function onPlayerReady(event) {
+
+				document.getElementById("play").addEventListener("click", function() {
+					player.playVideo();
+					setInterval(nextSubtitle, 1000/24);
+				});
+				document.getElementById("stop").addEventListener("click", function() {
+					player.stopVideo()
+				});
+				document.getElementById('jump').addEventListener('click', function() {
+					if (player && player.getCurrentTime) {
+						player.seekTo( player.getCurrentTime() + 5 );
+					}
+				});
+
+
+				function nextSubtitle() {
+					var titled = false;
+					for (var i = 0; i < obj.length; i++) {
+						var time = player.getCurrentTime();
+						if (time > obj[i].time && time < obj[i].time + obj[i].duration) {
+							subtitleDiv.textContent = obj[i].text;
+							titled = true;
+						}
+						if (!titled) {
+							subtitleDiv.textContent = "";
+						}
+					}
+				}
+				
+			}
+
+		</script>
+	</body>
+</html>

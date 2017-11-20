@@ -163,7 +163,21 @@ Go to [Home](index.html)
 	- [Blackjack](http://html5blackjack.net/)
 	- [Pet finder](http://api.emilyhashemi.com/)
 
-
+## Week 11
+**Web Video**
+- [YouTube API](week11/)
+- [Web cam](week11/cam.html)
+- Video applications
+	<ul>
+		<li><a href="http://lossur.es/#/" target="blank">Los Sures</a></li>
+		<li><a href="http://www.thewildernessdowntown.com/" target="blank">Wilderness Downtown</a></li>
+		<li><a href="http://www.sprawl2.com/" target="blank">Sprawl 2</a></li>
+		<li><a href="http://www.beonlineb.com/" target="blank">Neon Bible</a></li>
+		<li><a href="http://a-way-to-go.com/" target="blank">A Way To Go</a></li>
+		<li><a href="http://bear71.nfb.ca/#/bear71" target="blank">Bear 71</a></li>
+		<li><a href="http://www.youtubemultiplier.com/" target="blank">YouTube Multiplier</a> and <a href="https://youtube-dj.com/" target="blank">YouTube DJ</a></li>
+		<!-- <li><a href="http://yooouuutuuube.com/v/?width=192&height=120&flux=1&direction=rand&yt=2l_PmSOreGc"  target="blank">yooouuutuuube.com</a></li> -->
+	</ul>
 
 <!-- 
 media - css3 - canvas - 

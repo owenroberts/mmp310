@@ -1,0 +1,150 @@
+---
+layout: slides
+title: MMP 310
+week: 11
+dek: YouTube API
+---
+
+<div class="slide">
+	<p>Last week we looked at embedded videos in HTML5.  This week we'll use the YouTube API to load video data from YouTube and add controls as well.</p>
+	<p>There are two separate but related APIs we will reference for this:</p>
+	<ul>
+		<li><a href="https://developers.google.com/youtube/player_parameters?hl=en" target="blank">YouTube Player Parameters</a></li>
+		<li><a href="https://developers.google.com/youtube/iframe_api_reference" target="blank">YouTube iFrame player API</a></li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h2>Embed</h2>
+	<img src="catvideo.png" alt="">
+	<p>Most YouTube videos can be loaded onto a webpage using the embed code provided by YouTube in the "Share" menu.  Some videos have their content restricted to only be viewed on the YouTube site.</p>
+</div>
+
+<div class="slide">
+	<img src="embed.png" alt="">
+	<p>Find a video, click "Share", then "Embed" and copy the code.  There are some parameters that can be set here, such as the start time of the video, related videos and video controls options.</p>
+</div>
+
+<div class="slide">
+	<p>The embed HTML uses an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="blank">iframe</a> which is an element that creates a new browser context inside of the current browser window.</p>
+	<p>Copy and paste the embed code into an HTML document:</p>
+	<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML5 Video Example&lt;/title&gt;
+		&lt;meta charset="utf-8" /&gt;
+		&lt;link href="style.css" type="text/css" rel="stylesheet"/&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;
+            &lt;iframe id="player" width="560" height="315" src="http://www.youtube.com/embed/J---aiyznGQ?version=3&enablejsapi=1&controls=0&showinfo=0&modestbranding=1&rel=0&autohide=1" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Let's also add some buttons to control the video:</p>
+	<pre><code>&lt;div id="menu"&gt;
+	&lt;button id="play"&gt;Play&lt;/button&gt;
+	&lt;button id="stop"&gt;Stop&lt;/button&gt;
+	&lt;button id="jump"&gt;Jump ahead 5s&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>API Script</h2>
+	<p>In JavaScript, we load the YouTube API asynchronously, meaning we wait for the video data to load before adding the functionality to control it.  To do that we load the API script using our own JavaScript file:</p>
+	<pre><code>var tag = document.createElement('script');
+tag.src = "http://www.youtube.com/iframe_api";
+var firstTagScript = document.getElementsByTagName('script')[0];
+firstTagScript.parentNode.insertBefore(tag, firstTagScript);
+	</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Player reference</h2>
+	<p>Then we get a references to the video player and initialize it.  The YouTube API script will call the <code>onYouTubeIframeAPIReady</code> function, which will let us initialize the player with specific events and set functions to handle those events.</p>
+	<pre><code>var player;
+function onYouTubeIframeAPIReady() {
+	player = new YT.Player('player', {
+		events: {
+		    'onReady': onPlayerReady,
+		}
+	});
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Events</h2>
+	<p>In <code>onPlayerReady</code> we can set some event listeners for the buttons we created in the menu.</p>
+	<pre><code>function onPlayerReady(event) {
+document.getElementById("play").addEventListener("click", function() {
+	player.playVideo();
+});
+document.getElementById("stop").addEventListener("click", function() {
+	player.stopVideo()
+});
+document.getElementById('jump').addEventListener('click', function() {
+	if (player && player.getCurrentTime) {
+		player.seekTo( player.getCurrentTime() + 5 );
+	}
+});</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Subtitles</h2>
+	<p>We can add subtitles like we did in the video example.  This time instead of using the <code>timeupdate</code> event, we'll set the subtitles to appear using a separate timer, <code>setInterval</code> which we also covered in the Time examples.</p>
+	<pre><code>// in the HTML
+&lt;div id="subtitles"&gt;Subtitles&lt;/div&gt;
+// in JS
+var subtitles = ["Hello!", "I'm a cat!", "Goodbye!"];
+var currentSubTitle = 0;
+var subtitleDiv = document.getElementById("subtitles");
+// in onPlayerReady
+function nextSubtitle() {
+	subtitleDiv.textContent = subtitles[currentSubTitle];
+	currentSubTitle++;
+}
+setInterval(nextSubtitle, 2000);</code></pre>
+</div>
+
+<div class="slide">
+	<p>However, if we want specific times for the subtitles to appear, we need to use an object to organize the data.</p>
+	<pre><code>var subtitles = [
+	{
+		text: "Hello",
+		time: 1,
+		duration: 1
+	},
+	{
+		text: "I'm a cat",
+		time: 2,
+		duration: 1
+	},
+	{
+		text: "Goodbye!",
+		time: 4,
+		duration: 2
+	}
+];</code></pre>
+</div>
+
+<div class="slide">
+	<p>We don't need to keep track of the current title, but we do need to run the function more freqently to test the parameters.</p>
+	<pre><code>function nextSubtitle() {
+	var titled = false;
+	for (var i = 0; i < obj.length; i++) {
+		var time = player.getCurrentTime();
+		if (time > obj[i].time && time < obj[i].time + obj[i].duration) {
+			subtitleDiv.textContent = obj[i].text;
+			titled = true;
+		}
+	}
+	if (!titled) {
+		subtitleDiv.textContent = "";
+	}
+}
+// 1000/24 gives us 24 frames per second, should be enough
+setInterval(nextSubtitle, 1000/24);</code></pre>
+</div>
