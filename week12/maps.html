@@ -1,0 +1,71 @@
+---
+layout: slides
+title: MMP 310
+week: 12
+dek: Google Maps API
+---
+
+<div class="slide">
+	<p>We're going to look at some simple examples using the <a href="https://developers.google.com/maps/documentation/javascript/" target="blank">Google Maps API</a>.  There documentation and tutorials are very useful.</p>
+	<p>We need to start by creating an API key.</p>
+	<img src="key.png" alt="">
+	<br>
+	<img src="enable.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Then we can set up a basic HTML page and some CSS for the map.</p>
+	<pre><code>&lt;body&gt;
+	&lt;h1&gt;Google Maps&lt;/h1&gt;
+	&lt;div id="map"&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+	<pre><code>#map {
+	height: 500px;
+	width: 100%;
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Our JavaScript is pretty simple.  We going to use the Google API reference to create a new map and set a the center to a specific location.</p>
+	<pre><code>function initMap() {
+	var bmcc = {lat: 40.7180903, lng:-74.0142373};
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 4,
+		center: bmcc
+	});
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also create a marker at that location.</p>
+	<pre><code>var marker = new google.maps.Marker({
+	position: bmcc,
+	map: map,
+	title: "BMCC"
+});</code></pre>
+</div>
+
+<div class="slide">
+	<p>Finally, we can add an event listener to the marker.</p>
+	<pre><code>marker.addListener("click", function() {
+	map.setZoom(12);
+	map.setCenter(marker.getPosition());
+});</code></pre>
+</div>
+
+
+<div class="slide">
+	<p>To make this all work, we have to add a specific <code>script</code> provided by Google that we plug our API key into.</p>
+	<pre><code>&lt;script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"&gt;
+&lt;/script&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Let's also take a look at a click <code>event</code> on the map.</p>
+	<pre><code>map.addListener('click', function(event) {
+	console.log(event);
+	console.log(event.latLng.lat());
+	console.log(event.latLng.lng());
+});</code></pre>
+</div>

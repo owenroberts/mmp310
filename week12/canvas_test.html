@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title>Canvas Example</title>
+	<meta charset="utf-8" />
+	<style>	</style>
+</head>
+<body>
+	<div id="container">
+		<canvas id="canvas" width="600" height="400"></canvas>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext('2d'); 
+		var x = 10;
+		if (ctx) {
+			//setInterval(draw, 1000/24);
+		}
+		function draw() {
+			ctx.clearRect(0,0,600,400);
+			ctx.fillStyle = "blue";
+			ctx.fillRect(x, 100, 50, 50);
+			ctx.fillStyle = "green";
+			ctx.fillRect(x + 100, 100, 50, 50);
+			ctx.font = "40px Comic Sans MS"
+			ctx.fillText("Hello world!", x, 200);
+			x++;
+		}
+		var url = 'http://api.worldbank.org/v2/countries/usa/indicators/SP.POP.TOTL?format=jsonp&prefix=?';
+		$.getJSON(url, function(json) {
+			var x = 10;
+			for (var i = 0; i < json[1].length; i++) {
+				var year = json[1][i].date;
+				// divide population by 1,000,000 to get smaller number
+				var pop = json[1][i].value/1000000;
+				if (ctx) {
+					ctx.font = "14px"
+					ctx.fillStyle = "black";
+					ctx.fillText(year, x, 370);
+					ctx.fillStyle = "blue";
+					ctx.fillRect(x - 30, 350 - pop, 20, pop);
+					x += 30;
+				}
+			}
+		});
+
+
+	</script>
+</body>
+</html>

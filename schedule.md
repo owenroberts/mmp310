@@ -179,6 +179,12 @@ Go to [Home](index.html)
 		<!-- <li><a href="http://yooouuutuuube.com/v/?width=192&height=120&flux=1&direction=rand&yt=2l_PmSOreGc"  target="blank">yooouuutuuube.com</a></li> -->
 	</ul>
 
+## Week 12
+**Canvas**
+- [Canvas](week12/canvas.html)
+- [Google Maps API](week12/maps.html)
+
+
 <!-- 
 media - css3 - canvas - 
 

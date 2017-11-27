@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>Canvas Example</title>
+	<meta charset="utf-8" />
+	 <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+<body>
+		<h3>My Google Maps Demo</h3>
+		<div id="map"></div>
+	<script>
+		var key = 'AIzaSyDeghcYEis1H9bDYRm7rscDWsQUGj3fz04';
+		function initMap() {
+			var bmcc = {lat: 40.7180903, lng:-74.0142373};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 4,
+	          center: bmcc
+	        });
+	        var marker = new google.maps.Marker({
+	          position: bmcc,
+	          map: map,
+	          title: "BMCC"
+	        });
+	        marker.addListener("click", function() {
+	        	map.setZoom(12);
+	        	map.setCenter(marker.getPosition());
+	        });
+	        map.addListener('click', function(event) {
+			   	var latitude = event.latLng.lat();
+				var longitude = event.latLng.lng();
+				console.log( latitude + ', ' + longitude );
+			});
+	      }
+	</script>
+	<script async defer
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeghcYEis1H9bDYRm7rscDWsQUGj3fz04&callback=initMap">
+    </script>
+</body>
+</html>
