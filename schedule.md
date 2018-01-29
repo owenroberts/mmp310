@@ -192,6 +192,22 @@ Go to [Home](index.html)
 
 
 <!-- 
+
+interactive story
+	- decision tree, user experience map
+	- input vs branching stories
+	- randomized outputs
+interactive comic
+	- clicking on images
+	- decision trees etc
+interactive video
+	- using web video
+	- combine video sources
+	- youtube and native video
+data api
+	- data viz
+	- user input
+
 css3
 more git
 threejs?
