@@ -14,7 +14,7 @@ The class notes, schedule and assignments are all found here.
 - <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
 - [Student Work](studentwork/)
 
-## Fall 2017
+## Spring 2018
 
 - Instructor: Owen Roberts
 - email: oroberts AT bmcc DOT cuny DOT edu
