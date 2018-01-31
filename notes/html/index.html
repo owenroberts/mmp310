@@ -1,0 +1,73 @@
+---
+layout: slides
+title: HTML Review
+week: 1
+---
+
+<div class="slide">
+	<p>Simple HTML template:</p>
+	<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;My Website&lt;/title&gt;
+	&lt;link rel="stylesheet" href="style.css" type="text/css" /&gt;
+	&lt;meta charset="utf-8" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;My Website&lt;/h1&gt;
+	&lt;p&gt;This is my &lt;em&gt;amazing&lt;/em> website.</p>
+	&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=tntOCGkgt98" target="blank">This is a link&lt;/a&gt;.&lt;/p&gt;
+	&lt;p&gt;This is a photo of a cat:&lt;/p&gt;
+	&lt;img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+<div class="slide">
+	<img src="element.png" />
+</div>
+<div class="slide">
+	<h2>Elements, tags, attributes and content</h2>
+	<p>HTML can be broken down into these four components.</p>
+	<p>Elements are the basic structure of an HTML document.</p>
+	<p>Like other markup languages, HTML uses brackets like this: <code>< ></code> to divide content and tags. Tags tell the browser what to do with the content.  Some elements have an open tag and closing tag.</p>
+	<p>The content always goes in between the tag.  This can include text, other forms of media and other HTML elements.</p>
+	<p>Inside of the tags we can also add attributes which add information or functionality to elements with a name and value pair.</p>
+	<p>HTML elements are nested inside each other to create simple and complex structures.  If an HTML tag is opened inside of another HTML tag, it must be closed before it's parent tag is closed.</p>
+</div>
+<div class="slide">
+	<h2>Structural tags</h2>
+	<p>The basic structural tags of HTML include <code>doctype, html, head</code> and <code>body</code></p>
+	<p><code>doctype</code> tells the browser what type of document it is reading.</p>
+	<p><code>html</code> is a wrapper for the all of the content in the document.</p>
+	<p><code>head</code> contains information that is invisible to the user, such as meta information about the page, links to style sheets and scripting, and other functionality.</p>
+	<p><code>body</code> contains all of the content and structure that goes on the page.</p>
+	<p><code>div</code> is a basic element that stand for division.  It is used as a neutral building block for position and creating hierarchy with a page.</p>
+</div>
+<div class="slide">
+	<h2>Text tags</h2>
+	<p>Tags for text include:</p>
+	<li><code>h1, h2, h3, h4, h5, h6</code> are headings, such as the title of these slides, the higher the number the smaller the font and weight</li>
+	<li><code>p</code> is the paragraph tag, which is used to organize most text</li>
+	<li><code>em, strong</code> are style tags, emphasis for <em>italics</em> and strong for <strong>bold</strong>.</li>
+	<li><code>ul, ol, li</code> are used to create lists such as this one.  <code>ul</code> is unordered list, which makes a list with bullets.  <code>ol</code> is ordered, for numbers.  <code>li</code> is a list item.  They are useful for navigation menus.</li>
+</div>
+<div class="slide">
+	<h2>Hyperlinks</h2>
+	<li><code>a</code> is the anchor tag, for hypertext links.  It requires the <code>href</code> attribute to hold the location or URL of the link.  It also takes the <code>target</code> attribute to determine where to open the link, such as <code>"blank"</code> for a new window.</li>
+	<li>External links are links to pages on other sites: <code>href="http://www.othersite.net"</code></li>
+	<li>Internal links are links to pages within the same site, server or domain, and use relative paths: <code>href="work/assignment1/index.html"</code></li>
+</div>
+<div class="slide">
+	<h2>Image tag</h2>
+	<li><code>img</code> is the tag to add an image to a web page.  It takes the attribute <code>src</code> which contains the location of the image, such as <code>"images/cat.png"</code></li>
+	<p>There are many other tags we will explore throughout the semester for structure, advanced media and other functionality.</p>
+</div>
+<div class="slide">
+	<h2>References</h2>
+	<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="blank">MDN Intro to HTML</a></li>
+	<li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element" target="blank">MDN Element Reference</a></li>
+</div>
+<div class="slide">
+	<h1>CSS</h1>
+</div>
+

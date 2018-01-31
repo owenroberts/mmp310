@@ -2,7 +2,8 @@ description: mmp 310 class website
 class: MMP 350
 semester: s18
 baseurl: /mmp310
-# Exclude these files from your production _site
+layouts_dir: jeks/_layouts
+includes_dir: jeks/_includes
 exclude:
   - README.md
   - update.sh

@@ -9,79 +9,55 @@ Go to [Home](index.html)
 ## Week 1
 **Introduction**
 - Introduce class and syllabus
-- Quick [reivew](week1/) of HTML, CSS and JavaScript, file structure, web architecture
-	<!-- - [Class example](week1/review/) -->
-- [Intro to command line / Git](week1/git.html)
-- [Publishing with GitHub](week1/github.html)
+- Review HTML, CSS and JavaScript, file structure, web architecture
+	- [HTML review](notes/html/)
+	- [CSS review](notes/css/)
+- [Intro to command line / Git](notes/git/index.html)
+- [Publishing with GitHub](notes/git/github.html)
 - **In class assignment**
 	- Create a simple web site to use as the portfolio page for your work this semester
+	- Include `style.css` page
+	- Include a photo and short bio
 	- Upload site to GitHub to publish with GitHub Pages
 
 ## Week 2
 **Input & data storage with variables**
 - Review GitHub publishing
-- [JavaScript input & variables](week2/)
+- [JavaScript input & variables](notes/input/)
+- Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
+- **Assignment 1: Interactive story**
+	- In groups of 2 make a website that tells a story
+	- The story must be interactive
+	- We will explore various methods of interactivity including user input, randomization and logic
 
-<!-- 	
-- [Class example](week2/input/)
-- **Assignment 2: Madlibs**
-	- [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
-	- Create a program that takes information from a user and creates a response that tells a story about that user
-	- The information is usually used in unexpected ways
-	- Use text input or select menus
-	- Use HTML inputs to get user information
-	- Save the information using JavaScript
-	- Give the user a response that shows their information has been captured
-	- Add a stylesheet with original styling for the form 
--->
-
+<!-- examples of interactive stories ... -->
 
 
 ## Week 3
 **Logic**
-- [Data types: Number, String, Boolean](week3/)
-	<!-- - [Class Example](https://owenbmcc.github.io/classwork310/input_2/) -->
-- [Logic](week3/logic.html)
+- [Data types: Number, String, Boolean](notes/data_store)
+- [Logic](notes/logic/)
+- Class Demo: Quiz program
 - **In Class Assignment**
 	- Rewrite Madlibs assignment using a test to verify input
 
-<!-- - **Assignment 3: Quiz Program**
-	- Make a quiz with a least three questions
-	- Use `input` or `select` for user input
-	- Use logic to verify user answers and display feedback
-	- Count the total number correct and display results
-	- Extra Credit: Use images as response choices for user
-	- Extra Credit: Give hints to user on wrong response -->
+<!-- some directive for interactive story -->
 
 ## Week 4
 **Arrays**
-- [Arrays](week4/array.html)
-- **In Class**
-	<!-- - Use an Array to store the correct answers in Quiz program -->
-- [Math, random](week4/random.html)
+- [Arrays](notes/array/)
+- [Math, random](notes/random/)
+- Class Demo: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
 
-<!-- - **Assignment 4: Magic 8 Ball**
-	- [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
-	- Recreate the Magic 8 Ball game using JavaScript
-	- Magic 8 Ball works by answering Yes/No questions
-	- Your program will need to take a users question and respond - with one of the classic Magic 8 Ball responses (or you can write your own responses)
-	- Create an `array` with all possible answers and use `Math.random()` to get a random choice
-	- Use CSS to design the interface
-	- Bonus: Animate the response in some way
-	- Bonus: Make responses the include the input in some way -->
+<!-- use random order for a story -->
 
 ## Week 5
 **Loops**
-- [Loops](week5/loops.html)
-- **Pair Programming**
-	- Recreate [Design human design](http://designhumandesign.media.mit.edu/)
-- **[Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)**
+- Present Assignment 1: Interactive story
+- [Loops](notes/loop/)
+- [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
+- Class Demo: Random Password Generator
 
-<!-- - **Assignment 5: Random password**
-	- Generate a random password for a user using a loop
-	- Program should take a username, number of characters and keyword
-	- Output a randomly generated password with the correct number of characters
-	- The password should use the characters in the keyword in some way, but not exactly the same, for example: if keyword = banana, password = 1bAnAnA4u -->
 
 ## Week 6
 **Functions**
@@ -207,6 +183,10 @@ interactive video
 data api
 	- data viz
 	- user input
+meme generator
+	- get a random image
+	- random text
+	- 
 
 css3
 more git

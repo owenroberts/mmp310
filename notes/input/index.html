@@ -1,8 +1,7 @@
 ---
 layout: slides
-title: MMP 310
+title: JavaScript input and variables
 week: 2
-dek: JavaScript input and variables
 ---
 
 <div class="slide">
@@ -79,35 +78,31 @@ dek: JavaScript input and variables
 </div>
 
 
-<!-- 
-button
-textarea
-input
-	text
-	select, option
-	
-form
-
-should use getElementById for these examples........
- -->
-
 <div class="slide">
 	<h2>button</h2>
 	<p>A button element is one of the simplest input elements though it isn't as popular as it once was.  Here it is in HTML:</p>
 	<pre><code>&lt;button id="submit"&gt;Click me.&lt;/button&gt;</code></pre>
-	<p>We can also create one in the console:</p>
-	<pre><code><c></c>var button = document.createElement("button");
-<c></c>document.body.appendChild(button);
-<c></c>button.id = "submit";
-<c></c>button.innerText = "Click me!";</code></pre>
+	<p>We get a reference to the <code>button</code> using the <code>document.getElementById</code> method in JavaScript:</p>
+	<pre><code>const submitButton = document.getElementById("submit");
+console.log(submitButton);</code></pre>
+</div>
+
+
+
+<div class="slide">
+	<p>We can also create an element that doesn't exist using JavaScript:</p>
+	<pre><code>const newButton = document.createElement("button");
+document.body.appendChild(newButton);
+button.id = "new-button";
+button.innerText = "Click me too!";</code></pre>
 </div>
 
 <div class="slide">
 	<p>There are a lot of ways we can writes scripts to detect when the button is clicked.  This is a type of event, and we'll talk more in depth about events next week.  For now, let's write a very simple <code>event handler</code> to tell our program the button is clicked.</p>
-	<pre><code>button.onclick = function(event) {
+	<pre><code>submit.onclick = function(event) {
 	console.log(this);
 	console.log(event);
-	alert("You clicked me :)");
+	console.log("You clicked me :)");
 };</code></pre>
 </div>
 
@@ -117,10 +112,6 @@ should use getElementById for these examples........
 	<p><code>event</code> is an optional argument for the function that gives you data about the event itself, such as what type of event it was, the element, the position of the click within the element, modifier keys and other info.</p>
 </div>
 
-<div class="slide">
-	<p>If you want to add an event listener to a HTML element that was not added with JavaScript, you need to get a reference to it first, and in most cases save that reference in a variable.</p>
-	<pre><code>var button = document.getElementById("submit");</code></pre>
-</div>
 
 <div class="slide">
 	<h2>console.log</h2>
@@ -129,29 +120,24 @@ should use getElementById for these examples........
 
 <div class="slide">
 	<h2>input</h2>
-	<p>There are many different types of <code>input</code>.  Today we'll just use a text input:</p>
+	<p>There are different types of <code>input</code>.  Today we'll just use a text input:</p>
 	<pre><code>&lt;input id="name" type="text" placeholder="Input name"&gt;</code></pre>
-	<pre><code><c></c>var input = document.createElement("input");
-<c></c>input.id = "name";
-<c></c>input.placeholder = "Enter user name";
-<c></c>document.body.insertBefore(input, button);</code></pre>
-</div>
-
-<div class="slide">
 	<p>We can use JavaScript to grad the value the user types in:</p>
-	<pre><code>button.onclick = function() {
-	var name = input.value;
+	<pre><code>const nameInput = document.getElementById("name");
+submit.onclick = function() {
+	console.log(nameInput.value);
 };</code></pre>
 </div>
 
 <div class="slide">
 	<h2>textarea</h2>
 	<p>A <code>textarea</code> is a resizable <code>input</code> for text.</p>
-	<pre><code>&lt;textarea id="email" placeholder="Input email" &gt;</code></pre>
-	<pre><code><c></c>var email = document.createElement("textarea");
-<c></c>email.placeholder = "Add your email";
-<c></c>email.id = "email";
-<c></c>document.body.insertBefore(email, input);</code></pre>
+	<pre><code>&lt;textarea id="bio" placeholder="Input Bio" &gt;</code></pre>
+	<pre><code>const bioText = document.getElementById("textarea");
+submit.onclick = function() {
+	console.log(nameInput.value);
+	console.log(bioText.value);
+};</code></pre>
 </div>
 
 <div class="slide">
@@ -164,21 +150,17 @@ should use getElementById for these examples........
 	&lt;option&gt;Queens&lt;/option&gt;
 	&lt;option&gt;Staten Island&lt;/option&gt;
 &lt;/select&gt;</code></pre>
+<pre><code>const boroughSelect = document.getElementById("borough");
+submit.onclick = function() {
+	console.log(boroughSelect.value);
+};</code></pre>
 </div>
 
-<div class="slide">
-	<pre><code><c></c>var borough = document.createElement("select");
-<c></c>borough.id = "borough";
-<c></c>var bronx = document.createElement("option");
-<c></c>bronx.value = "Bronx";
-<c></c>bronx.innerText = "Bronx";
-<c></c>borough.add(bronx);
-<c></c>document.body.insertBefore(borough, button);</code></pre>
-</div>
+
 
 <div class="slide">
 	<h2>Add it all up</h2>
-	<p>Traditionally, we can place all of these elements into a <code>form</code> element, but we are not using any database or remote requests at this point, so we'll just use the elements and JavaScript to interact with them:</p>
+	<p>We can get the users input and then give them a response.  This is one of the most fundamental basics of web interactions.  We can also create new HTML nodes do add that information.</p>
 	<pre><code>button.onclick = function() {
 	var message = document.createElement("p");
 	message.innerHTML = "Hello " + input.value + " from " + borough.value + ", welcome to my website.";
