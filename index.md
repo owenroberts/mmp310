@@ -1,7 +1,6 @@
 ---
 layout: main
-title: MMP 310
-dek: Class info, notes and schedule
+title: Home
 ---
 
 This is the class page of MMP 310 at BMCC.

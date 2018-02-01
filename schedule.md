@@ -1,6 +1,6 @@
 ---
 layout: main
-title: MMP 310 - Schedule
+title: Schedule
 dek: Schedule with class notes & assignments
 ---
 
