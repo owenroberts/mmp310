@@ -1,0 +1,130 @@
+---
+layout: slides
+title: Intro to d3
+week: 12
+---
+
+<div class="slide">
+	<p>d3 is a JavaScript library, like jQuery.  It provides functions to manipulate the DOM and SVG graphics as well as interpret data.  It has its own which resembles some JavaScript and jQuery type things.</p>
+</div>
+
+<div class="slide">
+	<p>Let's go to the <a href="http://d3js.org/" target="blank">d3 website</a> to grab the library.  Let's take a look at their introductory tutorial while we're there, and then come back here for a slightly more advanced look.</p>
+	<p>We'll need to attach the d3 library like any other javascript library, throw this tag in your <code>&lt;head&gt;</code> section:</p>
+	<pre><code>&lt;script src="d3.min.js"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Okay, let's use some basic d3 with HTML.  We'll start with a simple bar graph.  We need a chart to contain our information, so let's add some HTML and CSS:</p>
+	<pre><code>&lt;style&gt;
+ 	#chart {
+		width:300px;
+		height:200px;
+		border:1px solid lightgray;
+		color:white;
+	}
+&lt;/style&gt;</code></pre>
+	<pre><code>&lt;div id="chart"&gt;&lt;/div&gt;</code></pre>
+
+</div>
+
+<div class="slide">
+	<p>Now we'll add some d3 to create bars:</p>
+	<pre><code>d3.select("#chart")
+	.selectAll("div")
+	.data(["lightblue", "blue", "lightgreen", "green"])
+	.enter().append("div")
+	.style("background", function(d) { return d; })
+	.text(function(d) { return d; });</code></pre>
+</div>
+
+<div class="slide">
+	<p>Let's modify the data with some numbers:</p>
+	<pre><code>d3.selectAll('#chart div')
+	.data([270, 100, 200, 150])
+	.transition()
+	.duration(2000)
+	.style('width', function(d) { return d + 'px'; });</code></pre>
+</div>
+
+<div class="slide">
+	<p>Okay, let's throw that data into a variable so it's easier to manipulate:</p>
+
+	<pre><code>var data = [270, 100, 200, 150];
+d3.selectAll('#chart div')
+	.data(data)
+	.transition()
+	.duration(2000)
+	.style('width', function(d) { return d + 'px'; });</code></pre>
+</div>
+
+<div class="slide">
+	<p>And we can style the colors using <code>%</code> so we don't have to have two d3 sections, and you can add as many bars as needed:</p>
+	<pre><code>var data = [270, 100, 200, 150, 160, 80];
+var colors = ["lightblue", "blue", "lightgreen", "green"];
+d3.select("#chart")
+	.selectAll("div")
+	.data(data)
+	.enter().append("div")
+	.style("background", function(d, i) { return colors[i%4]; })
+	.text(function(d) { return d; })
+	.transition()
+	.duration(2000)
+	.style('width', function(d) { return d + 'px'; });</code></pre>
+</div>
+
+<div class="slide">
+	<p>Next week we'll look at adding data from an API into these examples.</p>
+</div>
+
+<div class="slide">
+	<h2>SVG graphics</h2>
+	<p>d3 also supports SVG graphics, which creates a lot of flexibility, including adding graphics from Illustrator or other SVG editors.</p>
+	<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial" target="blank">SVG basics</a></li></ul>
+	<p>We'll use some basic SVG shapes and then a Illustrator SVG.</p>
+</div>
+
+<div class="slide">
+	<p>First add an SVG container:</p>
+	<pre><code>var svg = d3.select('#newChart').append('svg')
+  .attr('width', 400)
+  .attr('height', 400);</code></pre>
+</div>
+
+<div class="slide">
+	<p>Then we'll add some circles:</p>
+	<pre><code>d3.select("svg").selectAll("circle")
+	.data(data)
+	.enter().append("circle")
+	.attr("cx", 100)
+	.attr("cy", 100)
+	.attr("r", 10);</code></pre>
+</div>
+
+<div class="slide">
+	<p>Now try adding the data to different attributes of the circle and see what kind of effects you will get, as well as changing where you add the <code>transition()</code> and <code>duration()</code> functions:</p>
+	<pre><code>	.attr("cx", 0)
+	.transition()
+	.duration(2000)
+	.attr("cx", function(d) { return d; })
+	;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>External SVG</h2>
+	<p>We can make a design for a graphic in Illustrator and export it as an SVG to use in our d3 chart.</p>
+	<pre><code>d3.xml("cat.svg", "image/svg+xml", function(xml) {  
+	var cat = document.importNode(xml.documentElement, true);
+	svg.selectAll('g')
+		.data(data)
+		.enter().append('g')
+		.each(function(){ 
+			this.appendChild(cat.cloneNode(true)); 
+		})
+		.attr('transform', function(d) { return 'translate(' + d + ',100)'; } )
+		.transition()
+		.duration(2000)
+		.attr("fill", function(d, i) { return colors[i % colors.length]})
+		;
+});</code></pre>
+</div>

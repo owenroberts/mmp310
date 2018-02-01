@@ -61,50 +61,21 @@ Go to [Home](index.html)
 
 ## Week 6
 **Functions**
-- [Functions](week6/functions.html)
-- **Pair Programming**
-	- Write a function that will return a users age
-	- User inputs birth day, month and year
-	- Return correct age
-	- Will it work for today or any day in the future?
-- [DOM & Events](week6/events.html)
+- [Functions](notes/functions/)
+- [DOM & Events](notes/events)
+- Class Demo: Task List
 
-<!-- - **Assignment 6: Task List**
-	- Write a program that takes user input and adds a new element to a task list
-	- Use `textarea` or `input` to add tasks to the list
-	- You could write other types of lists as well (favorite movies, songs, etc.)
-	- Add a style.css page with styles for the list 
-	- Bonus: Add a button to cross out or remove completed tasks -->
 
 ## Week 7
 **Objects**
-- [Objects](week7/objects.html)
-- **Pair Programming**
-	- Quiz show using objects
-	- Rewrite one of partner's quiz show program (or design a new one)
-	- Use an object for each question to store question and answer
-- [JSON](week7/json.html)
+- [Objects](notes/objects/)
+- [JSON](notes/json)
 
-<!-- - **Assignment 7: Comic**
-	- Using object notation, make a comic out of images or drawings with captions
-	- Choose any subject, story, source material
-	- Bonus: Make it interactive -->
 
 ## Week 8
 **jQuery & JSON API**
-- [jQuery](week8/jQuery.html)
-- **Pair Programming**
-	- Rewrite the comics assignment with jQuery
-	- Is it easier?  Harder?
-- [JSON API](week8/api.html)
-
-<!-- - **Midterm**
-	- Memory Game ([example](http://mark-rolich.github.io/MemoryGame.js/))
-	- Use the Giphy API to load user searched images
-	- Add two copies of each image to the DOM
-	- User clicks on one image at a time to reveal them
-	- If they get a match the images stay revealed
-	- Add CSS and other features to the game -->
+- [jQuery](notes/jquery/)
+- [JSON API](notes/json_api/)
 
 ## Week 9
 **Midterm**
@@ -129,8 +100,8 @@ Go to [Home](index.html)
 
 ## Week 10
 **Final Pitch**
-- [Time](week10/time.html)
-- [HTML5 Media](week10/media.html)
+- [Time](notes/time/)
+- [HTML5 Media](notes/media/)
 - Final Project Pitch
 	- Present a concept for the final project
 	- Can work inidividual or in pairs
@@ -147,8 +118,8 @@ Go to [Home](index.html)
 
 ## Week 11
 **Web Video**
-- [YouTube API](week11/)
-- [Web cam](week11/cam.html)
+- [YouTube API](notes/youtube/)
+- [Web cam](notes/webcam/)
 - Video applications
 	<ul>
 		<li><a href="http://lossur.es/#/" target="blank">Los Sures</a></li>
@@ -163,8 +134,8 @@ Go to [Home](index.html)
 
 ## Week 12
 **Canvas**
-- [Canvas](week12/canvas.html)
-- [Google Maps API](week12/maps.html)
+- [Canvas](notes/canvas/)
+- [Google Maps API](notes/google_maps/)
 
 
 <!-- 

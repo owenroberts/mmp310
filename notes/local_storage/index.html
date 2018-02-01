@@ -1,0 +1,69 @@
+---
+layout: slides
+title: local storage
+week: 10
+---
+        
+<div class="slide">
+    <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="blank"><code>localStorage</code></a> property gives us access to the browser's storage object where we can store information that will exist with the browser even after a session is closed.</p>
+    <p><code>localStorage</code> can be used to replace an external database for simple web applications that only need to keep track of some basic information.</p>
+    <p>It's important to note that <code>localStorage</code> only exists in the current browser.  If you open the application on a new browser it will no longer be available.</p>
+</div>
+
+<div class="slide">
+    <p>Today, we'll build a simple reading list application.  It will keep track of the books we are currently reading and the page number we are on.</p>
+    <p>Because localStorage only saves strings, we need to use different methods to save more complex information.</p>
+</div>
+
+<div class="slide">
+    <p>Let's start simple:</p>
+    <pre><code><c></c>localStorage.bookTitle = "The Great Gatsby";
+<c></c>localStorage.pageNumber = "1";
+<c></c>console.log(localStorage.booktitle);
+<c></c>console.log(localStorage.pageNumber);</code></pre>
+</div>
+
+<div class="slide">
+    <p>If we were only reading one book, this is all the information we would need.  However, if we try to save a list of books, notice what happens:</p>
+    <pre><code><c></c>localStorage.books = ["The Great Gatsby", "Jane Eyre", "Madame Bovary", "Middlemarch"];
+<c></c>console.log(localStorage.books);</code></pre>
+</div>
+
+<div class="slide">
+    <p>Our list has been converted into a string, joined by commas:</p>
+    <pre><code>"The Great Gatsby,Jane Eyre,Madame Bovary,Middlemarch"</code></pre>
+    <p>Anything we want to save in localStroage will be converted into a string.  We can unpack that string using <code>string.split(",")</code> for an array, but if we have more complex information, that will eventually lead to lost data.</p>
+    <pre><code><c></c>var books = localStorage.books.split(",");</code></pre>
+</div>
+
+<div class="slide">
+    <p>We can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="blank">JSON.stringify()</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" target="blank">JSON.parse()</a> to save objects and then retrieve them.</p>
+</div>
+
+<div class="slide">
+    <pre><code><c></c>var books = [];
+<c></c>var gg = {
+    title: "The Great Gatsby",
+    page: 1
+};
+<c></c>books.push(gg);
+<c></c>books.push({
+    title: "Madame Bovary",
+    page: 100
+});
+<c></c>books.push({
+    title: "Middlemarch",
+    page: 701
+});
+<c></c>books.push({
+    title: "Jane Eyre",
+    page: 17
+});
+<c></c>localStorage.books = JSON.stringify(books);
+// refresh window
+<c></c>var books = JSON.parse(localStorage.books);</code></pre>
+</div>
+
+<div class="slide">
+    <p>In the demo today we will create a simple web application that allows the user to add a book to their reading list and update the page number and save that information in localStorage.</p>
+</div>
