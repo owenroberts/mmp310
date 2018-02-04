@@ -21,7 +21,7 @@ Go to [Home](index.html)
 	- Upload site to GitHub to publish with GitHub Pages
 
 ## Week 2
-**Input & data storage with variables**
+**Input**
 - Review GitHub publishing
 - [JavaScript input & variables](notes/input/)
 - Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
@@ -29,6 +29,7 @@ Go to [Home](index.html)
 	- In groups of 2 make a website that tells a story
 	- The story must be interactive
 	- We will explore various methods of interactivity including user input, randomization and logic
+	- [Interactive story inspiration](inspiration/interactive_story/)
 
 <!-- examples of interactive stories ... -->
 

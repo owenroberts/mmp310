@@ -5,7 +5,9 @@ week: 2
 ---
 
 <div class="slide">
-	<p>JavaScript is a scripting language, a lightweight programming language, specifically designed for adding functionality to the elements of web pages. Today we are going to look at some basic concepts in JavaScript and general computer programming which will allow us to interact with the browser and begin making dynamic designs. When we talk about dynamic design we mean making a design which changes given various inputs and interactions. The power of writing code is that we can build designs that react and change to various input, whether it is user interaction, time, or other sources.</p>
+	<p>JavaScript is a scripting language, a lightweight programming language, specifically designed for adding functionality to the elements of web pages.</p>
+	<p>Today we are going to look at some basic concepts in JavaScript that will allow us to interact with the browsers.</p>
+	<p>The power of writing code is that we can build designs that react and change to various input, whether it is user interaction through the mouse, keyboard, touchscreen or other inputs.</p>
 </div>
 <div class="slide">
 	<h2>The Console</h2>
@@ -14,15 +16,21 @@ week: 2
 	<div class="key">CAj</div>
 	<p>The console in the browser is sort of like the Terminal app for OSX, it's a text based interface for the application.  We're going to add a series of commands and see what happens.</p>
 </div>
+
+<div class="slide">
+	<h2>console.log</h2>
+	<p><code>console.log()</code> is a special JavaScript function that can be used to report things that are happening in the program to the developer console.  Like all languages, we need a way to print things to the console to see what works and doesn't it.  It's extremely useful and easy to use, but you have to remember to be specific.  You can put pretty much anything in the argument parentheses for <code>console.log()</code>, so make sure it's something useful, like an element, a variable, or something else that you want to be able to read.  This is a good way to read data from various events.</p>
+	<p>When you have the <code>console</code> open, any statement you type without an operator will be evaluated as if it was inside a <code>console.log()</code> call.</p>
+</div>
+
 <div class="slide">
 	<p>Start by typing into the console.</p>
-	<p><code><c></c> document</code></p>
+	<pre><code><c></c>document</code></pre>
 	<p>Look familiar?  This is our HTML document, interpreted as a node structure by the Document Object Model.</p>
 </div>
 
-<!--  writing stuff to dom / what is the dom? -->
 <div class="slide">
-	<p>Quick aside: What is the document object model?</p>
+	<p>What is the document object model?</p>
 	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="blank">DOM</a></li>
 	<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples" target="blank">DOM Examples</a></li>
 	<p>We'll cover DOM in detail in another class.</p>
@@ -30,9 +38,10 @@ week: 2
 
 <div class="slide">
 	<p>Okay, let's try a couple more lines: </p>
-	<pre><code><c></c> document.body
-<c></c> document.body.style
-<c></c> document.body.style.color = "purple";</code></pre>
+	<pre><code><c></c>document.body
+<c></c>document.body.children
+<c></c>document.body.style
+<c></c>document.body.style.color = "purple";</code></pre>
 </div>
 
 <div class="slide">
@@ -46,27 +55,12 @@ week: 2
 <c></c> document.body.appendChild(elem);</code></pre>
 </div>
 
-<!--  variables, how js treats numbers, strings booleans -->
 <div class="slide">
 	<h2>Let's review <code>var</code> real quick.</h2>
 	<p>In Javascript, every variable is declared as <code>var</code> regardless of what type of information it holds.  Soon we will discuss datatypes as they relate to JavaScript.  JavaScript only works with a few basic variable types: numbers, strings and booleans, along with arrays and objects and functions, which can all be declared with <code>var</code>. </p>
 	<p>Variables in JavaScript are more easily converted into each other.  This is called type coercion and we'll talk about that more next week as well.</p>
 	<p>For now, let's write some variables and then keep going.</p>
 	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" target="blank">var on MDN</a></p>
-</div>
-
-<div class="slide">
-	<pre><code><c></c>var x;
-<c></c>x = 10;
-<c></c>x++; console.log(x);
-<c></c>x;
-<c></c>x += 10;
-<c></c>x = x + 10;
-<c></c>x = "ten";
-<c></c>x = "10";
-<c></c>x++;
-<c></c>x = false;
-<c></c>typeof x;</code></pre>
 </div>
 
 <div class="slide">
@@ -77,7 +71,6 @@ week: 2
 	<p><code>let</code> is like <code>var</code> but block scoped.  This is a bit more complicated and we'll discuss it more later in the semester.  In theory, all JavaScript programs should be written using only <code>const</code> and <code>let</code>, but <code>var</code> is still acceptable in many cases and will work fine for many of the projects we do in class (plus I would have to rewrite all of my notes...)</p>
 </div>
 
-
 <div class="slide">
 	<h2>button</h2>
 	<p>A button element is one of the simplest input elements though it isn't as popular as it once was.  Here it is in HTML:</p>
@@ -86,8 +79,6 @@ week: 2
 	<pre><code>const submitButton = document.getElementById("submit");
 console.log(submitButton);</code></pre>
 </div>
-
-
 
 <div class="slide">
 	<p>We can also create an element that doesn't exist using JavaScript:</p>
@@ -110,12 +101,6 @@ button.innerText = "Click me too!";</code></pre>
 	<p><code>this</code> refers to the element the event listener is bound to.</p>
 	<p><code>this</code> doesn't always refer to an element, in some cases it refers to funcion scope, but for now <code>this</code> will typically refer to an element bound to an event listener. More on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" target="blank">this</a>.</p>
 	<p><code>event</code> is an optional argument for the function that gives you data about the event itself, such as what type of event it was, the element, the position of the click within the element, modifier keys and other info.</p>
-</div>
-
-
-<div class="slide">
-	<h2>console.log</h2>
-	<p><code>console.log()</code> is a special JavaScript function that can be used to report things that are happening in the program to the developer console.  Like all languages, we need a way to print things to the console to see what works and doesn't it.  It's extremely useful and easy to use, but you have to remember to be specific.  You can put pretty much anything in the argument parentheses for <code>console.log()</code>, so make sure it's something useful, like an element, a variable, or something else that you want to be able to read.  This is a good way to read data from various events.</p>
 </div>
 
 <div class="slide">
@@ -156,12 +141,10 @@ submit.onclick = function() {
 };</code></pre>
 </div>
 
-
-
 <div class="slide">
 	<h2>Add it all up</h2>
 	<p>We can get the users input and then give them a response.  This is one of the most fundamental basics of web interactions.  We can also create new HTML nodes do add that information.</p>
-	<pre><code>button.onclick = function() {
+	<pre><code>submit.onclick = function() {
 	var message = document.createElement("p");
 	message.innerHTML = "Hello " + input.value + " from " + borough.value + ", welcome to my website.";
 	document.body.appendChild(message);
