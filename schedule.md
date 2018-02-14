@@ -23,8 +23,8 @@ Go to [Home](index.html)
 ## Week 2
 **Input**
 - Review GitHub publishing
-- [JavaScript input & variables](notes/input/)
-- Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
+- [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/input/){:target="blank"}
+- Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
 - [GitHub Collaboration](notes/git/collaboration.html)
 - **Assignment 1: Interactive story**
 	- In groups of 2 make a website that tells a story
