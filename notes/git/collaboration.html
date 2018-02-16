@@ -1,0 +1,66 @@
+---
+layout: slides
+title: GitHub Collaboration
+week: 2
+---
+
+<div class="slide">
+	<p>For the first assignment, you will be working in pairs.  In order for both people in each group to contribute code and content to the project, you will need to set up a repo, clone it, and add your group member as a collabator.</p>
+</div>
+
+<div class="slide">
+	<img src="git/init.png" alt="">
+	<p>Start by creating a new project on your Desktop and initializing a git repo.  You can start adding some files, like <code>index.html</code>.</p>
+</div>
+
+<div class="slide">
+	<img src="github/create_new.png" alt="">
+	<p>One person should start.  Create a new repo just like we did on the first day of class.</p>
+</div>
+
+<div class="slide">
+	<img src="github/create.png">
+	<p>Add a repository name and description.</p>
+</div>
+
+<div class="slide">
+	<img src="git/remote.png" alt="">
+	<p>Copy the remote location of the repo that appears once it is created:</p>
+</div>
+
+<div class="slide">
+	<pre><code>$ git remote add origin &lt;copied-url&gt;</code></pre>
+	<p>Add the remote to your git repo.</p>
+	<p>Make your initial commit and push the code to Github.</p>
+</div>
+
+<div class="slide">
+	<img src="github/collaborator.png" alt="">
+	<p>Now that your repo is set up, you can add your partner as a collaborator.  Go to the code repository on your GitHub page and open the settings tab, then click on the Collaborators menu option.</p>
+	<p>Add your partner by typing their GitHub username into the Add Collaborator field.  When you add them, they will recieve and email from GitHub.</p>
+</div>
+
+<div class="slide">
+	<p>After accepting the invitation, your partner should now clone the repo on their own Desktop.  Simply copy the URL to the repo and then use the command:</p>
+	<pre><code>$ git clone &lt;repo-url&gt;</code></pre>
+	<p>This will create an enclosing folder and download the project and .git files to your Desktop.  Now try changing the files, something simple for now, and make a commit and then push to the origin.  Your partner should see their repo updated.  At that point your partner needs to update their local copy by using git pull:</p>
+	<pre><code>$ git pull origin master</code></pre>
+	<p>Each time your or your partner makes an update, you can pull your code using this process.</p>
+</div>
+
+<div class="slide">
+	<h2>Conflicts</h2>
+	<p>If your partner pushes some code that has different lines than your and you attempt to pull the code into your local repo, you will get a <note>merge conflict</note>. Git will ask you to resolve the conflicts and then make a new commit.  It will show you what lines and files have conflicts.  In those files you will see something like this:</p>
+		<pre><code><<<<<<<< HEAD
+&lt;p&gt;Welcome to my website!&lt;/p&gt;
+=======
+&lt;p&gt;Welcome to my butt!!!&lt;/p&gt;
+>>>>>>> new_feature</code></pre>
+</div>
+
+<div class="slide">
+	<p>The section that starts with <code>HEAD</code> is what is on your computer.  The section that ends with <code>new_feature</code> is what was added by your partner.</p>
+	<p>You simply need to choose what code to keep and then delete the non-functional lines.</p>
+	<p>When you do run into a conflict, let me know and we can go over it.</p>
+</div>
+

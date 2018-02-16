@@ -23,8 +23,9 @@ Go to [Home](index.html)
 ## Week 2
 **Input**
 - Review GitHub publishing
-- [JavaScript input & variables](notes/input/)
-- Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
+- [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/input/){:target="blank"}
+- Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
+- [GitHub Collaboration](notes/git/collaboration.html)
 - **Assignment 1: Interactive story**
 	- In groups of 2 make a website that tells a story
 	- The story must be interactive
@@ -39,8 +40,9 @@ Go to [Home](index.html)
 - [Data types: Number, String, Boolean](notes/data_store)
 - [Logic](notes/logic/)
 - Class Demo: Quiz program
-- **In Class Assignment**
-	- Rewrite Madlibs assignment using a test to verify input
+
+<!-- - **In Class Assignment**
+	- Rewrite Madlibs assignment using a test to verify input -->
 
 <!-- some directive for interactive story -->
 
