@@ -24,7 +24,7 @@ Go to [Home](index.html)
 **Input**
 - Review GitHub publishing
 - [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/input/){:target="blank"}
-- Class Demo: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
+- **Class Demo**: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
 - [GitHub Collaboration](notes/git/collaboration.html)
 - **Assignment 1: Interactive story**
 	- In groups of 2 make a website that tells a story
@@ -32,19 +32,16 @@ Go to [Home](index.html)
 	- We will explore various methods of interactivity including user input, randomization and logic
 	- [Interactive story inspiration](inspiration/interactive_story/)
 
-<!-- examples of interactive stories ... -->
-
-
 ## Week 3
 **Logic**
-- [Data types: Number, String, Boolean](notes/data_store)
+- [Data types: Number, String, Boolean](notes/data_types)
 - [Logic](notes/logic/)
-- Class Demo: Quiz program
+- **Class Demo**: Quiz Game
+- **Pair Programming**
+	- Rewrite Madlibs [example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"} using a test to verify input
+- Work on Assignment 1
 
-<!-- - **In Class Assignment**
-	- Rewrite Madlibs assignment using a test to verify input -->
-
-<!-- some directive for interactive story -->
+<!-- talk about branching story? -->
 
 ## Week 4
 **Arrays**
