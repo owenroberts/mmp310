@@ -36,7 +36,7 @@ Go to [Home](index.html)
 **Logic**
 - [Data types: Number, String, Boolean](notes/data_types)
 - [Logic](notes/logic/)
-- **Class Demo**: Quiz Game
+- **Class Demo**: Quiz Game  ~ [Class Example](https://owenbmcc.github.io/mmp310s18/quiz/){:target="blank"}
 - **Pair Programming**
 	- Rewrite Madlibs [example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"} using a test to verify input
 - Work on Assignment 1
@@ -45,6 +45,7 @@ Go to [Home](index.html)
 
 ## Week 4
 **Arrays**
+- Present ideas for assignment 1
 - [Arrays](notes/array/)
 - [Math, random](notes/random/)
 - Class Demo: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
