@@ -13,23 +13,28 @@ week: 4
 	<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="blank">Array on MDN</a></li></ul>
 </div>
 <div class="slide">
-	<p>In JavaScript, the items in an array can have any datatype, like a number, string, boolean, or even another arrary.  In other languages, the data in an array usually are all of the same type.  The elements of an array are accessed by their index number, starting with <code>[0]</code>.</p>
+	<p>In JavaScript, the items in an array can have any datatype, like a number, string, boolean, or even another arrary.</p>
+	<p>The elements of an array are accessed by their index number, starting with <code>[0]</code>.</p>
 </div>
 
 <div class="slide">
-	<p><code>imgs[0]</code> references <code>"cat.jpg"</code>.  Like strings, arrays have a <code>length</code> property.</p>
-	<pre><code><c></c>imgs[0];
-<c></c>imgs[1];
-<c></c>imgs[2];
-<c></c>decades[0];
-<c></c>decades[3];</code></pre>
+	<p><code>imgs[0]</code> references <code>"cat.jpg"</code>.</p>
+	<pre><code class="javascript"><c></c>imgs[0];
+<c></c>imgs[1]; // "dog.jpg"
+<c></c>imgs[2]; // "bird.jpg"
+<c></c>decades[0]; // 1980
+<c></c>decades[3]; // 2010</code></pre>
 </div>
 
 <div class="slide">
 	<h2>Adding elements to an array</h2>
-	<pre><code><c></c>imgs[3] = "alligator";
+	<pre><code class="javascript">// set an index
+<c></c>imgs[3] = "alligator";
+// push method adds one value to end of array
 <c></c>imgs.push("lion");
+// pop removes last element
 <c></c>imgs.pop();
+// shift removes first element
 <c></c>imgs.shift();</code></pre>		
 </div>
 
@@ -54,8 +59,10 @@ week: 4
 <div class="slide">
 	<pre><code><c></c>var a = ["cat", "dog", "alligator"];
 <c></c>console.log(a.length);
+// 3
 <c></c>var i = a.indexOf("dog");
-<c></c>console.log(i);</code></pre>
+<c></c>console.log(i);
+// 1</code></pre>
 </div>
 
 <div class="slide">
@@ -82,7 +89,7 @@ week: 4
 	<h2>Array type</h2>
 	<p>In JavaScript, <code>arrays</code> are actually <code>objects</code>:</p>
 	<pre><code><c></c>typeof imgs</code></pre>
-	<p>An <code>arrays</code> is a special type of <code>object</code> with a list of values and indexes.</p>
+	<p>An <code>arrays</code> is a special type of <code>object</code> with numerical indexes used to reference values.</p>
 	<p><code>Array</code> is itself a defult object in JavaScript with some helpful methods for creating and manipulating arrays.</p>
 	<pre><code><c></c>Array.isArray(imgs);</code></pre>
 </div>
