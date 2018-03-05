@@ -4,14 +4,19 @@ title: JavaScript Loops
 week: 5
 ---
 <div class="slide">
-	<p>A loop defines a set of commands to execute a certain number of times.  JavaScript uses several loops statements, including <code>do</code>, <code>while</code> and <code>for</code>.</p>
-	<p>Loops look like other control statements, such as <code>if () { ... }</code> but run the code block a certain number of times.</p>
+	<p>A loop defines a set of commands to execute more than once.</p>
+	<p>JavaScript uses <code>do</code>, <code>while</code> and <code>for</code>.</p>
+	<p>Loops look like other control statements.</p>
+	<pre><code>if (condition) { 
+	// condtional code 
+}</code></pre>
+	<p>A loop is like copying and pasting the same piece of code multiple times.</p>
 </div>
 
 
 <div class="slide">
 	<h2>while loop</h2>
-	<p>A <code>while</code> statements executes as long as the first statement is true.</p>
+	<p>A <code>while</code> statements executes as long as the conditional statement is true.</p>
 </div>
 
 <div class="slide">
@@ -32,30 +37,34 @@ week: 5
 	<pre><code><c></c>for (let i = 0; i < 5; i++) {
 	console.log("This is the " + i + " loop.");
 }</code></pre>
-	<p>The <code>for</code> keyword indicates the beginning of the for loop.  Inside the parentheses there are three statements that control the duration of the loop.</p>
+	<p>The <code>for</code> keyword indicates the beginning of the for loop.</p>
+	<p>Inside the parentheses there are three statements that control the duration of the loop.</p>
 </div>
 
 <div class="slide">
-	<p>The first statement establishes the initial condition: <code>let i = 0;</code>.</p>
-	<p>The second statement establishes a conditional: <code>i < 5;</code>.  As long as this condition evaluates to <code>true</code>, the loop will continue.</p>
-	<p>The final statement is the incremental/decremental statement or iteration: <code>i++;</code>.</p>
-	<pre><code>for (initialization; conditional; iteration;) {
+	<p>The first statement is the initial condition, where we start counting.</p> 
+	<pre><code>let i = 0;</code></pre>
+	<p>The second statement creates a condition.</p> 
+	<pre><code>i < 5;</code></pre>
+	<p>As long as this condition evaluates to <code>true</code>, the loop will continue.</p>
+</div>
+
+<div class="slide">
+	<p>The third statement is the update.  This is how the counting variable is changed after each loop.</p> 
+	<pre><code>i++</code></pre>
+	<pre><code>for (initialization; conditional; iteration) {
 	loop body;
 }</code></pre>
-	<p>This is essentially like copying and pasting the same piece of code five times, while changing a number or input.  Loops are an efficient way to execute actions on a list or array of data.</p>
+	<p>Loops are an efficient way to execute actions on a list or array of data.</p>
 </div>
 
 <div class="slide">
-	<p>In many cases the initial condition will be the value <code>0</code> as in <code>let i = 0;</code> (<code>i</code> in this case is shorthand for <strong>index</strong>).</p>
+	<p>Most of the time we start counting at <code>0</code>:</p>
+	<pre><code>let i = 0;</code></pre>
+
 	<p>But our initial condition could be anything.</p>
 	<pre><code><c></c>for (let i = 1; i < 6; i++) {
   console.log("This is the " + i + " loop.");
-}</code></pre>
-	<pre><code><c></c>for (let i = 1, len = i + 5; i < len; i++) {
-  console.log(i);
-}</code></pre>
-	<pre><code><c></c>for (let i = 1, len = i + 5; i < len; i++) {
-  console.log(i);
 }</code></pre>
 </div>
 

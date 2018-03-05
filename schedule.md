@@ -36,7 +36,7 @@ Go to [Home](index.html)
 **Logic**
 - [Data types: Number, String, Boolean](notes/data_types)
 - [Logic](notes/logic/)
-- **Class Demo**: Quiz Game  ~ [Class Example](https://owenbmcc.github.io/mmp310s18/quiz/){:target="blank"}
+- **Class Demo**: Quiz Game ~ [Class Example](https://owenbmcc.github.io/mmp310s18/quiz/){:target="blank"}
 - **Pair Programming**
 	- Rewrite Madlibs [example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"} using a test to verify input
 - Work on Assignment 1
@@ -48,7 +48,7 @@ Go to [Home](index.html)
 - Present ideas for assignment 1
 - [Arrays](notes/array/)
 - [Math, random](notes/random/)
-- Class Demo: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
+- **Class Demo**: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/8ball/){:target="blank"}
 
 <!-- use random order for a story -->
 
@@ -56,16 +56,23 @@ Go to [Home](index.html)
 **Loops**
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
-- [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1)
-- Class Demo: Random Password Generator
-
+- [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
+- **Class Demo**: Random Password Generator
+- **Assignment 2**: Quiz game / Slide show
+	- This project should use a loop, array and functions
+	- Create a slideshow of images and text
+	- Use an array for the image paths and text
+	- Allow the user to click to choose an answer for quiz
+	- Add up user answers to give them a score or result
+	- Be creative with quiz content
+	- [Examples](inspiration/slideshow/)
+	
 
 ## Week 6
 **Functions**
 - [Functions](notes/functions/)
 - [DOM & Events](notes/events)
 - Class Demo: Task List
-
 
 ## Week 7
 **Objects**
