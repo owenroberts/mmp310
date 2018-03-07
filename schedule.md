@@ -57,7 +57,8 @@ Go to [Home](index.html)
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
-- **Class Demo**: Random Password Generator
+- **Class Demo**: [Random Password Generator~ ](https://owenbmcc.github.io/mmp310s18/password/){:target="blank"}
+- **Class Demo**: [Slideshow](https://owenbmcc.github.io/mmp310s18/slideshow/){:target="blank"}
 - **Assignment 2**: Quiz game / Slide show
 	- This project should use a loop, array and functions
 	- Create a slideshow of images and text
