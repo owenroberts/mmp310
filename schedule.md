@@ -66,6 +66,7 @@ Go to [Home](index.html)
 	- Add up user answers to give them a score or result
 	- Be creative with quiz content
 	- [Examples](inspiration/slideshow/)
+	- Due March 28
 	
 
 ## Week 6
@@ -76,12 +77,14 @@ Go to [Home](index.html)
 
 ## Week 7
 **Objects**
+- Present Assignment 2 Progress
 - [Objects](notes/objects/)
 - [JSON](notes/json)
 
 
 ## Week 8
 **jQuery & JSON API**
+- Present Assignment 2
 - [jQuery](notes/jquery/)
 - [JSON API](notes/json_api/)
 
