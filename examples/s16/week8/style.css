@@ -1,0 +1,39 @@
+body {
+    font-family:sans-serif;
+    margin:0;
+    line-height:1.4;
+    background-color:lightgray;
+}
+#container {
+    width:800px;
+    margin: 0 auto;
+}
+.slide {
+    display:none; 
+    position:relative;
+}
+
+.slide img {
+    
+}
+.slide .label {
+    position:relative;
+    bottom: 2em;
+    left: 1em;
+    color:white;
+    font-size:24px;
+}
+#slideshow {
+    position:relative;
+    width:500px;
+}
+#slideshow button {
+    position:absolute;
+    top:400;
+}
+#next {
+    right:0;
+}
+#prev {
+    left:0;
+}

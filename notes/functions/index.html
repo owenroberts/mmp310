@@ -1,0 +1,153 @@
+---
+layout: slides
+title: Functions
+week: 6
+---
+
+<div class="slide">
+	<p>Functions are blocks of code that can be called repeatedly.  Functions are defined like variables but have parentheses following the function name. The parentheses <code>()</code> are an operator like <code>+</code> or <code>=</code> that are used to <note>invoke</note> or call a function.</p>
+</div>
+
+		<!--  Arguments can be placed inside the parentheses. -->
+
+<div class="slide">
+	<p>There a two primary ways to create a function.</p>
+	<pre><code>// function declaration
+function foo() {
+	console.log("Hello :)");
+}</code></pre>
+<pre><code>// function statement 
+var bar = function() {
+	console.log("world");
+}; // ends with semi color because it's a statement</code></pre>
+	<p>Notice how nothing happens after we declare the function.  The function is defined, but the code won't run until it is called:</p>
+	<pre><code>foo();
+bar();</code></pre>
+</div>
+
+<div class="slide">
+	<p>The function in the previous example isn't very useful.  We can just as easily write out <code>console.log("world");</code> as we can <code>foo()</code>.  Even if there were more lines, if they only do one thing, it's not that useful.  A function should repeat a series of code that needs to be done often, and usually called from different parts of the program.</p>
+</div>
+<div class="slide">
+	<h2>Arguments</h2>
+	<p>A function can also be written with <note>arguments</note>, which are variables that are declared within the parentheses of the function.</p>
+	<p>Think of a function like a machine that has a series of actions.  For example, a car can drive from one place to another, as many times as you want it to.  But that's not very useful if there's no one in the car.  You can put anyone you want to in a car and take them wherever you want.  If we think of a car as a function it has many possible inputs: people, an origin and destination, the amount of gas, speed, radio channel, etc.  And these input have a result.  People are carried from one place to another.</p>
+</div>
+
+<div class="slide">
+	<p>Let's write a function with arguments.</p>
+	<pre><code>function greet(name, greeting) {
+	console.log(greeting + ", " + name);
+}
+
+greet("Jenny", "Hello");
+greet("Jerry", "Hi");</code></pre>
+</div>
+
+<div class="slide">
+	<p>Now check what happens if we call the function with out arguments:</p>
+	<pre><code>greet();</code></pre>
+	<p>Why is this <code>undefined, undefined</code>?</p>
+	<p>The variables that are created for the arguments of the function, in this case <code>name</code> and <code>greeting</code> and implicitly instantiated when the function is called.</p>
+	<p>So, even though we never wrote <code>var name;</code> or <code>var greeting;</code> they are instantiated, and when a variable is instantiated but not assigned, it has the value <code>undefined</code>.  Because we did not call our function with the right number of arguments, those values stay undefined.</p>
+</div>
+<div class="slide">
+	<p>Open up the console and try these lines:</p>
+	<pre><code><c></c>q + w;
+<c></c>var q, w;
+<c></c>q;
+<c></c>q + w;
+<c></c>var q = 2, w = 2;
+<c></c>q + w;</code></pre>
+	<p>If we don't declare or assign a variable, trying to use them will throw an Uncaught Reference Error.  <code>NaN</code> or "Not a Number" is the result of trying to add two undefined variables.  </p>
+</div>
+<div class="slide">
+	<h2>How do we know if we have the right arguments?</h2>
+	<p>Because JavaScript will not throw an error if we try to call a function with the wrong number of arguments, it does provide an <code>arguments</code> variable, which is set to an array of whatever arguments are entered.  For example:</p>
+	<pre><code>function tooManyArguments(){
+	console.log(arguments);
+}
+tooManyArguments(1,2,"Jerry", "Jenny");</code></pre>
+</div>
+<div class="slide">
+	<p>If we want to make sure we have the right arguments we can test for length, type or other properties.</p>
+	<pre><code>function greet(name, greeting) {
+	if (arguments.length > 1) {
+		console.log(greeting + ", " + name);
+	} else {
+		console.log("Not enough arguments for a greeting :(");
+	}
+}
+greet("Jerry");</code></pre>
+<pre><code>function printName(name) {
+	if (typeof name == "string") {
+		console.log(name);
+	} else {
+		console.log("This function requires a string.");
+	}
+}
+printName("Jerry");
+printName(1);</code></pre>
+</div>
+<div class="slide">
+	<h2>Return</h2>
+	<p>Functions can also <code>return</code> values.  A return statement stops the function block and returns a value to whatever variable the function is assigned to.</p>
+	<pre><code>function add(n1, n2) {
+	return n1 + n2;
+}
+var x = add(2, 2);
+var y = add(x, 2);
+var z = add(x, y);
+console.log(add(x, y, z));</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Anonymous functions</h2>
+	<p>Regular JavaScript functions need to be called after they are declared.  There are cases where we want a function to run immediately. These are anonymous functions, which self execute:</p>
+	<pre><code>(function() {
+	console.log("Hello world");
+})();</code></pre>
+			<pre><code>(function(msg) {
+	console.log(msg);
+})("Hello world.");</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Scope</h2>
+	<p><span class="note">A quick note on scope:</span> Variables declared within a function are not available to other functions in our program.  Any variables declared in the <note>global</note> scope, or outside of any function, are available to function scopes.</p>
+	<p>Read more on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Implicit_globals_and_outer_function_scope" target="blank">scope</a>.</p>
+</div>
+
+<div class="slide">
+	<p>Bad scope example:</p>
+	<pre><code>function assign() {
+	var x = 0;
+	var y = 1;
+}
+function add() {
+	console.log(x + y);
+}
+assign();
+add();</code></pre>
+</div>
+
+<div class="slide">
+	<p>Better scope example:</p>
+	<pre><code>var x; 
+var y;
+function assign() {
+	x = 0;
+	y = 1;
+}
+function add() {
+	console.log(x + y);
+}
+assign();
+add();</code></pre>
+</div>
+
+<div class="slide">
+	<p>This will not be super important for the programs we write in this class but generally, it's not considered good practice to declare variables in the global scope in JavaScript.  This is because in a webpage with many JavaScript scripts attached, those global variables may be used unintentionally in other scripts.</p>
+	<p>One common practice used to avoid this is to wrap all of the code in your script in a self invoking function, which will keep things out of the global scope.  Another approach is to make a global object that has methods to access variables which allows your script to be accessible in other scripts without exposing all of your variables to the global scope.</p>
+	<p>More on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" target="blank">functions</a>.</p>
+</div>

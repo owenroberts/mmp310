@@ -3,43 +3,59 @@ Array.prototype.clone = function() {
 	return this.slice(0);
 };
 
-var clas = [
-	"Marlon",
-	"Philip",
-	"Juan",
-	"Kristine",
-	"Lana",
-	"Mark",
-	"Fane",
-	"Lulu",
-	"Islam",
-	"Brendan",
-	"Yoko",
-	"Allan",
-	"Marcus",
-	"Ronald",
-	"Amber",
-	"Sarah",
-	"Cammy",
-	"Liping",
-	"Sarah",
-	"Omotayo"
-		   ];
+var students = [
+	"Marlon", "Jenny", "Jessenia", "Syeda", "Yanping", "Khallid", "Vukan", "Daniel", "Judith", "Alyona", "Joshua", "Alexander", "Anthony", "Jonathan", "Sarah", "Jose", "Cory", "Xiuling"
+];
+var prevGroups = [
+	["Xiuling", "Sarah"], 
+	["Khallid", "Vukan"], 
+	["Alyona", "Marlon"], 
+	["Jose", "Jonathan"], 
+	["Yanping", "Alex"], 
+	["Syeda", "Anthony"], 
+	["Cory", "Jenny"], 
+	["Jessenia", "Judith"], 
+	["Joshua", "Daniel"]
+];
+
+
 
 document.write("Groups" + "<br><br>");
 
 var n = 2;
 
-while (clas.length > 0) {
+function testArrays(group1, group2) {
+	var test = [];
 	for (var i = 0; i < n; i++) {
-		var stu = Math.floor( Math.random() * clas.length );
-		document.write(clas[stu] + " " );
-		clas.splice(stu, 1);
+		test.push(group1.indexOf(group2[i]) != -1);
 	}
-	if (clas.length > 0 && clas.length < n) {
-		for (var i = 0; i < clas.length; i++) document.write(clas[i]);
-		clas.splice(0, clas.length);
-	}
-	document.write("<br>")
+	return test.indexOf(false) == -1;
 }
+
+var groups = [];
+var groupCounter = 0;
+while (students.length > 0) {
+	groups[groupCounter] = [];
+	for (var i = 0; i < n; i++) {
+		var stu1 = Math.floor( Math.random() * students.length );
+		var student1 = students.splice(stu1, 1).join();
+		var stu2 = Math.floor( Math.random() * students.length );
+		groups[groupCounter] = [student1, students[stu2]];
+
+		// need to account for gruops in wrong order
+		while (prevGroups.indexOf(groups[groupCounter]) != -1) {
+			stu2 = Math.floor( Math.random() * students.length );
+			groups[groupCounter] = [student1, students[stu2]];
+		}
+		students.splice(stu2, 1);
+		groupCounter++;
+	}
+	if (students.length > 0 && students.length < n) {
+		for (var i = 0; i < students.length; i++) 
+			groups[groupCounter].push(students[i]);
+		students.splice(0, students.length);
+	}
+}
+console.log(groups);
+document.write(groups.join(" <br> "));
 </script>

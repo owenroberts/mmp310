@@ -1,0 +1,86 @@
+---
+layout: slides
+title: JavaScript data types
+week: 3
+---
+
+<div class="slide">
+	<p>Data storage types such as variables can store different types of data in JavaScript.</p>
+	<p>Variables can be different data types.  The basic types in JavaScript are:</p>
+	<ul>
+		<li><code>Number</code></li>
+		<li><code>String</code></li>
+		<li><code>Boolean</code></li>
+		<li><code>Undefined</code></li>
+		<li><code>Null</code></li>
+		<li><code>Object</code></li>
+	</ul>
+</div>
+
+<!-- number -->
+<div class="slide">
+	<h2>Numbers</h2>
+	<pre><code><c></c>var x = 1;
+<c></c>console.log(x);
+<c></c>x++;
+<c></c>console.log(x);
+<c></c>typeof x;</code></pre>
+</div>
+
+<div class="slide">
+		<p>JavaScript does not differentiate between integers and floating point numbers, such as <code>1</code> and <code>1.5</code>.</p>
+		<!-- <p>JavaScript can also convert strings that have only numeric characters into numbers for us, which is a nice thing for new programmers, but can get a little hairy.</p> -->
+		<p><code>NaN</code> means "Not a Number".  You will get that if you try to evaluate a string that cannot be parsed to a number.  You can test for <code>NaN</code> using the <code>isNaN()</code> function.</p>
+		<pre><code><c></c> isNaN(NaN);
+<c></c> isNaN("hello world");
+<c></c> isNaN("7"); // why doesn't this return false?</code></pre>
+</div>
+		
+<!-- string -->
+<div class="slide">
+	<h2>Strings</h2>
+	<p>Strings in JavaScript are sequences of characters, using Unicode they are represented by a 16-bit number, for example: <code>"Hello world."</code> or <code>"string"</code>.  Characters are written as strings with the length of one.  Strings provide <code>length</code>, a property that returns the length of the string.</p>
+</div>
+<div class="slide">
+	<pre><code><c></c>"Hello World".length</code></pre>
+	<p>Strings also have some built in methods like <code>charAt()</code> and <code>replace()</code> which help us do evaluation and manipulation.</p>
+	<pre><code><c></c>var str = "Hello world";
+<c></c>str[0];
+<c></c>"Hello world".charAt(0);
+<c></c>"Hello world".replace("world", "Jerry");
+<c></c>"Hello world".indexOf("world");</code></pre>
+	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Methods_2" target="blank">More string methods</a></p>
+</div>
+
+<!-- addition vs concatenation review -->
+<div class="slide">
+	<h2>Addition vs. concatenation review</h2>
+	<pre><code><c></c>var x = 1;
+<c></c>var y = "7";
+<c></c>x + y;
+<c></c>typeof x + y;
+<c></c>y + x;
+<c></c>x + +y;
+<c></c>x + Number(y);</code></pre>
+		</div>
+
+		<!-- boolean -->
+<div class="slide">
+	<h2>Booleans</h2>
+	<p>Booleans default to the values <code>true</code> and <code>false</code>.</p>
+	<p>In JavaScript many values will become <code>false</code>, such as <code>0</code>, <code>""</code> (empty string), <code>NaN</code>, <code>null</code>, and <code>undefined</code>.</p>  
+	<p>Everything else defaults to <code>true</code>, such as <code>"Hello World"</code>, <code>1</code>, <code>99</code>, or <code>-99</code>.  Try evaluating some booleans in the console with this syntax:</p>
+	<pre><code><c></c>Boolean("");
+<c></c>Boolean(null);
+<c></c>Boolean(4);</code></pre>
+	<p>We'll use booleans when we start working on logic.</p>
+</div>
+
+
+<div class="slide">
+	<h2>Null and undefined</h2>
+	<p>JavaScript uses <code>null</code> and <code>undefined</code> as distinct values.  <code>null</code> indicates a purposely unassigned value.  <code>undefined</code> indicates a variable that has been instantiated but not assigned with a value.  <code>typeof null</code> is <code>object</code> while <code>typeof undefined</code> is <code>"undefined"</code>.</p>
+	<pre><code><c></c>console.log(y);
+<c></c>var x;
+<c></c>console.log(x);</code>
+</div>

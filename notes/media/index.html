@@ -1,0 +1,213 @@
+---
+layout: slides
+title: HTML5 Media
+week: 10
+---
+
+<div class="slide">
+	<h2>Video</h2>
+	<p>Adding video in HTML5 is very simple.  Today we'll start with native video components, and later we will look at the <a href="https://developers.google.com/youtube/youtube_player_demo" target="blank">YouTube API</a> which is very useful.  To have more control of the style and interactivity of a video, HTML5 and JavaScript provides the ability to add customization and effects.</p>
+</div>
+
+<div class="slide">
+	<video width="480" controls>
+		<source src="cat.mp4" type="video/mp4">
+		<source src="cat.ogg" type="video/ogg">
+			Your browser does not support HTML5 video : (
+	</video>
+	<pre class="block"><code>&lt;video controls&gt;
+	&lt;source src="cat.mp4" type="video/mp4"&gt;
+	&lt;source src="cat.ogg" type="video/ogg"&gt;
+	Your browser does not support HTML5 video :-(
+&lt;/video&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>HTML5 video must specify multiple sources and make files for each source.  There is not one file type that is supported by all major browsers, so you have to make at least 2 to make sure that your video will appear in Chrome, Safari, Firefox and IE.  For (a lot) more on video format, check out <a href="http://diveintohtml5.info/video.html" target="blank">this page</a> on Dive in HTML5.</p>
+	<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility" target="blank">Browser compatibility for media</a></p>
+	<p>The <code>type</code> attribute can be ignored and video will still load but should be used for better performance.  If you don't specify the type, the browser will attempt to load each video until it succeeds.  By specifying type, the browser immediately knows which video to load.</p>
+</div>
+
+<div class="slide">
+	<h2>Video parameters</h2>
+	<p>The <code>video</code> tag has several attributes that can change the look and playback of the video.  Adding <code>controls</code> gives the player default controls for each browser.  <code>autoplay</code> starts the video playback when the page loads.  Adding <code>loop</code> makes the video loop indefinitely, though this is a little buggy depending on the video you use.  In Chrome it doesn't seem to work at all, so I made a little JavaScript fix that we'll look at in a moment.  <code>muted</code> mutes the video.  <code>poster</code> adds an image to use when the video is not playing.</p>
+</div>
+
+<div class="slide">
+	<video poster="https://media.giphy.com/media/maNB0qAiRVAty/giphy.gif" onclick="this.play()" width="480" height="480">
+		<source src="cat.mp4" type="video/mp4">
+		<source src="cat.ogg" type="video/ogg">
+	</video>
+	<pre class="block"><code>&lt;video poster="https://media.giphy.com/media/maNB0qAiRVAty/giphy.gif" width="480"&gt;
+	&lt;source src="cat.mp4" type="video/mp4"&gt;
+	&lt;source src="cat.ogg" type="video/ogg"&gt;
+	Your browser does not support HTML5 video :-(
+&lt;/video&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Set the time the video starts at or set a range for the video to play using media fragments.</p>
+	<video width="480" onclick="this.play()">
+		<source src="cat.mp4#t=5,6" type="video/mp4">
+	</video>
+	<pre class="block"><code>&lt;video width="480&gt;
+	&lt;source src="cat.mp4#t=5,6" type="video/mp4"&gt;
+	&lt;/video&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Events</h2>
+	<p>The parameter <code>loop</code> will loop the video on most browsers, though not all of them.  The following video uses JavaScript to loop the video on any browser:</p>
+	<video id="loop" width="480" onclick="this.paused ? this.play() : this.pause();" >
+		<source src="cat.mp4" type="video/mp4">
+	</video>
+	<script>
+	   var loop = document.getElementById("loop");  
+	   loop.addEventListener("ended", function() {
+	   		loop.currentTime=0;loop.play(); 
+	   	}, true);
+	 </script>
+
+	 <pre class="block"><code>var video = document.getElementById("loop");   
+video.addEventListener("ended", function() {
+	video.currentTime = 0;
+	video.play(); 
+}, true);</code></pre>
+</div>
+
+<div class="slide">
+	<p>Using events, a video can trigger updates other parts of the DOM, change the style of the video and make other transformations.</p>
+	<p>In the following example, we can use the video to change the background of our entire page as it plays. At the same time, we will populate a paragraph with text.</p>
+</div>
+
+<div class="slide">
+	<video id="js" width="480" onclick="this.paused ? this.play() : this.pause();">
+		<source src="cat.mp4" type="video/mp4">
+    </video>
+    <p id="caption"></p>
+     
+    <script>
+    	var js = document.getElementById('js');
+    	var caption = document.getElementById('caption');
+		var captions = ["Hello", "I'm a cat", "Meow"];
+		var current = 0;
+    
+		js.addEventListener("timeupdate", function () {
+			console.log(js.currentTime);
+      		if (js.currentTime > 2 * current) {
+				caption.textContent = captions[current];
+				current++;
+    		}
+    	}, false);
+	</script>
+	<pre><code>var video = document.getElementById('cat');
+var caption = document.getElementById('caption');
+var captions = ["Hello", "I'm a cat", "Meow"];
+var current = 0;
+
+video.addEventListener("timeupdate", function () {
+	console.log(video.currentTime);
+		if (video.currentTime > 2 * current) {
+		caption.textContent = captions[current];
+		current++;
+	}
+}, false);</code></pre>
+</div>
+
+<div class="slide">
+	<h2>CSS styling</h2>
+	<p>We can style our video elements the same way we would any HTML element.</p>
+	<style>
+		#styled {
+			border:7px solid #f3f;
+			transition:all 1s;
+			box-shadow:10px 10px 0 blue;
+		}
+		#styled:hover {
+			-webkit-transform: rotateX(180deg);
+			-webkit-filter: blur(10px);       
+		}
+	</style>
+	<video id="styled" width="480" onclick="this.paused ? this.play() : this.pause();">
+		<source src="cat.mp4" type="video/mp4">
+	</video>
+</div>
+
+<div class="slide">
+	<pre><code>&lt;style&gt;
+	#styled {
+		border:7px solid #f3f;
+		transition:all 1s;
+		box-shadow:10px 10px 0 blue;
+	}
+	#styled:hover {
+		transform: rotateX(180deg);
+			filter: blur(10px);       
+		-webkit-transform: rotateX(180deg);
+		-webkit-filter: blur(10px);       
+	}
+&lt;/style&gt;
+&lt;video id="styled" width="480&gt;
+	&lt;source src="cat.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Custom controls can be created and styled.</p>
+	<div id="vid">
+		<video width="480" id="ex">
+			<source src="cat.mp4" type="video/mp4">
+		</video>
+		<div id="playBtn" onclick="ex.paused ? ex.play() : ex.pause(); this.textContent = ex.paused ? 'Play':'Pause' ">Play</div>
+	</div>
+	<style>
+		#vid {
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
+		#playBtn {
+			position: absolute;
+			color: #ffddff;
+			border:1px solid #ffddff;
+			padding:1em 2em;
+			border-radius:0.5em;
+		}
+	</style>
+	<pre><code>&lt;div id="vid"&gt;
+	&lt;video width="480" id="cat"&gt;
+		&lt;source src="cat.mp4" type="video/mp4"&gt;
+	&lt;/video&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code>&lt;style&gt;
+	#vid {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#playBtn {
+		position: absolute;
+		color: #ffddff;
+		border:1px solid #ffddff;
+		padding:1em 2em;
+		border-radius:0.5em;
+	}
+&lt;/style&gt;</code></pre>	
+</div>
+
+<div class="slide">
+	<pre><code>var video = document.getElementById("cat");
+var btn = document.getElementById("playBtn");
+btn.addEventListener("click", function() {
+	if (video.paused) {
+		video.play();
+		this.textContent = "Pause";
+	} else {
+		video.pause();
+		this.textContent = "Play";
+	}
+});</code></pre>
+</div>

@@ -1,0 +1,114 @@
+---
+layout: slides
+title: JavaScript Loops
+week: 5
+---
+<div class="slide">
+	<p>A loop defines a set of commands to execute more than once.</p>
+	<p>JavaScript uses <code>do</code>, <code>while</code> and <code>for</code>.</p>
+	<p>Loops look like other control statements.</p>
+	<pre><code>if (condition) { 
+	// condtional code 
+}</code></pre>
+	<p>A loop is like copying and pasting the same piece of code multiple times.</p>
+</div>
+
+
+<div class="slide">
+	<h2>while loop</h2>
+	<p>A <code>while</code> statements executes as long as the conditional statement is true.</p>
+</div>
+
+<div class="slide">
+		<pre><code><c></c>var i = 0;
+<c></c>if (i < 5) {
+  i++;
+  console.log(i);
+}</code></pre>
+    <pre><code><c></c>var i = 0;
+<c></c>while (i < 5) {
+  i++;
+  console.log(i);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>for loop</h2>
+	<pre><code><c></c>for (let i = 0; i < 5; i++) {
+	console.log("This is the " + i + " loop.");
+}</code></pre>
+	<p>The <code>for</code> keyword indicates the beginning of the for loop.</p>
+	<p>Inside the parentheses there are three statements that control the duration of the loop.</p>
+</div>
+
+<div class="slide">
+	<p>The first statement is the initial condition, where we start counting.</p> 
+	<pre><code>let i = 0;</code></pre>
+	<p>The second statement creates a condition.</p> 
+	<pre><code>i < 5;</code></pre>
+	<p>As long as this condition evaluates to <code>true</code>, the loop will continue.</p>
+</div>
+
+<div class="slide">
+	<p>The third statement is the update.  This is how the counting variable is changed after each loop.</p> 
+	<pre><code>i++</code></pre>
+	<pre><code>for (initialization; conditional; iteration) {
+	loop body;
+}</code></pre>
+	<p>Loops are an efficient way to execute actions on a list or array of data.</p>
+</div>
+
+<div class="slide">
+	<p>Most of the time we start counting at <code>0</code>:</p>
+	<pre><code>let i = 0;</code></pre>
+
+	<p>But our initial condition could be anything.</p>
+	<pre><code><c></c>for (let i = 1; i < 6; i++) {
+  console.log("This is the " + i + " loop.");
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>Likewise, we can change the conditional and iteration statements.</p>
+	<pre><code><c></c>for (let i = 0; i < 100; i += 10) {
+  console.log(i);
+}</code></pre>
+	<pre><code><c></c>for (let i = 10; i > 0; i--) {
+  console.log(i);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Example</h2>
+	<p>A practical example of a loop in JavaScript:</p>
+	<pre><code>var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];
+for (let i = 0; i < imgs.length; i++) { 
+	let img = new Image();
+	img.src = imgs[i];
+	document.body.appendChild(img);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Scope</h2>
+	<p><note>Note on scope:</note> in a <code>for</code> loop we use the <code>let</code> declaration to initialize <code>i</code> in order to <em>scope</em> <code>i</code> to the for loop</code>.</p>
+	<pre><code><c></c>for (let i = 0; i < 5; i++) {
+	console.log(i);
+}
+<c></c>console.log(i);</code></pre>
+</div>
+
+<div class="slide">
+	<p>Look at difference between <code>let</code> and <code>var</code>.</p>
+		<pre><code><c></c>for (var i = 0; i < 5; i++) {
+	var x = i;
+}
+<c></c>console.log(x);</code></pre>
+	<pre><code><c></c>for (var i = 0; i < 5; i++) {
+	let z = i;
+}
+<c></c>console.log(z);</code></pre>
+</div>
+
+        <!-- for loop for checking forms -->
+        <!-- for loop for adding event listeners -->

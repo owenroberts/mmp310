@@ -1,0 +1,51 @@
+---
+layout: slides
+title: Web Cam
+week: 11
+---
+
+<div class="slide">
+	<p>Other than using embedded native and YouTube videos, we can ask the user for access to their web cam and add the feed into the document.</p>
+	<p>Getting webcam stream is relatively easy, we need to make sure the browser has the ability to get user media, which is different in different browsers, so we need to make sure the function exists, and then ask the user for permission, and then handle either possibility.</p>
+</div>
+
+<div class="slide">
+	<pre><code>&lt;video id="webcam" autoplay&gt;&lt;/video&gt;</code></pre>
+	<pre><code>var webcam = document.querySelector('#webcam');
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+	 
+if (navigator.getUserMedia) { 
+	navigator.getUserMedia({video: true}, videoHandler, videoError);
+}
+
+function videoHandler(stream) {
+	webcam.src = window.URL.createObjectURL(stream);
+}
+function videoError(error) {
+	console.log(error);
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>canvas</h2>
+	<p>There's not a whole lot we can do with the video, but we can mirror the stream in an HTML5 <code>canvas</code> element.  We'll start just by mirroring the camera image.  Later, we'll go into more detail on the HTML5 canvas.</p>
+	<pre><code>var canvas = document.getElementById('video');
+var context = canvas.getContext('2d');
+function mirrorImage() {
+	context.save();
+	context.translate(canvas.width, 0);
+	context.scale(-1,1);
+	context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+	context.restore();
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We want to wait until webcam is loaded to display canvas.</p>
+	<pre><code>webcam.addEventListener("loadedmetadata", function() {
+	canvas.width = webcam.videoWidth;
+	canvas.height = webcam.videoHeight;
+	canvas.addEventListener('click', mirrorImage);
+});</code></pre>
+</div>

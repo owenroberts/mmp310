@@ -1,7 +1,6 @@
 ---
 layout: main
-title: MMP 310 - Home
-dek: Class info, notes and schedule
+title: Home
 ---
 
 This is the class page of MMP 310 at BMCC.
@@ -10,25 +9,30 @@ The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
 - <a href="https://mmp310.slack.com/" target="blank">Slack channel</a>
-- <a href="https://docs.google.com/document/d/1JE20usDOF3X6s2_0kL1T2oNvCwpqa74U5mKGhw4AfAI/edit?usp=sharing
-" target="blank">Syllabus</a>
+- <a href="https://docs.google.com/document/d/1H4hMdA0waBqqoETuE1wopXuVwWHD4-vcktsjPU2y-wY/" target="blank">Syllabus</a>
 - <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
+- [Student Work](studentwork/)
 
-## Fall 2017
+## Spring 2018
 
 - Instructor: Owen Roberts
 - email: oroberts AT bmcc DOT cuny DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Tuesday 1pm - 3pm, Thursday 2pm - 3pm, WEdnesday afternoon by appointment
-- Class meeting time: Monday 1:30 - 5:10 pm
-- Room Fiterman 1006
+- Office hours: Tuesday 3pm - 6pm, Wednesday by appointment
+- Class meeting time: Monday/Wednesday 5:30 - 7:10 pm
+- Room: Fiterman 1006
 
 ## Turning in assignments
 
-- Assignments are due the night before class
-- DM @owen a URL to the assignment
-- Late assignments are automatic 20% off
+- DM @owen a URL to the assignment on Slack
+- Due dates posted on schedule page, assignments must be ready to present at the beginning of class
+- Late assignments are automatic 25 points off
+
+10% | Teacher evaluation and attendance  
+40% | Assignments  
+20% | Midterm 
+30% | Final
 
 ## Software
 - Text Editor: [Brackets](http://brackets.io/)

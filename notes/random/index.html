@@ -1,0 +1,45 @@
+---
+layout: slides
+title: Math and random
+week: 4
+---
+
+<div class="slide">
+	<p>Like the <code>Array</code> object, JavaScript also has a <code>Math</code> global object, which contains basic methods for manipulating numbers.</p>
+	<p>We can use the Math object to generate random numbers.</p>
+	<ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="blank">Math</a></li></ul>
+</div>
+
+<div class="slide">
+	<p><code>Math.random()</code> generates a random number between 0 and 1.</p>
+	<pre><code><c></c>var n = Math.random();
+<c></c>console.log(n);
+<c></c>var a = ["cat", "dog", "bird"];
+<c></c>a[0];
+<c></c>a[n]; // why is this undefined??</code></pre>
+</div>
+
+<div class="slide">
+	<p>Floating point numbers are not very useful for getting an element from an array, which indexes by ints.</p>
+	<p>We can use another Math method, <code>Math.floor()</code> to round the number down:</p>
+	<pre><code><c></c>var n = Math.floor(Math.Random());
+<c></c>console.log(n);
+<c></c>a[n];</code></pre>
+</div>
+
+<div class="slide">
+	<p>We need to adjust the range of our random values.  Instead of a number between 0 and 1, we want a number between 0 (the first index of the array) and the last index of the array, or <code>array.length</code></p>
+	<pre><code><c></c>var n = Math.floor(Math.random() * a.length));
+<c></c>console.log(n);
+<c></c>a[n];</code></pre>
+</div>
+
+<div class="slide">
+	<p>This is a common pattern in JavaScript.</p>
+	<pre><code><c></c>a[Math.floor(Math.random() * a.length)];</code></pre>
+</div>
+
+<div class="slide">
+	<p>Why does this work?</p>
+	<div data-src="random.json"></div>
+</div>

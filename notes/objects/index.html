@@ -1,0 +1,84 @@
+---
+layout: slides
+title: Objects
+week: 7
+---
+<div class="slide">
+	<p>Although we haven't talked about them specifically, we have been using objects all semester.  In fact, basically everything in JavaScript is an object, including arrays, functions, and anything that has methods or properties.</p>
+	<p>JavaScript is based on an object oriented programming design.  This means the language is organized around objects and data rather than logic and actions.</p>
+	<p>Simply put, and object is a collection of properties and methods associated with one, well, object.  Properties and methods and described with key value pairs.</p>
+</div>
+
+<div class="slide">
+	<p>In a key value pair, the key is a string and the value can be any JavaScript value, a number, string, array, function or another object.  Single values like numbers, strings and booleans are called <note>properties</note>, while functions are called <note>methods</note>.</p>
+	<p>For example, with an array object, <code>.length</code> is a property and <code>.push()</code> is a method.  An array is an object that contains key values for each of the elements in the array as well as other methods and properties.</p>
+</div>
+
+<div class="slide">
+	<img src="train.jpg" alt="">
+	<p>When we covered functions, I used cars as an example, so this time I'll use trains.</p>
+	<p>(But you can use virtually any real world object as an example for a JavaScript object.)</p>
+	<p>Like objects in the real world, JavaScript objects have properties and methods, or qualities and actions.</p>
+</div>
+
+<div class="slide">
+	<p>A train has many properties, such as color, speed, number of passengers, distance traveled, origin and ending locations, etc.</p>
+	<p>It also has actions, it moves on tracks, it honks it's horn, it carries passengers.</p>
+	<p>Let's create a JavaScript version of a train:</p>
+</div>
+
+<div class="slide">
+	<h2>Object literal</h2>
+	<pre><code><c></c>var train = {
+	speed: 60,
+	numberOfPassengers: 500,
+	distance: 100,
+	origin: "Queens",
+	destination: "Brooklyn"
+};
+<c></c>console.log(train);</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can set and update properties of the train using object dot notation.</p>
+	<pre><code>// add a new property "color"
+<c></c>train.color = "blue";
+// change an existing value
+<c></c>train.numberOfPassengers = 400;
+<c></c>console.log(train);</code></pre>
+</div>
+
+<div class="slide">
+	<p>So far we only have properties, so let's define a method:</p>
+	<pre><code><c></c>train.getDuration = function() {
+	return this.distance / this.speed;
+};
+<c></c>train.getDuration();</code></pre>
+</div>
+
+<div class="slide">
+	<p>Objects values can also be referenced with bracket notation:</p>
+	<pre><code><c></c>train["color"];
+<c></c>train["origin"];
+<c></c>train["destination"] = "Manhattan";</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Object constructor</h2>
+	<p>Another way to create objects is through an object constructor, which is more like a blue print for an object that get created later.</p>
+	<pre><code>function Train(color, speed, distance, origin, destination) {
+	this.color = color;
+	this.speed = speed;
+	this.distance = distance;
+	this.origin = origin;
+	this.destination = destiantion;
+	this.getDuration = function() {
+		return this.distance / this.speed;
+	};
+}</code></pre>
+</div>
+
+<div class="slide">
+	<pre><code><c></c>var cTrain = new Train("blue", 60, 100, "Queens", "Brooklyn");
+<c></c>var twoTrain = new Train("red", 60, 200, "Bronx", "Brooklyn");</code></pre>
+</div>

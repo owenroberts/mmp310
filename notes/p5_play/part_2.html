@@ -1,0 +1,92 @@
+---
+layout: slides
+title: p5 play part 2
+week: 13
+---
+
+		<div class="slide">
+			<p>In part 1 we added a player sprite, a platform and an obstacle.  Now we will add graphics to these sprites.  There are a bunch of ways to do this, we'll use a <note>sprite sheet</note> for the player and individual images for the platform and obstacle.</p>
+			<p>Remember to look at p5.play <a href="http://p5play.molleindustria.org/examples/index.html?fileName=animation_sprite_sheet.js" target="blank">examples</a> and <a href="http://p5play.molleindustria.org/docs/index.html" target="blank">documentation</a> to learn more strategies.  We're only going to cover a couple of basics in class.</p>
+		</div>
+
+		<div class="slide">
+			<p>To add graphics we will introduce the <code>preload</code> function, which will be executed even before the <code>setup</code> function to load the image data.</p>
+			<p>First add some new global variables to the sketch:</p>
+			<pre><code>var player_walk_sprites, player_walk, player_stand_sprites, player_stand;</code></pre>
+			<p>And then load the images:</p>
+			<pre><code>player_walk_sprites = loadSpriteSheet("player.png", 128, 128, 8);
+player_walk = loadAnimation(player_walk_sprites);
+player_stand_sprites = loadSpriteSheet("player.png", 128, 128, 1);
+player_stand = loadAnimation(player_stand_sprites);</code></pre>
+			<p>Notice that <code>player_walk_sprites</code> and <code>player_stand_sprites</code> are using the same image, but using a different number of frames.</p>
+			<p>The arguments for <code>loadSpriteSheet</code> are the image to use, the width and height of each sprite, and the number of frames.</p>
+		</div>
+		
+		<div class="slide">	
+			<p>Now we want to add the animations to the <code>player</code> sprite.  We're also going to change the player's collider using the <code>setCollider</code> function.</p>
+			<pre><code>player = createSprite(100, 10);
+player.addAnimation("walk", player_walk);
+player.addAnimation("stand", player_stand);
+player.setCollider("circle", 0, 0, 64, 64);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>To see the collider we can use the <code>debug</code> property.  This can be used with any sprite:</p>
+			<pre><code>player.debug = true;</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>We need to modify the player movement code to change the animation when the player is walking or standing still:</p>
+			<pre><code>if ( keyDown("a") ) {
+	player.velocity.x -= speed;
+	player.changeAnimation("walk");
+} else if ( keyDown("d") ) {
+	player.velocity.x += speed;
+	player.changeAnimation("walk");
+} else {
+	player.changeAnimation("stand");
+}</code></pre>
+			<p>You may want even more animation states in your game.  You can add as many as you want as long as you can keep track of all of them.</p>
+		</div>
+
+		<div class="slide">	
+			<p>So that looks cool.  Let's add images for the platform and obstacle.  These will be static images but they could also be animations using their own sprite sheets.</p>
+			<p>Add global variables:</p>
+			<pre><code>var platform, ground;
+var obstacle, fire;</code></pre>
+			<p>And preload the images:</p>
+			<pre><code>fire = loadImage("fire.png");
+ground = loadImage("ground.png");</code></pre>
+			
+		</div>
+
+		<div class="slide">
+			<p>In <code>setup</code> add the image to each sprite, and adjust the colliders if needed:</p>
+			<pre><code>platform.addImage(ground);
+// platform.debug = true; 			
+obstacle.addImage(fire);
+obstacle.setCollider("circle", 0, 0, 64, 64);
+// obstacle.debug = true;</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Now if we want to repeat the platform and obstacle we can move them instead of the player:</p>
+			<pre><code>if ( keyDown("d")) {
+	obstacle.position.x -= speed;
+	platform.position.x -= speed;</code></pre>
+			<p>And test to see if the position has gone of screen and then move it back:</p>
+			<pre><code>if (platform.position.x < 0) platform.position.x = width/2;
+if (obstacle.position.x < -obstacle.width/2) obstacle.position.x = random(width, 2*width);</code></pre>
+		</div>
+
+		<div class="slide">
+			<p>Now experiment with adding more and different kinds of obstacles (perhaps in an obstacles array) and more animations.</p>
+			<p>Look at the examples to see if any of them match the ideas you want to add to your game.</p>
+		</div>
+
+
+		
+
+	</div>
+</body>
+</html>
