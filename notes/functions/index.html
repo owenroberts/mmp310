@@ -31,7 +31,14 @@ bar();</code></pre>
 <div class="slide">
 	<h2>Arguments</h2>
 	<p>A function can also be written with <note>arguments</note>, which are variables that are declared within the parentheses of the function.</p>
-	<p>Think of a function like a machine that has a series of actions.  For example, a car can drive from one place to another, as many times as you want it to.  But that's not very useful if there's no one in the car.  You can put anyone you want to in a car and take them wherever you want.  If we think of a car as a function it has many possible inputs: people, an origin and destination, the amount of gas, speed, radio channel, etc.  And these input have a result.  People are carried from one place to another.</p>
+	<p>Think of a function like a machine that performs a series of actions.  The actions are always the same, but the outcome may change depending on the arguments, or parameters.</p>  
+</div>
+<div class="slide">
+	<p>Think of a function as a blender.  A blender is a machine that does one thing: It blends food together.</p>
+	<p>Depending on what food you put into it, the result will be different.</p>
+	<p>The ingredients you put in a blender are like arguments.</p>
+	<p>If I put ice, milk, berries and bananas in a blender, I'll get a banana-berry smoothie.</p>
+	<p>If I put kale, celery, apples and pineapples in a blender I'll get a green juice.</p>
 </div>
 
 <div class="slide">
@@ -48,10 +55,10 @@ greet("Jerry", "Hi");</code></pre>
 	<p>Now check what happens if we call the function with out arguments:</p>
 	<pre><code>greet();</code></pre>
 	<p>Why is this <code>undefined, undefined</code>?</p>
-	<p>The variables that are created for the arguments of the function, in this case <code>name</code> and <code>greeting</code> and implicitly instantiated when the function is called.</p>
-	<p>So, even though we never wrote <code>var name;</code> or <code>var greeting;</code> they are instantiated, and when a variable is instantiated but not assigned, it has the value <code>undefined</code>.  Because we did not call our function with the right number of arguments, those values stay undefined.</p>
+	<p>The variables that are created for the arguments of the function, in this case <code>name</code> and <code>greeting</code> and declared when the function is invoked.</p>
+	<p>So, even though we never wrote <code>var name;</code> or <code>var greeting;</code> they are created, and when a variable is declared but not assigned, it has the value <code>undefined</code>.  Because we did not call our function with the right arguments, those values stay undefined.</p>
 </div>
-<div class="slide">
+<!-- <div class="slide">
 	<p>Open up the console and try these lines:</p>
 	<pre><code><c></c>q + w;
 <c></c>var q, w;
@@ -60,17 +67,17 @@ greet("Jerry", "Hi");</code></pre>
 <c></c>var q = 2, w = 2;
 <c></c>q + w;</code></pre>
 	<p>If we don't declare or assign a variable, trying to use them will throw an Uncaught Reference Error.  <code>NaN</code> or "Not a Number" is the result of trying to add two undefined variables.  </p>
-</div>
-<div class="slide">
+</div> -->
+<!-- <div class="slide">
 	<h2>How do we know if we have the right arguments?</h2>
 	<p>Because JavaScript will not throw an error if we try to call a function with the wrong number of arguments, it does provide an <code>arguments</code> variable, which is set to an array of whatever arguments are entered.  For example:</p>
 	<pre><code>function tooManyArguments(){
 	console.log(arguments);
 }
-tooManyArguments(1,2,"Jerry", "Jenny");</code></pre>
+tooManyArguments(1,2,"Jerry", "Jenny");</code></pre> 
 </div>
 <div class="slide">
-	<p>If we want to make sure we have the right arguments we can test for length, type or other properties.</p>
+	<p>We can use a conditional to make sure the</p>
 	<pre><code>function greet(name, greeting) {
 	if (arguments.length > 1) {
 		console.log(greeting + ", " + name);
@@ -79,19 +86,13 @@ tooManyArguments(1,2,"Jerry", "Jenny");</code></pre>
 	}
 }
 greet("Jerry");</code></pre>
-<pre><code>function printName(name) {
-	if (typeof name == "string") {
-		console.log(name);
-	} else {
-		console.log("This function requires a string.");
-	}
-}
-printName("Jerry");
-printName(1);</code></pre>
+its not that important to go over arguments array, not really ever used.
+
 </div>
+-->
 <div class="slide">
 	<h2>Return</h2>
-	<p>Functions can also <code>return</code> values.  A return statement stops the function block and returns a value to whatever variable the function is assigned to.</p>
+	<p>Functions can also <code>return</code> values.  A return statement stops the function execution and returns a value to whatever variable the function is assigned to.</p>
 	<pre><code>function add(n1, n2) {
 	return n1 + n2;
 }
@@ -151,3 +152,10 @@ add();</code></pre>
 	<p>One common practice used to avoid this is to wrap all of the code in your script in a self invoking function, which will keep things out of the global scope.  Another approach is to make a global object that has methods to access variables which allows your script to be accessible in other scripts without exposing all of your variables to the global scope.</p>
 	<p>More on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" target="blank">functions</a>.</p>
 </div>
+
+<!-- 
+shiffman functions
+	- modularity
+	- reusability
+
+ -->

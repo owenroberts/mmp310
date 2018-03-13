@@ -5,7 +5,7 @@ week: 6
 ---
 
 <div class="slide">
-	<p>Remember this from week 2?</p>
+	<p>Remember this?</p>
 	<pre><code><c></c>document</code></pre>
 	<p>We're going to look at the Document Object Model again, in the context of <note>events</note> and <note>functions</note>.</p>
 </div>
@@ -74,7 +74,7 @@ console.log(children[0].nextSibling);</code></pre>
 	<div id="element" class="elements" style="margin-left:0">Ancestor
 		<div class="elements">Parent
 			<div class="elements">Sibling</div>
-			<div class="elements" style="background:blue">Main
+			<div class="elements" style="background:blue">Current
 				<div class="elements">Child
 					<div class="elements">Descendent</div>
 					<div class="elements">Descendent</div>
@@ -155,7 +155,7 @@ c.appendChild(elem);</code></pre>
 	<pre><code><c></c>addEventListener("keydown", function(event) {
 	console.log(event);
 });</code></pre>
-	<p>This can be abbreviated <code>ev</code> or even <code>e</code>.</p>
+	<p>This is sometimes abbreviated as <code>ev</code> or even <code>e</code>.</p>
 </div>
 
 <div class="slide">
@@ -182,10 +182,11 @@ c.appendChild(elem);</code></pre>
 <div class="slide">
 	<h2>this</h2>
 	<p>When using event listeners, the <code>this</code> keyword is bound to the DOM element that was targeted for the event.  Using <code>this</code> we can get a reference to the element and it's properties.</p>
-	<pre><code><c></c>var b = document.querySelector("#onclick");
+	<pre><code><c></c>var b = document.querySelector("#this");
 <c></c>b.onclick = function(event) {
 	console.log(this);
 };</code></pre>
+	<button id="this">This button has the id "button".</button>
 </div>
 
 

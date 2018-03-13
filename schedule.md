@@ -55,7 +55,8 @@ dek: Schedule with class notes & assignments
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
-- **Class Demo**: Random Password Generator
+- **Class Demo**: [Random Password Generator~ ](https://owenbmcc.github.io/mmp310s18/password/){:target="blank"}
+- **Class Demo**: [Slideshow](https://owenbmcc.github.io/mmp310s18/slideshow/){:target="blank"}
 - **Assignment 2**: Quiz game / Slide show
 	- This project should use a loop, array and functions
 	- Create a slideshow of images and text
@@ -64,6 +65,7 @@ dek: Schedule with class notes & assignments
 	- Add up user answers to give them a score or result
 	- Be creative with quiz content
 	- [Examples](inspiration/slideshow/)
+	- Due March 28
 	
 
 ## Week 6
@@ -74,12 +76,14 @@ dek: Schedule with class notes & assignments
 
 ## Week 7
 **Objects**
+- Present Assignment 2 Progress
 - [Objects](notes/objects/)
 - [JSON](notes/json)
 
 
 ## Week 8
 **jQuery & JSON API**
+- Present Assignment 2
 - [jQuery](notes/jquery/)
 - [JSON API](notes/json_api/)
 
