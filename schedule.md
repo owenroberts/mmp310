@@ -4,8 +4,6 @@ title: Schedule
 dek: Schedule with class notes & assignments
 ---
 
-Go to [Home](index.html)
-
 ## Week 1
 **Introduction**
 - Introduce class and syllabus
