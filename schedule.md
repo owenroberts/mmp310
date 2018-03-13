@@ -4,8 +4,7 @@ title: Schedule
 dek: Schedule with class notes & assignments
 ---
 
-## Week 1
-**Introduction**
+## Week 1 **Introduction**
 - Introduce class and syllabus
 - Review HTML, CSS and JavaScript, file structure, web architecture
 	- [HTML review](notes/html/)
@@ -18,8 +17,7 @@ dek: Schedule with class notes & assignments
 	- Include a photo and short bio
 	- Upload site to GitHub to publish with GitHub Pages
 
-## Week 2
-**Input**
+## Week 2 **Input**
 - Review GitHub publishing
 - [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/input/){:target="blank"}
 - **Class Demo**: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
@@ -30,8 +28,7 @@ dek: Schedule with class notes & assignments
 	- We will explore various methods of interactivity including user input, randomization and logic
 	- [Interactive story inspiration](inspiration/interactive_story/)
 
-## Week 3
-**Logic**
+## Week 3 **Logic**
 - [Data types: Number, String, Boolean](notes/data_types)
 - [Logic](notes/logic/)
 - **Class Demo**: Quiz Game ~ [Class Example](https://owenbmcc.github.io/mmp310s18/quiz/){:target="blank"}
@@ -41,8 +38,7 @@ dek: Schedule with class notes & assignments
 
 <!-- talk about branching story? -->
 
-## Week 4
-**Arrays**
+## Week 4 **Arrays**
 - Present ideas for assignment 1
 - [Arrays](notes/array/)
 - [Math, random](notes/random/)
@@ -50,8 +46,7 @@ dek: Schedule with class notes & assignments
 
 <!-- use random order for a story -->
 
-## Week 5
-**Loops**
+## Week 5 **Loops**
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
@@ -68,27 +63,23 @@ dek: Schedule with class notes & assignments
 	- Due March 28
 	
 
-## Week 6
-**Functions**
+## Week 6 **Functions**
 - [Functions](notes/functions/)
 - [DOM & Events](notes/events)
 - Class Demo: Task List
 
-## Week 7
-**Objects**
+## Week 7 **Objects**
 - Present Assignment 2 Progress
 - [Objects](notes/objects/)
 - [JSON](notes/json)
 
 
-## Week 8
-**jQuery & JSON API**
+## Week 8 **jQuery & JSON API**
 - Present Assignment 2
 - [jQuery](notes/jquery/)
 - [JSON API](notes/json_api/)
 
-## Week 9
-**Midterm**
+## Week 9 **Midterm**
 - Midterm Workshop
 
 <!-- - Midterm rubric: 100 total points
@@ -108,8 +99,7 @@ dek: Schedule with class notes & assignments
 		- User enters a search term or selects a category
 		- Designed to make interaction with the game clear -->
 
-## Week 10
-**Final Pitch**
+## Week 10 **Final Pitch**
 - [Time](notes/time/)
 - [HTML5 Media](notes/media/)
 - Final Project Pitch
@@ -126,8 +116,7 @@ dek: Schedule with class notes & assignments
 	- [Blackjack](http://html5blackjack.net/)
 	- [Pet finder](http://api.emilyhashemi.com/)
 
-## Week 11
-**Web Video**
+## Week 11 **Web Video**
 - [YouTube API](notes/youtube/)
 - [Web cam](notes/webcam/)
 - Video applications
@@ -142,8 +131,7 @@ dek: Schedule with class notes & assignments
 		<!-- <li><a href="http://yooouuutuuube.com/v/?width=192&height=120&flux=1&direction=rand&yt=2l_PmSOreGc"  target="blank">yooouuutuuube.com</a></li> -->
 	</ul>
 
-## Week 12
-**Canvas**
+## Week 12 **Canvas**
 - [Canvas](notes/canvas/)
 - [Google Maps API](notes/google_maps/)
 
