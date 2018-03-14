@@ -22,11 +22,12 @@ dek: Schedule with class notes & assignments
 - [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/input/){:target="blank"}
 - **Class Demo**: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
 - [GitHub Collaboration](notes/git/collaboration.html)
-- **Assignment 1: Interactive story**
-	- In groups of 2 make a website that tells a story
-	- The story must be interactive
-	- We will explore various methods of interactivity including user input, randomization and logic
-	- [Interactive story inspiration](inspiration/interactive_story/)
+
+## Assignment 1 **Interactive story**
+- In groups of 2 make a website that tells a story
+- The story must be interactive
+- We will explore various methods of interactivity including user input, randomization and logic
+- [Interactive story inspiration](inspiration/interactive_story/)
 
 ## Week 3 **Logic**
 - [Data types: Number, String, Boolean](notes/data_types)
@@ -52,15 +53,16 @@ dek: Schedule with class notes & assignments
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
 - **Class Demo**: [Random Password Generator~ ](https://owenbmcc.github.io/mmp310s18/password/){:target="blank"}
 - **Class Demo**: [Slideshow](https://owenbmcc.github.io/mmp310s18/slideshow/){:target="blank"}
-- **Assignment 2**: Quiz game / Slide show
-	- This project should use a loop, array and functions
-	- Create a slideshow of images and text
-	- Use an array for the image paths and text
-	- Allow the user to click to choose an answer for quiz
-	- Add up user answers to give them a score or result
-	- Be creative with quiz content
-	- [Examples](inspiration/slideshow/)
-	- Due March 28
+
+## Assignment 2 **Quiz game / Slide show**
+- This project should use a loop, array and functions
+- Create a slideshow of images and text
+- Use an array for the image paths and text
+- Allow the user to click to choose an answer for quiz
+- Add up user answers to give them a score or result
+- Be creative with quiz content
+- [Examples](inspiration/slideshow/)
+- Due March 28
 	
 
 ## Week 6 **Functions**
