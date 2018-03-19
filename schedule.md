@@ -75,7 +75,6 @@ dek: Schedule with class notes & assignments
 - [Objects](notes/objects/)
 - [JSON](notes/json)
 
-
 ## Week 8 **jQuery & JSON API**
 - Present Assignment 2
 - [jQuery](notes/jquery/)

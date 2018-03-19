@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Multimedia Programming 1
+title: Multimedia Programming 2
 ---
 
 This is the class page of MMP 310 at BMCC.
