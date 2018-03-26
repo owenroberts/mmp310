@@ -108,9 +108,15 @@ dek: Schedule with class notes & assignments
 - Midterm Workshop
 
 
-## Week 10 **Final Pitch**
+## Week 10 **HTML 5 Media**
+- Present Midterm
 - [Time](notes/time/)
 - [HTML5 Media](notes/media/)
+
+## Week 11 **Web Video**
+- [YouTube API](notes/youtube/)
+- [Web cam](notes/webcam/)
+- [Example video applications](inspiration/video/)
 - Final Project Pitch
 	- Present a concept for the final project
 	- Can work inidividual or in pairs
@@ -118,32 +124,15 @@ dek: Schedule with class notes & assignments
 	- [List of public APIs](https://github.com/toddmotto/public-apis)
 	- Must take user input and return feedback
 	- Can be game, interactive visualization, information based app
-- Example web apps:
-	- [Koalas to the max](http://www.koalastothemax.com/)
-	- [Every satellite orbiting earth](http://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/)
-	- [Design a wig](http://www.vam.ac.uk/designawig)
-	- [Blackjack](http://html5blackjack.net/)
-	- [Pet finder](http://api.emilyhashemi.com/)
+- [Example web apps](inspiration/apps/)
 
-## Week 11 **Web Video**
-- [YouTube API](notes/youtube/)
-- [Web cam](notes/webcam/)
-- Video applications
-	<ul>
-		<li><a href="http://lossur.es/#/" target="blank">Los Sures</a></li>
-		<li><a href="http://www.thewildernessdowntown.com/" target="blank">Wilderness Downtown</a></li>
-		<li><a href="http://www.sprawl2.com/" target="blank">Sprawl 2</a></li>
-		<li><a href="http://www.beonlineb.com/" target="blank">Neon Bible</a></li>
-		<li><a href="http://a-way-to-go.com/" target="blank">A Way To Go</a></li>
-		<li><a href="http://bear71.nfb.ca/#/bear71" target="blank">Bear 71</a></li>
-		<li><a href="http://www.youtubemultiplier.com/" target="blank">YouTube Multiplier</a> and <a href="https://youtube-dj.com/" target="blank">YouTube DJ</a></li>
-		<!-- <li><a href="http://yooouuutuuube.com/v/?width=192&height=120&flux=1&direction=rand&yt=2l_PmSOreGc"  target="blank">yooouuutuuube.com</a></li> -->
-	</ul>
 
 ## Week 12 **Canvas**
 - [Canvas](notes/canvas/)
 - [Google Maps API](notes/google_maps/)
 
+## Week 13 **Final**
+- Final Workshop
 
 <!-- 
 
