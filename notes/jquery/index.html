@@ -5,7 +5,7 @@ week: 8
 ---
 
 <div class="slide">
-	<p>jQuery is a JavaScript library that simplifies scripting for HTML pages using DOM element selectors and a set of animations, transitions and other manipulations based on CSS and HTML. jQuery was released in 2006 and has become extremely popular in front end web development. One of the features of jQuery is that it is compatible with all major browsers.</p>
+	<p>jQuery is a JavaScript library that simplifies scripting for HTML pages using DOM element selectors and a set of animations, transitions and other manipulations based on CSS and HTML. jQuery was released in 2006 and has become popular in front end web development. It is largely consistent and compatible with all the major browsers.</p>
 </div>
 <div class="slide">
 	<p>You can <a href="http://jquery.com/download/" target="blank">download jQuery</a> from their site and attach the file to your HTML pages with a script tag.</p>
@@ -15,9 +15,22 @@ week: 8
 	<p>For your JavaScript to use the <code>jQuery</code> object, it must come after <code>jQuery</code> is loaded into your document.</p>
 </div>
 <div class="slide">
-	<p><code>jQuery</code> is an object with a bunch of methods associated with it that act as short cuts for commonly used JavaScript functionality.  <code>$</code> is also a reference to the <code>jQuery</code> boject.  Try typing both in the <code>console</code>. The basic syntax of a <code>jQuery</code> function looks like this:</p>
+	<p><code>jQuery</code> is an object with a bunch of methods associated with it that act as short cuts for commonly used JavaScript functionality.  <code>$</code> is also a reference to the <code>jQuery</code> object.  Try typing both in the <code>console</code>. The basic syntax of a <code>jQuery</code> function looks like this:</p>
 	<pre><code>$('selector').method()</code></pre>
 	<p>Like in CSS, the selector refers to an HTML element. The action refers to the script that will be executed on that element.</p>
+</div>
+
+<div class="slide">
+	<p><code>jQuery's</code> functionality basically overlaps with "vanilla" JavaScript.  The main difference is that their methods can be shorter and simpler to write and can do more complex things with simple statements.</p>
+	<p><code>jQuery</code> only uses <note>methods</note> (functions).</p>
+	<pre><code>// jQuery
+element.text("Hello");
+element.append(childElement);
+</code></pre>
+	<p>Vanilla JavaScript uses both methods and properties:</p>
+	<pre><code>// vanilla
+element.textContent = "Hello";  // property
+element.appendChild(childElement);  // method</code></pre>
 </div>
 
 <div class="slide">
@@ -33,7 +46,7 @@ week: 8
 
 <div class="slide">
 	<h2>What's the deal with this syntax?</h2>
-	<p><code>jQuery</code> is used for a lot of events and the callback function structure looks similar to but is different from the <code>.addEventListener</code> we've been using up until now. Let's compare.</p>
+	<p><code>jQuery</code> is used for a lot of events and the callback function structure looks similar to but is different from the <code>.addEventListener</code> we've been using. Let's compare.</p>
 	<pre><code>var submit = document.getElementById("button");
 submit.addEventListener("click", <bg>function() {
 	console.log("Hello world!");
@@ -51,12 +64,12 @@ $('#submit').click(<bg>function</bg>);</code></pre>
 	<p>Because the anonymous function has an <code>()</code> operator and the <code>{}</code> code block, there are many nested parts, so it can be kind of confusing.</p>
 </div>
 
-<div class="slide">
+<!-- <div class="slide">
 	<h2>this</h2>
 	<p>This is a special keyword used in JavaScript (as well as other languages) to refer to the current object.  In JavaScript events, it refers to the HTML element the event listener is bound to.  This is the same in jQuery.  This can be confusing because <code>this</code> and <code>$('selector')</code> are different things.</p>
 	<p data-height="300" data-theme-id="10088" data-slug-hash="vWELRB" data-default-tab="js,result" data-user="owenroberts" data-embed-version="2" data-pen-title="jQuery Ex 3: this" class="codepen">See the Pen <a href="https://codepen.io/owenroberts/pen/vWELRB/">jQuery Ex 3: this</a> by Owen Roberts (<a href="https://codepen.io/owenroberts">@owenroberts</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</div>
+</div> -->
 
 <div class="slide">
 	<h2>Hide and show</h2>

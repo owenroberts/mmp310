@@ -37,7 +37,6 @@ dek: Schedule with class notes & assignments
 	- Rewrite Madlibs [example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"} using a test to verify input
 - Work on Assignment 1
 
-<!-- talk about branching story? -->
 
 ## Week 4 **Arrays**
 - Present ideas for assignment 1
@@ -45,7 +44,6 @@ dek: Schedule with class notes & assignments
 - [Math, random](notes/random/)
 - **Class Demo**: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/8ball/){:target="blank"}
 
-<!-- use random order for a story -->
 
 ## Week 5 **Loops**
 - Present Assignment 1: Interactive story
@@ -63,7 +61,6 @@ dek: Schedule with class notes & assignments
 - Be creative with quiz content
 - [Examples](inspiration/slideshow/)
 - Due March 28
-	
 
 ## Week 6 **Functions**
 - [Functions](notes/functions/)
@@ -80,25 +77,36 @@ dek: Schedule with class notes & assignments
 - [jQuery](notes/jquery/)
 - [JSON API](notes/json_api/)
 
+## Midterm **Meme Mashup**
+- This semester the midterm will use Giphy API
+- Allow the user to search or select images tags
+- Get randomized images and display them to user
+- Add whatever other components you want to make it creative!
+- **Rubric**
+	- Total 100 points
+	- JavaScipt: 20 points
+		- No bugs
+		- JavaScript and jQuery used appropriately
+		- Comments 
+		- Legibility
+	- JSON + API: 20 points
+		- Working API request
+		- Handle JSON data
+	- CSS Styles: 20 points
+		- Original CSS styles used appropriately
+		- No frameworks
+		- No default styles!
+	- User Experience: 20 points
+		- Clear instructions for use
+		- Easy to use interface
+	- Creativity: 20 points
+		- Do something original with the user interaction
+		- Could add quiz/game elements
+
+
 ## Week 9 **Midterm**
 - Midterm Workshop
 
-<!-- - Midterm rubric: 100 total points
-	- 20: JavaScript
-		- No bugs
-		- jQuery and JavaScript used correctly
-		- Loops and if statements used correctly
-	- 20: JSON and API
-		- Working API request
-		- Handle JSON data
-	- 20: Original CSS styles
-	- 20: Added features
-		- Keep score
-		- Notify on winning
-		- Add animation to card reveal
-	- 20: User Interface
-		- User enters a search term or selects a category
-		- Designed to make interaction with the game clear -->
 
 ## Week 10 **Final Pitch**
 - [Time](notes/time/)

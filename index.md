@@ -12,6 +12,7 @@ The class notes, schedule and assignments are all found here.
 - <a href="https://docs.google.com/document/d/1H4hMdA0waBqqoETuE1wopXuVwWHD4-vcktsjPU2y-wY/" target="blank">Syllabus</a>
 - <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
 - [Student Work](studentwork/)
+- [Class Examples](examples/)
 
 ## Spring 2018
 
