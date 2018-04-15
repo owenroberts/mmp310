@@ -6,7 +6,7 @@ week: 10
 
 <div class="slide">
 	<h2>Date</h2>
-	<p>We can get the time using the object <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="blank">Date();</a></code> and it's methods:</p>
+	<p>In JavaScript, time is referenced using the object <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="blank">Date()</a> and it's methods:</p>
 	<pre><code><c></c>Date();
 <c></c>Date.now(); // milliseconds since 1 January 1970 00:00:00 UTC
 <c></c>performance.now() // milliseconds in lifetime of document
@@ -24,7 +24,7 @@ week: 10
 
 <div class="slide">
 	<h2>Timers</h2>
-	<p>JavaScript also has timers, including <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout" target="blank">setTimeout</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval" target="blank">setInterval</a></code>.</p>
+	<p>JavaScript also has timers, including <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout" target="blank">setTimeout</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval" target="blank">setInterval</a>.</p>
 	<p><code>setTimeout</code> delays the execution of a function for a specified amount of time measured in milliseconds.</p>
 	<pre><code><c></c>var delayedGreeting = function() {
 	alert("Hello world!");
@@ -33,11 +33,11 @@ week: 10
 </div>
 <div class="slide">
 	<p>We can save a timeout as a variables and use that variable to cancel it.</p>
-	<pre><code><c></c>var delayedGreeting = function() {
+	<pre><code><c></c>function delayedGreeting() {
 	alert("Hello world!");
 };
-<c></c>var g = setTimeout(delayedGreeting, 1000);
-<c></c>clearTimeout(g);</code></pre>
+<c></c>var greet = setTimeout(delayedGreeting, 1000);
+<c></c>clearTimeout(greet);</code></pre>
 </div>
 
 <div class="slide">
@@ -50,4 +50,71 @@ week: 10
 	count--;
 };
 <c></c>var countdownInterval = setInterval(countdown, 100);</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Countdown</h2>
+	<p>Using these timing function, let's build a simple counter that could be used in a quiz, game or web application.</p>
+	<p>In this example, the user will click a button to start a quiz, and a count down will be begin.  When the count down ends, the user's quiz score will be calculated.  If they submit their answers before the count down finished, the timer will be cancelled.</p>
+</div>
+
+<div class="slide">
+	<p>For the HTML, we need to make a start button, a div for the quiz, and a div for the countdown to be visualized to the user.</p>
+	<pre><code>&lt;div id="container"&gt;
+	&lt;h1&gt;Welcome to my website.&lt;/h1&gt;
+	
+	&lt;button id="start"&gt;Start quiz&lt;/button&gt;
+	
+	&lt;div id="quiz" style="display:none"&gt;
+		&lt;p&gt;Quiz question #1&lt;/p&gt;
+		&lt;select class="question"&gt;
+			&lt;option&gt;True&lt;/option&gt;
+			&lt;option&gt;False&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;button id="submit"&gt;Start quiz&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;div id="countdown"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Start by getting references to the start button, submit button, quiz div, questions class, and count down div.</p>
+	<pre><code>const startBtn = document.getElementById("start");
+const submitBtn = document.getElementById("submit");
+var quiz = document.getElementById("quiz");
+var questions = document.getElementsByClassName("question");
+var countDisplay = document.getElementById("countdown");</code></pre>
+</div>
+
+<div class="slide">
+	<p>When the user begins the quiz, we display the quiz questions and start the counter.</p>
+	<pre><code>startButton.addEventListener("click", function() {
+quiz.style.display = "block"; // show quiz questions
+this.style.display = "none"; // hide start button
+let count = 10;  // quiz gets ten seconds
+function countdown() {
+	if (count == 0) {
+		checkAnswers();
+	} else {
+		countDisplay.textContent = "Time to complete quiz: " + count;
+        count--;
+    }
+}
+let countdownInterval = setInterval(countdown, 1000);</code></pre>
+</div>
+
+<div class="slide">
+	<p>The <code>checkAnswers()</code> function will check the users answer either when they click submit or when the timer finishes.</p>
+	<pre><code>const answers = [True]; // list of answers to questions
+submitBtn.addEventListener("click", checkAnswers);
+function checkAnswers() {
+	clearInterval(countdownInterval);
+	let score = 0;
+	for (let i = 0; i < questions.length; i++) {
+		if (questions[i].value == answers[i]) {
+			score++;
+		}
+	}
+	countDisplay.textContent = "Your score is " + score + " / " + questions.length;
+}</code></pre>
 </div>

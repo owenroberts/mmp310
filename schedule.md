@@ -107,7 +107,6 @@ dek: Schedule with class notes & assignments
 ## Week 9 **Midterm**
 - Midterm Workshop
 
-
 ## Week 10 **HTML 5 Media**
 - Present Midterm
 - [Time](notes/time/)
