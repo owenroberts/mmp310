@@ -64,7 +64,7 @@ week: 8
 <div class="slide">
 	<p>Once we have the query, we can use our user key, the Giphy API string and <code>$.getJSON</code> from <code>jQuery</code> to get results.  Let's just log the results first.  Take a look at the object and try to find the source URLs for the images.</p>
 	<pre><code>var key = "YOUR_KEY_HERE";
-var url = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + key + "&limit=20";
+var url = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + key + "&limit=20";
 $.getJSON(url, function(json) {
 	console.log(json);
 });</code></pre>
