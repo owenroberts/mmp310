@@ -34,11 +34,11 @@ week: 10
 </div>
 
 <div class="slide">
-	<video poster="https://media.giphy.com/media/maNB0qAiRVAty/giphy.gif" onclick="this.play()" width="480" height="480">
+	<video poster="giphy.gif" onclick="this.play()" width="640" height="360">
 		<source src="cat.mp4" type="video/mp4">
 		<source src="cat.ogg" type="video/ogg">
 	</video>
-	<pre class="block"><code>&lt;video poster="https://media.giphy.com/media/maNB0qAiRVAty/giphy.gif" width="480"&gt;
+	<pre class="block"><code>&lt;video poster="giphy.gif" width="640"&gt;
 	&lt;source src="cat.mp4" type="video/mp4"&gt;
 	&lt;source src="cat.ogg" type="video/ogg"&gt;
 	Your browser does not support HTML5 video :-(
@@ -50,9 +50,9 @@ week: 10
 	<video width="480" onclick="this.play()">
 		<source src="cat.mp4#t=5,6" type="video/mp4">
 	</video>
-	<pre class="block"><code>&lt;video width="480&gt;
+	<pre class="block"><code>&lt;video width="480"&gt;
 	&lt;source src="cat.mp4#t=5,6" type="video/mp4"&gt;
-	&lt;/video&gt;</code></pre>
+&lt;/video&gt;</code></pre>
 </div>
 
 <div class="slide">
@@ -210,4 +210,18 @@ btn.addEventListener("click", function() {
 		this.textContent = "Play";
 	}
 });</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Audio</h2>
+	<p>The HTML5 audio element is similar to the video element, using many of the same methods and properties.</p>
+</div>
+
+<div class="slide">
+	<audio controls>
+		<source src="pigs_and_geese.mp3" type="audio/mp3">
+	</audio>
+	<pre><code>&lt;audio controls&gt;
+	&lt;source src="pigs_and_geese.mp3" type="audio/mp3"&gt;
+&lt;/audio&gt;</code></pre>
 </div>
