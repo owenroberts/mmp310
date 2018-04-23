@@ -67,9 +67,14 @@ week: 10
 	
 	&lt;div id="quiz" style="display:none"&gt;
 		&lt;p&gt;Quiz question #1&lt;/p&gt;
-		&lt;select class="question"&gt;
-			&lt;option&gt;True&lt;/option&gt;
-			&lt;option&gt;False&lt;/option&gt;
+		&lt;select class="answer"&gt;
+			&lt;option value="1"&gt;True&lt;/option&gt;
+			&lt;option value="0"&gt;False&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;p&gt;Quiz question #2&lt;/p&gt;
+		&lt;select class="answer"&gt;
+			&lt;option value="0"&gt;True&lt;/option&gt;
+			&lt;option value="1"&gt;False&lt;/option&gt;
 		&lt;/select&gt;
 		&lt;button id="submit"&gt;Start quiz&lt;/button&gt;
 	&lt;/div&gt;
@@ -81,40 +86,48 @@ week: 10
 	<p>Start by getting references to the start button, submit button, quiz div, questions class, and count down div.</p>
 	<pre><code>const startBtn = document.getElementById("start");
 const submitBtn = document.getElementById("submit");
-var quiz = document.getElementById("quiz");
-var questions = document.getElementsByClassName("question");
-var countDisplay = document.getElementById("countdown");</code></pre>
+const quiz = document.getElementById("quiz");
+const questions = document.getElementsByClassName("answer");
+const countDisplay = document.getElementById("countdown");</code></pre>
+</div>
+
+<div class="slide">
+	<p>Next we need a couple of global variables, the count and countInterval.</p>
+	<pre><code>let countInterval;
+let count = 10; // quiz gets ten seconds</code></pre>
 </div>
 
 <div class="slide">
 	<p>When the user begins the quiz, we display the quiz questions and start the counter.</p>
+	<p>To start the counter, we can assign a <code>setInterval</code> to the <code>countInterval</code>.</p>
 	<pre><code>startButton.addEventListener("click", function() {
-quiz.style.display = "block"; // show quiz questions
-this.style.display = "none"; // hide start button
-let count = 10;  // quiz gets ten seconds
-function countdown() {
+	quiz.style.display = "block"; // show quiz questions
+	this.style.display = "none"; // hide start button
+	countdownInterval = setInterval(countdown, 1000);
+});
+</div>
+
+<div class="slide">
+	<p>The <code>countdown</code> function actually shows the user the count and if the count gets to 0 it checks the users answers.</p>
+	<pre><code>function countdown() {
 	if (count == 0) {
 		checkAnswers();
 	} else {
 		countDisplay.textContent = "Time to complete quiz: " + count;
-        count--;
-    }
-}
-let countdownInterval = setInterval(countdown, 1000);</code></pre>
+		count--;
+	}
+}</code></pre>
 </div>
 
 <div class="slide">
 	<p>The <code>checkAnswers()</code> function will check the users answer either when they click submit or when the timer finishes.</p>
-	<pre><code>const answers = [True]; // list of answers to questions
-submitBtn.addEventListener("click", checkAnswers);
+	<pre><code>submitBtn.addEventListener("click", checkAnswers);
 function checkAnswers() {
 	clearInterval(countdownInterval);
 	let score = 0;
-	for (let i = 0; i < questions.length; i++) {
-		if (questions[i].value == answers[i]) {
-			score++;
-		}
+	for (let i = 0; i < answers.length; i++) {
+		score += +answers[i].value;
 	}
-	countDisplay.textContent = "Your score is " + score + " / " + questions.length;
+	countDisplay.textContent = "Your score is " + score;
 }</code></pre>
 </div>
