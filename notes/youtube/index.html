@@ -153,8 +153,8 @@ setInterval(nextSubtitle, 2000);</code></pre>
 	for (var i = 0; i < subtitles.length; i++) {
 		var time = player.getCurrentTime();
 		var subtitle = subtitles[i];
-		if (time > obj[i].time && time < subtitles.time + subtitles.duration) {
-			subtitleDiv.textContent = subtitles.text;
+		if (time > subtitle.time && time < subtitle.time + subtitle.duration) {
+			subtitleDiv.textContent = subtitle.text;
 			titled = true;
 		}
 	}
