@@ -11,6 +11,7 @@ dek: Schedule with class notes & assignments
 	- [CSS review](notes/css/)
 - [Intro to command line / Git](notes/git/index.html)
 - [Publishing with GitHub](notes/git/github.html)
+- [Quick Git/GitHub setup reference](notes/git/quick.html)
 - **In class assignment**
 	- Create a simple web site to use as the portfolio page for your work this semester
 	- Include `style.css` page

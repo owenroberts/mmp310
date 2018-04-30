@@ -1,0 +1,78 @@
+---
+layout: slides
+title: Quick Reference for GitHub setup
+week: 1
+---
+
+<div class="slide">
+	<p>If you're creating a new Git repository and GitHub repo for a new project or collaboration you don't need all of the notes from the class overview.  Here's the quickest setup for creating a new project.</p>
+</div>
+
+<div class="slide">
+	<h2>Git vs GitHub</h2>
+	<p>The first thing to think about is where you want to create the repo.  Remember that the repo you have on your local computer and the one you push to GitHub are different copies of the same Git history, so you need to choose one to start with first.</p>
+	<p>We're going to start with creating a repo locally on your computer first.</p>
+</div>
+
+<div class="slide">
+	<h2>Local git repo</h2>
+	<p>Make a folder for your project.  You need to know where it is.  You can do this using Terminal or the Finder.</p>
+	<p>First choose where you want the folder to be.  I recommend the Desktop.  Documents is another good option.</p>
+	<p>Navigate to your folder with Terminal.</p>
+	<pre><code>$ cd Desktop
+$ mkdir new_project
+$ cd new_project</code></pre>
+</div>
+
+<div class="slide">
+	<p>Once you have created the folder and moved into with Terminal we can initialize the repo.  This basically sets up the Git system inside your project.</p>
+	<pre><code>$ git init</code></pre>
+	<p>You will get a message like <code>Initialized empty Git respository</code> with the path to your project on the computer.</p>
+</div>
+
+<div class="slide">
+	<h2>.gitignore</h2>
+	<p>You want to add a <code>.gitignore</code> file to your repo before you make your first commit.  The easiest way is to just add and update it in Terminal.</p>
+	<pre><code>$ touch .gitignore
+$ echo '.DS_Store' > .gitignore</code></pre>
+	<p>That will add a line to ignore all the default Mac files you don't want in your repo.  To ignore other things, open the <code>.gitignore</code> and edit it in Sublime or Text Edit.</p>
+</div>
+
+<div class="slide">
+	<h2>git status</h2>
+	<p>Use git status a lot.  It doesn't do anything, but it shows you what your repo looks like.</p>
+	<pre><code>$ git status</code></pre>
+	<p>Right now it should show some red files.  That means you have files to add.</p>
+</div>
+
+<div class="slide">
+	<h2>Adding files</h2>
+	<p>At this point you may or may not have added new files like <code>index.html</code>, <code>style.css</code> and <code>app.js</code>. If you haven't, go ahead and add some.</p>
+	<p>Use the <code>add</code> command to add the files.</p>
+	<pre><code>$ git add .</code></pre>
+	<p>The dot at the end of the command means add all files.</p>
+	<p>Type <code>git status</code> again and you should have some green files.</p>
+</div>
+
+<div class="slide">
+	<h2>Making a commit</h2>
+	<p>If you have green files and you want to share them or publish them you need to make a commit.</p>
+	<pre><code class="javascript">git commit -m "initial commit"</code></pre>
+	<p>This is your first commit.</p>
+	<p>You should get some message about the master branch, the commit hash number and create mode.</p>
+	<p><code>git status</code> should say <code>On branch master <br> nothing to commit</code>.</p>
+</div>
+
+<div class="slide">
+	<h2>Rinse and repeat</h2>
+	<p><code>add</code> and <code>commit</code> are the commands you will use the most.  If you change your code, you need to add the changes and then commit them.</p>
+	<p>Don't forget to use <code>-m "commit message"</code>!!!</p>
+	<p>If you don't you will end up in the dreaded <code>vim</code>.  Here's how to <a href="https://www.youtube.com/watch?v=ebZzVAZC7tc" target="blank">get out of vim</a>.</p>
+</div>
+
+<div class="slide">
+	<h2>push to GitHub</h2>
+	<p>Now that you have some code you want to share or publish it's time to set up GitHub.</p>
+	<p>Make a new repo in your GitHub account.</p>
+	<p>Do <note>NOT</note> select "Initialize this repository with a README".  This will result in an error because your local repo and remote repo will have different initial commits.  When you add a README GitHub makes the initial commit for you.  If you <em>need</em> a README you can make it locally.</p>
+</div>
