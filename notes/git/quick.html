@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: Quick Reference for GitHub setup
+title: Quick Reference for Git & GitHub setup
 week: 1
 ---
 
@@ -71,8 +71,68 @@ $ echo '.DS_Store' > .gitignore</code></pre>
 </div>
 
 <div class="slide">
-	<h2>push to GitHub</h2>
+	<h2>GitHub</h2>
 	<p>Now that you have some code you want to share or publish it's time to set up GitHub.</p>
 	<p>Make a new repo in your GitHub account.</p>
 	<p>Do <note>NOT</note> select "Initialize this repository with a README".  This will result in an error because your local repo and remote repo will have different initial commits.  When you add a README GitHub makes the initial commit for you.  If you <em>need</em> a README you can make it locally.</p>
+</div>
+
+<div class="slide">
+	<img src="github/create.png">
+</div>
+
+<div class="slide">
+	<p>Name the repository something that makes sense for you project and click the green button.</p>
+	<p>Copy the URL that appears on the next screen.</p>
+</div>
+
+<div class="slide">
+	<img src="git/remote.png">
+</div>
+
+<div class="slide">
+	<h2>Remote</h2>
+	<p>That URL is your GitHub <note>remote</note>, or the location where you can push your code to publish and share.
+	<p>We need to add the remote to our local repo so it knows where to push.</p>
+	<pre><code>$ git remote add origin copied-url</code></pre>
+	<p>"origin" is the name of this remote.  Sometimes you need more than one remote so you need to specify them.  You will probably only have the "origin" which will point to GitHub.</p>
+</div>
+
+<div class="slide">
+	<h2>push</h2>
+	<p>Now you can push your code!</p>
+	<pre><code>$ git push origin master</code></pre>
+	<p>This will add your current local repo to the GitHub repo.  "master" is the default branch.  You probably don't need another branch right now.</p>
+</div>
+
+<div class="slide">
+	<h2>Updating</h2>
+	<p>Now that you have a repo you can push code to it from other computers or have collaborators and contributors add code as well.</p>
+	<p>To make sure if your code is up to date, follow these steps.  You always want to <code>pull</code> before doing anything else.</p>
+</div>
+
+<div class="slide">
+	<pre><code>// before anything else
+$ git status
+$ git pull origin master
+
+// after you make changes
+$ git status
+// if red files
+$ git add .
+$ git status
+// if green files
+$ git commit -m "update message"
+$ git push origin master</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Cloning</h2>
+	<p>If you want to work on your code on a new computer or your collaborator wants to work on the repo, you can use <code>clone</code>.</p>
+	<p>Copy the repo URL.</p>
+	<pre><code>$ cd Desktop
+$ git clone repo-url
+$ cd repo-name</code></pre>
+	<p>Remember that clone will create a new folder and you won't be in it.  You have to <code>cd</code> into the folder first.</p>
+	<p>After that follow the same steps for updating.</p>
 </div>
