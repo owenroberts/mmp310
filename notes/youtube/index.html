@@ -30,6 +30,7 @@ week: 11
 <div class="slide">
 	<p>The embed HTML uses an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="blank">iframe</a> which is an element that creates a new browser context inside of the current browser window.</p>
 	<p>Copy and paste the embed code into an HTML document.</p>
+	<p>Make sure to include the <code>enablejsapi=1</code> parameter, which allows you to reference the video player in your JavaScript.</p>
 </div>
 
 <div class="slide">
@@ -90,17 +91,18 @@ function onYouTubeIframeAPIReady() {
 
 <div class="slide">
 	<pre><code>function onPlayerReady(event) {
-document.getElementById("play").addEventListener("click", function() {
-	player.playVideo();
-});
-document.getElementById("stop").addEventListener("click", function() {
-	player.stopVideo()
-});
-document.getElementById('jump').addEventListener('click', function() {
-	if (player && player.getCurrentTime) {
-		player.seekTo( player.getCurrentTime() + 5 );
-	}
-});</code></pre>
+	document.getElementById("play").addEventListener("click", function() {
+		player.playVideo();
+	});
+	document.getElementById("stop").addEventListener("click", function() {
+		player.stopVideo()
+	});
+	document.getElementById('jump').addEventListener('click', function() {
+		if (player && player.getCurrentTime) {
+			player.seekTo( player.getCurrentTime() + 5 );
+		}
+	});
+}</code></pre>
 </div>
 
 <div class="slide">
@@ -148,10 +150,11 @@ setInterval(nextSubtitle, 2000);</code></pre>
 	<p>We don't need to keep track of the current title, but we do need to run the function more freqently to test the parameters.</p>
 	<pre><code>function nextSubtitle() {
 	var titled = false;
-	for (var i = 0; i < obj.length; i++) {
+	for (var i = 0; i < subtitles.length; i++) {
 		var time = player.getCurrentTime();
-		if (time > obj[i].time && time < obj[i].time + obj[i].duration) {
-			subtitleDiv.textContent = obj[i].text;
+		var subtitle = subtitles[i];
+		if (time > obj[i].time && time < subtitles.time + subtitles.duration) {
+			subtitleDiv.textContent = subtitles.text;
 			titled = true;
 		}
 	}
@@ -159,6 +162,6 @@ setInterval(nextSubtitle, 2000);</code></pre>
 		subtitleDiv.textContent = "";
 	}
 }
-// 1000/24 gives us 24 frames per second, should be enough
-setInterval(nextSubtitle, 1000/24);</code></pre>
+// 1000/24 = 24 frames per second
+setInterval(nextSubtitle, 1000 / 24);</code></pre>
 </div>
