@@ -16,6 +16,9 @@ week: 11
 <div class="slide">
 	<h2>Embed</h2>
 	<img src="catvideo.png" alt="">
+</div>
+
+<div class="slide">
 	<p>Most YouTube videos can be loaded onto a webpage using the embed code provided by YouTube in the "Share" menu.  Some videos have their content restricted to only be viewed on the YouTube site.</p>
 </div>
 
@@ -26,7 +29,10 @@ week: 11
 
 <div class="slide">
 	<p>The embed HTML uses an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="blank">iframe</a> which is an element that creates a new browser context inside of the current browser window.</p>
-	<p>Copy and paste the embed code into an HTML document:</p>
+	<p>Copy and paste the embed code into an HTML document.</p>
+</div>
+
+<div class="slide">
 	<pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
 	&lt;head&gt;
@@ -64,6 +70,9 @@ firstTagScript.parentNode.insertBefore(tag, firstTagScript);
 <div class="slide">
 	<h2>Player reference</h2>
 	<p>Then we get a references to the video player and initialize it.  The YouTube API script will call the <code>onYouTubeIframeAPIReady</code> function, which will let us initialize the player with specific events and set functions to handle those events.</p>
+</div>
+
+<div class="slide">
 	<pre><code>var player;
 function onYouTubeIframeAPIReady() {
 	player = new YT.Player('player', {
@@ -77,6 +86,9 @@ function onYouTubeIframeAPIReady() {
 <div class="slide">
 	<h2>Events</h2>
 	<p>In <code>onPlayerReady</code> we can set some event listeners for the buttons we created in the menu.</p>
+</div>
+
+<div class="slide">
 	<pre><code>function onPlayerReady(event) {
 document.getElementById("play").addEventListener("click", function() {
 	player.playVideo();
@@ -94,6 +106,9 @@ document.getElementById('jump').addEventListener('click', function() {
 <div class="slide">
 	<h2>Subtitles</h2>
 	<p>We can add subtitles like we did in the video example.  This time instead of using the <code>timeupdate</code> event, we'll set the subtitles to appear using a separate timer, <code>setInterval</code> which we also covered in the Time examples.</p>
+</div>
+
+<div class="slide">
 	<pre><code>// in the HTML
 &lt;div id="subtitles"&gt;Subtitles&lt;/div&gt;
 // in JS

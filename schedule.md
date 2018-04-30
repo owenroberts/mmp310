@@ -127,6 +127,7 @@ dek: Schedule with class notes & assignments
 
 
 ## Week 12 **Canvas**
+- Present Final Project Pitch
 - [Canvas](notes/canvas/)
 - [Google Maps API](notes/google_maps/)
 
