@@ -18,7 +18,7 @@ week: 12
 	<p>This is becoming less and less necessary, but like the <code>video</code> element, the <code>canvas</code> element can use fallback content for when a browser is no compatible.</p>
 	<pre><code>&lt;canvas width="600" height="400"&gt;
 	&lt;img src="no-canvas.png"&gt;
-	&lt;p&gt;No canvas.&lt;/p&gt;
+	&lt;p&gt;Your browser does not support the canvas element.&lt;/p&gt;
 &lt;/canvas&gt;</code></pre>
 </div>
 
@@ -31,7 +31,7 @@ var ctx = canvas.getContext('2d');</code></pre>
 </div>
 
 <div class="slide">
-	<p>After getting the reference, we check for support and then begin drawing.  If you have used <a href="https://p5js.org/" target="blank">p5 js</a> before these will look a little familiar.  Notice that the canvas API uses HTML values for things like color and font and sets specific properties, and then uses methods to draw  shapes, graphics and text.  Working directly with canvas can be arduous which is why libraries like <code>p5</code> and <a href="http://paperjs.org/" target="blank">Paper.js</a> exist to make basic drawing functions easier.</p>
+	<p>After getting the reference, we check for support and then begin drawing.  If you have used <a href="https://p5js.org/" target="blank">p5 js</a> these will look a little familiar.  Notice that the canvas API uses HTML values for things like color and font and sets specific properties, and then uses methods to draw  shapes, graphics and text.  Working directly with canvas can be arduous which is why libraries like <note>p5</note> and <a href="http://paperjs.org/" target="blank">Paper.js</a> exist to make basic drawing functions easier.</p>
 	<pre><code>if (ctx) {
 	ctx.fillStyle = "blue";
 	ctx.fillRect(100, 100, 50, 50);
