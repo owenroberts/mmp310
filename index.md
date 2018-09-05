@@ -17,6 +17,7 @@ https://docs.google.com/document/d/1F_0Dalqr8eWzhLX3_V2BXLJ-j_8AJNN8vuWaVAeVWsE/
  -->
 - [Student Work](studentwork/)
 - [Class Examples](examples/)
+- [Public Pad](https://pad.riseup.net/p/mmp310){:target="blank"}
 
 ## Fall 2018
 
