@@ -8,13 +8,18 @@ This is the class page of MMP 310 at BMCC.
 The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
-- <a href="https://mmp310.slack.com/" target="blank">Slack channel</a>
-- <a href="https://docs.google.com/document/d/1H4hMdA0waBqqoETuE1wopXuVwWHD4-vcktsjPU2y-wY/" target="blank">Syllabus</a>
-- <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
+<!-- - <a href="https://mmp310.slack.com/" target="blank">Slack channel</a>
+ -->
+- [Syllabus](
+https://docs.google.com/document/d/1F_0Dalqr8eWzhLX3_V2BXLJ-j_8AJNN8vuWaVAeVWsE/edit?usp=sharing
+){:target="blank"}
+<!-- - <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
+ -->
 - [Student Work](studentwork/)
 - [Class Examples](examples/)
+- [Public Pad](https://pad.riseup.net/p/mmp310){:target="blank"}
 
-## Spring 2018
+## Fall 2018
 
 - Instructor: Owen Roberts
 - email: oroberts AT bmcc DOT cuny DOT edu
@@ -25,10 +30,15 @@ The class notes, schedule and assignments are all found here.
 - Room: Fiterman 1006
 
 ## Turning in assignments
+- Assignments turned in on Blackboard
+- Late assignments are 25 points off
 
-- DM @owen a URL to the assignment on Slack
-- Due dates posted on schedule page, assignments must be ready to present at the beginning of class
-- Late assignments are automatic 25 points off
+## Citations for code resources
+- Coding assignments must use citations for any code borrowed from resources outside of class, including Google, Stack Overflow, YouTube or any tutorial, even if it's as little as one line of code
+- This is good practice to keep track of resources as well
+- In comments at the top of include a link to the resource
+
+## Grade Breakdown
 
 10% | Teacher evaluation and attendance  
 40% | Assignments  
@@ -36,7 +46,7 @@ The class notes, schedule and assignments are all found here.
 30% | Final
 
 ## Software
-- Text Editor: [Brackets](http://brackets.io/)
+- Text Editor: [Brackets](http://brackets.io/){:target="blank"}
 - Browser: Chrome
 - GitHub
 - Terminal 
@@ -71,7 +81,7 @@ Currently there are no dedicated MMP 310 tutors.  If you are interested in tutor
 ## Resources
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [JavaScript Basics](https://autotelicum.github.io/Smooth-CoffeeScript/literate/js-intro.html#syntax-basics)
-- <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction" target="blank">MDN Intro to HTML</a>
-- <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element" target="blank">MDN Element Reference</a>
-- <a href="https://files.fosswire.com/2007/08/fwunixref.pdf" target="blank">Unix cheat sheet </a>
-- <a href="https://ss64.com/osx/" target="blank">Unix full reference </a>
+- [MDN Intro to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction){:target="blank"}
+- [MDN Element Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element){:target="blank"}
+- [Unix cheat sheet](https://files.fosswire.com/2007/08/fwunixref.pdf){:target="blank"}
+- [Unix full reference](https://ss64.com/osx/){:target="blank"}

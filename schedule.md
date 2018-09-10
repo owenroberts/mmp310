@@ -123,6 +123,9 @@ dek: Schedule with class notes & assignments
 	- Can work inidividual or in pairs
 	- Create a web application using an API
 	- [List of public APIs](https://github.com/toddmotto/public-apis)
+		- Use only API with ```No``` or ```apiKey``` for auth
+		- Some APIs are only intended for backend use (Zomato, IGDB.com)
+		- Don't use any APIs that require credit card or billing
 	- Must take user input and return feedback
 	- Can be game, interactive visualization, information based app
 - [Example web apps](inspiration/apps/)
