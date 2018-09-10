@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>count down</title>
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<h1>Count down</h1>
+	<button id="start">Start Quiz</button>
+	<div id="quiz" style="display:none;">
+		<p>Quiz question #1</p>
+		<select class="answer">
+			<option value="10">True</option>
+			<option value="0">False</option>
+		</select>
+		<p>Quiz question #2</p>
+		<select class="answer">
+			<option value="0">True</option>
+			<option value="20">False</option>
+		</select>
+		<button id="submit">Submit answers</button>
+	</div>
+	<div id="countdown"></div>
+	<script src="app.js"></script>
+</body>
+</html>

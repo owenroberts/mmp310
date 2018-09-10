@@ -1,0 +1,25 @@
+body, input, button, ::-webkit-input-placeholder {
+	font-family:cursive;
+	color: aqua;
+	background-color:darkcyan;
+}
+
+.task {
+	border: 2px dashed white;
+	margin: 1em 0;
+}
+
+.task p {
+	margin:0;
+}
+
+.task button {
+	background: red;
+}
+
+
+
+
+
+
+

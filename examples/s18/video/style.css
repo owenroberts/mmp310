@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+	font-family: 'Oswald', sans-serif;
+}
+
+#video-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#js {
+	/*position: absolute;*/
+	border: 8px solid hotpink;
+	transition: filter 500ms;
+}
+
+#js:hover {
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+}
+
+#playButton {
+	position: absolute;
+	z-index: 1;
+	color: hotpink;
+	font-size: 2em;
+	padding: 1em;
+	border: 2px solid hotpink;
+	border-radius: 1em;
+	
+}
+
+#caption {
+	font-size: 5em;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

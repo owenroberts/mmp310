@@ -1,0 +1,14 @@
+body {
+	background-color:darkcyan;
+}
+img.slide {
+	max-width: 200px;
+}
+p.caption {
+	font-family: cursive;
+	color: aqua;
+}
+#container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}

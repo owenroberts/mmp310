@@ -18,18 +18,18 @@ dek: Schedule with class notes & assignments
 	- Include a photo and short bio
 	- Upload site to GitHub to publish with GitHub Pages
 
+## Assignment 1 **Interactive story**
+- In groups of 2 make a website that tells a story
+- Story is interactive - User uses mouse or keyboard to add content, choose the path or the story or interact with the content
+- We will explore various methods of interactivity including user input, randomization and logic
+- [Interactive story inspiration](inspiration/interactive_story/)
+
 ## Week 2 **Input**
 - Review GitHub publishing
 - [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310/input/){:target="blank"}
 - [GitHub Collaboration](notes/git/collaboration.html)
 - **Class Demo**: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
 - **In Class**: Complete Madlib example starting with demonstration code
-
-## Assignment 1 **Interactive story**
-- In groups of 2 make a website that tells a story
-- The story must be interactive
-- We will explore various methods of interactivity including user input, randomization and logic
-- [Interactive story inspiration](inspiration/interactive_story/)
 
 ## Week 3 **Logic**
 - [Data types: Number, String, Boolean](notes/data_types)
@@ -38,7 +38,6 @@ dek: Schedule with class notes & assignments
 - **Pair Programming**
 	- Rewrite Madlibs [example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"} using a test to verify input
 - Work on Assignment 1
-
 
 ## Week 4 **Arrays**
 - Present ideas for assignment 1
