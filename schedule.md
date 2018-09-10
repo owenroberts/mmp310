@@ -20,9 +20,10 @@ dek: Schedule with class notes & assignments
 
 ## Week 2 **Input**
 - Review GitHub publishing
-- [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/input/){:target="blank"}
-- **Class Demo**: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"}
+- [JavaScript input & variables](notes/input/) ~ [Class Example](https://owenbmcc.github.io/mmp310/input/){:target="blank"}
 - [GitHub Collaboration](notes/git/collaboration.html)
+- **Class Demo**: [Madlibs](https://en.wikipedia.org/wiki/Mad_Libs)
+- **In Class**: Complete Madlib example starting with demonstration code
 
 ## Assignment 1 **Interactive story**
 - In groups of 2 make a website that tells a story
