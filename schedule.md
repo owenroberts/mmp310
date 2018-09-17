@@ -34,9 +34,7 @@ dek: Schedule with class notes & assignments
 ## Week 3 **Logic**
 - [Data types: Number, String, Boolean](notes/data_types)
 - [Logic](notes/logic/)
-- **Class Demo**: Quiz Game ~ [Class Example](https://owenbmcc.github.io/mmp310s18/quiz/){:target="blank"}
-- **Pair Programming**
-	- Rewrite Madlibs [example](https://owenbmcc.github.io/mmp310s18/madlibs/){:target="blank"} using a test to verify input
+- **Pair Programming**: Mad libs input verification
 - Work on Assignment 1
 
 ## Week 4 **Arrays**
@@ -45,7 +43,6 @@ dek: Schedule with class notes & assignments
 - [Math, random](notes/random/)
 - **Class Demo**: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/8ball/){:target="blank"}
 
-
 ## Week 5 **Loops**
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
@@ -53,7 +50,7 @@ dek: Schedule with class notes & assignments
 - **Class Demo**: [Random Password Generator~ ](https://owenbmcc.github.io/mmp310s18/password/){:target="blank"}
 - **Class Demo**: [Slideshow](https://owenbmcc.github.io/mmp310s18/slideshow/){:target="blank"}
 
-## Assignment 2 **Quiz game / Slide show**
+## Assignment 2 **Quiz game**
 - This project should use a loop, array and functions
 - Create a slideshow of images and text
 - Use an array for the image paths and text
