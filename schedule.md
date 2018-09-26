@@ -41,7 +41,7 @@ dek: Schedule with class notes & assignments
 - Present ideas for assignment 1
 - [Arrays](notes/array/)
 - [Math, random](notes/random/)
-- **Class Demo**: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball) ~ [Class Example](https://owenbmcc.github.io/mmp310s18/8ball/){:target="blank"}
+- **Class Demo**: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
 
 ## Week 5 **Loops**
 - Present Assignment 1: Interactive story
