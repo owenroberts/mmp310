@@ -57,7 +57,6 @@ dek: Schedule with class notes & assignments
 - Add up user answers to give them a score or result
 - Be creative with quiz content
 - [Examples](inspiration/slideshow/)
-- Due March 28
 
 ## Week 6 **Functions**
 - [Functions](notes/functions/)
