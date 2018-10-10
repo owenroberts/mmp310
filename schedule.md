@@ -47,7 +47,6 @@ dek: Schedule with class notes & assignments
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
-- **Class Demo**: [Random Password Generator~ ](https://owenbmcc.github.io/mmp310s18/password/){:target="blank"}
 - **Class Demo**: [Slideshow](https://owenbmcc.github.io/mmp310s18/slideshow/){:target="blank"}
 
 ## Assignment 2 **Quiz game**
