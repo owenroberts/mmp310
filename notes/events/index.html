@@ -17,12 +17,12 @@ week: 6
 </div>
 <div class="slide">
 	<p>Referencing elements in the DOM:</p>
-	<pre><code>document.getElementById("container");
+	<div class="ex">document.getElementById("container");
 document.getElementsByClassName("link");
 document.getElementsByTagName("p");
 document.querySelector("#container");
 document.querySelectorAll(".link");
-document.querySelectorAll("p");</code></pre>
+document.querySelectorAll("p");</div>
 </div>
 
 <div class="slide">
@@ -32,31 +32,31 @@ document.querySelectorAll("p");</code></pre>
 
 <div class="slide">
 	<p>Creating and appending elements to DOM:</p>
-	<pre><code>var message = document.createElement("div");
+	<div class="ex">var message = document.createElement("div");
 message.className = "message";
-document.body.appendChild(message);</code></pre>
+document.body.appendChild(message);</div>
 </div>
 
 <div class="slide">
 	<p>And removing them:</p>
-	<pre><code>var messages = document.getElementsByClassName("message");
-document.body.removeChild(messages[0]);</code></pre>
+	<div class="ex">var messages = document.getElementsByClassName("message");
+document.body.removeChild(messages[0]);</div>
 </div>
 
 <div class="slide">
 	<p>We can access child and parent nodes:</p>
-	<pre><code>var c = document.querySelector("#container");
+	<div class="ex">var c = document.querySelector("#container");
 console.log(c.firstChild);
 console.log(c.lastChild);
-console.log(c.childNodes);</code></pre>
+console.log(c.childNodes);</div>
 </div>
 
 <div class="slide">
 	<p>And get the parent node or sibling node:</p>
-	<pre><code>var children = c.childNodes;
+	<div class="ex">var children = c.childNodes;
 console.log(children[0].parentNode);
 console.log(children[0].previousSibling);
-console.log(children[0].nextSibling);</code></pre>
+console.log(children[0].nextSibling);</div>
 </div>
 
 <div class="slide">
@@ -91,26 +91,26 @@ console.log(children[0].nextSibling);</code></pre>
 
 <div class="slide">
 	<p>Creating and modifying style and content:</p>
-	<pre><code>var message = document.createElement("div");
+	<div class="ex">var message = document.createElement("div");
 message.className = "message";
 message.innerHTML = "This is a new message!";
 message.style.color = "red";
-c.appendChild(message);</code></pre>
+c.appendChild(message);</div>
 </div>
 
 <div class="slide">
 	<p>You can access any style in any element:</p>
-	<pre><code>var c = document.getElementById("container");
-c.style.color = "green";</code></pre>
+	<div class="ex">var c = document.getElementById("container");
+c.style.color = "green";</div>
 </div>
 
 <div class="slide">
 	<p>Add an image to the document:</p>
-	<pre><code>var img = new Image();
+	<div class="ex">var img = new Image();
 img.src = "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg";
 var elem = document.createElement("div");
 elem.appendChild(img);
-c.appendChild(elem);</code></pre>
+c.appendChild(elem);</div>
 </div>
 
 
@@ -123,7 +123,7 @@ c.appendChild(elem);</code></pre>
 
 <div class="slide">
 	<p>Some events:</p>
-	<pre><code><c></c>addEventListener("click", function() {
+	<div class="ex"><c></c>addEventListener("click", function() {
 	console.log("Hello");
 });
 <c></c>addEventListener("scroll", function() {
@@ -131,64 +131,69 @@ c.appendChild(elem);</code></pre>
 });
 <c></c>addEventListener("resize", function() {
 	console.log("Hey!");
-});</code></pre>
+});</div>
 </div>
 
 <div class="slide">
 	<h2>window load</h2>
 	<p>It's a good idea to load your code once the browser window has loaded all of the HTML and CSS.  We can do this easily with the <code>window</code> object.</p>
-	<pre><code>window.addEventListener("load", function() { 
+	<div class="ex">window.addEventListener("load", function() { 
 	// write program here
-});</code></pre>
+});</div>
 </div>
 
 <div class="slide">
 	<p>Using <code>addEventListener</code> here is a good because it allows other event listeners to be added.  Using an <code>onload</code> statement restricts other event listeners by binding the <code>onload</code> event to one statement.</p>
-	<pre><code>window.onload = function() {
+	<div class="ex">window.onload = function() {
 	// only this will happen
-};</code></pre>
+};</div>
 </div>
 
 <div class="slide">
 	<h2>event argument</h2>
 	<p>Events have related information that we can access by adding an <code>event</code> argument:</p>
-	<pre><code><c></c>addEventListener("keydown", function(event) {
+	<div class="ex"><c></c>addEventListener("keydown", function(event) {
 	console.log(event);
-});</code></pre>
+});</div>
 	<p>This is sometimes abbreviated as <code>ev</code> or even <code>e</code>.</p>
 </div>
 
 <div class="slide">
 	<h2>Event targets</h2>
 	<p>We can also <code>bind</code> events to specific elements in the DOM:</p>
-	<pre><code><c></c>var b = document.querySelector("#button");
+	<div class="ex"><c></c>var b = document.querySelector("#button");
 <c></c>b.addEventListener("click", function(event) {
 	console.log("You clicked me!");
-});</code></pre>
+});</div>
 	<button id="button">This button has the id "button".</button>
 </div>
 
 <div class="slide">
 	<h2>Event statements</h2>
-	<p>Many events have shorthand methods called Global Event Handlers like <code>.onclick</code> and <code>.onscroll</code> that can be used with DOM elements:</p>
-				<pre><code><c></c>var b = document.querySelector("#onclick");
+	<p>Many events have shorthand methods called Global Event Handlers like <code>.onclick</code> and <code>.onscroll</code> that can be used with DOM elements.</p>
+</div>
+
+<div class="slide">
+	<div class="ex"><c></c>var b = document.querySelector("#onclick");
 <c></c>b.onclick = function(event) {
 	console.log("You clicked me!");
-};</code></pre>
+};</div>
 	<button id="onclick">This button has the id "onclick".</button>
-	<p><note>Note:</note> the only disadvantage of this style of event is that it limits the element to only that event listener.</p>
+	<p><note>Note:</note> the disadvantage of this style of event is that it limits the element to only that event listener.</p>
 </div>
 
 <div class="slide">
 	<h2>this</h2>
 	<p>When using event listeners, the <code>this</code> keyword is bound to the DOM element that was targeted for the event.  Using <code>this</code> we can get a reference to the element and it's properties.</p>
-	<pre><code><c></c>var b = document.querySelector("#this");
-<c></c>b.onclick = function(event) {
-	console.log(this);
-};</code></pre>
-	<button id="this">This button has the id "button".</button>
 </div>
 
+<div class="slide">
+	<div class="ex"><c></c>var b = document.querySelector("#this");
+<c></c>b.onclick = function(event) {
+	console.log(this);
+};</div>
+	<button id="this">This button has the id "button".</button>
+</div>
 
 <div class="slide">
 	<ul>

@@ -5,29 +5,32 @@ week: 6
 ---
 
 <div class="slide">
-	<p>Functions are blocks of code that can be called repeatedly.  Functions are defined like variables but have parentheses following the function name. The parentheses <code>()</code> are an operator like <code>+</code> or <code>=</code> that are used to <note>invoke</note> or call a function.</p>
+	<p>Functions are blocks of code that can be called repeatedly.</p>
+	<p>Functions are defined like variables but have parentheses following the function name.</p>
+	<p>The parentheses <code>()</code> are used to <note>invoke</note> or call a function.</p>
 </div>
-
-		<!--  Arguments can be placed inside the parentheses. -->
 
 <div class="slide">
 	<p>There a two primary ways to create a function.</p>
-	<pre><code>// function declaration
+	<div class="ex">// function declaration
 function foo() {
 	console.log("Hello :)");
-}</code></pre>
-<pre><code>// function statement 
-var bar = function() {
-	console.log("world");
-}; // ends with semi color because it's a statement</code></pre>
-	<p>Notice how nothing happens after we declare the function.  The function is defined, but the code won't run until it is called:</p>
-	<pre><code>foo();
-bar();</code></pre>
+}</div>
 </div>
 
 <div class="slide">
-	<p>The function in the previous example isn't very useful.  We can just as easily write out <code>console.log("world");</code> as we can <code>foo()</code>.  Even if there were more lines, if they only do one thing, it's not that useful.  A function should repeat a series of code that needs to be done often, and usually called from different parts of the program.</p>
+<div class="ex">// function statement 
+var bar = function() {
+	console.log("world");
+}; // ends with semi color because it's a statement</div>
 </div>
+
+<div class="slide">
+	<p>Notice how nothing happens after we declare the function.  The function is defined, but the code won't run until it is called:</p>
+	<div class="ex">foo();
+bar();</div>
+</div>
+
 <div class="slide">
 	<h2>Arguments</h2>
 	<p>A function can also be written with <note>arguments</note>, which are variables that are declared within the parentheses of the function.</p>
@@ -43,74 +46,53 @@ bar();</code></pre>
 
 <div class="slide">
 	<p>Let's write a function with arguments.</p>
-	<pre><code>function greet(name, greeting) {
+	<div class="ex">function greet(name, greeting) {
 	console.log(greeting + ", " + name);
 }
 
 greet("Jenny", "Hello");
-greet("Jerry", "Hi");</code></pre>
+greet("Jerry", "Hi");</div>
 </div>
 
 <div class="slide">
 	<p>Now check what happens if we call the function with out arguments:</p>
-	<pre><code>greet();</code></pre>
+	<div class="ex">greet();</div>
 	<p>Why is this <code>undefined, undefined</code>?</p>
+</div>
+
+<div class="slide">
 	<p>The variables that are created for the arguments of the function, in this case <code>name</code> and <code>greeting</code> and declared when the function is invoked.</p>
 	<p>So, even though we never wrote <code>var name;</code> or <code>var greeting;</code> they are created, and when a variable is declared but not assigned, it has the value <code>undefined</code>.  Because we did not call our function with the right arguments, those values stay undefined.</p>
 </div>
-<!-- <div class="slide">
-	<p>Open up the console and try these lines:</p>
-	<pre><code><c></c>q + w;
-<c></c>var q, w;
-<c></c>q;
-<c></c>q + w;
-<c></c>var q = 2, w = 2;
-<c></c>q + w;</code></pre>
-	<p>If we don't declare or assign a variable, trying to use them will throw an Uncaught Reference Error.  <code>NaN</code> or "Not a Number" is the result of trying to add two undefined variables.  </p>
-</div> -->
-<!-- <div class="slide">
-	<h2>How do we know if we have the right arguments?</h2>
-	<p>Because JavaScript will not throw an error if we try to call a function with the wrong number of arguments, it does provide an <code>arguments</code> variable, which is set to an array of whatever arguments are entered.  For example:</p>
-	<pre><code>function tooManyArguments(){
-	console.log(arguments);
-}
-tooManyArguments(1,2,"Jerry", "Jenny");</code></pre> 
-</div>
-<div class="slide">
-	<p>We can use a conditional to make sure the</p>
-	<pre><code>function greet(name, greeting) {
-	if (arguments.length > 1) {
-		console.log(greeting + ", " + name);
-	} else {
-		console.log("Not enough arguments for a greeting :(");
-	}
-}
-greet("Jerry");</code></pre>
-its not that important to go over arguments array, not really ever used.
 
-</div>
--->
 <div class="slide">
 	<h2>Return</h2>
 	<p>Functions can also <code>return</code> values.  A return statement stops the function execution and returns a value to whatever variable the function is assigned to.</p>
-	<pre><code>function add(n1, n2) {
+</div>
+
+<div class="slide">
+	<div class="ex">function add(n1, n2) {
 	return n1 + n2;
 }
 var x = add(2, 2);
 var y = add(x, 2);
 var z = add(x, y);
-console.log(add(x, y, z));</code></pre>
+console.log(add(x, y, z));</div>
 </div>
 
 <div class="slide">
 	<h2>Anonymous functions</h2>
-	<p>Regular JavaScript functions need to be called after they are declared.  There are cases where we want a function to run immediately. These are anonymous functions, which self execute:</p>
-	<pre><code>(function() {
+	<p>Regular JavaScript functions need to be called after they are declared.  There are cases where we want a function to run immediately. These are anonymous functions, which call themselves.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">(function() {
 	console.log("Hello world");
-})();</code></pre>
-			<pre><code>(function(msg) {
+})();</div>
+	<br>
+	<div class="ex">(function(msg) {
 	console.log(msg);
-})("Hello world.");</code></pre>
+})("Hello world.");</div>
 </div>
 
 <div class="slide">
@@ -121,7 +103,7 @@ console.log(add(x, y, z));</code></pre>
 
 <div class="slide">
 	<p>Bad scope example:</p>
-	<pre><code>function assign() {
+	<div class="ex">function assign() {
 	var x = 0;
 	var y = 1;
 }
@@ -129,12 +111,12 @@ function add() {
 	console.log(x + y);
 }
 assign();
-add();</code></pre>
+add();</div>
 </div>
 
 <div class="slide">
 	<p>Better scope example:</p>
-	<pre><code>var x; 
+	<div class="ex">var x; 
 var y;
 function assign() {
 	x = 0;
@@ -144,11 +126,10 @@ function add() {
 	console.log(x + y);
 }
 assign();
-add();</code></pre>
+add();</div>
 </div>
 
 <div class="slide">
-	<p>This will not be super important for the programs we write in this class but generally, it's not considered good practice to declare variables in the global scope in JavaScript.  This is because in a webpage with many JavaScript scripts attached, those global variables may be used unintentionally in other scripts.</p>
 	<p>One common practice used to avoid this is to wrap all of the code in your script in a self invoking function, which will keep things out of the global scope.  Another approach is to make a global object that has methods to access variables which allows your script to be accessible in other scripts without exposing all of your variables to the global scope.</p>
 	<p>More on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" target="blank">functions</a>.</p>
 </div>

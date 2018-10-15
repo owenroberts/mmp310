@@ -61,7 +61,6 @@ dek: Schedule with class notes & assignments
 ## Week 6 **Functions**
 - [Functions](notes/functions/)
 - [DOM & Events](notes/events)
-- Class Demo: Task List
 
 ## Week 7 **Objects**
 - Present Assignment 2 Progress
