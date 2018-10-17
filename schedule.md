@@ -42,12 +42,15 @@ dek: Schedule with class notes & assignments
 - [Arrays](notes/array/)
 - [Math, random](notes/random/)
 - **Class Demo**: [Magic 8 Ball](https://en.wikipedia.org/wiki/Magic_8-Ball)
+- **In Class**: Finish Magic 8 Ball app
 
 ## Week 5 **Loops**
 - Present Assignment 1: Interactive story
 - [Loops](notes/loop/)
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
-- **Class Demo**: [Slideshow](https://owenbmcc.github.io/mmp310s18/slideshow/){:target="blank"}
+- **Class Demo**: Quiz Game Images
+- **Class Demo**: Random Password Generator
+- **In Class**: Complete Random Password Generator
 
 ## Assignment 2 **Quiz game**
 - This project should use a loop, array and functions
@@ -61,11 +64,15 @@ dek: Schedule with class notes & assignments
 ## Week 6 **Functions**
 - [Functions](notes/functions/)
 - [DOM & Events](notes/events)
+- **Class Demo**: Task List
+- **In Class**: Complete Task List App
 
 ## Week 7 **Objects**
 - Present Assignment 2 Progress
 - [Objects](notes/objects/)
 - [JSON](notes/json)
+- **Class Demo**: Quiz Game with Objects
+- **In Class**: Work on Assignment 2
 
 ## Week 8 **jQuery & JSON API**
 - Present Assignment 2
