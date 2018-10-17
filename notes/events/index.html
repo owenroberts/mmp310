@@ -18,45 +18,16 @@ week: 6
 <div class="slide">
 	<p>Referencing elements in the DOM:</p>
 	<div class="ex">document.getElementById("container");
-document.getElementsByClassName("link");
+document.getElementsByClassName("slide");
 document.getElementsByTagName("p");
 document.querySelector("#container");
-document.querySelectorAll(".link");
+document.querySelectorAll(".slides");
 document.querySelectorAll("p");</div>
 </div>
 
 <div class="slide">
 	<p><note>Note</note> the spelling and punctuation of these methods, they have to be written exactly right.</p>
 	<p><code>.getElement</code> is for ids, vs <code>.getElements</code> for class and tag names</p>
-</div>
-
-<div class="slide">
-	<p>Creating and appending elements to DOM:</p>
-	<div class="ex">var message = document.createElement("div");
-message.className = "message";
-document.body.appendChild(message);</div>
-</div>
-
-<div class="slide">
-	<p>And removing them:</p>
-	<div class="ex">var messages = document.getElementsByClassName("message");
-document.body.removeChild(messages[0]);</div>
-</div>
-
-<div class="slide">
-	<p>We can access child and parent nodes:</p>
-	<div class="ex">var c = document.querySelector("#container");
-console.log(c.firstChild);
-console.log(c.lastChild);
-console.log(c.childNodes);</div>
-</div>
-
-<div class="slide">
-	<p>And get the parent node or sibling node:</p>
-	<div class="ex">var children = c.childNodes;
-console.log(children[0].parentNode);
-console.log(children[0].previousSibling);
-console.log(children[0].nextSibling);</div>
 </div>
 
 <div class="slide">
@@ -88,6 +59,39 @@ console.log(children[0].nextSibling);</div>
 		</div>
 	</div>
 </div>
+
+<div class="slide">
+	<p>We can access child and parent nodes:</p>
+	<div class="ex">var c = document.querySelector("#container");
+console.log(c.firstChild);
+console.log(c.lastChild);
+console.log(c.childNodes);</div>
+</div>
+
+<div class="slide">
+	<p>And get the parent node or sibling node:</p>
+	<div class="ex">var children = c.childNodes;
+console.log(children[0].parentNode);
+console.log(children[0].previousSibling);
+console.log(children[0].nextSibling);</div>
+</div>
+
+
+<div class="slide">
+	<p>Creating and appending elements to DOM:</p>
+	<div class="ex">var message = document.createElement("div");
+message.className = "message";
+document.body.appendChild(message);</div>
+</div>
+
+<div class="slide">
+	<p>And removing them:</p>
+	<div class="ex">var messages = document.getElementsByClassName("message");
+document.body.removeChild(messages[0]);</div>
+</div>
+
+
+
 
 <div class="slide">
 	<p>Creating and modifying style and content:</p>
@@ -188,11 +192,11 @@ c.appendChild(elem);</div>
 </div>
 
 <div class="slide">
-	<div class="ex"><c></c>var b = document.querySelector("#this");
-<c></c>b.onclick = function(event) {
+	<div class="ex">var b = document.querySelector("#this-btn");
+b.onclick = function(event) {
 	console.log(this);
 };</div>
-	<button id="this">This button has the id "button".</button>
+	<button id="this-btn">This button has the id "button".</button>
 </div>
 
 <div class="slide">
