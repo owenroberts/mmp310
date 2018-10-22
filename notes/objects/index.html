@@ -17,6 +17,11 @@ week: 7
 <div class="slide">
 	<h2>Key, value pairs</h2>
 	<p>In a key value pair, the key is a string and the value can be any JavaScript value, a number, string, array, function or another object.</p>
+	<p>Single values like numbers, strings and booleans are called <note>properties</note>, while functions are called <note>methods</note>.</p>
+
+</div>
+
+<div class="slide">
 	<pre><code><table>
 		<tr>
 			<th>key</th>
@@ -30,8 +35,15 @@ week: 7
 			<td>length</td>
 			<td>7</td>
 		</tr>
+		<tr>
+			<td>push</td>
+			<td>function() { }</td>
+		</tr>
+		<tr>
+			<td>pop</td>
+			<td>function() { }</td>
+		</tr>
 	</table></code></pre>
-	<p>Single values like numbers, strings and booleans are called <note>properties</note>, while functions are called <note>methods</note>.</p>
 </div>
 
 <div class="slide">
@@ -124,10 +136,13 @@ week: 7
 </div>
 
 
-
 <div class="slide">
 	<h2>Object constructor</h2>
 	<p>Another way to create objects is through an object constructor, which is more like a blueprint for an object that get created later.</p>
+</div>
+
+
+<div class="slide">
 	<pre><code>function Train(color, speed, distance, origin, destination) {
 	this.color = color;
 	this.speed = speed;

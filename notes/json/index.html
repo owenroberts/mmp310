@@ -11,25 +11,25 @@ week: 7
 </div>
 
 <div class="slide">
-	<p>Image we were to build a slide show with images and captions.  We would want to be able to create each image and caption without having to repeat the same HTML or JavaScript structure over and over.</p>  
+	<p>Imagine we were to build a slide show with images and captions.  We would want to be able to create each image and caption without having to repeat the same HTML or JavaScript structure over and over.</p>  
 	<p>Using the loops we learned a couple of weeks ago, we can just design the data structure and then use a loop to add the info.</p>
 </div>
 
 <div class="slide">
-	<p>One of those objects might look like this:</p>
-	<pre><code>var slide = {
+	<p>An example of a slide object.</p>
+	<pre><code>const slide = {
 	image: "cat.jpg",
 	caption: "Hello."
 };</code></pre>
 </div>
 
 <div class="slide">
-	<p>To add more slides we might repeat that design and then add them to an array:</p>
-	<pre><code>var catSlide = {
+	<p>To add more slides we might repeat that design and then add them to an array.</p>
+	<pre><code>const catSlide = {
 	image: "cat.jpg",
 	caption: "I'm a cat!"
 };
-var dogSlide = {
+const dogSlide = {
 	image: "dog.jpg",
 	caption: "I'm a dog~"
 };
@@ -37,7 +37,10 @@ var slides = [catSlide, dogSlide];</code></pre>
 </div>
 
 <div class="slide">
-	<p>To simplify this a bit, we can just write all of this data in one big array:</p>
+	<p>To simplify this a bit, we can just write all of this data in one big array.</p>
+</div>
+
+<div class="slide">
 	<pre><code>var slides = [
 	{
 		img: "cat1.jpg",
@@ -55,10 +58,13 @@ var slides = [catSlide, dogSlide];</code></pre>
 </div>
 
 <div class="slide">
-	<p>Adding one slide to our slideshow might look something like this:</p>
-	<pre><code>var slideElem = document.createElement("div");
-var image = new Image();
-var caption = document.createElement("p");
+	<p>To add an image to the slide show we could read the properties of the object and create HTML elements using JavaScript.</p>
+</div>
+
+<div class="slide">
+	<pre><code>const slideElem = document.createElement("div");
+const image = new Image();
+const caption = document.createElement("p");
 image.src = slide.image;
 caption.textContent = slide.caption;
 slideElem.appendChild(image);
@@ -66,13 +72,14 @@ slideElem.appendChild(caption);
 document.body.appendChild(slideElem);</code></pre>
 </div>
 
-
-
 <div class="slide">
 	<p>That's a lot to do for one slide, it would be a real pain to do that for 3 or 5 or 10 slides.</p>
-	<p>By using an array with our object data, we can just put that code in a loop:</p>
+	<p>By using an array with our object data, we can just put that code in a loop.</p>
+</div>
+
+<div class="slide">
 	<pre><code>// loop through all slides
-for (var i = 0; i < slidses.length; i++) {
+for (let i = 0; i < slides.length; i++) {
 	// get a reference to each slide in the array
 	var slide = slides[i];
 	var slideElem = document.createElement("div");
