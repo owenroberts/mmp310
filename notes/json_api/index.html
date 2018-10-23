@@ -7,27 +7,8 @@ week: 8
 <div class="slide">
 	<p>API stands for <note>Application Programming Interface</note>.</p>
 	<p>APIs are used to provide a set of protocols and patterns for building software and applications.  Often they allow programmers to interact with a specific database, hardware or software.</p>
-	<p>We're going to look at a simple API today, the <!-- <a href="http://omdbapi.com/" target="blank">Open Movie Database</a>, a resource for movie information and media that is built on user contributions.  The OMDb is a (mostly) free resource, and full access can be gained by donating money (this is just for poster images).  We'll also look at the  --><a href="https://developers.giphy.com/" target="blank">Giphy API</a> which requires signing up for a user key but is still free to use.</p>
+	<p>We're going to look at a simple API today, the <a href="https://developers.giphy.com/" target="blank">Giphy API</a> which requires signing up for a user key but is still free to use.</p>
 </div>
-
-<!-- <div class="slide">
-	<h2>OMDb API</h2>
-	<p>Simple OMBd synatax:</p>
-	<pre><code>http://www.omdbapi.com/?t=Space Jam</code></pre>
-	<p>Paste that into the browser window and you will see some simple JSON.</p>
-</div>
-
-<div class="slide">
-	<p>To use that in our own webpage, we can use a jQuery <code>$.getJSON</code> request:</p>
-	<pre><code><c></c>$.getJSON('http://www.omdbapi.com/?t=Space Jam', function(json){  
-  console.log(json);
-});</code></pre>
-</div>
-<div class="slide">
-	<pre><code><c></c>$.getJSON('http://www.omdbapi.com/?t=Jurassic Park', function(json){  
-	console.log(json);
-});</code></pre>
-</div> -->
 
 <div class="slide">
 	<h2>Giphy API</h2>
@@ -39,49 +20,90 @@ week: 8
 	<p>We're going to make a very simple GIF image search app.</p>
 	<p>Starting with the HTML page, all we need is an input box:</p>
 	<pre><code>&lt;input type="text" id="query" placeholder="search"&gt;&lt;/input&gt;</code></pre>
-	<p>We also need jQuery, so attach that as well:</p>
-	<pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="app.js"&gt;&lt;/script&gt;</code></pre>
-</div>
-
-<div class="slide">
-	<p>We're going to use jQuery so let's make sure the <code>document</code> is loaded:</p>
-	<pre><code>$(document).ready(function() {
-	// all code goes here
-});</code></pre>
 </div>
 
 <div class="slide">
 	<p>Next we need to detect when the user has entered text.</p>
-	<pre><code>$('#query').on("keypress", function(event){
+	<pre><code>const query = document.getElementById('query');
+query.addEventListener('keydown', function(event) {
 	if (event.which == 13) {
-		var query = this.value;
-		console.log(query);
+		const q = query.value;
 	}
 });</code></pre>
 </div>
 
 <div class="slide">
-	<p>Once we have the query, we can use our user key, the Giphy API string and <code>$.getJSON</code> from <code>jQuery</code> to get results.  Let's just log the results first.  Take a look at the object and try to find the source URLs for the images.</p>
-	<pre><code>var key = "YOUR_KEY_HERE";
-var url = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + key + "&limit=20";
-$.getJSON(url, function(json) {
+	<p>Once we have the query, we can use our user key, the Giphy API string and <code>fecth</code> to get results.  
+	<p><code>fecth</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="blank">JavaScript function</a> for the browser API which gets external resources and returns then to the browser.</p>
+	<p><code>fecth</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="blank">Promise</a> which an object that represents the eventual completion of an asynchronous operation, or failure. </p>
+	<p>Asynchronous operations are used when we don't know how long something will take. They happen outside of the main JavaScript thread so they won't pause other parts of the browser code.</p>
+</div>
+
+<div class="slide">
+	<p>Next we have to create the request URL.  The URL is built using the giphy server address, the search term and the api key, all stuck together in one big string.</p>
+	<p>To build that we're going to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="blank">template literal</a>, which allows us to include variable values inside of the string using the <code>${}</code> syntax.</p>
+</div>
+
+<div class="slide">
+	<p>The string starts with the server address: <code>https://api.giphy.com/v1/gifs/search</code>.</p>
+	<p>Add the query with the <code>q</code> value: <code>?q=${q}</code> then the API key with <code>&api_key=${key}</code></p>
+	<pre><code>const key = "YOUR_KEY_HERE";
+const url = `https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${key}`;
+</code></pre>
+</div>
+
+<div class="slide">
+	<h2>JSON data</h2>
+	<p>Let's just log the results first.  Get the promise from <code>fetch</code> and log the result.</p>
+	<pre><code>const promise = fetch(url)
+	.then(function (response) {
+		return response.json();
+	});
+
+promise.then(function(json) {
 	console.log(json);
 });</code></pre>
+	<p>Take a look at the object and try to find the source URLs for the images.</p>
 </div>
 
 <div class="slide">
 	<p>Not we need to loop through the results and create elements to add the images to the HTML document.</p>
 	<pre><code>for (let i = 0; i < json.data.length; i++) {
 	const img = json.data[i];
-	const imgElem = $('&lt;img&gt;')
-		.attr('src', img.images.downsized.url);
-	$('body').append(imgElem);
+	const elem = new Image();
+	elem.src = img.images.downsized.url;
+	document.body.appendChild(elem);
 }</code></pre>
 </div>
 
-<!--  add limit  -->
+<div class="slide">
+	<h2>Catch errors</h2>
+	<p>To be safe let's add a <code>catch</code> statement in case there are any errors.</p>
+	<pre><code>promise.catch(function(error) { 
+	console.log('error', error) 
+});</code></pre>
+</div>
 
-<!--  add rating  -->
+<div class="slide">
+	<h2>Random</h2>
+	<p>This will always give us the top 25 gif results.</p>
+	<p>What if we want randomized gifs?</p>
+	<p>We can use the random API end point.</p>
+	<pre><code>const url = `https://api.giphy.com/v1/gifs/random?q=${q}&api_key=${key}`;</code></pre>
+</div>
 
-<!-- get random -->
+<div class="slide">
+	<p>With the random endpoint, there is just one image returned, so we no longer need a loop.</p>
+	<pre><code>promise.then(function(json) {
+	const img = json.data;
+	const elem = new Image();
+	elem.src = img.images.downsized.url;
+	document.body.appendChild(elem);
+});</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also filter results by rating, which uses MPAA-style rating including Y, G, PG, PG-13 and R.</p>
+	<p>This can be added as another parameter to the search string <code>&rating=g</code>.</p>
+	<pre><code>const url = `https://api.giphy.com/v1/gifs/random?q=${q}&api_key=${key}&rating=g`;</code></pre>
+</div>

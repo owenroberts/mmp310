@@ -74,37 +74,15 @@ dek: Schedule with class notes & assignments
 - **Class Demo**: Quiz Game with Objects
 - **In Class**: Work on Assignment 2
 
-## Week 8 **jQuery & JSON API**
+## Week 8 **JSON API**
 - Present Assignment 2
-- [jQuery](notes/jquery/)
 - [JSON API](notes/json_api/)
 
-## Midterm **Meme Mashup**
-- This semester the midterm will use Giphy API
-- Allow the user to search or select images tags
-- Get randomized images and display them to user
-- Add whatever other components you want to make it creative!
-- **Rubric**
-	- Total 100 points
-	- JavaScipt: 20 points
-		- No bugs
-		- JavaScript and jQuery used appropriately
-		- Comments 
-		- Legibility
-	- JSON + API: 20 points
-		- Working API request
-		- Handle JSON data
-	- CSS Styles: 20 points
-		- Original CSS styles used appropriately
-		- No frameworks
-		- No default styles!
-	- User Experience: 20 points
-		- Clear instructions for use
-		- Easy to use interface
-	- Creativity: 20 points
-		- Do something original with the user interaction
-		- Could add quiz/game elements
-
+## Midterm **Meme Generator**
+- Create a web app that allows users to create a meme 
+- Users search for a GIF using the Giphy API
+- Add text using a text input
+- See Blackboard for Rubric
 
 ## Week 9 **Midterm**
 - Midterm Workshop

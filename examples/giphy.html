@@ -1,0 +1,31 @@
+<input type="text" id="query" placeholder="search">
+<script>
+	window.addEventListener('load', () => {
+		const query = document.getElementById('query');
+		query.addEventListener('keydown', function(event) {
+			if (event.which == 13) {
+				const q = query.value;
+				const key = "P7NLCftNCTpBvJr3RlwWp8YUZ9RTcKgy";
+				const url = `https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${key}&rating=g`;
+				
+				const promise = fetch(url)
+					.then(function (response) {
+						return response.json();
+					});
+
+				promise.then(function(json) {
+					console.log(json);
+					for (let i = 0; i < json.data.length; i++) {
+						const img = json.data[i];
+						const elem = new Image();
+						elem.src = img.images.downsized.url;
+						document.body.appendChild(elem);
+					}
+				});
+				promise.catch(function(error) { 
+					console.log('error', error) 
+				});
+			}
+		});
+	});
+</script>
