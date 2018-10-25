@@ -119,6 +119,12 @@ dek: Schedule with class notes & assignments
 
 <!-- 
 
+midterm - giphy
+- meme generator - user adds meme search and text for meme and it generates meme with image
+- meme madlibs/quiz game
+- meme choose the right image for search term
+- 
+
 interactive story
 	- decision tree, user experience map
 	- input vs branching stories
@@ -144,4 +150,5 @@ threejs?
 libraries?
 
 http://teachingmultimedia.net/mmp420syllabus.html
+
 -->

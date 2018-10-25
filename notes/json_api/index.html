@@ -46,6 +46,18 @@ query.addEventListener('keydown', function(event) {
 
 <div class="slide">
 	<p>The string starts with the server address: <code>https://api.giphy.com/v1/gifs/search</code>.</p>
+	<p>After the server address, add parameters starting after a <code>?</code>.</p>
+	<p>Each parameter is created with a key and value, <code>key=value</code>.</p>
+	<p>The first parameter is the search term, or query, which has the key <code>q</code>.</p>
+	<pre><code>https://api.giphy.com/v1/gifs/search?q=query</code></pre>
+</div>
+
+<div class="slide">
+	<p>After the first parameter, subsequent parameters can be added after an <code>&</code>.</p>
+	<pre><code>https://api.giphy.com/v1/gifs/search?q=query&amp;param=value</code></pre>
+</div>
+
+<div class="slide">
 	<p>Add the query with the <code>q</code> value: <code>?q=${q}</code> then the API key with <code>&api_key=${key}</code></p>
 	<pre><code>const key = "YOUR_KEY_HERE";
 const url = `https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${key}`;
