@@ -35,7 +35,10 @@ query.addEventListener('keydown', function(event) {
 <div class="slide">
 	<p>Once we have the query, we can use our user key, the Giphy API string and <code>fecth</code> to get results.  
 	<p><code>fecth</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="blank">JavaScript function</a> for the browser API which gets external resources and returns then to the browser.</p>
-	<p><code>fecth</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="blank">Promise</a> which an object that represents the eventual completion of an asynchronous operation, or failure. </p>
+</div>
+
+<div class="slide">
+	<p><code>fetch</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="blank">Promise</a> which an object that represents the eventual completion of an asynchronous operation, or failure. </p>
 	<p>Asynchronous operations are used when we don't know how long something will take. They happen outside of the main JavaScript thread so they won't pause other parts of the browser code.</p>
 </div>
 
@@ -47,6 +50,9 @@ query.addEventListener('keydown', function(event) {
 <div class="slide">
 	<p>The string starts with the server address: <code>https://api.giphy.com/v1/gifs/search</code>.</p>
 	<p>After the server address, add parameters starting after a <code>?</code>.</p>
+</div>
+
+<div class="slide">
 	<p>Each parameter is created with a key and value, <code>key=value</code>.</p>
 	<p>The first parameter is the search term, or query, which has the key <code>q</code>.</p>
 	<pre><code>https://api.giphy.com/v1/gifs/search?q=query</code></pre>
@@ -115,6 +121,7 @@ promise.then(function(json) {
 </div>
 
 <div class="slide">
+	<h2>Rating</h2>
 	<p>We can also filter results by rating, which uses MPAA-style rating including Y, G, PG, PG-13 and R.</p>
 	<p>This can be added as another parameter to the search string <code>&rating=g</code>.</p>
 	<pre><code>const url = `https://api.giphy.com/v1/gifs/random?q=${q}&api_key=${key}&rating=g`;</code></pre>

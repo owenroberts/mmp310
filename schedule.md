@@ -78,10 +78,12 @@ dek: Schedule with class notes & assignments
 - Present Assignment 2
 - [JSON API](notes/json_api/)
 
-## Midterm **Meme Generator**
-- Create a web app that allows users to create a meme 
-- Users search for a GIF using the Giphy API
-- Add text using a text input
+## Midterm **Meme Mashup**
+- Create an interactive experience using Giphy API
+- Record user input to respond with GIFs from API
+- Quiz, interactive story, or new interaction
+- Work from class demos or create original idea
+- Choose a partner or work individually
 - See Blackboard for Rubric
 
 ## Week 9 **Midterm**
@@ -92,21 +94,28 @@ dek: Schedule with class notes & assignments
 - [Time](notes/time/)
 - [HTML5 Media](notes/media/)
 
+## Final Project
+- Choose an API to work with
+- Create a web application using data from the API
+- Must be interactive
+- Quiz, interactive story, other type of game, data visualization
+- [List of public APIs](https://github.com/toddmotto/public-apis)
+	- Use only API with ```No``` or ```apiKey``` for auth
+	- Some APIs are only intended for backend use (Zomato, IGDB.com), won't work for us
+	- Don't use any APIs that require credit card or billing
+- Choose a partner or work individually
+- [Example web apps](inspiration/apps/)
+
 ## Week 11 **Web Video**
 - [YouTube API](notes/youtube/)
 - [Web cam](notes/webcam/)
 - [Example video applications](inspiration/video/)
-- Final Project Pitch
-	- Present a concept for the final project
-	- Can work inidividual or in pairs
-	- Create a web application using an API
-	- [List of public APIs](https://github.com/toddmotto/public-apis)
-		- Use only API with ```No``` or ```apiKey``` for auth
-		- Some APIs are only intended for backend use (Zomato, IGDB.com)
-		- Don't use any APIs that require credit card or billing
-	- Must take user input and return feedback
-	- Can be game, interactive visualization, information based app
-- [Example web apps](inspiration/apps/)
+- **Assignment**: Final Project Pitch
+	- Make a pitch for the final project
+	- What API is being used
+	- What type of application
+	- How is user interaction recorded
+	- What kind of response is given
 
 
 ## Week 12 **Canvas**
