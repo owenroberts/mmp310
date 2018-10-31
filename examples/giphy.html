@@ -1,31 +1,43 @@
-<input type="text" id="query" placeholder="search">
+<input type="text" class="query" id="animal" placeholder="animal">
+<input type="text" class="query" id="place" placeholder="place">
+<input type="text" class="query" id="food" placeholder="food">
+<br>
 <script>
 	window.addEventListener('load', () => {
-		const query = document.getElementById('query');
-		query.addEventListener('keydown', function(event) {
-			if (event.which == 13) {
-				const q = query.value;
-				const key = "P7NLCftNCTpBvJr3RlwWp8YUZ9RTcKgy";
-				const url = `https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${key}&rating=g`;
-				
-				const promise = fetch(url)
-					.then(function (response) {
-						return response.json();
-					});
 
-				promise.then(function(json) {
+		const key = "P7NLCftNCTpBvJr3RlwWp8YUZ9RTcKgy";
+
+		const queries = document.getElementsByClassName('query');
+		for (let i = 0; i < queries.length; i++) {
+			const query = queries[i];
+			query.addEventListener('keydown', function(event) {
+				if (event.which == 13) {
+					const tag = event.currentTarget.value;
+					addGif(tag);
+				}
+			});
+		}
+
+		function addGif(tag) {
+			const url = `https://api.giphy.com/v1/gifs/random?tag=${tag}&api_key=${key}&rating=g`;
+			fetch(url)
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function(json) {
 					console.log(json);
-					for (let i = 0; i < json.data.length; i++) {
-						const img = json.data[i];
-						const elem = new Image();
-						elem.src = img.images.downsized.url;
-						document.body.appendChild(elem);
-					}
-				});
-				promise.catch(function(error) { 
+					const img = new Image();
+					img.src = json.data.images.downsized.url;
+					document.body.appendChild(img);
+
+					img.addEventListener('click', function(event) {
+						event.currentTarget.remove();
+						addGif(tag);
+					});
+				})
+				.catch(function(error) { 
 					console.log('error', error) 
 				});
-			}
-		});
+		}
 	});
 </script>
