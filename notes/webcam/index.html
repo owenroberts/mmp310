@@ -8,12 +8,12 @@ week: 11
 	<p>Other than using embedded native and YouTube videos, we can ask the user for access to their web cam and add the feed into the document.</p>
 	<p>Getting webcam stream is relatively easy, but first we have to make sure the browser has access to a camera.</p>
 	<p>First let's add the HTML video element.</p>
-	<pre><code>&lt;video id="webcam" autoplay&gt;&lt;/video&gt;</code></pre>
+	<div class="ex" data-lang="html">&lt;video id="webcam" autoplay&gt;&lt;/video&gt;</div>
 </div>
 
 <div class="slide">
 	
-	<pre><code>var webcam = document.querySelector('#webcam');
+	<div class="ex">var webcam = document.querySelector('#webcam');
 
 // check for user media in different browsers
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
@@ -27,7 +27,7 @@ function videoHandler(stream) {
 }
 function videoError(error) {
 	console.log(error);
-}</code></pre>
+}</div>
 </div>
 
 <div class="slide">
@@ -36,22 +36,38 @@ function videoError(error) {
 </div>
 
 <div class="slide">
-	<pre><code>var canvas = document.getElementById('video');
-var context = canvas.getContext('2d');
-function mirrorImage() {
-	context.save();
-	context.translate(canvas.width, 0);
-	context.scale(-1,1); // flip the image on the x-axis
-	context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
-	context.restore();
-}</code></pre>
+	<div class="ex">var canvas = document.getElementById('video');
+var context = canvas.getContext('2d');</div>
 </div>
 
 <div class="slide">
-	<p>We want to wait until webcam is loaded to display canvas.</p>
-	<pre><code>webcam.addEventListener("loadedmetadata", function() {
+	<p>Next we need a function to render the image from the webcam to the canvas.</p>
+	<div class="ex">function render() {
+	context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+}</div>
+</div>
+
+<div class="slide">
+	<p>We want to wait until webcam is loaded to display canvas.  Then we can set the canvas to the size of the video and start rendering.</p>
+	<div class="ex">webcam.addEventListener("loadedmetadata", function() {
 	canvas.width = webcam.videoWidth;
 	canvas.height = webcam.videoHeight;
-	canvas.addEventListener('click', mirrorImage);
-});</code></pre>
+	setInterval(render, 1000 / 30);
+});</div>
+</div>
+
+<div class="slide">
+	<p>To mirror the image to make it feel more like a typical web cam, we can </p>
+	<div class="ex">function render() {
+	context.save();
+	context.translate(canvas.width, 0); // move the image across the canvas 
+	context.scale(-1,1); // flip the image on the x-axis
+	context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+	context.restore();
+}</div>
+</div>
+
+<div class="slide">
+	<p>Finally, hide the original video element so to see only the mirrored image.</p>
+	<div class="ex" data-lang="html">&lt;video id="webcam" autoplay style="display:none"&gt;&lt;/video&gt;</div>
 </div>
