@@ -1,0 +1,21 @@
+19s notes
+
+topics
+
+3d
+dom interfaces
+mobile
+ar
+	- https://github.com/arjunmahishi/p5-AR
+	- https://github.com/jeromeetienne/AR.js/
+	
+objects
+arrays
+loops
+
+assignments
+
+3d self portrait
+spaceship animation thing
+generated patterns
+ar project
