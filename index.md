@@ -17,7 +17,7 @@ https://docs.google.com/document/d/1F_0Dalqr8eWzhLX3_V2BXLJ-j_8AJNN8vuWaVAeVWsE/
  -->
 - [Student Work](studentwork/)
 - [Class Examples](examples/)
-- [Public Pad](https://pad.riseup.net/p/mmp310){:target="blank"}
+- [Public Pad](pad)
 
 ## Fall 2018
 
@@ -85,3 +85,36 @@ Currently there are no dedicated MMP 310 tutors.  If you are interested in tutor
 - [MDN Element Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element){:target="blank"}
 - [Unix cheat sheet](https://files.fosswire.com/2007/08/fwunixref.pdf){:target="blank"}
 - [Unix full reference](https://ss64.com/osx/){:target="blank"}
+
+
+<!-- 
+
+new 2019 structure
+
+1 review - assignment - interactive story
+vars
+conditionals 
+functions
+story - characters - setting - plot
+
+2 loops - interactive patterns?
+
+3 arrays - animations
+
+4 objects - games
+
+
+
+
+topics/concepts 
+ar
+3d
+game
+interface
+touches
+dom
+loop arrays objects
+json data, data visualization
+
+
+ -->

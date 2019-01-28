@@ -1,0 +1,155 @@
+---
+layout: slides
+title: Publishing with GitHub
+week: 1
+---
+
+<div class="slide">
+	<h2>Getting started</h2>
+	<p>Using GitHub as a publishing tool helps us do a few things:</p>
+	<ul>
+		<li>Learn git!  Git is a valuable tool.</li>
+		<li>Collaborate easily.</li>
+		<li>Publish simple webpages online for free.</li>
+	</ul>
+	<img src="github_logo.png" alt="">
+	<img width="350px" src="git_logo.png" alt="">
+</div>
+
+<!--  github ceo on collaboration -->
+<div class="slide">
+	<p>Here's the CEO of GitHub.</p>
+	<div class="utube">
+		<iframe src="https://www.youtube.com/embed/1sgbsJp9WYY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+</div>
+
+<div class="slide">
+	<h2>Create an account</h2>
+	<p>Sign up at <a href="http://github.com" target="blank">GitHub.com</a></p>
+	<img src="signup.png">
+	<p>Use an email you can check, you will have to confirm your email.</p>
+</div>
+
+<div class="slide">
+	<h2>GitHub Desktop</h2>
+	<p>We are going to start with the GitHub Desktop client to learn the basics of git and Github.</p>
+	<img src="desktop.png" alt="">
+</div>
+
+<div class="slide">
+	<p>The computer lab computers should have GitHub already installed but it may be an older version.  If that's the case go to the following link and download a new copy.  Place this copy on the <note>Desktop</note>.  This is important because we don't have permission to add new apps to the Applications folder.</p>
+	<p><a href="https://desktop.github.com/" target="blank">Download the GitHub Desktop Client here.</a></p>
+</div>
+
+<div class="slide">
+	<p>Click <note>Sign in to GitHub.com</note> and follow the prompts to login:</p>
+	<img src="login0.png" alt="">
+</div>
+<div class="slide">
+	<p>Use the same email address you used to create your account.</p>
+	<img src="login1.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Choose the <note>Create New Repository</note> option on the home screen of the GitHub Desktop app, the button on the left.</p>
+	<img src="create.png" alt="">
+</div>
+
+<div class="slide">
+	<p>We already have a folder for our classwork, so type the name of the folder into the <em>Name</em> box and choose the <note>Desktop</note> for the <em>Local Path</em>: </p>
+	<img src="create_repo.png" alt="">
+</div>
+
+<div class="slide">
+	<p>One of the features of the GitHub Desktop client is that it will automatically detect if this is a new repo and create an <note>inital commit</note> for us.  But we want to <note>Undo</note> this because we're going to create the initial commit ourselves.  Click <note>Undo</note> in the bottom left corner of the application.</p>
+	<img src="undo.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Because this is our first update to the git repository all of our files are green meaning they're new changes to be added.  These are the <note>uncommitted</note> changes in the repo.  In order to add new changes we have to commit them.</p>
+	<img src="uncommitted.png" alt="">
+</div>
+
+<div class="slide">
+	<p>You may have a file or two called ".DS_Store".  We don't want to save these files because they're only used by the Mac OSX system to keep track of changes in the Finder.  We don't want to upload them to GitHub because they're not necessary for the site.</p>
+	<img src="ds_store.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Fortunately, git allows us to ignore files in the folder from the repo.  In the GitHub Desktop toolbar, select <note>Repository</note> and then <note>Repository Settings</note>.</p>
+	<img src="repo_settings.png" alt="">
+</div>
+
+<div class="slide">
+	<p>In Repository Settings we can write in files to ignore.  This will create a special file called <note>.gitignore</note>.  Choose <note>Ignored Files</note> and type in <note>.DS_Store</note> in the first line and click <note>Save</note></p>
+	<img src="ignored.png" alt="">
+</div>
+
+<div class="slide">
+	
+	<p>Write the commit message "inital commit" and then click the commit to master button.</p>
+	<img src="initial.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Once your first commit is made, you can click the <note>Publish</note> button.  You will need to uncheck the "Keep this code private" option because we're not using GitHub Enterprise, which is the paid account option.</p>
+	<img src="publish.png" alt="">
+</div>
+
+
+<div class="slide">
+	<h2>GitHub Pages</h2>
+	<p>We're going to use <a href="https://pages.github.com/" target="blank">GitHub Pages</a> to publish the repo.</p>
+	<p>We'll come back after that and make some changes to the repo.</p>
+</div>
+<div class="slide">
+	<img src="github.png" alt="">
+	<p>Return to GitHub.com in your browser.  You will see the new repo.  You can click on it to see your files and administer the repo.</p>
+</div>
+<div class="slide">
+	<p>Navigate to the Settings tab on the GitHub repo page and scroll down to the to the GitHub Pages section.  Click the dropdown under <note>Source</note> and choose the <note>master</note> branch.</p>
+	<img src="master.png" alt="">
+</div>
+
+
+<div class="slide">
+	<p>Your website will be published at the URL <code>username.github.io/reponame</code> where your username is you GitHub account and the repo name is whatever you named your repository.</p>
+	<img src="url.png" alt="">
+</div>
+
+<div class="slide">
+	<h2>Cloning a GitHub repo</h2>
+	<p>Once you upload your work to GitHub you can download it to any computer you may want to work on outside of the classroom.  You clone a copy of your code repo using the GitHub Desktop.  This is similar to downloading via FTP, but in this case you have a copy of your entire repo, with all of the changes you made, so you can sync your changes from the classroom and home computer.</p>
+</div>
+
+<div class="slide">
+	<p>Download GitHub Client on your computer and sign in just at the beginning, but this time, choose <note>Clone a Repository</note> instead of Create.</p>
+	<img src="clone.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Enter the location of the repo using the <code>username/reponame</code> syntax.  Create a folder on your computer where the repo should go and add as the Local path.  Your folder should be but doesn't have to be the same as your repo name.</p>
+	<img src="clone_repo.png" alt="">
+</div>
+
+<div class="slide">
+	<h2>Making updates</h2>
+	<p>Now that your home and lab computer copies of your projects are synced, whenever you open the GitHub Desktop client you will see the option to <note>Fetch</note> or <note>Pull</note> changes that you made at home to your classroom computer and vice versa.  It is important to always fetch changes you made in one location <em>before</em> you edit your files.  Always open GitHub and check to see if there are changes to add.</p>
+	<img src="fetch.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Once you fetch, you can begin editing your new files.  If you decide to make changes, git will keep track.  When you return to the GitHub Desktop you will see those changes.</p>
+	<img src="change.png" alt="">
+</div>
+
+<div class="slide">
+	<p>If you are happy with these changes you can commit them.  This creates a new snapshot the git will remember.  Remember to make a good commit message so you remember what the changes did.</p>
+	<img src="commit_message.png" alt="">
+</div>
+
+<div class="slide">
+	<p>Once you are done committing changes make sure to <note>Push</note> those changes to GitHub so you can sync them on your other machines.  This will also automatically publish the new version on your GitHub Pages site.</p>
+	<img src="push.png" alt="">
+</div>
