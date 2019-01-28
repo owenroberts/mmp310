@@ -1,0 +1,50 @@
+#cat {
+	border: 10px solid hotpink;
+	-webkit-filter: blur(0px);
+	filter: blur(0px);
+	transition: all 1s;
+}
+
+#cat:active {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+#video-container {
+	position: relative;
+	width: 380px;
+}
+
+#play-button {
+	position: absolute;
+	bottom: 2em;
+	right: 2em;
+	border: 5px solid lightblue;
+	background: hotpink;
+	padding: 1em;
+	border-radius: 0.5em;
+	font-size: 20px;
+	font-family: monospace;
+	color: lightblue;
+	transition: box-shadow 500ms;
+}
+
+#play-button:hover {
+	box-shadow: 10px 10px 0 hotpink;
+}
+
+#caption {
+	font-size: 20px;
+	font-family: monospace;
+	color: lightblue;
+	position: absolute;
+	top: 2em;
+	left: 2em;
+}
+
+
+
+
+
+
+

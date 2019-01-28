@@ -1,0 +1,9 @@
+#container {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#magic {
+	width: 300px;
+	display: block;
+}

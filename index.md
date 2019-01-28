@@ -8,10 +8,8 @@ This is the class page of MMP 310 at BMCC.
 The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
-<!-- - <a href="https://mmp310.slack.com/" target="blank">Slack channel</a>
- -->
 - [Syllabus](
-https://docs.google.com/document/d/1F_0Dalqr8eWzhLX3_V2BXLJ-j_8AJNN8vuWaVAeVWsE/edit?usp=sharing
+https://docs.google.com/document/d/1mbiKKiymvCavG_0lyng6lG39FfFbqoCu0NImloCzdAY/edit?usp=sharing
 ){:target="blank"}
 <!-- - <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
  -->

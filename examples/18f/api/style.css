@@ -1,0 +1,8 @@
+#gifs {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+img {
+	width: 100%;
+}

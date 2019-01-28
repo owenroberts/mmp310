@@ -1,0 +1,4 @@
+input, textarea, button, select {
+	display: block;
+	margin-top: 0.5em;
+}
