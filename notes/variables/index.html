@@ -1,0 +1,232 @@
+---
+layout: slides
+title: JavaScript Variables
+week: 1
+---
+
+<div class="slide">
+	<p>Today we're going to review some basic concepts introduced last semester.</p>
+	<p>We'll start with some JavaScript basics, data types, and variables.</p>
+</div>
+
+<div class="slide">
+	<h2>Data types</h2>
+	<p>The three JavaScript primitive data types we will use are: <code>numbers</code>, <code>strings</code> and <code>booleans</code>.</p>
+	<p><code>undefined</code> and <code>null</code> are also primitive data types which represent variables that either do not have values or do not exist.</p>
+</div>
+
+
+<div class="slide">
+	<h2>Integers and Floats</h2>
+	<p>The numbers we have been using so far are all whole numbers, or integers, numbers that do not have a decimal point value.</p>
+	<p>JavaScript also uses floats, or numbers with decimal points.</p>
+	<pre><code><c></c>3 / 4
+// 0.75</code></pre>
+</div>
+
+
+<div class="slide">
+	<p>However, JavaScript considers both integers and floats to be numbers.  They are not separate types.</p>
+	<pre><code><c></c>typeof 1
+// "number"
+<c></c>typeof 0.5
+// "number"</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Strings</h2>
+	<p>In JavaScript, single or double quotation marks are used to contain a string.</p>
+	<pre><code><c></c>"I am a string."
+<c></c>'me too.'
+<c></c>typeof "I'm a string"</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Booleans</h2>
+	<p>Something that we often need to do in a program is make a decision based on different values.  To do this, we can use boolean expressions, which evaluate whether a statement is <code>true</code> or <code>false</code>.</p>
+</div>
+
+<div class="slide">
+	<p>The <code>==</code> operator is used to evaluate a boolean statement.</p>
+	<pre><code><c></c>1 == 1
+// true
+<c></c>2 + 2 == 4
+// true
+<c></c>2 + 2 == 5
+// false
+</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also compare strings and other values.</p>
+	<pre><code><c></c>"hello" == "world"
+// false
+<c></c>typeof 5 == 'number';
+// true
+<c></c>var x;
+x == undefined;
+// true</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Variables</h2>
+	<p>Variables are short hand or key words that contains data.  Variables in JavaScript can be used to contain any type of data.  They can also be used to contain different types of data within one program.</p>
+</div>
+
+<div class="slide">
+	<p>JavaScript understands a few different types of text.</p>
+	<table>
+		<tr>
+			<td><note>keywords</note></td> 
+			<td>words like <code>function</code> and <code>var</code> that are defined by the language.</td>
+		</tr>
+		<tr>
+			<td><note>variable names</note></td> 
+			<td>words for functions and variables that we create in our code like <code>faceSize</code> and <code>faceColor</code>.</td>
+		</tr>
+		<tr>
+			<td><note>hard data</note></td> 
+			<td>numbers and words that represent values like <code>0</code> or a string like <code>"hello world"</code>.</td>
+		</tr>
+	</table>
+</div>
+
+<div class="slide">
+	<h2>Creating a variable</h2>
+	<p>The following is a simple statement that declares and initializes a variable.</p>
+	<pre><code><c></c>var sentence = "Hello world";</code></pre>
+	<p>Each part of our statement should be separated by one space.</p>
+</div>
+
+<div class="slide">
+	<h2>Assignment operator</h2>
+	<p>The <code>=</code> sign is for assigning values.</p>
+	<p>Unlike in math, it does not mean that two values are the same.  It simply asks the program to store a value somewhere in the memory the computer and give that piece of memory a nickname.</p>
+	<p>When I say "gets" I mean the <code>=</code> assignment operator.</p>
+	<p>So this is what that statement would sound like:</p>
+	<blockquote>A variable called sentence <em>gets</em> the value "Hello world."</blockquote>
+</div>
+
+<div class="slide">
+	<h2>Declaration and Assignment</h2>
+	<p>Creating a variable requires two steps: <em>declaration</em> and <em>assignment</em>.</p>
+	<pre><code>// declaration
+<c></c>var a;
+// undefined
+
+// assignment
+<c></c>a = 10;
+// 10</code></pre>
+</div>
+
+<div class="slide">
+	<p>A variables can be <em>initialized</em> by declaring <em>and</em> assigning in one statement:</p>
+	<pre><code>// initialize
+<c></c> var a = 10;</code></pre>
+</div>
+
+<div class="slide">
+	<p>There are many reasons to use variables in code.</p>  
+	<p>Variables make code more reusable.</p>
+	<p>Variables can be updated to make a program change through animation or interaction.</p>
+	<p>Variables can be used to make complex math and other calculations eaiser.</p>
+</div>
+
+<div class="slide">
+	<p>The following example uses a variable to repeat text in several places.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var welcome = "Welcome to MMP 310.";
+function setup() {
+	createCanvas(640, 360);
+	background(51);
+	textSize(40);
+
+	fill('plum');
+	text(welcome, 10, 50);
+	fill('gold');
+	text(welcome, 10, 100);
+	fill('aqua');
+	text(welcome, 10, 150);
+	fill('coral');
+	text(welcome, 10, 200);
+	fill('springgreen');
+	text(welcome, 10, 250);
+	fill('rosybrown');
+	text(welcome, 10, 300);
+}</div>
+</div>
+
+<div class="slide">
+	<p>The next example demonstrates using a variable to animate a shape.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var r = 0;
+function draw() {
+	background(51);
+	rectMode(CENTER);
+
+	// r is updated every frame
+	r += PI * 0.01;
+	
+	// rotate by r around the center
+	translate(width/2, height/2);
+	rotate(r);
+
+	fill('plum');
+	noStroke();
+	rect(0, 0, 100, 100);
+	ellipse(0, 100, 50);
+	ellipse(100, 0, 50);
+	ellipse(-100, 0, 50);
+}</div>
+</div>
+
+<div class="slide">
+	<p>The following example demonstrates using variables to recreate a drawing in multiple places.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>
+var x = 100;
+var y = 100;
+var s = 100; // size
+var o = 25; // offset
+function setup() {
+	createCanvas(640, 180);
+	noStroke();
+	background(51);
+	rectMode(CENTER);
+
+	// bug 1
+	fill('rosybrown');
+	ellipse(x, y, s); // body
+	fill('black');
+	ellipse(x + o, y - o, s / 2); // eye
+	ellipse(x - o, y - o, s / 2); // eye
+	rect(x, y + o, s / 2, o / 4); // mouth
+
+	x += 200;
+
+	// bug 1
+	fill('plum');
+	ellipse(x, y, s); // body
+	fill('black');
+	ellipse(x + o, y - o, s / 2); // eye
+	ellipse(x - o, y - o, s / 2); // eye
+	rect(x, y + o, s / 2, o / 4); // mouth
+
+	x += 200;
+
+	// bug 1
+	fill('gold');
+	ellipse(x, y, s); // body
+	fill('black');
+	ellipse(x + o, y - o, s / 2); // eye
+	ellipse(x - o, y - o, s / 2); // eye
+	rect(x, y + o, s / 2, o / 4); // mouth
+}</div>
+</div>
+

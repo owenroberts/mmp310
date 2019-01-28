@@ -4,6 +4,11 @@ title: Schedule
 dek: Schedule with class notes & assignments
 ---
 
+## Project 1 **Interactive story**
+- While reviewing variables, logic and functions, we will create an interactive story using p5
+- Story elements: character, setting, plot
+- [Interactive story inspiration](inspiration/interactive_story/)
+
 ## Week 1 **Review**
 - [GitHub Review](notes/github)
 - [JavaScript Variables](notes/variables)
@@ -12,10 +17,7 @@ dek: Schedule with class notes & assignments
 	- Use p5 `text` with variables for the narration
 	- Use `x`, `y`, and `size` variables to position the characters
 
-## Project 1 **Interactive story**
-- While reviewing variables, logic and functions, we will create an interactive story using p5
-- Story elements: character, setting, plot
-- [Interactive story inspiration](inspiration/interactive_story/)
+
 
 ## Week 2 **Logic**
 - [Logic]()

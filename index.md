@@ -11,13 +11,11 @@ The class notes, schedule and assignments are all found here.
 - [Syllabus](
 https://docs.google.com/document/d/1mbiKKiymvCavG_0lyng6lG39FfFbqoCu0NImloCzdAY/edit?usp=sharing
 ){:target="blank"}
-<!-- - <a href="http://piratepad.net/mmp310" target="blank">Add your email to PiratePad</a>
- -->
 - [Student Work](studentwork/)
 - [Class Examples](examples/)
 - [Public Pad](pad)
 
-## Fall 2018
+## Spring 2019
 
 - Instructor: Owen Roberts
 - email: oroberts AT bmcc DOT cuny DOT edu
@@ -81,12 +79,9 @@ Currently there are no dedicated MMP 310 tutors.  If you are interested in tutor
 - [JavaScript Basics](https://autotelicum.github.io/Smooth-CoffeeScript/literate/js-intro.html#syntax-basics)
 - [MDN Intro to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction){:target="blank"}
 - [MDN Element Reference](https://developer.mozilla.org/en/docs/Web/HTML/Element){:target="blank"}
-- [Unix cheat sheet](https://files.fosswire.com/2007/08/fwunixref.pdf){:target="blank"}
-- [Unix full reference](https://ss64.com/osx/){:target="blank"}
 
 
 <!-- 
-
 new 2019 structure
 
 1 review - assignment - interactive story
@@ -103,7 +98,6 @@ story - characters - setting - plot
 
 
 
-
 topics/concepts 
 ar
 3d
@@ -113,6 +107,5 @@ touches
 dom
 loop arrays objects
 json data, data visualization
-
 
  -->
