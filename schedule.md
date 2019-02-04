@@ -17,10 +17,8 @@ dek: Schedule with class notes & assignments
 	- Use p5 `text` with variables for the narration
 	- Use `x`, `y`, and `size` variables to position the characters
 
-
-
 ## Week 2 **Logic**
-- [Logic]()
+- [Logic](notes/logic)
 - Assignment 2 **Setting**
 	- Use p5 shape and color functions to design three settings
 	- Use logic to display the setting based on user clicks
@@ -41,14 +39,31 @@ dek: Schedule with class notes & assignments
 ## Week 6 **Nested Loops**
 - [Nested Loop]()
 
-## Week 7 Arrays
+## Week 7 **Interactive Patterns**
+- [Interactive Patterns]()
+
+
+## Week 8 Arrays
 - [Arrays]()
+
+<!-- 
+	rectXY.push([mouseX, mouseY]);
+ -->
 
 ## Week 8 Objects
 - [Objects]()
 
 
 <!-- 
+
+other courses
+	http://www.cs.cmu.edu/~./15110/schedule.html
+	http://cmuems.com/2015c/
+	http://www.cs.cmu.edu/~112/notes/notes-1d-lists.html
+	https://creative-coding.decontextualize.com/
+	http://coursescript.com/notes/interactivecomputing/objects/index.html
+
+
 
 midterm - giphy
 - meme generator - user adds meme search and text for meme and it generates meme with image
