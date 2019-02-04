@@ -12,20 +12,20 @@ dek: Schedule with class notes & assignments
 ## Week 1 **Review**
 - [GitHub Review](notes/github)
 - [JavaScript Variables](notes/variables)
-- Assignment 1 **Characters**
+- **Assignment 1: Characters**
 	- Design two characters using p5 shape and color functions
 	- Use p5 `text` with variables for the narration
 	- Use `x`, `y`, and `size` variables to position the characters
 
 ## Week 2 **Logic**
 - [Logic](notes/logic)
-- Assignment 2 **Setting**
+- **Assignment 2: Setting**
 	- Use p5 shape and color functions to design three settings
 	- Use logic to display the setting based on user clicks
 
 ## Week 3 **Functions**
 - [Functions]()
-- Assignement 3 **Plot**
+- **Assignement 3: Plot**
 	- Use functions to draw the characters in different places in each setting
 
 ## Project 2 **Generative Patterns**
@@ -41,7 +41,6 @@ dek: Schedule with class notes & assignments
 
 ## Week 7 **Interactive Patterns**
 - [Interactive Patterns]()
-
 
 ## Week 8 Arrays
 - [Arrays]()
