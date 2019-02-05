@@ -24,9 +24,12 @@ dek: Schedule with class notes & assignments
 	- Use logic to display the setting based on user clicks
 
 ## Week 3 **Functions**
-- [Functions]()
+- [Functions](notes/functions)
 - **Assignement 3: Plot**
 	- Use functions to draw the characters in different places in each setting
+	- Create a story with at least three parts, beginning, middle and end
+	- Choose either the mouse or keyboard for interaction
+	- Use text for narration and interaction instructions
 
 ## Project 2 **Generative Patterns**
 - Use loops to create patterns that change 
