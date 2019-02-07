@@ -35,7 +35,7 @@ dek: Schedule with class notes & assignments
 - Use loops to create patterns that change 
 
 ## Week 4 **Loops**
-- [Loops]()
+- [Loops](notes/loop)
 - [Math, random]()
 - [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
 

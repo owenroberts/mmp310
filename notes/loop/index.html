@@ -44,6 +44,9 @@ week: 5
 <div class="slide">
 	<p>The first statement is the initial condition, where we start counting.</p> 
 	<pre><code>let i = 0;</code></pre>
+</div>
+
+<div class="slide">
 	<p>The second statement creates a condition.</p> 
 	<pre><code>i < 5;</code></pre>
 	<p>As long as this condition evaluates to <code>true</code>, the loop will continue.</p>
@@ -56,6 +59,22 @@ week: 5
 	loop body;
 }</code></pre>
 	<p>Loops are an efficient way to execute actions on a list or array of data.</p>
+</div>
+
+<div class="slide">
+	<h2>let</h2>
+	<p><code>let i = 0;</code> probably doesn't look familiar so let's discuss it here.</p>
+	<p><code>let</code> is a variable declaration keyword like <code>var</code>, there's just one difference, <code>let</code> is scoped, so it stops existing after the for loop.</p>
+	<p>This is good practice for loops, functions and other places where we don't want variables to exist outside of their current scope.</p>
+</div>
+
+<div class="slide">
+	<p>We can see the difference in the console:</p>
+	<pre><code><c></c>for (let i = 0; i < 10; i++);
+<c></c>console.log(i);</code></pre>
+	<pre><code><c></c>for (var j = 0; j < 10; j++);
+<c></c>console.log(j);</code></pre>
+	<p>Notice how <code>i</code> is undefined while <code>j</code> has a value?  For <code>let</code>, <code>i</code> stops existing once the <code>for</code> loop is done.</p>
 </div>
 
 <div class="slide">
@@ -79,36 +98,217 @@ week: 5
 </div>
 
 <div class="slide">
-	<h2>Example</h2>
-	<p>A practical example of a loop in JavaScript:</p>
-	<pre><code>var imgs = ["cat.jpg", "dog.jpg", "bird.jpg"];
-for (let i = 0; i < imgs.length; i++) { 
-	let img = new Image();
-	img.src = imgs[i];
-	document.body.appendChild(img);
-}</code></pre>
+	<h2>Drawing with loops</h2>
+	<p>In p5, we can use a loop to draw a shape or collection of shapes more than once without having to repeat the code.</p>	
 </div>
 
 <div class="slide">
-	<h2>Scope</h2>
-	<p><note>Note on scope:</note> in a <code>for</code> loop we use the <code>let</code> declaration to initialize <code>i</code> in order to <em>scope</em> <code>i</code> to the for loop</code>.</p>
-	<pre><code><c></c>for (let i = 0; i < 5; i++) {
-	console.log(i);
-}
-<c></c>console.log(i);</code></pre>
+	<div class="ex" data-preview>// draw 5 circles in a line
+function setup() { 
+	createCanvas(640, 360);
+	background(220);
+
+	// five cicle functions with arguments
+	ellipse(50, height/2, 40);
+	ellipse(100, height/2, 40);
+	ellipse(150, height/2, 40);
+	ellipse(200, height/2, 40);
+	ellipse(250, height/2, 40);
+}</div>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>// adding a variable
+function setup() { 
+	createCanvas(640, 360);
+	background(220);
+
+	// the first circle starts at 50
+	var x = 50;
+	ellipse(x, height/2, 40);
+	
+	// no i can just change x instead of doing math in my head
+	x += 50;
+	ellipse(x, height/2, 40);
+
+	// but i have to do it three more times
+	x += 50;
+	ellipse(x, height/2, 40);
+	x += 50;
+	ellipse(x, height/2, 40);
+	x += 50;
+	ellipse(x, height/2, 40);
+
+	// this is actually more code!
+}</div>
 </div>
 
 <div class="slide">
-	<p>Look at difference between <code>let</code> and <code>var</code>.</p>
-		<pre><code><c></c>for (var i = 0; i < 5; i++) {
-	var x = i;
-}
-<c></c>console.log(x);</code></pre>
-	<pre><code><c></c>for (var i = 0; i < 5; i++) {
-	let z = i;
-}
-<c></c>console.log(z);</code></pre>
+	<div class="ex" data-preview>// let's add a loop
+function setup() { 
+  	createCanvas(640, 360);
+  	background(220);
+
+  	// var x = 50 becomes the initial condition
+  	// x < width is as long as the x value is inside the canvas
+  	// x + 50 increment with each loop
+
+	for (var x = 50; x < width; x += 50) {
+		ellipse(x, height/2, 40);
+	}
+
+	// even more circles with 3 lines of code
+}</div>
 </div>
 
-        <!-- for loop for checking forms -->
-        <!-- for loop for adding event listeners -->
+<div class="slide">
+	<h2>Patterns</h2>
+	<p>Using a loop unlocks a lot new possiblities.  The same code that we used to draw one self portrait can now be used to draw 10 self portraits, only adding a couple of lines of code.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	for (var x = 50; x < width; x += 50) {
+		ellipse(x, height/2, 40);
+		ellipse(x - 10, height/2 - 10, 10);
+		ellipse(x + 10, height/2 - 10, 10);
+		rect(x, height/2 + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Variation</h2>
+	<p>We can repeat shapes and drawings but we can also add variations.</p>
+	<p>To start, let's just use the value of x for other things besides the size.</p>
+</div>
+
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// change size 
+	for (var x = 50; x < width; x += 50) {
+		var size = x / 10;
+		ellipse(x, height/2, size);
+		ellipse(x - 10, height/2 - 10, 10);
+		ellipse(x + 10, height/2 - 10, 10);
+		rect(x, height/2 + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// change color
+	for (var x = 50; x < width; x += 50) {
+		var c = map(x, 0, width, 0, 255);
+		fill(c);
+		ellipse(x, height/2, 40);
+		ellipse(x - 10, height/2 - 10, 10);
+		ellipse(x + 10, height/2 - 10, 10);
+		rect(x, height/2 + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Random</h2>
+	<p>Randomness is another way to introduce some variation into our pattern.</p>
+	<p>We can randomize the size, shape, color and position, and choose randoms for the randomness.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// random fill, with less green, more blue
+	for (var x = 50; x < width; x += 50) {
+		var r = random(0, 255);
+		var g = random(0, 100);
+		var b = random(100, 255);
+		fill(r, g, b);
+		ellipse(x, height/2, 40);
+		ellipse(x - 10, height/2 - 10, 10);
+		ellipse(x + 10, height/2 - 10, 10);
+		rect(x, height/2 + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// random size 
+	for (var x = 50; x < width; x += 50) {
+		var size = random(50, 100);
+		ellipse(x, height/2, size);
+		ellipse(x - 10, height/2 - 10, size / 10);
+		ellipse(x + 10, height/2 - 10, size / 10);
+		rect(x, height/2 + 10, size, size / 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// random y position
+	for (var x = 50; x < width; x += 50) {
+		var y = random(height/2 + 40, height/2 - 40);
+		ellipse(x, y, 40);
+		ellipse(x - 10, y - 10, 10);
+		ellipse(x + 10, y - 10, 10);
+		rect(x, y + 10, 30, 10, 5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+
+	// combination
+	for (var x = 50; x < width; x += 50) {
+		var y = random(height/2 + 40, height/2 - 40);
+		var s = random(50, 100);
+
+		var r = random(0, 255);
+		var g = random(0, 255);
+		var b = random(0, 255);
+		fill(r, g, b);
+
+		ellipse(x, y, s);
+		ellipse(x - s / 4, y - s / 4, s / 2);
+		ellipse(x + s / 4, y - s / 4, s / 2);
+
+		r += 50;
+		g += 50;
+		b += 50;
+		fill(r, g, b);
+		rect(x, y + 10, s / 2, s / 4, s / 8);
+	}
+}</div>
+</div>
