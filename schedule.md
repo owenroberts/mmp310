@@ -36,11 +36,9 @@ dek: Schedule with class notes & assignments
 
 ## Week 4 **Loops**
 - [Loops](notes/loop)
-- [Math, random]()
-- [Code Academy: For Loops](https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1){:target="blank"}
 
-## Week 6 **Nested Loops**
-- [Nested Loop]()
+## Week 6 **Grid**
+- [Grid](notes/grid)
 
 ## Week 7 **Interactive Patterns**
 - [Interactive Patterns]()

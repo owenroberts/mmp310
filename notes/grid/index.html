@@ -1,0 +1,83 @@
+---
+layout: slides
+title: JavaScript Grid
+week: 6
+---
+
+<div class="slide">
+	<p>Last week we used a loop to create a row of repeating shapes with variations.</p>
+	<p>Now we will take loops a step further by creating a full grid using columns and rows.</p>
+	<p>Programming make it easy to do the math to create a grid with a number of rows and columns.</p>
+	<p>We can achieve this by putting one loop inside of another!</p>
+</div>
+
+<div class="slide">
+	<p>Let's start by looking at how to divide the canvas into columns and rows.</p>
+	<p>Columns are divisions in horiztonal space.  We can use the width of the canvas, and the number of columns we want, to set up the loop.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	strokeWeight(2);
+
+	// set the number of columns
+	var columns = 6;
+
+	// divide the canvas by that number to get each column width
+	var columnWidth = width / columns;
+
+	// draw a line at each column
+	for (let x = 0; x <= width; x += columnWidth) {
+		line(x, 0, x, height);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Next, we can divide the vertical space into rows.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	strokeWeight(2);
+
+	// set the number of rows
+	var rows = 5;
+
+	// divide the canvas by that number to get each row height
+	var rowHeight = height / rows;
+
+	// draw a line at each row
+	for (let y = 0; y <= height; y += rowHeight) {
+		line(0, y, width, y);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Now the trick is to combine them.  We could just copy the two loops next two each other, that would give us the appearance of a grid.</p>
+	<p>But if we want to draw something at each module of that grid, we need to know the x and y of not just the columns and rows, but also the <em>intersection</em> of each column and row.</p>
+	<p>For that we can use a <em>nested</em> for loop.  One loop inside of another.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	strokeWeight(2);
+
+	// simple example with text
+	
+	for (let i = 0; i < 10; i++) {
+		for (let j = 0; j < 10; j++) {
+			text(i + ", " + j, i * 50, j * 50);
+		}
+	}
+}</div>
+</div>
+
+
