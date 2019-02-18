@@ -33,8 +33,12 @@ dek: Schedule with class notes & assignments
 ## Project 2 **Generative Patterns**
 - Use loops to create patterns that change 
 
-## Week 4 **Loops**
+## Week 4 **Loop**
 - [Loops](notes/loop)
+- [Random](notes/random)
+- **Assignment 4: Emoji Variations**
+	- Use a loop to draw a series of emoji variations
+	- Use a click event to generate new emojis
 
 ## Week 6 **Grid**
 - [Grid](notes/grid)
