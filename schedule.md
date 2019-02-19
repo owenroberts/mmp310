@@ -36,9 +36,9 @@ dek: Schedule with class notes & assignments
 ## Week 4 **Loop**
 - [Loops](notes/loop)
 - [Random](notes/random)
-- **Assignment 4: Emoji Variations**
-	- Use a loop to draw a series of emoji variations
-	- Use a click event to generate new emojis
+- **Assignment 4: Pattern Variations**
+	- Use a loop to draw a series of shape variations
+	- Use a click event to generate new variations
 
 ## Week 6 **Grid**
 - [Grid](notes/grid)
