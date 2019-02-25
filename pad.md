@@ -25,6 +25,7 @@ title: MMP 310 Public Pad
 		top: 0;
 		padding: 0;
 	}
+	.CodeMirror pre { font-size: 18px; }
 	.powered-by-firepad { display: none; }
 	.firepad-toolbar {
 		padding: 0;
