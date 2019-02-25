@@ -40,13 +40,14 @@ dek: Schedule with class notes & assignments
 	- Use a loop to draw a series of shape variations
 	- Use a click event to generate new variations
 
-## Week 6 **Grid**
+## Week 5 **Grid**
 - [Grid](notes/grid)
+- **Assignment 5: Grid Design**
 
-## Week 7 **Interactive Patterns**
+## Week 6 **Interactive Patterns**
 - [Interactive Patterns]()
 
-## Week 8 Arrays
+## Week 7 Arrays
 - [Arrays]()
 
 <!-- 
