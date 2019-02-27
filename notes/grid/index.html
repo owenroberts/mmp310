@@ -12,6 +12,7 @@ week: 6
 </div>
 
 <div class="slide">
+	<h2>Columns</h2>
 	<p>Let's start by looking at how to divide the canvas into columns and rows.</p>
 	<p>Columns are divisions in horiztonal space.  We can use the width of the canvas, and the number of columns we want, to set up the loop.</p>
 </div>
@@ -36,6 +37,7 @@ week: 6
 </div>
 
 <div class="slide">
+	<h2>Rows</h2>
 	<p>Next, we can divide the vertical space into rows.</p>
 </div>
 
@@ -59,6 +61,7 @@ week: 6
 </div>
 
 <div class="slide">
+	<h2>Nested loop</h2>
 	<p>Now the trick is to combine them.  We could just copy the two loops next two each other, that would give us the appearance of a grid.</p>
 	<p>But if we want to draw something at each module of that grid, we need to know the x and y of not just the columns and rows, but also the <em>intersection</em> of each column and row.</p>
 	<p>For that we can use a <em>nested</em> for loop.  One loop inside of another.</p>
@@ -74,10 +77,77 @@ week: 6
 	
 	for (let i = 0; i < 10; i++) {
 		for (let j = 0; j < 10; j++) {
-			text(i + ", " + j, i * 50, j * 50);
+			text(i + ", " + j, 50 + i * 50, 50 + j * 50);
 		}
 	}
 }</div>
 </div>
 
+<div class="slide">
+	<h2>XY Grid</h2>
+	<p>Nesting a loop is tricky, but if we set it up right using the x and y coordinates as our loop values, we can create a canvas that is sort of a grid of smaller canvas areas.</p>
+</div>
 
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	strokeWeight(2);
+
+	// xy grid
+
+	for (let x = 0; x <= width; x += 60) {
+		for (let y = 0; y <= height; y += 60) {
+			ellipse(x, y, 50);
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Once we have the basic grid we can introduce elements into the pattern, like randomness, choices and changes that we covered last week.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() { 
+	createCanvas(640, 360);
+	background(220);
+	rectMode(CENTER);
+	strokeWeight(2);
+
+	// xy grid
+
+	for (let x = 0; x <= width; x += 60) {
+		for (let y = 0; y <= height; y += 60) {
+			
+			var s = random(30, 60); // random size
+	
+			var r = random(0, 255);
+			var g = random(0, 255);
+			var b = random(0, 255);
+			fill(r, g, b); // random color
+
+			// random face shape
+			if (random(2) > 1) {
+				ellipse(x + random(-20, 20), y, s); 
+			} else {
+				rect(x + random(-20, 20), y, s, s);
+			}
+
+			r += 50; // lighter color
+			g += 50;
+			b += 50;
+
+			stroke(r, g, b);
+			ellipse(x - s / 4, y - s / 4, s / 2); // left eye
+			ellipse(x + s / 4, y - s / 4, s / 2); // right eye 
+			
+			noStroke();
+			fill(r, g, b);
+			rect(x, y + 10, s / 2, s / 4, s / 8); // mouth
+	
+		}
+	}
+}</div>
+</div>
