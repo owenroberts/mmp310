@@ -42,7 +42,7 @@ dek: Schedule with class notes & assignments
 
 ## Week 5 **Grid**
 - [Grid](notes/grid)
-- [Generate and save image]()
+- [Generate and save image](notes/save)
 - **Assignment 5: Grid Design**
 	- Use a nested loop, create a design for a product
 	- Could be a t-shirt, wall paper, bag, anything with patterns
@@ -53,6 +53,7 @@ dek: Schedule with class notes & assignments
 	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_){:target="blank"}
 
 ## Week 6 **Interactive Patterns**
+- [DOM Library]()
 - [Interactive Patterns]()
 
 ## Week 7 Arrays

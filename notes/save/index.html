@@ -1,0 +1,72 @@
+---
+layout: slides
+title: Save
+week: 6
+---
+
+<div class="slide">
+	<p>This week, to save patterns created with the grid code, we will use the <a href="https://p5js.org/reference/#/p5/save" target="blank">save()</a> function in p5, which saves an image from the canvas graphics.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	ellipse(width/2, height/2, 200);
+}
+
+// save the canvas when mouse is clicked
+function mouseClicked() {
+	// is mouse on canvas ?
+	if (mouseX > 0 && mouseX < width &&
+		mouseY > 0 && mouseY < height) {
+		save();
+	}
+}
+</div>
+</div>
+
+<div class="slide">
+	<p>An optional argument can be added to specify the file name and type.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	for (let x = 0; x <= width; x += 100) {
+		ellipse(x, random(height), random(200));
+	}
+}
+
+// save the canvas when mouse is clicked
+function mouseClicked() {
+	// is mouse on canvas ?
+	if (mouseX > 0 && mouseX < width &&
+		mouseY > 0 && mouseY < height) {
+		save('loop.png');
+	}
+}
+</div>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	for (let x = 0; x <= width; x += 10) {
+		rect(x + random(100), random(120, 240), random(200), random(10));
+	}
+}
+
+// save the canvas when mouse is clicked
+function mouseClicked() {
+	// is mouse on canvas ?
+	if (mouseX > 0 && mouseX < width &&
+		mouseY > 0 && mouseY < height) {
+		save('rects.jpg');
+	}
+}
+</div>
+</div>
+
