@@ -42,7 +42,7 @@ dek: Schedule with class notes & assignments
 
 ## Week 5 **Grid**
 - [Grid](notes/grid)
-- [Generate and save image](notes/save)
+- [Save image](notes/save)
 - **Assignment 5: Grid Design**
 	- Use a nested loop, create a design for a product
 	- Could be a t-shirt, wall paper, bag, anything with patterns
