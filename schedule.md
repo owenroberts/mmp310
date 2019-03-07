@@ -53,7 +53,7 @@ dek: Schedule with class notes & assignments
 	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_){:target="blank"}
 
 ## Week 6 **Interactive Patterns**
-- [DOM Library]()
+- [DOM Library](notes/dom)
 - [Interactive Patterns]()
 
 ## Week 7 Arrays
