@@ -54,7 +54,9 @@ dek: Schedule with class notes & assignments
 
 ## Week 6 **Interactive Patterns**
 - [DOM Library](notes/dom)
-- [Interactive Patterns]()
+- **Assignment 6: Interactive Pattern**
+	- Using the grid design from Assignment 5, add a DOM based interface
+	- Give the user the ability to change attributes of the design such as the number of columns and rows, the colors, the type of shapes, the amount of randomness
 
 ## Week 7 Arrays
 - [Arrays]()
