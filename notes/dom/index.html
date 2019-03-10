@@ -6,16 +6,17 @@ week: 6
 
 <div class="slide">
 	<p>This week we're going to add HTML elements to our p5 project to create a user interface using common components from HTML.</p>
-	<p>Of course, we can add HTML and CSS to our projects in the traditional manner, but p5 also has functions to create the elements from the <note>sketch.js</note> file to keep our work in one place.</p>
+	<p>Of course, we can add HTML and CSS to our projects in the traditional manner by eiditn <note>index.html</note> or <note>style.css</note>, but p5 also has functions to create the elements from the <note>sketch.js</note> file to keep our work in one place.</p>
 </div>
 
 <div class="slide">
 	<h2>Download the DOM Library</h2>
-	<p>Create HTML elements requires a separate library that extends the <note>p5.js</note> library we have been using.</p>
+	<p>Creating HTML elements requires a separate library that extends the <note>p5.js</note> library we have been using.</p>
 	<p>Download <a href="https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js" target="blank">p5.dom.js</a> here.</p>
 	<p>There is a separate <a href="https://p5js.org/reference/#/libraries/p5.dom" target="blank">reference</a> page here.</p>
-	<p>Check out other <a href="https://p5js.org/libraries/" target="blank">libraries</a> here.</p>
+	
 	<p>The tutorial, <a href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas" target="blank">Beyond the canvas</a>, covers more ways to use the p5 DOM library.</p>
+	<p>Check out other <a href="https://p5js.org/libraries/" target="blank">p5 libraries</a> here.</p>
 </div>
 
 <div class="slide">
@@ -146,7 +147,7 @@ button.addClass('interface');</div>
 	<h2>Position</h2>
 	<p>By default, DOM elements created in p5 will be attached to the HTML document <em>after</em> the canvas.</p>
 	<p>We can use the <code>.position</code> method to positoin the elements on top of the canvas to integrate our interface with the sketch itself.</p>
-	<p>This approach will work best in the full screen sketches we have created.  To do this with a regular sketch, we would need to add some more CSS.  Check out <a href="{{site.url}}{{site.baseurl}}/examples/dom/css/">this example</a> for reference.</p>
+	<p>This approach will work best in the full screen sketches we have created.  To do this with a regular sketch, we would need to add some more CSS.  Check out <a href="{{site.url}}{{site.baseurl}}/examples/dom/css/" target="blank">this example</a> for reference.</p>
 </div>
 
 <div class="slide">
