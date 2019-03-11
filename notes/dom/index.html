@@ -1,0 +1,243 @@
+---
+layout: slides
+title: DOM Library
+week: 6
+---
+
+<div class="slide">
+	<p>This week we're going to add HTML elements to our p5 project to create a user interface using common components from HTML.</p>
+	<p>Of course, we can add HTML and CSS to our projects in the traditional manner by eiditn <note>index.html</note> or <note>style.css</note>, but p5 also has functions to create the elements from the <note>sketch.js</note> file to keep our work in one place.</p>
+</div>
+
+<div class="slide">
+	<h2>Download the DOM Library</h2>
+	<p>Creating HTML elements requires a separate library that extends the <note>p5.js</note> library we have been using.</p>
+	<p>Download <a href="https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js" target="blank">p5.dom.js</a> here.</p>
+	<p>There is a separate <a href="https://p5js.org/reference/#/libraries/p5.dom" target="blank">reference</a> page here.</p>
+	
+	<p>The tutorial, <a href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas" target="blank">Beyond the canvas</a>, covers more ways to use the p5 DOM library.</p>
+	<p>Check out other <a href="https://p5js.org/libraries/" target="blank">p5 libraries</a> here.</p>
+</div>
+
+<div class="slide">
+	<p>Like the p5 library, we need to add a link in <note>index.html</note> to load the file in our project.</p>
+	<div class="ex" data-err>&lt;script src="p5.min.js"&gt;&lt;/script&gt;
+&lt;script src="p5.dom.js"&gt;&lt;/script&gt;
+&lt;script src="sketch.js" &gt;&lt;/script&gt;</div>
+	<p>The order here matters.  <note>p5.dom.js</note> must be added after <note>p5.min.js</note> in order to reference the p5 library, but before <note>sketch.js</note> so that the sketch can reference the functions and methods of the DOM library.</p>
+</div>
+
+<div class="slide">
+	<h2>Button</h2>
+	<p>Last week we used the <code>save()</code> function to save an image of the canvas when clicking on the canvas.</p>
+	<p>Let's try adding a button for the user to save an image.</p>
+	<p>(These examples won't run in the browser, you will need to copy them to Brackets to run).</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	noStroke();
+	fill('lightblue');
+
+	var button = createButton('Save Image');
+	button.mousePressed(save);
+
+	for (let x = 0; x <= width; x += 50) {
+		ellipse(x, random(height), random(100));
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p><code>save</code> is already a function, so we can call it by just adding it into the <code>.mousePressed()</code> event listener on the button.</p>
+	<p>However, if we want to save a specific file name, we'll need to create our own function and then call that.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	noStroke();
+	fill('lightblue');
+
+	var button = createButton('Save Image');
+	button.mousePressed(saveImage);
+
+	for (let x = 0; x <= width; x += 50) {
+		ellipse(x, random(height), random(100));
+	}
+}
+
+function saveImage() {
+	save('pattern.png');
+}</div>
+</div>
+
+<div class="slide">
+	<p>Let's add another button.</p>
+	<p>For this one, we can create a new function to actually draw the pattern.  Then the user can click the button to generate new patterns.  Once they find one they like, they can click the "Save Image" button.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function setup() {
+	createCanvas(640, 360);
+ 
+	pattern(); // generate a pattern to start
+
+	var patternButton = createButton('New Pattern');
+	patternButton.mousePressed(pattern);
+
+	var saveButton = createButton('Save Image');
+	saveButton.mousePressed(saveImage);
+}
+
+function pattern() {
+	background('plum');
+	noStroke();
+	fill('lightblue');
+	for (let x = 0; x <= width; x += 50) {
+		ellipse(x, random(height), random(100));
+	}
+}
+
+function saveImage() {
+	save('pattern.png');
+}</div>
+</div>
+
+<div class="slide">
+	<h2>CSS styling</h2>
+	<p>Notice where the <code>button</code> element appears in this example, and that it takes on the default CSS styling of a button.  We can use CSS styling to change the position and style of the button.</p>
+	<p>We can set the CSS for all button using the <code>button</code> selector in the <note>style.css</note> stylesheet we have in each project.</p>
+</div>
+
+<div class="slide">
+	<pre><code>button {
+	background: lightblue;
+	color: white;
+	padding: 0.5em;
+	border: none;
+	border-radius: .5em;
+	font-size: 18px;
+	box-shadow: 2px 2px 0 blue;
+	cursor: pointer;
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>We can also add styles to individual buttons using the p5 DOM method <code>.style()</code>, which takes a CSS rule as the first argument and the value as the second argument.</p>
+	<div class="ex">var button = createButton("My Button");
+button.style('background-color', 'blue');</div>
+</div>
+
+<div class="slide">
+	<p>We can also add classes to style a group of button based on a class created in CSS.</p>
+	<div class="ex" data-err>// CSS
+.interface {
+	border: 1px solid blue;
+}
+// p5
+var button = createButton("My Button");
+button.addClass('interface');</div>
+</div>
+
+<div class="slide">
+	<h2>Position</h2>
+	<p>By default, DOM elements created in p5 will be attached to the HTML document <em>after</em> the canvas.</p>
+	<p>We can use the <code>.position</code> method to positoin the elements on top of the canvas to integrate our interface with the sketch itself.</p>
+	<p>This approach will work best in the full screen sketches we have created.  To do this with a regular sketch, we would need to add some more CSS.  Check out <a href="{{site.url}}{{site.baseurl}}/examples/dom/css/" target="blank">this example</a> for reference.</p>
+</div>
+
+<div class="slide">
+	<p>This will place a button relative to the bottom of the browser.  Using p5 methods, we can write CSS relative to the p5 environment.</p>
+	<div class="ex">var button = createButton("My Button");
+button.position(100, height - 100);</div>
+</div>
+
+<div class="slide">
+	<h2>Slider</h2>
+	<p>Besides buttons, we can create slider input to change values in the sketch.  Let's add a slider to change the number of columns in the pattern.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">var columns = 8;
+function setup() {
+	createCanvas(640, 360);
+ 
+	pattern(); // generate a pattern to start
+
+	var patternButton = createButton('New Pattern');
+	patternButton.mousePressed(pattern);
+
+	var saveButton = createButton('Save Image');
+	saveButton.mousePressed(saveImage);
+	
+	var slider = createSlider(1, 32, columns, 1);
+	slider.input(updateColumns);
+}
+
+function updateColumns() {
+	columns = this.value();
+}
+
+function pattern() {
+	background('plum');
+	noStroke();
+	fill('lightblue');
+	var w = width / columns;
+	for (let x = 0; x <= width; x += w) {
+		ellipse(x, random(height), random(100));
+	}
+}
+
+function saveImage() {
+	save('pattern.png');
+}</div>
+</div>
+
+<div class="slide">
+	<p>Notice that the <code>columns</code> value is a global variable.  In order to update the number of columns in the design, we need that value to be available to both the <code>pattern</code> function and the <code>updateColumns</code> function.</p>
+	<p>The slider element has four arguments, the minimum value (1), the maximum value (32), the starting value (columns), in this case the number of columns, and the difference between values as the slider is used.</p>
+</div>
+
+<div class="slide">
+	<p><code>slider</code> uses the <code>.input</code> event listener to listen for when it is changed.  It then class the <code>updateColumns</code> function, which I just created for this example.</p>
+	<p>In that function, the keyword <code>this</code> refers to the slider.  This is a short hand that is used a lot in JavaScript.  We'll do more with it in a few weeks when we learn <em>objects</em>.</p>
+</div>
+
+<div class="slide">
+	<p>Let's add another slider to control the color of the circles in the pattern and also add labels so we know which is which.</p>
+	<p>We can use <code>createDiv</code> to create a generic <code>&lt;div&gt;</code> element.</p>
+	<p>I'm going to leave the other parts of the sketch out to save space.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">var columns = 8;
+var b = 127;
+function setup() {
+	createDiv('Columns');
+	var slider = createSlider(1, 32, 8, 1);
+	slider.input(updateColumns);
+	
+	createDiv('Blue');
+	var colorSlider = createSlider(0, 255, b, 1);
+	colorSlider.input(updateColor);
+}
+
+function updateColor() {
+	b = this.value();
+}
+
+function updateColumns() {
+	columns = this.value();
+}</div>
+</div>
+
+<div class="slide">
+	<p>Try applying this to your grid pattern.</p>
+	<p>Create sliders for the number of rows and columns.</p>
+	<p>Create a slider for one other attribute, color, size or shape.</p>
+	<p>With the two buttons and new sliders, the user will be able to generate variations of the pattern and save the one they like.</p>
+</div>

@@ -1,0 +1,13 @@
+body {
+    font-family: monaco;
+    font-size: 18px;
+    line-height: 1.4;
+    background-color:aliceblue;
+}
+
+#container {
+    width: 560px;
+    margin:0 auto;
+    border-left: 2px dotted green;
+    padding:0 1em;
+}
