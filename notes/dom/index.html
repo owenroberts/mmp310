@@ -12,7 +12,7 @@ week: 6
 <div class="slide">
 	<h2>Download the DOM Library</h2>
 	<p>Creating HTML elements requires a separate library that extends the <note>p5.js</note> library we have been using.</p>
-	<p>Download <a href="https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js" target="blank">p5.dom.js</a> here.</p>
+	<p>Download <a href="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js" target="blank">p5.dom.min.js</a> here.</p>
 	<p>There is a separate <a href="https://p5js.org/reference/#/libraries/p5.dom" target="blank">reference</a> page here.</p>
 	
 	<p>The tutorial, <a href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas" target="blank">Beyond the canvas</a>, covers more ways to use the p5 DOM library.</p>
@@ -22,7 +22,7 @@ week: 6
 <div class="slide">
 	<p>Like the p5 library, we need to add a link in <note>index.html</note> to load the file in our project.</p>
 	<div class="ex" data-err>&lt;script src="p5.min.js"&gt;&lt;/script&gt;
-&lt;script src="p5.dom.js"&gt;&lt;/script&gt;
+&lt;script src="p5.dom.min.js"&gt;&lt;/script&gt;
 &lt;script src="sketch.js" &gt;&lt;/script&gt;</div>
 	<p>The order here matters.  <note>p5.dom.js</note> must be added after <note>p5.min.js</note> in order to reference the p5 library, but before <note>sketch.js</note> so that the sketch can reference the functions and methods of the DOM library.</p>
 </div>
