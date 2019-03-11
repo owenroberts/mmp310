@@ -1,7 +1,6 @@
 ---
 layout: main
 title: Schedule
-dek: Schedule with class notes & assignments
 ---
 
 ## Project 1 **Interactive story**
