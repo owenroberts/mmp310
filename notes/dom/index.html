@@ -4,6 +4,8 @@ title: DOM Library
 week: 6
 ---
 
+<script src="{{site.url}}{{site.baseurl}}/slides/lib/p5.dom.min.js"></script>
+
 <div class="slide">
 	<p>This week we're going to add HTML elements to our p5 project to create a user interface using common components from HTML.</p>
 	<p>Of course, we can add HTML and CSS to our projects in the traditional manner by eiditn <note>index.html</note> or <note>style.css</note>, but p5 also has functions to create the elements from the <note>sketch.js</note> file to keep our work in one place.</p>
@@ -158,7 +160,7 @@ button.position(100, height - 100);</div>
 
 <div class="slide">
 	<h2>Slider</h2>
-	<p>Besides buttons, we can create slider input to change values in the sketch.  Let's add a slider to change the number of columns in the pattern.</p>
+	<p>Along with buttons, we can create slider inputs to change values in the sketch.  Let's add a slider to change the number of columns in the pattern.</p>
 </div>
 
 <div class="slide">
@@ -203,8 +205,8 @@ function saveImage() {
 </div>
 
 <div class="slide">
-	<p><code>slider</code> uses the <code>.input</code> event listener to listen for when it is changed.  It then class the <code>updateColumns</code> function, which I just created for this example.</p>
-	<p>In that function, the keyword <code>this</code> refers to the slider.  This is a short hand that is used a lot in JavaScript.  We'll do more with it in a few weeks when we learn <em>objects</em>.</p>
+	<p><code>slider</code> uses the <code>.input</code> event listener to listen for when it is changed.  It then calls the <code>updateColumns</code> function, which I just created for this example.</p>
+	<p>In that function, the keyword <code>this</code> refers to the slider.  This is a short hand that is used a lot in JavaScript.  We'll do more with it in a few weeks when we learn <note>objects</note>.</p>
 </div>
 
 <div class="slide">

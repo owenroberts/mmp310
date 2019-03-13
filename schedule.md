@@ -57,16 +57,19 @@ title: Schedule
 	- Using the grid design from Assignment 5, add a DOM based interface
 	- Give the user the ability to change attributes of the design such as the number of columns and rows, the colors, the type of shapes, the amount of randomness
 
+## Project 3 **Data Visualization**
+- Using an external data source, create a visualization of the data with p5 shapes and color
+- Use arrays and loops to read through data
 
-## Week 7 Arrays
-- [Arrays]()
+## Week 7 **Arrays**
+- [Arrays](notes/array)
 
 <!-- 
 	rectXY.push([mouseX, mouseY]);
  -->
 
-## Week 8 Objects
-- [Objects]()
+<!-- ## Week 8 Objects
+- [Objects]() -->
 
 
 <!-- 
