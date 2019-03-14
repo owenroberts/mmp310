@@ -6,7 +6,7 @@ week: 7
 
 <div class="slide">
 	<h2>Arrays</h2>
-	<p>An <code>array</code> is an object that contains a list of values. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="blank">Array on MDN</a>.</p>
+	<p>An <code>array</code> is an object that contains a list of values.</p>
 	<p>For example, a list of animals.</p>
 	<pre><code>var animals = ["cat", "dog", "bird"];</code></pre>
 </div>
@@ -126,12 +126,92 @@ animals.indexOf("dog"); // 1</code></pre>
 
 <div class="slide">
 	<p>Now I can change the size of the cat based on the size variable.</p>
-	<p>Let's take this a step further </p>
+	<p>Let's take this a step further and create a cat function to move this code out of the <code>setup</code> function.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	noStroke();
+
+	cat(200, 200, 200);
+	cat(400, 200, 100);
+	cat(500, 200, 50);
+}
+function cat(x, y, s) {
+	fill(0); // black
+	triangle(x - s*3/4, y - s/4, x + s*3/4, y - s/4, x, y + s/2); // ears
+	ellipse(x, y, s); // face
+	fill(255); // white
+	ellipse(x - s/4, y, s/4, s/2); // left eye
+	ellipse(x + s/4, y, s/4, s/2); // right eye
+}</div>
+</div>
+
+<div class="slide">
+	<p>Now let's use the array and loop.  We'll start just by adding an ellipse for each point in the array.</p>
 </div>
 
 
+<div class="slide">
+	<div class="ex" data-preview>var catSizes = [50, 100, 25, 50, 35, 100, 49, 90, 70, 10];
+function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	for (let i = 0; i < catSizes.length; i++) {
+		var x = map(i, 0, catSizes.length, 0, width);
+		var s = catSizes[i];
+		ellipse(x, 200, s);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>How does this work?</p>
+	<p><code>catSizes.length</code> gives me the number of elements in the array.  I want to draw an ellipse for each element.</p>
+	<p>Like in most <code>for</code> loops, I start counting at <code>0</code> with <code>let i = 0;</code>.  <code>i</code> is most often used here because of a programming convention originating in math notation where i is the first index, or counter.</p>
+	<p>If we start counting at <code>0</code>, then we will draw <code>10</code> circles when <code>i</code> is <code>9</code>, so our end condition is <code>i < catSizes.length</code> or <code>i < 10</code> or when <code>i</code> is no longer less than <code>10</code>.</p>
+</div>
+
+<div class="slide">
+	<p>That sets up the <code>for</code> loop.</p>
+	<p>Once inside the <code>for</code> loop, we can reference each value in the array with <code>i</code>.  As we loop, <code>i</code> counts up, <code>0, 1, 2 ... 9</code>, so at one point each element of the array is referenced by <code>catSizes[i]</code>.</p>
+	<p>That value is assigned to the size of the ellipse.</p>
+</div>
+
+<div class="slide">
+	<p>Since we don't want to draw each circle in the same place, the <code>x</code> value is mapped to the length of the array, so each ellipse is drawn in a new x position.</p>
+	<p>Let's add in the cat function.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var catSizes = [50, 100, 25, 50, 35, 100, 49, 90, 70, 10];
+function setup() {
+	createCanvas(640, 360);
+	background('plum');
+	noStroke();
+
+	for (let i = 0; i < catSizes.length; i++) {
+		var x = map(i, 0, catSizes.length, 0, width);
+		var s = catSizes[i];
+		cat(x, 200, s);
+	}
+}
+function cat(x, y, s) {
+	fill(0); // black
+	triangle(x - s*3/4, y - s/4, x + s*3/4, y - s/4, x, y + s/2); // ears
+	ellipse(x, y, s); // face
+	fill(255); // white
+	ellipse(x - s/4, y, s/4, s/2); // left eye
+	ellipse(x + s/4, y, s/4, s/2); // right eye
+}</div>
+</div>
 
 <div class="slide">
 	<h2>Resources</h2>
-	<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2" target="blank">More array methods</a>
+	<ul>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="blank">Array on MDN</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2" target="blank">More array methods</a></li>
+	</ul>
 </div>
