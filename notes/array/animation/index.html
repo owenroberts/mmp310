@@ -114,10 +114,49 @@ function draw() {
 	rot += 0.01;
 
 	for (let i = 0; i < points.length; i++) {
-		let x = points[i][0];
-		let y = points[i][1]; 
+		let x = points[i][0] - width/2; // offset the drawing 
+		let y = points[i][1] - height/2; 
 		fill('gold');
-		ellipse(x - width/2, y - height/2, 20); // offset the drawing 
+		ellipse(x, y, 20); 
 	}
+} </div>
+</div>
+
+<div class="slide">
+	<p>We can combine this with our cat drawing from the previous lesson to add animated drawings to the canvas.</p>
+	<p>Try doing this with other functions, like the characters we created in week 1, or a self portrait, a spaceship, a car, anything that might be animated.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var cats = []; // array to save xy points of each cat
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	fill('plum');
+}
+function draw() {
+	background(51);
+
+	for (let i = 0; i < cats.length; i++) {
+		let x = cats[i][0];
+		let y = cats[i][1]; 
+		fill('plum');
+		cat(x, y, 50);
+		cats[i][0]++;
+	}
+}
+
+// push one cat per mouse click
+function mouseClicked() {
+	cats.push([mouseX, mouseY]);
+}
+
+function cat(x, y, s) {
+	fill(0); // black
+	triangle(x - s*3/4, y - s/4, x + s*3/4, y - s/4, x, y + s/2); // ears
+	ellipse(x, y, s); // face
+	fill(255); // white
+	ellipse(x - s/4, y, s/4, s/2); // left eye
+	ellipse(x + s/4, y, s/4, s/2); // right eye
 } </div>
 </div>
