@@ -1,0 +1,123 @@
+---
+layout: slides
+title: Drawing with Arrays
+week: 7
+---
+
+<div class="slide">
+	<p>You may remember an example from MMP 210 where we removed the background and drew with the mouse.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	background(51);
+	fill('plum');
+}
+function draw() {
+	// no background in draw
+	if (mouseIsPressed) {
+		ellipse(mouseX, mouseY, 20);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>This example relies on there being no background, so each ellipse that is rendered stays on the canvas.</p>
+	<p>What if we wanted to draw other things on the canvas?  Or animate our drawing?</p>
+	<p>Using an array, we can keep track of the points where the user draws to create persistent data that exists from frame to frame.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var points = []; // array to save xy points
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	fill('plum');
+}
+function draw() {
+	background(51);
+
+	// add points
+	if (mouseIsPressed) {
+		var point = [mouseX, mouseY];  // each point is an array
+		points.push(point);
+	}
+
+	// loop to draw points
+	for (let i = 0; i < points.length; i++) {
+		let x = points[i][0];
+		let y = points[i][1];
+		ellipse(x, y, 20);
+	}
+} </div>
+</div>
+
+<div class="slide">
+	<p>Now the drawing points can be updated.  Let's simply update the position and make them fall down the canvas.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var points = []; // array to save xy points
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	fill('plum');
+}
+function draw() {
+	background(51);
+
+	if (mouseIsPressed) {
+		var point = [mouseX, mouseY];
+		points.push(point);
+	}
+
+	for (let i = 0; i < points.length; i++) {
+		let x = points[i][0];
+		let y = points[i][1]; 
+		ellipse(x, y, 20);
+		points[i][1]++; // increment y by 1
+	}
+} </div>
+</div>
+
+<div class="slide">
+	<p>Or we can spin the drawing.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var points = []; // array to save xy points
+var rot = 0; // rotation variable
+function setup() {
+	createCanvas(640, 360);
+	noStroke();
+	fill('plum');
+}
+function draw() {
+	background(51);
+
+	if (mouseIsPressed) {
+		var point = [mouseX, mouseY];
+		points.push(point);
+	}
+
+	for (let i = 0; i < points.length; i++) {
+		let x = points[i][0];
+		let y = points[i][1]; 
+		fill('plum');
+		ellipse(x, y, 20);
+	}
+
+	translate(width/2, height/2);
+	rotate(rot);
+	rot += 0.01;
+
+	for (let i = 0; i < points.length; i++) {
+		let x = points[i][0];
+		let y = points[i][1]; 
+		fill('gold');
+		ellipse(x - width/2, y - height/2, 20); // offset the drawing 
+	}
+} </div>
+</div>

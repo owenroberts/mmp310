@@ -63,6 +63,14 @@ title: Schedule
 
 ## Week 7 **Arrays**
 - [Arrays](notes/array)
+- [Drawing with Arrays](notes/array/animation)
+- **Assignment 7: Array Animation**
+	- Using an array, create an animation
+	- Add one other component to the data in the array, color, size or shape
+
+
+<!--  start with simple array assignment
+	use data source in week 2 -->
 
 <!-- 
 	rectXY.push([mouseX, mouseY]);
