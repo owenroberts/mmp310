@@ -68,6 +68,13 @@ title: Schedule
 	- Using an array, create an animation
 	- Add one other component to the data in the array, color, size or shape
 
+## Week 8 **Data**
+- [Data Files](notes/data/csv)
+- [Data Visualization]()
+- **Assignment 8: Data Visualization**
+	- Choose a data source and download as a CSV file
+	- Use a loop to read data
+	- Visualize data with p5 functions
 
 <!--  start with simple array assignment
 	use data source in week 2 -->

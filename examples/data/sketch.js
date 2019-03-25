@@ -7,22 +7,35 @@
 	https://www.basketball-reference.com/leagues/NBA_2019_rookies.html
 */
 
-var population;
+var water;
 function preload() {
-	population = loadTable('New_York_City_Population_by_Borough__1950_-_2040.csv', 'csv');
+	water = loadTable('Water_Consumption_In_The_New_York_City.csv', 'csv', 'header');
 }
-
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(640, 360);
 	background(51);
-	noStroke();
+	textAlign(CENTER, CENTER);
 
-	for (let i = 0; i < population.getRowCount(); i++) {
-		
+	let x = 50;
+	let y = 100;
+	for (let i = 0; i < water.getRowCount(); i++) {
+		let year = water.getNum(i, 'Year');
+		let gallons = water.getNum(i, 3);
+
+		fill('lightblue');
+		ellipse(x, height/2, gallons);
+
+		fill('white');
+		noStroke();
+		text(year, x, height/2);
+
+		x += 100;
+		if (x > width) {
+			x = 0;
+			y += 100;
+		}
 	}
-	
 }
-
 
 
 

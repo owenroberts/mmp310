@@ -1,0 +1,143 @@
+---
+layout: slides
+title: CSV Data
+week: 8
+---
+
+<div class="slide">
+	<p>Last week we used an array of cat sizes to demonstrate drawing data using a list of values.</p>
+	<p>That was the first step in creating a data visualization.  This week we'll look at how to take data from a resource and read it in p5.  Then we'll learn to visualize that data.</p>
+	<p>Specifically, we're going to read data from a <note>CSV</note> file, which stands for <note>comma separated values</note>.</p>
+	<p>A CSV files is like an Excel Spreadsheet, but simplified to be only the raw data, making it easier to read with code.  Any Excel or Google Sheets files can be saved as a CSV.</p>
+</div>
+
+<div class="slide">
+	<p>Part of the assignment for this week is to find a data source to visualize.</p>
+	<p>Any CSV files can be used for the assignment, but we'll look at a few specific resources where data can be found.</p>
+	<ul>
+		<li><a href="https://www.data.gov/" target="_blank">data.gov</a> has links to data sets for open data on the US government.</li>
+		<li><a href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> has data sets for New York City.</li>
+		<li><a href="https://github.com/leomaurodesenv/game-datasets#dataset" target="_blank">Game Datasets</a> is a curated list of data relating to video games.</li>
+		<li><a href="https://www.basketball-reference.com/" target="_blank">Basketball Reference</a> (along with its sister sites for other sports) is a resource for all basketball related data, which also very easy to manipulate in the browser.</li>
+	</ul>
+	<p>There are many other data sources available on the web, these are just a few examples.  I encourage you to search for other data sets and share them with the class.</p>
+</div>
+
+<div class="slide">
+	<h2>Getting data into a sketch</h2>
+	<p>For this example, I'm going to use a relatively simple dataset from NYC Open Data, <a href="https://data.cityofnewyork.us/Environment/Water-Consumption-In-The-New-York-City/ia2d-e54m" target="_blank">Water Consumption In The New York City</a> which has three data points for each year from 1979 to 2019, the population of New York, the water consumption in millions of gallons per day, and the gallons per person per day.</p>
+</div>
+
+<div class="slide">
+	<p>Once I've found a dataset I want to work with, I can click the Export button and then click CSV to download a CSV.</p>
+	<img src="export.png">
+</div>
+
+<div class="slide">
+	<p>Once I have downloaded the CSV I can place it in my project folder next to <note>sketch.js</note> and my other files.</p>
+	<p>CSVs can be viewed in text editors, but it is easier to view them in Microsoft Excel, which formats them into a table.</p>
+	<p>After viewing the data in this CSV, I noticed an issue—the data was not in chronological order.  Using Microsoft Excel, I sorted the data based on the year, in the first column.  That will make it easier for me to view the data in order in my sketch.</p>
+</div>
+
+<div class="slide">
+	<img src="sort.png">
+	<p>Note, if you need to sort data, Excel may prompt you to sort either the entire dataset (Expand the selection) or just the single column.  You should choose the entire dataset, or <note>Exand the selection</note>, which should be the default.</p>
+</div>
+
+<div class="slide">
+	<p>Now I can read the data in my sketch.</p>
+	<p>Beacuse the CSV is an external file,  we'll use the <code>preload</code> function to load it before running the sketch.</p>
+	<p>We will also use the <code>loadTable</code> function to load the data.  View the reference on <a href="https://p5js.org/reference/#/p5/loadTable" target="_blank">loadTable</a> for more info.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var water;
+function preload() {
+	water = loadTable('Water_Consumption_In_The_New_York_City.csv', 'csv', 'header');
+}
+function setup() {
+	createCanvas(640, 360);
+	background(51);
+	textAlign(CENTER, CENTER);
+
+	let x = 50;
+	let y = 25;
+	for (let i = 0; i < water.getRowCount(); i++) {
+		let year = water.getNum(i, 'Year');
+		let gallons = water.getNum(i, 3) / 4;
+
+		fill('lightblue');
+		ellipse(x, y, gallons);
+
+		fill('white');
+		noStroke();
+		text(year, x, y);
+
+		x += 100;
+		if (x > width) {
+			x = 50;
+			y += 50;
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>In order to read the data, we use a few methods that are part of the water object created by the <code>loadTable</code> function.</p>
+	<pre><code>water.getRowCount()</code> </pre>
+	<p>This gives us the total number of rows in the data (excluding the header).  We can use that as the ending condition for our loop.</p>
+</div>	
+
+<div class="slide">
+	<p>Inside the loop, we can then use <code>i</code> as the row number and read the data at each row.</p>
+	<pre><code>water.getNum(i, 'Year');</code></pre>
+	<p>This gives the value of the 'Year' column at each row, which we know is a number.  For a string value, we would use <code>water.getString()</code>.</p>
+	<pre><code>water.getNum(i, 3);</code></pre>
+	<p>This gets the Per capita value of water consumption.  We can reference columns by number or by the header title.</p>
+</div>
+
+<div class="slide">
+	<p>Notice that i divided the number of gallons by 4.  The number itself is pretty large, so I wouldn't be able to fit my whole chart in the canvas if I just used the raw number.  I have to play around with values to find one that represented the data and fits the overall size of my chart.</p>
+	<p>Since I'm using a loop, all of the values are divided by the same number, so I know I have an even representation of data.</p>
+</div>
+
+<div class="slide">
+	<p>What we can see in the chart is that the overall consumption of water per resident has gone down.</p>
+	<p>However, we know the population is going up.  How will the chart change if we show the total amount of water instead?</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var water;
+function preload() {
+	water = loadTable('Water_Consumption_In_The_New_York_City.csv', 'csv', 'header');
+}
+function setup() {
+	createCanvas(640, 360);
+	background(51);
+	textAlign(CENTER, CENTER);
+
+	let x = 50;
+	let y = 25;
+	for (let i = 0; i < water.getRowCount(); i++) {
+		let year = water.getNum(i, 'Year');
+		let gallons = water.getNum(i, 2) / 15;
+
+		fill('lightblue');
+		ellipse(x, y, gallons);
+
+		fill('white');
+		noStroke();
+		text(year, x, y);
+
+		x += 100;
+		if (x > width) {
+			x = 50;
+			y += 50;
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Today we'll focus on just getting the data to display in the canvas, in the next class we'll look more into visualizing the data using code.</p>
+</div>
