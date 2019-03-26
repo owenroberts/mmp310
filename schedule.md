@@ -70,7 +70,7 @@ title: Schedule
 
 ## Week 8 **Data**
 - [Data Files](notes/data/csv)
-- [Data Visualization]()
+- [Data Visualization](notes/data/vis)
 - **Assignment 8: Data Visualization**
 	- Choose a data source and download as a CSV file
 	- Use a loop to read data

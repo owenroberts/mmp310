@@ -1,0 +1,210 @@
+---
+layout: slides
+title: Data Visualization
+week: 8
+---
+
+<div class="slide">
+	<p>In the previous lesson we looked at how to load data from a CSV and display it on the p5 canvas.</p>
+	<p>Today we'll look at adding interactive visualizations to the data.</p>
+</div>
+
+<div class="slide">
+	<p>For this example, I'm going to use Basketball Reference to visualize the <a href="https://www.basketball-reference.com/leagues/NBA_2019_rookies.html" target="_blank">NBA rookies assist leaders</a>.</p>
+	<p>Using Basketball Reference is a bit easier because I can sort the data on their website and then convert to a CSV using the <note>Share</note> tool.</p>
+</div>
+
+<div class="slide">
+	<img src="rookies.png">
+</div>
+
+<div class="slide">
+	<img src="share.png">
+</div>
+
+<div class="slide">
+	<img src="csv.png">
+</div>
+
+<div class="slide">
+	<p>Then I can copy and paste the CSV data into Brackets and save as a new file.</p>
+	<p>After looking at the data I noticed that some columns use the same abbreviation because the data includes numbers for the whole season as well as per game.  I want to use per game, so I changed the <note>AST</note> field to <note>ASTper</note> to make it so I can reference assists per game in my chart.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">var rookies;
+function preload() {
+	rookies = loadTable('rookie-assists-leader.csv', 'csv', 'header');
+}
+function setup() {
+	createCanvas(windowWidth, windowHeight/2);
+	textAlign(LEFT, CENTER);
+	textSize(50);
+	noStroke();
+}</div>
+</div>
+
+<div class="slide">
+	<p>In this example I have to preload the rookie assists leader chart and then use <code>setup</code> to setup the basic sketch setting.</p>
+	<p>For this example, I need to use the <code>draw</code> loop because I'm going to add interaction, meaning I need the sketch to be able to change and draw new colors and shapes.</p>
+	<p>To start I just want to show which rookie has the most assists.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">function draw() {
+	background(51);
+	for (let i = 0; i < rookies.getRowCount(); i++) {
+		let ast = rookies.get(i, 'ASTper');
+		let x = i * 11;
+		let h = map(ast, 0, 10, 0, height);
+		
+		fill('white');
+		rect(x, height - h, 10, h);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>First I loop over the table using <code>rookies.getRowCount()</code>.</p>
+	<p>Then I map the number of assists to the height of the canvas.</p>
+	<p>Each bar is 10 pixels wide, so I get the <code>x</code> position by multiplying <code>i</code> by <code>11</code> so there is 1 pixel in between each bar.</p>
+	<p>The trick then is that to show the bars I need to subtract the height of each bar from the height of the canvas.  Remember the canvas starts from the top, so y goes from <code>0</code> to <code>height</code>.</p>
+</div>
+
+<div class="slide">
+	<p>Finally, while I'm drawing the bars representing assists, I can visualize the chart by changing the color of the bar when the user mouses over it and then displaying the name of the rookie and assists number.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">fill('white');
+if (mouseX > x && mouseX < x + 10) {
+	text(rookies.get(i, 'Player').split('\\')[0], 400, 200);
+	text(ast, 400, 250);
+	fill('gold');  // only fill gold bar if mouse over
+}
+rect(x, height - h, 10, h); </div>
+</div>
+
+<div class="slide">
+	<pre><code>rookies.get(i, 'Player').split('\\')[0]</code></pre>
+	<p>This line looks weird because the player names actually have an extra encoding in them, they look like this: <note>Trae Young\youngtr01</note>.</p>
+	<p>To get just the name of the player, I'm using the <code>split</code> function of the string and then getting the backslash with <code>('\\')</code> because backslash is a special character, I have to use the escape character (which happens to also be the backslash).  Then I use <code>[0]</code> to get the first part of the array.</p>
+</div>
+
+<div class="slide">
+	<p>This it what it looks like altogether.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var rookies;
+function preload() {
+	rookies = loadTable('rookie-assists-leader.csv', 'csv', 'header');
+}
+
+function setup() {
+	createCanvas(640, 360);
+	textAlign(LEFT, CENTER);
+	textSize(50);
+	noStroke();
+}
+
+function draw() {
+	background(51);
+	for (let i = 0; i < rookies.getRowCount(); i++) {
+		let ast = rookies.get(i, 'ASTper');
+		let x = i * 11;
+		let h = map(ast, 0, 10, 0, height);
+		
+		fill('white');
+		if (mouseX > x && mouseX < x + 11) {
+			text(rookies.get(i, 'Player').split('\\')[0], 200, 100);
+			text(ast, 200, 150);
+			fill('gold');
+		}
+
+		rect(x, height - h, 10, h);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Two dimensions</h2>
+	<p>The previous chart visualizes one component of NBA rookies play.  To compare rookies across two dimensions, we can add another data point to map on the x axis.</p>
+	<p>I'm going to use minutes played.  Again, I want to use the "per game" statistic, so I'm going to change the name of the column in the chart to <note>MPper</note>.</p>
+	<p>First I need to get that stat and then map my stats to the x and y axes.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">for (let i = 0; i < rookies.getRowCount(); i++) {
+let ast = rookies.get(i, 'ASTper');
+let min = rookies.get(i, 'MPper');
+let x = map(min, 0, 36, 0, width);
+let y = map(ast, 0, 8, height, 0);
+
+fill('white');
+ellipse(x, y, 10);</div>
+</div>
+
+<div class="slide">
+	<p>Here I'm mapping the minutes values on the x axis.  Because no players average more than 36 minutes per game, I'm setting the max value to 36, with the min value 0.  This maps from 0 x to the width of the canvas.</p>
+	<p>I'm mapping y values to the number of assists.  No player averages more than 8 assists, so that's my max.  The height scale is inverted, again because the y axis starts with 0 at the top and gets bigger as it goes down the canvas.</p>
+</div>
+
+<div class="slide">
+	<p>For the interaction code, I need to use the circle distance detection instead of the x position.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">fill('white');
+if (dist(x, y, mouseX, mouseY) < 10) {
+	text(rookies.get(i, 'Player').split('\\')[0], 200, 100);
+	text(ast, 200, 150);
+	fill('gold');
+}
+ellipse(x, y, 10);</div>
+</div>
+
+<div class="slide">
+	<p>Here's the whole chart.</p>
+	<p>The last thing add is some labels for the data.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var rookies;
+function preload() {
+	rookies = loadTable('rookie-assists-leader.csv', 'csv', 'header');
+}
+function setup() {
+	createCanvas(640, 360);
+	textAlign(LEFT, CENTER);
+	textSize(50);
+	noStroke();
+}
+
+function draw() {
+	background(51);
+	for (let i = 0; i < rookies.getRowCount(); i++) {
+		let ast = rookies.get(i, 'ASTper');
+		let min = rookies.get(i, 'MPper');
+		let x = map(min, 0, 36, 0, width);
+		let y = map(ast, 0, 8, height, 0);
+
+		fill('white');
+		if (dist(x, y, mouseX, mouseY) < 10) {
+		textSize(50);
+			text(rookies.get(i, 'Player').split('\\')[0], 50, 100);
+			text(ast + ' AST' , 50, 150);
+			text(min + ' MIN' , 50, 200);
+
+			fill('gold')
+		}
+		ellipse(x, y, 10);
+	}
+	// labels
+	textSize(14);
+	text('Minutes Per Game', width - 200, height - 10);
+	text('Assists Per Game', width/2, 10);
+}</div>
+</div>
+
+

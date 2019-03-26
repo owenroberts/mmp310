@@ -8,14 +8,66 @@
 */
 
 var water;
+var rookies
 function preload() {
 	water = loadTable('Water_Consumption_In_The_New_York_City.csv', 'csv', 'header');
+	rookies = loadTable('rookie-assists-leader.csv', 'csv', 'header');
 }
 function setup() {
-	createCanvas(640, 360);
-	background(51);
-	textAlign(CENTER, CENTER);
+	createCanvas(windowWidth, windowHeight/2);
+	textAlign(LEFT, CENTER);
+	textSize(50);
+	noStroke();
+	rookiesAstMin();
+}
 
+function draw() {
+	
+}
+
+function rookiesAstMin() {
+	background(51);
+	for (let i = 0; i < rookies.getRowCount(); i++) {
+		let ast = rookies.get(i, 'ASTper');
+		let min = rookies.get(i, 'MPper');
+		let x = map(min, 0, 36, 0, width);
+		let y = map(ast, 0, 8, height, 0);
+
+		fill('white');
+
+		if (dist(x, y, mouseX, mouseY) < 10) {
+			text(rookies.get(i, 'Player').split('\\')[0], 400, 200);
+			text(ast, 400, 250)
+
+			fill('gold')
+		}
+
+		ellipse(x, y, 10);
+	}
+}
+
+function rookieAst() {
+	background(51);
+	for (let i = 0; i < rookies.getRowCount(); i++) {
+		let ast = rookies.get(i, 'ASTper');
+		let x = i * 11;
+		let h = map(ast, 0, 10, 0, height);
+		
+		fill('white');
+		if (mouseX > x && mouseX < x + 11) {
+			text(rookies.get(i, 'Player').split('\\')[0], 400, 200);
+			text(ast, 400, 250);
+			fill('gold');
+		}
+		rect(x, height - h, 10, h);
+	}
+}
+
+function rookieVis() {
+
+}
+
+function waterVis() {
 	let x = 50;
 	let y = 100;
 	for (let i = 0; i < water.getRowCount(); i++) {
