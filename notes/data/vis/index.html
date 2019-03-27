@@ -135,14 +135,15 @@ function draw() {
 </div>
 
 <div class="slide">
-	<div class="ex">for (let i = 0; i < rookies.getRowCount(); i++) {
-let ast = rookies.get(i, 'ASTper');
-let min = rookies.get(i, 'MPper');
-let x = map(min, 0, 36, 0, width);
-let y = map(ast, 0, 8, height, 0);
-
-fill('white');
-ellipse(x, y, 10);</div>
+	<div class="ex" data-err>for (let i = 0; i < rookies.getRowCount(); i++) {
+	let ast = rookies.get(i, 'ASTper');
+	let min = rookies.get(i, 'MPper');
+	let x = map(min, 0, 36, 0, width);
+	let y = map(ast, 0, 8, height, 0);
+	
+	fill('white');
+	ellipse(x, y, 10);
+}</div>
 </div>
 
 <div class="slide">
