@@ -76,6 +76,18 @@ title: Schedule
 	- Use a loop to read data
 	- Visualize data with p5 functions
 
+## Project 4 **Mobile Game**
+- Mobile events and touches
+- Object oriented programming for game elements
+
+## Week 9 **Objects**
+- [Objects](notes/objects)
+- [Class](notes/class)
+
+## Week 10 **Mobile Interaction**
+- [Mobile Touches]
+- [Class Inheritence]
+
 <!--  start with simple array assignment
 	use data source in week 2 -->
 
