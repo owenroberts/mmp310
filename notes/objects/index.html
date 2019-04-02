@@ -1,28 +1,28 @@
 ---
 layout: slides
 title: Objects
-week: 7
+week: 9
 ---
 
 <div class="slide">
-	<p>Although we haven't talked about them specifically, we have been using objects all semester.  In fact, basically everything in JavaScript is an object, including arrays, functions, and anything that has methods or properties.</p>
-	<p>JavaScript is based on an object oriented programming design.  This means the language is organized around objects and data rather than logic and actions.</p>
+	<p>Throughout the semester we have seen examples of objects in JavaScript.  In fact, basically everything in JavaScript is an object, including arrays, functions, and anything that has methods or properties.</p>
+	<p>JavaScript is based on an object oriented programming design.  This means the language is organized around objects.</p>
+	<p>So far we haven't written any objects of our own, but today we will start.</p>
 </div>
 
 <div class="slide">
-	<p>Simply put, and object is a collection of properties and methods associated with one, well, object.</p>
+	<h2>Object members</h2>
+	<p>Simply put, and object is a collection of properties and methods.</p>
 	<p>Properties and methods are assigned with key value pairs.</p>
 </div>
 
 <div class="slide">
-	<h2>Key, value pairs</h2>
 	<p>In a key value pair, the key is a string and the value can be any JavaScript value, a number, string, array, function or another object.</p>
 	<p>Single values like numbers, strings and booleans are called <note>properties</note>, while functions are called <note>methods</note>.</p>
-
 </div>
 
 <div class="slide">
-	<pre><code><table>
+	<table class="code">
 		<tr>
 			<th>key</th>
 			<th>value</th>
@@ -43,7 +43,7 @@ week: 7
 			<td>pop</td>
 			<td>function() { }</td>
 		</tr>
-	</table></code></pre>
+	</table>
 </div>
 
 <div class="slide">
@@ -51,7 +51,9 @@ week: 7
 </div>
 
 <div class="slide">
-	<pre><code class="javascript">var fruit = ["banana.jpg", "orange.jpg", "kiwi.jpg"]; // array<table><tr>
+	<pre><code class="javascript">var fruit = ["banana.jpg", "orange.jpg", "kiwi.jpg"];</code></pre>
+	<table class="code">
+		<tr>
 			<th>key</th>
 			<th>value</th>
 		</tr>
@@ -79,85 +81,204 @@ week: 7
 			<td>pop</td>
 			<td>function() {}</td>
 		</tr>
-	</table></code></pre>
-</div>
-
-<div class="slide">
-	<h2>Trains</h2>
-	<img src="train.jpg" alt="">
-</div>
-
-<div class="slide">
-	<p>Almost any object in the real world can be used as a metaphor for a JavaScript object.  Let's use trains.</p>
-	<p>Like objects in the real world, JavaScript objects have properties and methods, or qualities and actions.</p>
-</div>
-
-<div class="slide">
-	<p>Trains all have one basic blueprint.  This is like the object.</p>
-	<p>A train has many properties, such as color, speed, number of passengers, distance traveled, origin and ending locations, etc.</p>
-	<p>It also has actions, like functions, it moves on tracks, it honks it's horn, it carries passengers.</p>
+	</table>
 </div>
 
 <div class="slide">
 	<h2>Object literal</h2>
-	<p>Let's create a JavaScript version of a train:</p>
-	<pre><code><c></c>var train = {
-	speed: 60,
-	numberOfPassengers: 500,
-	distance: 100,
-	origin: "Queens",
-	destination: "Brooklyn"
+	<p>There are many ways to create objects in JavaScript.  Today we'll start with an <note>object literal</note>.  A literal in JavaScript is a statement that uses fixed values, like the properties we will assgin our object.</p>
+	<p>Declaring an object can be as simple as the following statement.</p>
+	<pre><code>var spaceship = {};</code></pre>
+</div>
+
+<div class="slide">
+	<p>The curly brackets that we have previously see to define code blocks for functions, loops and conditional statements, are also used to define an object.</p>
+</div>
+
+<div class="slide">
+	<p>Inside our <code>spaceship</code> literal we can define some properties of the spaceship.</p>
+	<pre><code>var spaceship = {
+	x: 0,
+	y: 0
+};</code></pre>
+	<p>Within an object literal, properties are assignment with the name followed by a colon and then the value, then a comma to separate the next key value pair.</p>
+</div>
+
+<div class="slide">
+	<p>Here we can see that the variables of our program are simplified, instead of having two separate variables for x and y, we have an object that contains both values.</p>
+	<p>Let's add some code to draw the spaceship and move it across the screen.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var spaceship = {
+	x: 0,
+	y: 200
 };
-<c></c>console.log(train);</code></pre>
+
+function draw() {
+	background(51);
+
+	// draw a spaceship
+	fill('white');
+	noStroke();
+	triangle(spaceship.x, spaceship.y, spaceship.x + 50, spaceship.y + 100, spaceship.x - 50, spaceship.y + 100);
+
+	// move left and right with arrow keys
+	if (keyIsDown(LEFT_ARROW)) {
+		spaceship.x -= 5;
+	}
+	if (keyIsDown(RIGHT_ARROW)) {
+		spaceship.x += 5;
+	}
+}</div>
 </div>
 
 <div class="slide">
-	<p>We can set and update properties of the train using dot notation <code>object.property</code>.</p>
-	<pre><code>// add a new property "color"
-<c></c>train.color = "blue";
-// change an existing value
-<c></c>train.numberOfPassengers = 400;
-<c></c>console.log(train);</code></pre>
+	<h2>Dot notation</h2>
+	<p>The above example uses <note>dot notation</note> to set or access the properties of the spaceship object.</p>
+	<pre><code>object.property // returns values
+object.property = 0; // set value</code></pre>
 </div>
 
 <div class="slide">
-	<p>Object properties can also be referenced with bracket notation:</p>
-	<pre><code><c></c>train["color"];
-<c></c>train["origin"];
-<c></c>train["destination"] = "Manhattan";</code></pre>
+	<p>In the example, <code>spaceship.x</code> and <code>spaceship.y</code> are first accessed to draw the triangle to represent the spaceship visually.</p>
+	<p>Then, the <code>spaceship.x</code> value is set, or updated, using <code>spaceship.x += 5;</code> when the user presses a key.</p>
 </div>
 
 <div class="slide">
-	<p>So far we only have properties, so let's define a method:</p>
-	<pre><code><c></c>train.getDuration = function() {
-	return this.distance / this.speed;
+	<h2>Bracket notation</h2>
+	<p>We won't be using it for these examples, but the properties of objects can also be accessed using bracket notation, like in an array, but with key values instead of number indexes.</p>
+	<pre><code>spaceship['x'] += 5;
+spaceship['y'] += 5;</code></pre>
+</div>
+
+<div class="slide">
+	<p>Looking at the above example, how can we add more properties to the spaceship?  What values in our code can be captured with properties?</p>
+	<p>Any hard coded value could be a variable, right?</p>
+	<p>Now we can add those values to our object.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var spaceship = {
+	x: 0,
+	y: 200,
+	size: 100,
+	speed: 5
 };
-<c></c>train.getDuration();</code></pre>
-</div>
 
+function draw() {
+	background(51);
 
-<div class="slide">
-	<h2>Object constructor</h2>
-	<p>Another way to create objects is through an object constructor, which is more like a blueprint for an object that get created later.</p>
-</div>
+	// draw a spaceship
+	fill('white');
+	noStroke();
+	triangle(spaceship.x, spaceship.y, spaceship.x + spaceship.size/2, spaceship.y + spaceship.size, spaceship.x - spaceship.size/2, spaceship.y + spaceship.size);
 
-
-<div class="slide">
-	<pre><code>function Train(color, speed, distance, origin, destination) {
-	this.color = color;
-	this.speed = speed;
-	this.distance = distance;
-	this.origin = origin;
-	this.destination = destiantion;
-	this.getDuration = function() {
-		return this.distance / this.speed;
-	};
-}</code></pre>
+	// move left and right with arrow keys
+	if (keyIsDown(LEFT_ARROW)) {
+		spaceship.x -= spaceship.speed;
+	}
+	if (keyIsDown(RIGHT_ARROW)) {
+		spaceship.x += spaceship.speed;
+	}
+}</div>
 </div>
 
 <div class="slide">
-	<h2>new</h2>
-	<p>With an object constructor the <code>new</code> keyword is used when creating a new object.</p>
-	<pre><code><c></c>var cTrain = new Train("blue", 60, 100, "Queens", "Brooklyn");
-<c></c>var twoTrain = new Train("red", 60, 200, "Bronx", "Brooklyn");</code></pre>
+	<p>By adding these values to the <code>spaceship</code> object, we can organize the properties in one variable with multiple properties, making out code easier to understand and update.</p>
+	<p>So far we've only added values with properties, but we can further simplify our code, and make it more object oriented, by adding some methods.</p>
+</div>
+
+<div class="slide">
+	<p>As we start to build a more complex program to create a game, we want to think of the <code>draw</code> function as the sort of main function in our code.  To better organize the draw function, we can use objects that display and update themselves, so our main function isn't cluttered with the code of specific parts of each component.</p>
+</div>
+
+<div class="slide">
+	<p>First we'll take the code that draws the spaceship and add it to the object.</p>
+	<div class="ex">var spaceship = {
+	x: 0,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		fill('white');
+		noStroke();
+		triangle(spaceship.x, spaceship.y, spaceship.x + spaceship.size/2, spaceship.y + spaceship.size, spaceship.x - spaceship.size/2, spaceship.y + spaceship.size);
+	}
+};</div>
+</div>
+
+<div class="slide">
+	<p>For methods that are part of an object, we can use the <code>this</code> keyword to replace references to that object.</p>
+</div>
+
+<div class="slide">
+	<p>First we'll take the code that draws the spaceship and add it to the object.</p>
+	<div class="ex">var spaceship = {
+	x: 0,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		fill('white');
+		noStroke();
+		triangle(this.x, this.y, this.x + this.size/2, this.y + this.size, this.x - this.size/2, this.y + this.size);
+	}
+};</div>
+</div>
+
+<div class="slide">
+	<p>Next we can take the code that updates the position of the spaceship to create the <code>update</code> function.</p>
+	<div class="ex">var spaceship = {
+	x: 0,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		fill('white');
+		noStroke();
+		triangle(this.x, this.y, this.x + this.size/2, this.y + this.size, this.x - this.size/2, this.y + this.size);
+	},
+	update: function() {
+		if (keyIsDown(LEFT_ARROW)) {
+			this.x -= this.speed;
+		}
+		if (keyIsDown(RIGHT_ARROW)) {
+			this.x += this.speed;
+		}
+	}
+};</div>
+</div>
+
+<div class="slide">
+	<p>Let's finish the example and see the simplified <code>draw</code> function.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>var spaceship = {
+	x: 0,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		fill('white');
+		noStroke();
+		triangle(this.x, this.y, this.x + this.size/2, this.y + this.size, this.x - this.size/2, this.y + this.size);
+	},
+	update: function() {
+		if (keyIsDown(LEFT_ARROW)) {
+			this.x -= thisthisthis.speed;
+		}
+		if (keyIsDown(RIGHT_ARROW)) {
+			this.x += thisthis.speed;
+		}
+	}
+};
+
+function draw() {
+	background(51);
+
+	spaceship.display();
+	spaceship.update();
+}</div>
 </div>
