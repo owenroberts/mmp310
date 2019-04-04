@@ -87,31 +87,39 @@ function touchStarted() {
 	if (touches[0]) {
 		touch.x = touches[0].x;
 		touch.y = touches[0].y;
+		touch.px = touch.x;
+		touch.py = touch.y;
 	}
 }
 
 function touchMoved() {
-	touch.px = touch.x;
-	touch.py = touch.y;
 	touch.x = touches[0].x;
 	touch.y = touches[0].y;
+	console.log(touch.x, touch.y);
 }
 
 function touchEnded() {
+	
 	if (s.scene.over && s.counter <= 0) {
 		asteroids = [];
 		s.scene.game = true;
 		s.scene.over = false;
-	}
-	else if (s.scene.game) {
-		if (touch.x - touch.px > 0)
-			player.speed.x += 2;
-		else 
-			player.speed.x -= 2;
+	} else if (s.scene.game) {
 
-		if (touch.y - touch.py < 0)
+		const delta = touch.x - touch.px;
+
+		if (delta > 20) {
+			player.speed.x = 5;
+		} else if (delta < -20) {
+			player.speed.x = -5;
+		} else {
+			player.speed.x = 0;
 			lasers.push(new Laser());
+		}
 	}
+
+	touch.px = touch.x;
+	touch.py = touch.y;
 }
 
 

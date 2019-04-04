@@ -5,9 +5,9 @@ class Spaceship extends Entity {
 	update() {
 		super.update();
 		if (this.speed.x > 0)
-			this.speed.x -= 0.02;
+			this.speed.x -= 0.1;
 		else if (this.speed.x < 0)
-			this.speed.x += 0.02;
+			this.speed.x += 0.1;
 		if (this.x > width || this.x < 0)
 			this.speed.x = 0;
 	}

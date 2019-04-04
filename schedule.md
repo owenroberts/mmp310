@@ -83,10 +83,15 @@ title: Schedule
 ## Week 9 **Objects**
 - [Objects](notes/objects)
 - [Class](notes/class)
+- **Assignment 9: Game Graphics**
+	- Create custom graphics for the spaceship and asteroids
+	- Can use a new theme
+	- Randomize one property of asteroids
+	- Add one new property to the spaceship
 
 ## Week 10 **Mobile Interaction**
-- [Mobile Touches]
-- [Class Inheritence]
+- [Mobile Events]()
+- [Class Inheritence]()
 
 <!--  start with simple array assignment
 	use data source in week 2 -->

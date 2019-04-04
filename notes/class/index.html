@@ -1,0 +1,254 @@
+---
+layout: slides
+title: Class
+week: 9
+---
+
+<div class="slide">
+	<p>In JavaScript, classes are a special kind of function that create an object definition.</p>
+	<p>For our purposes, <em>class</em> and <em>object</em> mean the same thing.</p>
+	<p>Generally, both terms refer to the programming practice of organizing code into objects, which can then be used as a <note>prototype</note>, a sort of <note>blueprint</note> for components of our program.</p>
+</div>
+
+<div class="slide">
+	<p>In the previous class we created a <code>spaceship</code> object that uses <note>properties</note> to define the position, size, speed of the spaceship, and <note>methods</note> to draw the spaceship and move it.</p>
+	<p>For the "enemies" in our game, we will make asteroids.  Those asteroids will all use the same set of properties and methods.</p>
+	<p>In order to save time writing code, we'll define a basic idea of an asteroid as a <note>class</note>, and then use that class to create new asteroids.</p>
+</div>
+
+<div class="slide">
+	<h2>Constructor</h2>
+	<p>The syntax for a class is a bit different than a function declaration.</p>
+	<pre><code>class Asteroid {
+	constructor() {
+		this.size = 100;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<p>This class declaration has no parentheses.  It defines a class, which contains information, so there are no arguments.</p>
+	<p>Generally, class names are capitalized.  This makes it easier to distinguish them from variables.  That's why our class is <code>Asteroid</code> while the <code>spaceship</code> object literal is lowercase.</p>
+</div>
+
+<div class="slide">
+	<p>Classes have to include a special <code>constructor()</code> function, which can take arguments.  When an instance of the class is created, this function is classed to set the basic properties of the class.</p>
+	<p><code>this</code> is used inside the class methods to make the data available to all methods in the object.  This is sort of like a global variable in a program, but within the scope of the object.</p>
+</div>
+
+<div class="slide">
+	<h2>Instance</h2>
+	<p>An <note>instance</note> of a class is one object based on the class prototype.  An isntance is created using the <code>new</code> keyword.</p>
+	<pre><code>var ast = new Asteroid();</code></pre>
+	<p>Let's look at an example creating asteroids.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>class Asteroid {
+	constructor() {
+		this.size = 100;
+		this.x = random(width);
+		this.y = random(height);
+	}
+	display() {
+		fill(0);
+		noStroke();
+		ellipse(this.x, this.y, this.size);
+	}
+}
+
+// array to keep track of asteroids
+var asteroids = []; 
+
+function draw() {
+	background(51);
+	
+	// add a new asteroid randomly
+	if (random(100) > 99) {
+		asteroids.push(new Asteroid());
+	}
+
+	// loop over asteroids and display
+	for (let i = 0; i < asteroids.length; i++) {
+		asteroids[i].display();
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Like our <code>spaceship</code> function, the <code>Asteroid</code> has a <code>display()</code> function that is used to draw it on the canvas.</p>
+	<p>Because this is a <code>class</code> constructor, the syntax is a little different.  We can simply write the name of the function with parentheses and curly brackets, which looks a bit cleaner.</p>
+	<p>Member functions still use <code>this</code> to refer to the object instance.</p>
+</div>
+
+<div class="slide">
+	<p>Another difference with the asteroids is the <code>for</code> loop.</p>
+	<pre><code>for (let i = 0; i < asteroids.length; i++) {
+	asteroids[i].display();
+}</code></pre>
+	<p>Because there are multiple asteroids, we need to use an array and loop to draw all of them.  This saves us from having to write <code>asteroid.display()</code> over and over.</p>
+</div>
+
+<div class="slide">
+	<h2>Update</h2>
+	<p>Let's add a new function to update the asteroids.  They will move in two dimensions, to make them less predictable for the player.</p>
+	<p>We will add a speed property that will be an object with it's own <code>x</code> and <code>y</code> values.</p>
+	<p>After displaying each asteroid, we will update them.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>class Asteroid {
+	constructor() {
+		this.size = 100;
+		this.x = random(width);
+		this.y = random(-height); // negative to make asteroids appear from above canvas
+		
+		// object literal inside object/class
+		this.speed = {
+			x: random(-1, 1),
+			y: random(1, 5)
+		}; 
+	}
+	display() {
+		fill(0);
+		noStroke();
+		ellipse(this.x, this.y, this.size);
+	}
+	update() {
+		this.x += this.speed.x;
+		this.y += this.speed.y;
+	}
+}
+
+// array to keep track of asteroids
+var asteroids = []; 
+
+function draw() {
+	background(51);
+	
+	// add a new asteroid randomly
+	if (random(100) > 99) {
+		asteroids.push(new Asteroid());
+	}
+
+	// loop over asteroids and display
+	for (let i = 0; i < asteroids.length; i++) {
+		asteroids[i].display();
+		asteroids[i].update();
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Currently, it's possible for the asteroids to fly off the right or left side of the screen.</p>
+	<p>We can add some basic edge detection to make the asteroids bounce back toward the inside of the canvas.</p>
+	<pre><code>update() {
+	this.x += this.speed.x;
+	this.y += this.speed.y;
+
+	// if x goes off left or right
+	if (this.x < 0 || this.x > width) {
+		// reverse x speed
+		this.x *= -1;
+	}
+}</code></pre>
+</div>
+
+<div class="slide">
+	<h2>Collision</h2>
+	<p>Now we're ready to bring the player back into the sketch.</p>
+	<p>The asteroids are the "enemies", so if the player gets hit by an asteroid they should lose the game.  In the future, we'll code a more sophisticated to deal with this.  For now, let's just write "You died" and turn the game loop off.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>class Asteroid {
+	constructor() {
+		this.size = 100;
+		this.x = random(width);
+		this.y = random(-height);
+		this.speed = {
+			x: random(-1, 1),
+			y: random(1, 5)
+		}; 
+	}
+	display() {
+		fill(0);
+		noStroke();
+		ellipse(this.x, this.y, this.size);
+	}
+	update() {
+		this.x += this.speed.x;
+		this.y += this.speed.y;
+
+		if (this.x < 0 || this.x > width) {
+			this.x *= -1;
+		}
+	}
+	collide(other) {
+		// if distance between the spaceship and asteroid is smaller than size of asteroid
+		var d = dist(this.x, this.y, other.x, other.y);
+		if (d < this.size / 2) {
+			// game is over
+			textSize(150);
+			fill('orange');
+			textAlign(CENTER, CENTER);
+			text("YOU DIED", width/2, height/2);
+			noLoop(); // kills the draw loop
+		}
+	}
+}
+
+var asteroids = []; 
+
+var spaceship = {
+	x: 320,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		fill('white');
+		noStroke();
+		triangle(this.x, this.y, this.x + this.size/2, this.y + this.size, this.x - this.size/2, this.y + this.size);
+	},
+	update: function() {
+		if (keyIsDown(LEFT_ARROW)) {
+			this.x -= this.speed;
+		}
+		if (keyIsDown(RIGHT_ARROW)) {
+			this.x += this.speed;
+		}
+	}
+};
+
+function draw() {
+	background(51);
+	
+	if (random(100) > 99) {
+		asteroids.push(new Asteroid());
+	}
+
+	// display and update spaceship
+	spaceship.display();
+	spaceship.update();
+
+	for (let i = 0; i < asteroids.length; i++) {
+		asteroids[i].display();
+		asteroids[i].update();
+
+		// detect collision with spaceship
+		asteroids[i].collide(spaceship);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>The <code>collide()</code> function of the <code>Asteroid</code> takes an argument, <code>other</code>.  The <code>other</code> is whatever object is being tested for collision.</p>
+	<p>The function calculates the distance between the position of <code>other</code> and <code>this</code>, referencing the current asteroid.</p>
+	<p>If that distances is smaller than half the asteroid, we know the asteroid and spaceship have entered the same space.</p>
+</div>
+
+<div class="slide">
+	<p>Next we will add mobile touch controls for the spaceship, more structured classes and scenes for the game.</p>
+	<p>For now, try designing the asteroids for your own game.  Update the design and randomize one component of the asteroids visuals so there is some variety.</p>
+	<p>For a challenge, try detecting when the asteroids collide with each other.  Use a visual change to show the asteroids have collided.</p>
+</div>
