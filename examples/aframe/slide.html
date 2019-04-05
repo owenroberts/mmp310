@@ -19,38 +19,47 @@
 	<a-scene id="scene" embedded arjs>
 		<a-assets>
 			<img id="fish" src='fish.jpg'>
+			<img id="bird" src='bird.jpg'>
+			<img id="cat" src='cat.jpg'>
 		</a-assets>
 		<!-- define a camera which will move according to the marker position -->
 		<a-marker-camera preset='hiro'></a-marker-camera>
 		
 		<a-entity id="foo">
-			<a-box position='0 0 0' scale='0.5 0.1 0.5' src="#fish" ></a-box>
+			<a-entity axis></a-entity>
+			<a-plane position="-2 -1 -1" rotation="-90 0 0" height="1" width="1" src="#bird" >
+				<a-text value="I'm a bird :)"  color="hotpink" position="0 0 0.1" align="center"></a-text>
+			</a-plane>
+			
+			<a-plane position="0  -1 -1" rotation="-90 0 0" height="1" width="1" src="#cat" >
+				<a-text value="I'm a cat :/"  color="aqua" position="0 0 0.1" align="center"></a-text>
+			</a-plane>
+			<a-plane position="2  -1 -1" rotation="-90 0 0" height="1" width="1" src="#fish" >
+				<a-text value="I'm a fish :&"  color="purple" position="0 0 0.1" align="center"></a-text>
+			</a-plane>
 		</a-entity>
 	</a-scene>
 
 	<script>
 
 		const foo = document.querySelector('#foo');
-		let ratio = { x: 360 / window.innerWidth, y: 360 / window.innerHeight };
+		let ratio = { x: 0.001, y: 0.001 };
 		let touch = { t: 50 };
 		function touchStart(ev) {
-			ev.preventDefault();
 			touch.x = ev.touches[0].clientX;
 			touch.y = ev.touches[0].clientY;
 			touch.px = ev.touches[0].clientX;
 			touch.py = ev.touches[0].clientY;
 		}
 		function touchMove(ev) {
-			ev.preventDefault();
 			touch.x = ev.touches[0].clientX;
 			touch.y = ev.touches[0].clientY;
 			const d = {
 				x: (touch.x - touch.px) * ratio.x,
 				y: (touch.y - touch.py) * ratio.y
 			};
-			const r = foo.getAttribute('rotation');
-			// foo.setAttribute('rotation', { z: , x: 0, y: 0 });
-			foo.setAttribute('rotation', { z: r.x - d.x, x: r.y + d.y, y: 0 });
+			const p = foo.getAttribute('position');
+			foo.setAttribute('position', {x: p.x + d.x, y: 0, z: p.z + d.y});
 		}
 		function touchEnd(ev) {
 			const d = {
