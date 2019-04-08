@@ -89,9 +89,13 @@ title: Schedule
 	- Randomize one property of asteroids
 	- Add one new property to the spaceship
 
-## Week 10 **Mobile Interaction**
+## Week 10 **Class Inheritance**
+- [Class Inheritence](notes/class/inheritance)
+
+
+## Week 11 **Mobile Interaction**
 - [Mobile Events]()
-- [Class Inheritence]()
+
 
 <!--  start with simple array assignment
 	use data source in week 2 -->

@@ -1,0 +1,157 @@
+---
+layout: slides
+title: Class Inheritance
+week: 10
+---
+
+<div class="slide">
+	<p>Last week we looked at created objects and classes in JavaScript.</p>
+	<p>In object oriented programming, one of the most important and fundamental concepts is <note>class inheritance</note>, which is the ability to create an class based on an existing class.</p>
+	<p>Class inheritance can be used to simplify our code by looking at what properties and methods objects share and combining those into a base class.</p>
+</div>
+
+<div class="slide">
+	<p>Consider the components of the spaceship game we are building.  So far we have a spaceship and asteroids.  This week we will add lasers for the spaceship.  That gives our game three components.</p>
+	<p>What properties do each component share?</p>
+	<p>How are the different?</p>
+</div>
+
+<div class="slide">
+	<p>Let's start by comparing our <code>spaceship</code> object and our <code>Asteroid</code> class and seeing what properties are the same.</p>
+</div>
+
+<div class="slide">
+	<div class="side-by-side">
+		<div class="ex" data-nogutter>var spaceship = {
+	x: 0,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		// draws spaceship
+	},
+	update: function() {
+		// moves spaceship
+	}
+};</div>
+		<div class="ex" data-nogutter>class Asteroid {
+	constructor() {
+		this.size = 100;
+		this.x = random(width);
+		this.y = random(-height);
+		this.speed = {
+			x: random(-1, 1),
+			y: random(1, 5)
+		}; 
+	}
+	display() {
+		// draws asteroid
+	}
+	update() {
+		// move asteroid
+	}
+}</div>
+</div>
+</div>
+
+<div class="slide">
+	<p>Notice that they have the exact same properties and methods.  (We're ignoring the collide method for now).</p>
+	<p>But there are differences between those properties and methods.</p>
+	<p>The trick of class inheritance is creating a base class that can easily be extended to create different classes.</p>
+</div>
+
+<div class="slide">
+	<p>Let's try combining those properties.</p>
+	<p>We'll create a base class, or <code>super</code> class, which the spaceship and asteroids will extend.</p>
+	<p>This class will be call <code>Entity</code>, "a thing with distinct and independent existence", or a generic thing.</p>
+	<p>Let's start simple with x, y and size.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Entity {
+	// constructor takes x,y arguments because they differ in spaceship and asteroid
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+		this.size = 100;  // same in both
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>No let's create the <code>Asteroid</code> and <code>Spaceship</code> sub classes.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Spaceship extends Entity {
+	constructor() {
+		super(width/2, height - 200);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>The <code>super</code> function is used to call the <code>constructor</code> of the base class.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Asteroid extends Entity {
+	constructor() {
+		super(random(width), random(-100));
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>These look similar, except for the actual values passed to the <code>x</code> and <code>y</code> coordinates of each component.</p>
+	<p>However, the speed component is different for each element. Here we can decide to either make the speed part of the super class or part of the subclass.</p>
+	<p>Because the speed will be important to updating each object, it's a good idea to put it in the super class, so we can't create sub classes that don't have a speed property.</p>
+</div>
+
+
+<div class="slide">
+	<div class="ex">class Entity {
+	// constructor takes x,y arguments because they differ in spaceship and asteroid
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+		this.size = 100;  // same in both
+		this.speed = {
+			x: 0,
+			y: 0
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex">class Spaceship extends Entity {
+	constructor() {
+		super(width/2, height - 200);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<div class="ex">class Asteroid extends Entity {
+	constructor() {
+		super(random(width), random(-100));
+		this.speed.x = random(-1, 1);
+		this.speed.y = random(5);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>This establishes a default speed applied to any object.  If a sub class needs to have a different speed it can be set after the <code>super</code> function creates a default object.</p>
+	<p>For spaceships and asteroids their <code>display</code> and <code>update</code> functions are mostly different, so we can define them within the sub classes.</p>
+	<p>We will add one more method to the super class <code>Entity</code>, the <code>collide</code> method, but first let's do a little challenge.</p>
+</div>
+
+<div class="slide">
+	<h2>Lasers</h2>
+	<p>Now that we have a base class for spaceships and asteroids, try making a class for lasers.</p>
+	<p>Lasers should be created when the user hits a button, and then travel toward the asteroids. (We'll work on collisions later).</p>
+	<p>Create a <code>Laser</code> class and try to create your own lasers.</p>
+	<p>We'll cover a possible solution for lasers in the next class.</p>
+</div>
