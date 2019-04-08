@@ -91,7 +91,10 @@ title: Schedule
 
 ## Week 10 **Class Inheritance**
 - [Class Inheritence](notes/class/inheritance)
-
+- **Assignment 10: Laser Sub Class**
+	- Create a custom class for game lasers
+	- Extend the Entity class
+	- Write `display` and `update` methods
 
 ## Week 11 **Mobile Interaction**
 - [Mobile Events]()
