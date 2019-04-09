@@ -20,4 +20,7 @@ class Spaceship extends Entity {
 			this.x + this.size/2, this.y + this.size
 			);
 	}
+	setSpeed(speed) {
+		this.speed.x = speed;
+	}
 }

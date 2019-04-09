@@ -107,17 +107,14 @@ function touchEnded() {
 		const delta = touch.x - touch.px;
 
 		if (delta > 20) {
-			player.speed.x = 5;
+			player.setSpeed(5)
 		} else if (delta < -20) {
-			player.speed.x = -5;
+			player.setSpeed(-5);
 		} else {
-			player.speed.x = 0;
+			player.setSpeed(0);
 			lasers.push(new Laser());
 		}
 	}
-
-	touch.px = touch.x;
-	touch.py = touch.y;
 }
 
 

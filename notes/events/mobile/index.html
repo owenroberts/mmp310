@@ -11,11 +11,140 @@ week: 11
 </div>
 
 <div class="slide">
+	<h2>Device emulator</h2>
 	<p>To start, we need to change our development environment a bit.  Ideally, we could test directly on a mobile device, but it will be hard to set that up in class because our computers are restricted and everyone likely has different types of phones.</p>
+</div>
+
+<div class="slide">
 	<p>The next best way is to use the Chrome device emulator.</p>
 	<p>To start, open the Developer Tools (Command + Option + I) and then click on small devices icon left of the Elements tab, (Command + Option + M with browser window focused).</p>
 </div>
 
 <div class="slide">
 	<img src="device.png">
+</div>
+
+<div class="slide">
+	<p>Once you have the mobile emulator open, you can choose different devices from the device drop down or enter specific dimensions.</p>
+	<p>There are some other nice tools in here like the zoom and screen capture.</p>
+	<p>You will also notice the cursor has turned into a circle with a white outline and transparent fill.  In this mode, Chrome pretends that the mouse cursor is a finger and click events will be registered as touch events.</p>
+	<p>This will allow us to test touch events that would be used by a mobile device.</p>
+</div>
+
+<div class="slide">
+	<h2>Touch events</h2>
+	<p>JavaScript natively supports four basic touch events.</p>
+	<table class="code define">
+		<tr><td>touchstart</td><td>User begins touch</td></tr>
+		<tr><td>touchend</td><td>User ends touch</td></tr>
+		<tr><td>touchcancel</td><td>User touch leaves the browser window</td></tr>
+		<tr><td>touchmove</td><td>User touch moves</td></tr>
+	</table>
+</div>
+
+<div class="slide">
+	<p><note>p5</note> has function built in like the <code>mousePressed</code> function to respond to touch events.</p>
+	<p>It includes a <a href="https://p5js.org/reference/#/p5/touches" target="_blank">touches</a> array, simliar to <code>mouseX</code> or <code>mouseY</code>, but with multiple points, because there could be more than one finger touching the device.</p>
+	<p>We'll focus on detecting taps and swipes from just the first touch.</p>
+</div>
+
+<div class="slide">
+	<p>To start we need our own variable, <code>touch</code> to keep track of touches.</p> 
+	<p>We need to measure the difference between the beginning and end positions of a touch.</p>
+	<p>Since there's no <code>pmouseX</code> for touches, we'll make our own.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">// touch starts as an empty object
+var touch = {};
+function touchStarted() {
+	// when touch starts, record the position
+	if (touches[0]) {
+		touch.x = touchs[0].x;
+		touch.y = touchs[0].y;
+		touch.px = touchs[0].x;
+		touch.py = touchs[0].y;
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>We need to make sure we weren't triggering touches to fast and the <code>touches</code> array was already reset, so first we check to make sure it's available with <code>if (touches[0])</code>.</p>
+	<p>Then we set the current xy and previous xy to the current touch.  We will detect to see if the touch has move far and in what direction.</p>
+	<p>If it hasn't moved much, we'll call it a tap.</p>
+	<p>If it moves to the left we'll make it a swipe left, and a swipe right if it's the opposite.</p>
+</div>
+
+<div class="slide">
+	<p>Before the touch ends we need to follow it if it moves.</p>
+	<div class="ex">function touchMoved() {
+	touch.x = touches[0].x;
+	touch.y = touches[0].y;
+}</div>
+</div>
+
+<div class="slide">
+	<p>Now we can see when the touch ends and call functions from the spaceship based on what the user does.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">// set a threshold, this is how far the touch has to move to become a swipe
+var threshold = 20;
+function touchEnded() {
+	// calculate how far the touch moved horizontally
+	var delta = touch.x - touch.px;  // delta means "difference"
+	if (delta > threshold) {
+		// swipe right
+		spaceship.setSpeed(5);
+	} else if (delta < -threshold) {
+		spaceship.setSpeed(-5);
+	} else {
+		// tap
+		spaceship.setSpeed(0); // stop spaceship
+		lasers.push(new Laser()); // shoot a laser
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>For the sake of simplicity, a tap will both stop the spaceship and shoot a new laser.</p>
+	<p>One result of that is that the spaceship cannot move and shoot at the same time.  This could be good or bad depending on how you expect the player to interact with the game.</p>
+	<p>As with everything in code, there are many different ways to achieve the same goals.</p>
+	<p>Try adjusting this code to give the player different controls.</p>
+</div>
+
+<div class="slide">
+	<h2>Spaceship class</h2>
+	<p>Now, of course, we need to update our <code>spaceship</code> to react to these changes.</p>  
+	<p>On the one hand, we need to add the <code>setSpeed</code> method we introduced in the <code>touchEnded</code> function.</p>
+	<p>We can also add to the <code>spaceship.update()</code> function to make it slow down as though there is some gravity in our game's "outer space".</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Spaceship extends Entity {
+	constructor() {
+		super(width/2, height - 100, 60);
+		this.drag = 0.1;  // amount to slow down over time
+	}
+	
+	setSpeed(speed) {
+		// this is pretty easy if we're just moving left and right
+		this.speed.x = speed;
+		// how would you change this to move up and down?
+	}
+	update() {
+		// first call the update function from the Entity class
+		super.update();
+		// next slow the space ship down
+		if (this.speed.x > 0) {
+			this.speed.x -= -this.drag; 
+		} else if (this.speed.x < 0) {
+			this.speed.x += this.drag;
+		}
+		// now make sure it doesn't fly out of the window
+		if (this.x > width || this.x < 0) {
+			this.speed.x = 0;
+		}
+	}
+}</div>
 </div>
