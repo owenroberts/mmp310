@@ -8,7 +8,7 @@ class Asteroid extends Entity {
 		this.speed.y = random(1, 2);
 	}
 	update() {
-		if (this.y > height) this.remove();
+		if (this.y > height) this.remove(asteroids);
 		if (this.x > width || this.x < 0) this.speed.x *= -1;
 		super.update();
 	}
@@ -16,9 +16,5 @@ class Asteroid extends Entity {
 		fill(0);
 		noStroke();
 		ellipse(this.x, this.y, this.size);
-	}
-	remove() {
-		const index = asteroids.indexOf(this);
-		asteroids.splice(index, 1);
 	}
 }

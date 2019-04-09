@@ -10,10 +10,6 @@ class Laser extends Entity {
 	}
 	update() {
 		super.update();
-		if (this.y < 0) this.remove();
-	}
-	remove() {
-		const index = lasers.indexOf(this);
-		lasers.splice(index, 1);
+		if (this.y < 0) this.remove(lasers);
 	}
 }

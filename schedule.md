@@ -97,7 +97,7 @@ title: Schedule
 	- Write `display` and `update` methods
 
 ## Week 11 **Mobile Interaction**
-- [Mobile Events]()
+- [Mobile Events](notes/events/mobile)
 
 
 <!--  start with simple array assignment
@@ -112,6 +112,12 @@ title: Schedule
 
 
 <!-- 
+
+game mechanics
+timers
+animations
+scenes
+
 
 other courses
 	http://www.cs.cmu.edu/~./15110/schedule.html

@@ -155,3 +155,111 @@ week: 10
 	<p>Create a <code>Laser</code> class and try to create your own lasers.</p>
 	<p>We'll cover a possible solution for lasers in the next class.</p>
 </div>
+
+<div class="slide">
+	<h2>Collision</h2>
+	<p>Now that you have an awesome <code>Laser</code> class you will have realized that in order for lasers to destroy the asteroids, you will need to detect collisions between lasers and asteroids, not just asteroids and the spaceship.</p>
+	<p>Our original <code>collide()</code> function can't do it because it has the position of the <code>spaceship</code> hard coded into the <code>dist()</code> function.</p>
+</div>
+
+<div class="slide">
+	<p>How can we update the <code>collide</code> function to account for multiple different classes?</p>
+	<p>One approach is to add an argument to the function and pass in the other objects themselves.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Entity {
+	collide(other) {
+		// calculate distance between the two
+		var d = dist(this.x, this.y, other.x, other.y);
+		// get the larger size between the two
+		var s;
+		if (this.size > other.size) {
+			s = this.size;
+		} else {
+			s = other.size;
+		}
+		// if distance is less than half the size, the entities overlap
+		if (d < s / 2) {
+			return true; // collision is happening
+		} else {
+			return false; // collision is not happening
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>The <code>collide()</code> function of the <code>Entity</code> takes an argument, <code>other</code>.  The <code>other</code> is whatever object is being tested for collision.</p>
+	<p>Once we determine that a collision is happening we don't want to just end the game because it might be a laser hitting an asteroid, rather than an asteroid hitting the spaceship.</p>
+	<p>Instead the function will just tell our main program whether the collision occurred and the main program can decide what to do.</p>
+	<p>Let's take a look at the for loop that handles the asteroids and update it.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">for (let i = 0; i < asteroids.length; i++) {
+	asteroids[i].display();
+	asteroids[i].update();
+
+	// detect collision with spaceship
+	if (asteroids[i].collide(spaceship)) {
+		// end game
+	}	
+
+	// loop over all of the lasers
+	for (let j = 0; j < lasers.length; j++) {
+		if (lasers[j].collide(asteroids[i])) {
+			// mark objects to be removed later 
+			asteroids[i].died = true;
+			lasers[j].died = true;
+		}
+	}	
+}</div>
+</div>
+
+<div class="slide">
+	<p>Finally, we need to add another method to the <code>Entity</code> class to remove the instance from the array.</p>
+	<p>However, because asteroids and lasers are part of different arrays we need to pass in the specific list for each to the remove function.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Entity {
+	remove(list) {
+		// get the index of the entity in the array (list)
+		// this refers to the entity
+		const index = list.indexOf(this);
+		// splice the entity out of list
+		list.splice(index, 1);
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>Once we've run through the updates of all the objects in the game, we can loop through them again to clean up and remove objects that have collided with other objects.</p>
+	<p>By separating these events we can add support for animations or other events later.  We also avoid breaking for loop by chaning the order of elements in the array as we loop over it.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">for (let i = 0; i < asteroids.length; i++) {
+	asteroids[i].display();
+	asteroids[i].update();
+}
+
+for (let i = 0; i < lasers.length; i++) {
+	lasers[i].display();
+	lasers[i].update();
+}
+
+for (let i = 0; i < lasers.length; i++) {
+	if (lasers[i].died) {
+		lasers[i].remove(lasers);
+	}
+}
+
+for (let i = 0; i < asteroids.length; i++) {
+	if (asteroids[i].died) {
+		asteroids[i].remove(asteroids);
+	}
+}</div>
+</div>
+

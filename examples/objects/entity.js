@@ -18,4 +18,8 @@ class Entity {
 		if (d < s/2) return true;
 		else return false;
 	}
+	remove(list) {
+		const index = list.indexOf(this);
+		list.splice(index, 1);
+	}
 }

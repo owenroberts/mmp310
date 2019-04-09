@@ -62,11 +62,11 @@ function game() {
 	}
 
 	for (let i = 0; i < lasers.length; i++) {
-		if (lasers[i].died) lasers[i].remove();
+		if (lasers[i].died) lasers[i].remove(lasers);
 	}
 
 	for (let i = 0; i < asteroids.length; i++) {
-		if (asteroids[i].died) asteroids[i].remove();
+		if (asteroids[i].died) asteroids[i].remove(asteroids);
 	}
 
 	
@@ -95,11 +95,9 @@ function touchStarted() {
 function touchMoved() {
 	touch.x = touches[0].x;
 	touch.y = touches[0].y;
-	console.log(touch.x, touch.y);
 }
 
 function touchEnded() {
-	
 	if (s.scene.over && s.counter <= 0) {
 		asteroids = [];
 		s.scene.game = true;

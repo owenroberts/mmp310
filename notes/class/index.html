@@ -186,7 +186,7 @@ function draw() {
 	}
 	collide(other) {
 		// if distance between the spaceship and asteroid is smaller than size of asteroid
-		var d = dist(this.x, this.y, other.x, other.y);
+		var d = dist(this.x, this.y, spaceship.x, spaceship.y);
 		if (d < this.size / 2) {
 			// game is over
 			textSize(150);
@@ -236,16 +236,16 @@ function draw() {
 		asteroids[i].update();
 
 		// detect collision with spaceship
-		asteroids[i].collide(spaceship);
+		asteroids[i].collide();
 	}
 }</div>
 </div>
 
 <div class="slide">
-	<p>The <code>collide()</code> function of the <code>Asteroid</code> takes an argument, <code>other</code>.  The <code>other</code> is whatever object is being tested for collision.</p>
-	<p>The function calculates the distance between the position of <code>other</code> and <code>this</code>, referencing the current asteroid.</p>
+	<p>The <code>collide()</code> function calculates the distance between the position of <code>spaceshp</code> and <code>this</code>, referencing the current asteroid.</p>
 	<p>If that distances is smaller than half the asteroid, we know the asteroid and spaceship have entered the same space.</p>
 </div>
+
 
 <div class="slide">
 	<p>Next we will add mobile touch controls for the spaceship, more structured classes and scenes for the game.</p>
