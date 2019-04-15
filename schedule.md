@@ -119,9 +119,14 @@ title: Schedule
 <!-- 
 
 game mechanics
+custom update / sides etc
+difficulty increase
 timers
 animations
 scenes
+power ups
+
+
 
 
 other courses

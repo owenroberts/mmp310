@@ -1,0 +1,97 @@
+---
+layout: slides
+title: Game Dynamics
+week: 11
+---
+
+<div class="slide">
+	<p>Last time we finished the basic components of our game using class inheritance.</p>
+	<p>Today we'll look at a few different strategies for changing the game dynamics.</p>
+	<p>Game dynamics refer to the way a game changes as the user plays.  A game that stays the same will be pretty boring, so we need to find ways to balance the dynamics in order to make the game more challenging and have a sense of forward motion.</p>
+</div>
+
+<div class="slide">
+	<h2>Challenge</h2>
+	<p>We'll start with something relatively simple.</p>
+	<p>The rate that asteroids are added into the game is determined by the randomness in this line in <note>sketch.js</note>.</p>
+	<div class="ex">// adds random asteroid
+if (random(100) > 99) {
+	// create an asteroid
+	asteroids.push(new Asteroid());
+}</div>
+</div>
+
+<div class="slide">
+	<p>The likelihood that an asteroid is added to the game in any given frame is 1 out of 100.  If we raise that probability there will be more asteroids and therefore the game will become more difficult.</p>
+	<p>Try changing that number first to see the difference.</p>
+	<p>Then we need to decide when and how to change it.  Perhaps each time player shoots an asteroid, the probability will be raised.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">// global variable to track probability
+	var asteroidProbability = 99;
+function draw() {
+	// adds random asteroid
+	if (random(100) > asteroidProbability) {
+		// create an asteroid
+		asteroids.push(new Asteroid());
+	}
+
+
+	for (let i = 0; i < asteroids.length; i++) {
+		
+		// detect all lasers
+		for (let j = 0; j < lasers.length; j++) {
+			if (asteroids[i].collide(lasers[j])) {
+				asteroids[i].died = true;
+				lasers[j].died = true;
+
+				// this is when a laser hits an asteroid
+				asteroidProbability -= 0.1;
+			}
+		}
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<h2>Counters</h2>
+	<p>Now that the game gets more difficult, we can add some reward to make the game easier.</p>
+	<p>Eventually we will add power ups for the lasers, but before we do that we need to learn a new component of creating a game: <note>counters</note>.</p>
+</div>
+
+<div class="slide">
+	<p>In games, we often want to wait for a period of time for something to happen.  The best way to do this is with a counter.</p>
+	<p>A counter is a simple way of counting the number of frames that pass while the game is going.</p>
+	<p>A simple place to start is with the laser.  It is firing constantly when the player presses the fire button.</p>
+	<p>To make the laser fire at an interval we can implement a counter.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">// global vars
+var laserTimeout = 12; // how long to wait between firing
+var laserCounter = 0; // used to count between each one
+
+function draw() {
+
+	// if the laserCounter is 0 that means we can fire
+	if (laserCounter <= 0) {
+		if (keyIsDown(32) || keyIsDown(88)) {
+			lasers.push(new Laser());
+
+			// if a laser is fired, set the counter to timeout
+			laserCounter = laserTimeout;
+		}
+	} else {
+		// after the laser has been fired we count down to 0
+		laserCounter--;
+	}
+}
+</div>
+</div>
+
+<div class="slide">
+	<p>Now we can make the game easier or harder by changing the rate that the laser fires.</p>
+	<p>What other ways can the difficulty be increased or decreased?</p>
+	<p>Challenge: Create a <code>Powerup</code> class that changes the laser fire rate when it is hit by the spaceship. (Hint: Start with the <code>Asteroid</code> class and modify it to look different and collide with the spaceship.</p>
+</div>
