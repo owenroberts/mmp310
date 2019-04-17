@@ -99,11 +99,11 @@ title: Schedule
 ## Week 11 **Mobile Interaction**
 - [Mobile Events](notes/events/mobile)
 - [Game Dynamics](notes/game/dynamics)
-- **Assignemnt 11: Mobile Events**
-	- Implement mobile events in your game
-	- Adjust the speed and properties for game play
-	- Add game dynamics to make the game more difficult over time
-
+- **Assignemnt 11: Final Project Proposal**
+	- Choose one of the projects to continue working on for the final
+	- Propose a substantial update 
+		- Including updated graphics 
+		- New code for added mechanic or feature
 
 <!--  start with simple array assignment
 	use data source in week 2 -->
