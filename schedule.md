@@ -96,14 +96,19 @@ title: Schedule
 	- Extend the Entity class
 	- Write `display` and `update` methods
 
-## Week 11 **Mobile Interaction**
-- [Mobile Events](notes/events/mobile)
+## Week 11 **Game Dynamics**
 - [Game Dynamics](notes/game/dynamics)
 - **Assignemnt 11: Final Project Proposal**
 	- Choose one of the projects to continue working on for the final
 	- Propose a substantial update 
 		- Including updated graphics 
 		- New code for added mechanic or feature
+
+## Week 12 **Mobile Interaction**
+- Present Final Project proposal
+- [Mobile Events](notes/events/mobile)
+
+## Week 13/14 **Final project workshop**
 
 <!--  start with simple array assignment
 	use data source in week 2 -->
