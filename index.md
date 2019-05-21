@@ -11,7 +11,7 @@ The class notes, schedule and assignments are all found here.
 - [Syllabus](
 https://docs.google.com/document/d/1mbiKKiymvCavG_0lyng6lG39FfFbqoCu0NImloCzdAY/edit?usp=sharing
 ){:target="blank"}
-- [Student Work](studentwork/)
+- [Student Work](student_work/)
 - [Class Examples](examples/)
 - [Public Pad](pad)
 
