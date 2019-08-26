@@ -8,9 +8,7 @@ This is the class page of MMP 310 at BMCC.
 The class notes, schedule and assignments are all found here.
 
 - [Schedule](schedule.html)
-- [Syllabus](
-https://docs.google.com/document/d/1mbiKKiymvCavG_0lyng6lG39FfFbqoCu0NImloCzdAY/edit?usp=sharing
-){:target="blank"}
+- [Syllabus](https://docs.google.com/document/d/1IR6tYZ7jp6D1GzWjWlMQXlB7YNJQs3XXr---QabwbGM/edit){:target="blank"}
 - [Student Work](student_work/)
 - [Class Examples](examples/)
 - [Public Pad](pad)
