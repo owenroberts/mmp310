@@ -13,13 +13,13 @@ The class notes, schedule and assignments are all found here.
 - [Class Examples](examples/)
 - [Public Pad](pad)
 
-## Spring 2019
+## Fall 2019
 
 - Instructor: Owen Roberts
 - email: oroberts AT bmcc DOT cuny DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Tuesday 3pm - 6pm, Wednesday by appointment
+- Office hours: Monday 2pm - 5pm, Wednesday by appointment
 - Class meeting time: Monday/Wednesday 5:30 - 7:10 pm
 - Room: Fiterman 1006
 
