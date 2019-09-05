@@ -14,9 +14,10 @@ week: 1
 - [Mad takes](http://www.madtakes.com/){:target="blank"}
  -->
 
-- [Super Pixel Quest](Emmanuel Espinasse){:target="blank"} by Emmanuel Espinasse
-- [My boyfriend came back from the war](http://www.teleportacia.org/war/){:target="blank"} by Olia Lialina
-- [Roaxaca Zone](http://www.bdnext.net/roaxaca-zone/){:target="blank"} by Antoine Maillard
-- [Memories](http://memories.sutueatsflies.com/){:target="blank"} by Stuart Campbell
-- [PoCom-UK-001](http://e-merl.com/pocom.htm){:target="blank"} by Daniel Merlin Goodbrey
-- [My Obsession with Chess](http://scottmccloud.com/1-webcomics/chess/chess.html){:target="blank"} by Scott McCloud
+- [Super Pixel Quest](http://superpixelquest.com/){:target="_blank"} by Emmanuel Espinasse
+- [My boyfriend came back from the war](http://www.teleportacia.org/war/){:target="_blank"} by Olia Lialina
+- [Roaxaca Zone](http://www.bdnext.net/roaxaca-zone/){:target="_blank"} by Antoine Maillard
+- [Memories](http://memories.sutueatsflies.com/){:target="_blank"} by Stuart Campbell
+- [PoCom-UK-001](http://e-merl.com/pocom.htm){:target="_blank"} by Daniel Merlin Goodbrey
+- [My Obsession with Chess](http://scottmccloud.com/1-webcomics/chess/chess.html){:target="_blank"} by Scott McCloud
+- [Bla Bla](http://blabla.nfb.ca/#/blabla){:target="_blank"} by Vincent Morisset 
