@@ -1,0 +1,157 @@
+name,club,age,position,position_cat,market_value/mil's,page_views,fpl_value,fpl_sel,fpl_points,region,nationality,new_foreign,age_cat,club_id,big_club,new_signing
+Matthew Taylor,Burnley,35,LM,2,0.25,255,4.5,0.40%,0,1,England,0,6,4,0,0
+Jonjoe Kenny,Everton,20,RB,3,0.25,53,4.5,0.20%,1,1,England,0,1,7,0,0
+Joel Coleman,Huddersfield,21,GK,4,0.25,36,4,2.40%,0,1,England,0,1,8,0,0
+Joe Lolley,Huddersfield,24,RW,1,0.25,63,4.5,0.10%,0,1,England,0,2,8,0,0
+Jack Payne,Huddersfield,25,CM,2,0.25,81,4.5,0.10%,0,1,England,0,3,8,0,0
+Dean Whitehead,Huddersfield,35,CM,2,0.25,161,4.5,0.10%,0,1,England,0,6,8,0,0
+Jason McCarthy,Southampton,21,CB,3,0.25,53,4.5,0.10%,0,1,England,0,1,14,0,0
+Sam Field,West Brom,19,CM,2,0.25,15,4.5,0.10%,9,1,England,0,1,19,0,0
+Solly March,Brighton,23,RM,2,0.5,139,5,0.20%,0,1,England,0,2,3,0,0
+Matthew Pennington,Everton,22,CB,3,0.5,219,4,1.70%,9,1,England,0,2,7,0,0
+Harry Bunn,Huddersfield,24,LW,1,0.5,85,4.5,0.10%,0,1,England,0,2,8,0,0
+Martin Cranie,Huddersfield,30,CB,3,0.5,67,4,1.40%,0,1,England,0,4,8,0,0
+Mark Hudson,Huddersfield,35,CB,3,0.5,70,4,1.40%,0,1,England,0,6,8,0,0
+Ben Hamer,Leicester City,29,GK,4,0.5,132,4.5,0.10%,0,1,England,0,4,9,0,0
+Josh Sims,Southampton,20,RW,1,0.5,126,4.5,0.10%,12,1,England,0,1,14,0,0
+Connor Goldson,Brighton,24,CB,3,0.75,52,4,0.80%,0,1,England,0,2,3,0,0
+Kasey Palmer,Huddersfield,20,AM,1,0.75,220,5.5,0.20%,0,1,England,0,1,8,0,0
+Scott Malone,Huddersfield,26,LB,3,0.75,81,4.5,0.10%,0,1,England,0,3,8,0,0
+Rolando Aarons,Newcastle United,21,LW,1,0.75,170,4.5,0.10%,0,1,England,0,1,13,0,0
+Sam McQueen,Southampton,22,LM,2,0.75,221,4.5,0.10%,23,1,England,0,2,14,0,0
+Liam Rosenior,Brighton,33,RB,3,1,132,4,3.20%,0,1,England,0,5,3,0,0
+Steve Sidwell,Brighton,34,CM,2,1,461,4.5,0.60%,0,1,England,0,6,3,0,0
+Dean Marney,Burnley,33,CM,2,1,171,4.5,0.00%,51,1,England,0,5,4,0,0
+Jonathan Hogg,Huddersfield,28,CM,2,1,75,4.5,0.30%,0,1,England,0,4,8,0,0
+Axel Tuanzebe,Manchester City,19,CB,3,1,279,4,1.70%,14,1,England,0,1,12,1,0
+Josh Tymon,Stoke City,18,LB,3,1,120,4.5,0.10%,9,1,England,0,1,15,0,0
+Lee Grant,Stoke City,34,GK,4,1,480,4.5,1.20%,106,1,England,0,6,15,0,1
+Leon Britton,Swansea,34,CM,2,1,218,4.5,0.10%,32,1,England,0,6,16,0,0
+Ashley Fletcher,West Ham,21,CF,1,1,412,4.5,5.90%,16,1,England,0,1,20,0,1
+Gareth Barry,Everton,36,DM,2,1.5,1331,4.5,1.70%,68,1,England,0,6,7,0,0
+Trent Alexander-Arnold,Liverpool,18,RB,3,1.5,327,4.5,0.30%,15,2,England,0,1,10,1,0
+Michael Carrick,Manchester United,35,DM,2,1.5,1789,4.5,1.80%,42,1,England,0,6,12,1,0
+Peter Crouch,Stoke City,36,CF,1,1.5,2656,5,2.90%,79,1,England,0,6,15,0,0
+Jonathan Leko,West Brom,18,RW,1,1.5,169,4.5,0.20%,12,1,England,0,1,19,0,0
+Marc Pugh,Bournemouth,30,LW,1,2,140,5,0.10%,64,1,England,0,4,2,0,0
+Andrew Surman,Bournemouth,30,CM,2,2,154,4.5,1.10%,44,1,England,0,4,2,0,0
+James Tarkowski,Burnley,24,CB,3,2,116,4.5,0.10%,23,1,England,0,2,4,0,0
+Phil Jagielka,Everton,34,CB,3,2,566,5,6.30%,104,1,England,0,6,7,0,0
+Tommy Smith,Huddersfield,25,RB,3,2,65,5,1.10%,0,1,England,0,3,8,0,0
+Dominic Solanke,Liverpool,19,CF,1,2,671,5,2.00%,0,1,England,0,1,10,1,0
+Sheyi Ojo,Liverpool,20,LW,1,2,383,5,0.10%,0,1,England,0,1,10,1,0
+Simon Francis,Bournemouth,32,RB,3,2.5,167,4.5,4.00%,89,1,England,0,5,2,0,0
+Ashley Barnes,Burnley,27,CF,1,2.5,287,5.5,1.20%,81,1,England,0,3,4,0,0
+Matthew Lowton,Burnley,28,RB,3,2.5,121,4.5,1.20%,90,1,England,0,4,4,0,0
+Ben Chilwell,Leicester City,20,LB,3,2.5,288,4.5,0.80%,19,1,England,0,1,9,0,0
+Wayne Routledge,Swansea,32,LW,1,2.5,264,5.5,0.10%,74,1,England,0,5,16,0,0
+Dan Gosling,Bournemouth,27,CM,2,3,184,5,0.10%,49,1,England,0,3,2,0,0
+Charlie Daniels,Bournemouth,30,LB,3,3,185,5,19.80%,134,1,England,0,4,2,0,0
+Sam Baldock,Brighton,28,CF,1,3,204,5,0.20%,0,1,England,0,4,3,0,0
+Martin Kelly,Crystal Palace,27,RB,3,3,210,4.5,0.30%,46,1,England,0,3,6,0,0
+Matt Targett,Southampton,21,LB,3,3,110,4.5,0.20%,12,1,England,0,1,14,0,0
+Glenn Murray,Brighton,33,CF,1,3.5,496,6,1.30%,0,1,England,0,5,3,0,0
+Dominic Calvert-Lewin,Everton,20,SS,1,3.5,343,5,0.30%,17,1,England,0,1,7,0,1
+Jack Stephens,Southampton,23,CB,3,3.5,249,5,0.40%,60,1,England,0,2,14,0,0
+Nathan Dyer,Swansea,29,RW,1,3.5,313,4.5,0.10%,12,1,England,0,4,16,0,0
+Ashley Westwood,Burnley,27,DM,2,4,161,4.5,0.10%,13,1,England,0,3,4,0,0
+Tom Heaton,Burnley,31,GK,4,4,717,5,13.50%,149,1,England,0,4,4,0,0
+Joe Gomez,Liverpool,20,CB,3,4,460,4.5,0.40%,0,1,England,0,1,10,1,0
+Harry Winks,Tottenham,21,CM,2,4,806,5,0.00%,30,1,England,0,1,17,1,0
+Ben Foster,West Brom,34,GK,4,4,484,4.5,20.70%,113,1,England,0,6,19,0,0
+Junior Stanislas,Bournemouth,27,LW,1,4.5,315,6,0.60%,107,1,England,0,3,2,0,0
+Karl Darlow,Newcastle United,26,GK,4,4.5,235,4.5,1.10%,0,1,England,0,3,13,0,0
+Sam Byram,West Ham,23,RB,3,4.5,198,4.5,0.30%,29,1,England,0,2,20,0,0
+Carl Jenkinson,Arsenal,25,RB,3,5,561,4.5,0.40%,2,1,England,0,3,1,1,0
+Tyrone Mings,Bournemouth,24,CB,3,5,422,4.5,0.40%,4,1,England,0,2,2,0,0
+Steve Cook,Bournemouth,26,CB,3,5,184,5,2.00%,112,1,England,0,3,2,0,0
+Adam Smith,Bournemouth,26,RB,3,5,200,5,0.90%,104,1,England,0,3,2,0,0
+Jermain Defoe,Bournemouth,34,CF,1,5,3213,8,15.00%,166,1,England,0,6,2,0,0
+Lewis Dunk,Brighton,25,CB,3,5,140,4.5,4.10%,0,1,England,0,3,3,0,0
+Dale Stephens,Brighton,27,CM,2,5,122,4.5,0.90%,0,1,England,0,3,3,0,0
+Jack Cork,Burnley,28,DM,2,5,204,4.5,0.50%,50,1,England,0,4,4,0,0
+Ruben Loftus-Cheek,Crystal Palace,21,CM,2,5,685,4.5,16.40%,6,1,England,0,1,6,0,0
+Joel Ward,Crystal Palace,27,RB,3,5,154,5,0.60%,86,1,England,0,3,6,0,0
+Scott Dann,Crystal Palace,30,CB,3,5,217,5,1.10%,61,1,England,0,4,6,0,0
+Ademola Lookman,Everton,19,LW,1,5,1387,5.5,0.30%,16,1,England,0,1,7,0,0
+Mason Holgate,Everton,20,CB,3,5,344,4.5,2.90%,54,1,England,0,1,7,0,0
+Aaron Lennon,Everton,30,RW,1,5,504,5.5,0.20%,22,1,England,0,4,7,0,0
+Danny Simpson,Leicester City,30,RB,3,5,428,4.5,5.50%,85,1,England,0,4,9,0,0
+Ashley Young,Manchester United,32,LM,2,5,936,5,0.00%,26,1,England,0,5,12,1,0
+Lascelles,Newcastle United,27,CB,3,5,400,4.5,3.60%,0,1,England,0,3,13,0,0
+Jack Colback,Newcastle United,27,DM,2,5,181,4.5,1.10%,0,1,England,0,3,13,0,0
+Glen Johnson,Stoke City,32,RB,3,5,512,4.5,0.80%,56,1,England,0,5,15,0,0
+Kyle Naughton,Swansea,28,RB,3,5,170,4.5,2.00%,82,1,England,0,4,16,0,0
+Nathaniel Chalobah,Watford,22,DM,2,5,977,4.5,2.30%,12,1,England,0,2,18,0,0
+Jason Puncheon,Crystal Palace,31,AM,1,5.5,427,5,1.20%,92,1,England,0,4,6,0,0
+Lewis Cook,Bournemouth,20,CM,2,6,243,4.5,0.80%,17,1,England,0,1,2,0,0
+Ben Mee,Burnley,27,CB,3,6,166,4.5,13.70%,94,1,England,0,3,4,0,0
+Connor Wickham,Crystal Palace,24,CF,1,6,248,5.5,0.00%,18,1,England,0,2,6,0,0
+Marc Albrighton,Leicester City,27,LM,2,6,347,5.5,1.10%,95,1,England,0,3,9,0,0
+Alfie Mawson,Swansea,23,CB,3,6,509,5,1.80%,94,1,England,0,2,16,0,1
+Tom Carroll,Swansea,25,CM,2,6,432,4.5,4.30%,52,1,England,0,3,16,0,0
+Craig Dawson,West Brom,27,RB,3,6,215,5,6.00%,102,1,England,0,3,19,0,0
+Rob Holding,Arsenal,21,CB,3,7,666,5,1.70%,32,1,England,0,1,1,1,1
+James Tomkins,Crystal Palace,28,CB,3,7,208,4.5,2.00%,75,1,England,0,4,6,0,1
+Tom Ince,Huddersfield,25,RW,1,7,512,6,2.60%,0,1,England,0,3,8,0,0
+Jake Livermore,West Brom,27,DM,2,7,564,5,0.20%,77,1,England,0,3,19,0,0
+Mark Noble,West Ham,30,CM,2,7,425,5.5,0.10%,71,1,England,0,4,20,0,0
+Jordon Ibe,Bournemouth,21,RW,1,8,504,5,0.40%,36,1,England,0,1,2,0,0
+Tom Davies,Everton,19,CM,2,8,1354,5.5,1.00%,63,1,England,0,1,7,0,0
+Harry Maguire,Leicester City,24,CB,3,8,488,5,1.50%,71,1,England,0,2,9,0,0
+Danny Ings,Liverpool,24,CF,1,8,748,5.5,0.10%,0,1,England,0,2,10,1,0
+Fabian Delph,Manchester City,27,CM,2,8,520,4.5,0.40%,13,1,England,0,3,11,1,0
+Tammy Abraham,Swansea,19,CF,1,8,1227,5.5,3.30%,0,1,England,0,1,16,0,0
+Will Hughes,Watford,22,CM,2,8,258,5,0.60%,0,1,England,1,2,18,0,0
+Tom Cleverley,Watford,27,CM,2,8,703,5,0.20%,55,1,England,0,3,18,0,0
+Demarai Gray,Leicester City,21,LW,1,9,593,5.5,1.10%,58,1,England,0,1,9,0,0
+Danny Drinkwater,Leicester City,27,CM,2,9,714,5,0.20%,69,1,England,0,3,9,0,0
+Kieran Gibbs,Arsenal,27,LB,3,10,489,5,0.50%,45,1,England,0,3,1,1,0
+Callum Wilson,Bournemouth,25,CF,1,10,337,6,0.20%,63,1,England,0,3,2,0,0
+Andre Gray,Burnley,26,CF,1,10,687,6.5,1.70%,108,1,England,0,3,4,0,0
+Dwight Gayle,Newcastle United,26,CF,1,10,1351,6.5,11.40%,0,1,England,0,3,13,0,0
+Kieran Trippier,Tottenham,26,RB,3,10,525,5.5,17.30%,51,1,England,0,3,17,1,0
+Jay Rodriguez,West Brom,27,CF,1,10,472,6,2.90%,73,1,England,0,3,19,0,0
+Andy Carroll,West Ham,28,CF,1,10,1212,6,0.40%,69,1,England,0,4,20,0,0
+Jonjo Shelvey,Newcastle United,25,CM,2,11,747,5.5,2.50%,0,1,England,0,3,13,0,0
+Ryan Shawcross,Stoke City,29,CB,3,11,281,5,1.00%,94,2,England,0,4,15,0,0
+Troy Deeney,Watford,29,CF,1,11,1141,6.5,3.40%,130,1,England,0,4,18,0,0
+Andros Townsend,Crystal Palace,26,RW,1,12,693,6,2.70%,116,1,England,0,3,6,0,1
+Leighton Baines,Everton,32,LB,3,12,491,6,10.00%,135,1,England,0,5,7,0,0
+James Milner,Liverpool,31,CM,2,12,1824,6.5,10.40%,139,1,England,0,4,10,1,0
+Jesse Lingard,Manchester United,24,LW,1,12,1939,6,0.70%,60,1,England,0,2,12,1,0
+Aaron Cresswell,West Ham,27,LB,3,12,380,5,1.30%,60,1,England,0,3,20,0,0
+Charlie Austin,Southampton,28,CF,1,13,874,6.5,2.10%,62,1,England,0,4,14,0,0
+Phil Jones,Manchester United,25,CB,3,14,808,5,0.40%,55,1,England,0,3,12,1,0
+Danny Welbeck,Arsenal,26,CF,1,15,1521,7.5,0.50%,37,1,England,0,3,1,1,0
+Jordan Pickford,Everton,23,GK,4,15,719,5,14.60%,102,1,England,0,2,7,0,0
+Wayne Rooney,Everton,31,SS,1,15,7664,7.5,20.90%,76,1,England,0,4,7,0,0
+Jamie Vardy,Leicester City,30,CF,1,15,2988,8.5,1.50%,161,1,England,0,4,9,0,0
+James Ward-Prowse,Southampton,22,CM,2,15,416,5.5,2.20%,92,1,England,0,2,14,0,0
+Nathan Redmond,Southampton,23,RW,1,15,706,6.5,11.30%,126,1,England,0,2,14,0,1
+Fraser Forster,Southampton,29,GK,4,15,548,5,7.30%,134,1,England,0,4,14,0,0
+Saido Berahino,Stoke City,23,CF,1,15,841,6,0.80%,26,1,England,0,2,15,0,0
+Jack Butland,Stoke City,24,GK,4,15,402,5,2.80%,20,1,England,0,2,15,0,0
+Marko ArnautoviÄ‡,Stoke City,28,LW,1,15,579,7,0.70%,117,1,England,0,4,15,0,0
+Gary Cahill,Chelsea,31,CB,3,16,1420,6.5,12.00%,178,1,England,0,4,5,1,0
+Jack Wilshere,Arsenal,25,CM,2,18,1759,5.5,0.00%,61,1,England,0,3,1,1,0
+Michael Keane,Everton,24,CB,3,18,1362,5.5,13.10%,113,1,England,0,2,7,0,0
+Marcus Rashford,Manchester United,19,CF,1,18,3668,7.5,4.80%,76,1,England,0,1,12,1,0
+Chris Smalling,Manchester United,27,CB,3,18,834,5.5,1.30%,52,1,England,0,3,12,1,0
+Michail Antonio,West Ham,27,RW,1,18,1142,7.5,0.50%,132,1,England,0,3,20,0,0
+Theo Walcott,Arsenal,28,RW,1,20,2393,7.5,1.50%,122,1,England,0,4,1,1,0
+Daniel Sturridge,Liverpool,27,CF,1,20,2042,8,4.30%,54,1,England,0,3,10,1,0
+Luke Shaw,Manchester United,22,LB,3,20,947,5,0.40%,45,1,England,0,2,12,1,0
+Ryan Bertrand,Southampton,27,LB,3,20,578,5.5,11.20%,123,1,England,0,3,14,0,0
+Nathaniel Clyne,Liverpool,26,RB,3,21,602,5.5,4.50%,129,1,England,0,3,10,1,0
+Alex Oxlade-Chamberlain,Arsenal,23,RM,2,22,1519,6,1.80%,83,1,England,0,2,1,1,0
+Ross Barkley,Everton,23,AM,1,25,1413,7.5,0.70%,144,1,England,0,2,7,0,0
+Adam Lallana,Liverpool,29,AM,1,25,1808,7.5,6.40%,139,1,England,0,4,10,1,0
+Eric Dier,Tottenham,23,DM,2,25,1239,5,3.50%,93,1,England,0,2,17,1,0
+Jordan Henderson,Liverpool,27,CM,2,28,1236,5.5,1.80%,73,1,England,0,3,10,1,0
+Danny Rose,Tottenham,27,LB,3,28,848,6.5,0.60%,84,1,England,0,3,17,1,0
+Kyle Walker,Manchester City,27,RB,3,30,1008,6.5,18.50%,142,1,England,0,3,11,1,0
+John Stones,Manchester City,23,CB,3,35,1078,5.5,2.30%,59,1,England,0,2,11,1,1
+Raheem Sterling,Manchester City,22,LW,1,45,2074,8,3.80%,149,1,England,0,2,11,1,0
+Dele Alli,Tottenham,21,CM,2,45,4626,9.5,38.60%,225,1,England,0,1,17,1,0
+Harry Kane,Tottenham,23,CF,1,60,4161,12.5,35.10%,224,1,England,0,2,17,1,0

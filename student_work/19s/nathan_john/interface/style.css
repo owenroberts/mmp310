@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+button {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 1.5em;
+	background-color: black;
+	color: white;
+	border-color: black lightblue palegreen;
+	margin: 0.25em;
+}
+
+.interface {
+	color: white;
+    margin: 0.25em;
+}
+
+div {
+	font-size: 2em;
+	font-family: monospace;
+}
