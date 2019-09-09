@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon API | Search</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__text-box">
+            <h1 class="primary-heading">
+                Pokemon API
+            </h1>
+            <p class="sub-text">
+                Search any Pokemon by it's name or number and press enter below. You'll get that Pokemon's information.
+            </p>
+            <p class="sub-text">
+                You can also get a Pokemon by random!
+            </p>
+
+            <!-- Hidden Button, Triggered by Javascript -->
+            <a href="#poke-box-section" class="btn--hidden scroll" id="scroll-input">Testing</a>
+
+            <div class="input-box">
+                <input type="text" placeholder="Search for a Pokemon..." class="input-box__input" id="pokemon-search">
+            </div>
+
+            <div class="btn-box">
+                <a class="btn btn--blue scroll" href="#poke-box-section" id="random-pokemon">Random Pokemon</a>
+                <!-- <a href="quiz.html" class="btn btn--blue" target="_blank">Take Quiz</a>   -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Pokeball IMG & Pokemon Sprite-->
+    <section class="pokemon-section" id="pokeball-section">
+        <div class="pokemon-section__img" id="poke-img-box">
+            <!-- Pokeball Image -->
+            <div class="pokemon-section__poke-ball" id="pokeball-img"></div>
+            <!-- Pokemon Sprite -->
+            <div id="pokemon-sprite"></div>
+        </div>
+
+        <!-- Scroll Button -->
+        <div class="scroll-box" id="scroll-btn">
+            <a href="#header" class="scroll-box__link scroll" id="scroll-btn">&#8679;</a>
+        </div>
+    </section>
+
+    <!-- Pokemon info -->
+    <section class="pokemon-box-section" id="poke-box-section">
+        <div class="pokemon-box" id="poke-box">            
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
