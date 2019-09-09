@@ -98,6 +98,7 @@ title: Schedule
 
 ## Week 11 **Game Dynamics**
 - [Game Dynamics](notes/game/dynamics)
+
 - **Assignemnt 11: Final Project Proposal**
 	- Choose one of the projects to continue working on for the final
 	- Propose a substantial update 
@@ -131,7 +132,10 @@ animations
 scenes
 power ups
 
-
+- **Assignemnt 11: Mobile Events**
+	- Implement mobile events in your game
+	- Adjust the speed and properties for game play
+	- Add game dynamics to make the game more difficult over time
 
 
 other courses
