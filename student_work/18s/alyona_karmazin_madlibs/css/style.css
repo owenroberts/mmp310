@@ -1,0 +1,73 @@
+body {
+    background-color: #F7CC60;
+}
+
+#wrapper {
+    max-width: 700px;
+    padding: 50px ;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #34252F;
+    color: whitesmoke;
+}
+
+/*text style*/
+
+p {
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-family: 'Cabin Sketch', cursive;
+    FONT-SIZE: 2.7em;
+    color: #F7D98F;
+}
+
+h2 {
+    font-family: 'Cabin Sketch', cursive;
+    FONT-SIZE: 2.0em;
+    color: #F7C548;
+}
+
+h4 {
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.3em;
+    color: #F7D274;
+}
+
+/*dropdown options style*/
+
+select {
+    width: 200px;
+    height: 25px;
+    margin: 5px auto;
+    
+    margin: 10px;
+    cursor: pointer;
+    background-color: #F7C548;
+    font-family: "Tajawal", sans-serif;
+    font-size: 0.9em;
+}
+
+/*button style*/
+
+button {
+    background-color: #565264;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 24px;
+    border-radius: 4px;
+    font-family: "Tajawal", sans-serif;
+    font-size: 0.8em;
+}
+#change{
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #F7C548;
+    color: black;
+}

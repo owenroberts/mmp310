@@ -10,17 +10,19 @@ title: MMP 310 - Student Work
 
 
 ## Fall 2017
-- [Memory Game](https://lanagaballa7.github.io/310/midterm-1/){:target="_blank"} by Lana Gaballa
-- [Whos that Pokemon?](https://philip177.github.io/MMP310-classwork/Finals/){:target="_blank"} by Philip Cohen
+- [Memory Game](https://lanagaballa7.github.io/310/midterm-1/){:target="_blank"} by Lana Gaballa  
+- [Whos that Pokemon?](https://philip177.github.io/MMP310-classwork/Finals/){:target="_blank"} by Philip Cohen  
 
 ## Spring 2018
 - [Pokemon API](http://torralbajose.com/Pokemon-API/){:target="_blank"} by Jose Torralba
+- [Solar System](https://judith8181.github.io/mmp310final/solar-system/empty-example/index.html){:target="_blank"} by Judith Paredes
+- [Rick and Morty Magic 8 Ball](https://alyonatiki.github.io/Magic8ball_usingAPI/){:target="_blank"} by Alyona Karmazin
+- [Madlibs](https://alyonatiki.github.io/madlibs_GiphyAPI/){:target="_blank"} by Alyona Karmazin
+
+
 
 ## Fall 2018
 - [Interactive Story](https://ailishmyers.github.io/mmp310/group-project/index.html){:target="_blank"} by Ailish Myers
-
-
-
 
 
 ## Spring 2019
