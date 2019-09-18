@@ -19,7 +19,7 @@ The class notes, schedule and assignments are all found here.
 - email: oroberts AT bmcc DOT cuny DOT edu
 - Office: S622J
 - Office extension: 8057
-- Office hours: Monday 2pm - 5pm, Wednesday by appointment
+- Office hours: Tuesday 4pm - 6pm, Thursday 4pm - 5pm, Wednesday by appointment
 - Class meeting time: Monday/Wednesday 5:30 - 7:10 pm
 - Room: Fiterman 1006
 
