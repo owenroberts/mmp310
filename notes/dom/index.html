@@ -1,10 +1,10 @@
 ---
 layout: slides
 title: DOM Library
-week: 6
+week: 5
 ---
 
-<script src="{{site.url}}{{site.baseurl}}/slides/lib/p5.dom.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/slides/lib/p5.dom.js"></script>
 
 <div class="slide">
 	<p>This week we're going to add HTML elements to our p5 project to create a user interface using common components from HTML.</p>
@@ -31,34 +31,12 @@ week: 6
 
 <div class="slide">
 	<h2>Button</h2>
-	<p>Last week we used the <code>save()</code> function to save an image of the canvas when clicking on the canvas.</p>
 	<p>Let's try adding a button for the user to save an image.</p>
-	<p>(These examples won't run in the browser, you will need to copy them to Brackets to run).</p>
 </div>
 
-<div class="slide">
-	<div class="ex">function setup() {
-	createCanvas(640, 360);
-	background('plum');
-	noStroke();
-	fill('lightblue');
-
-	var button = createButton('Save Image');
-	button.mousePressed(save);
-
-	for (let x = 0; x <= width; x += 50) {
-		ellipse(x, random(height), random(100));
-	}
-}</div>
-</div>
 
 <div class="slide">
-	<p><code>save</code> is already a function, so we can call it by just adding it into the <code>.mousePressed()</code> event listener on the button.</p>
-	<p>However, if we want to save a specific file name, we'll need to create our own function and then call that.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">function setup() {
+	<div class="ex" data-preview>function setup() {
 	createCanvas(640, 360);
 	background('plum');
 	noStroke();
@@ -83,7 +61,7 @@ function saveImage() {
 </div>
 
 <div class="slide">
-	<div class="ex">function setup() {
+	<div class="ex" data-preview>function setup() {
 	createCanvas(640, 360);
  
 	pattern(); // generate a pattern to start
@@ -149,7 +127,7 @@ button.addClass('interface');</div>
 	<h2>Position</h2>
 	<p>By default, DOM elements created in p5 will be attached to the HTML document <em>after</em> the canvas.</p>
 	<p>We can use the <code>.position</code> method to positoin the elements on top of the canvas to integrate our interface with the sketch itself.</p>
-	<p>This approach will work best in the full screen sketches we have created.  To do this with a regular sketch, we would need to add some more CSS.  Check out <a href="{{site.url}}{{site.baseurl}}/examples/dom/css/" target="blank">this example</a> for reference.</p>
+	<p>This approach will work best in the full screen sketches we have created.  To do this with a regular sketch, we would need to add some more CSS.  Check out <a href="{{site.url}}{{site.baseurl}}/examples/dom/css/" target="_blank">this example</a> for reference.</p>
 </div>
 
 <div class="slide">
@@ -160,11 +138,11 @@ button.position(100, height - 100);</div>
 
 <div class="slide">
 	<h2>Slider</h2>
-	<p>Along with buttons, we can create slider inputs to change values in the sketch.  Let's add a slider to change the number of columns in the pattern.</p>
+	<p>Along with buttons, we can create slider inputs to change values in the sketch.  Let's add a slider to change the number of elements in the pattern.</p>
 </div>
 
 <div class="slide">
-	<div class="ex">var columns = 8;
+	<div class="ex" data-preview>var num = 8;
 function setup() {
 	createCanvas(640, 360);
  
@@ -176,19 +154,19 @@ function setup() {
 	var saveButton = createButton('Save Image');
 	saveButton.mousePressed(saveImage);
 	
-	var slider = createSlider(1, 32, columns, 1);
+	var slider = createSlider(1, 32, num, 1);
 	slider.input(updateColumns);
 }
 
 function updateColumns() {
-	columns = this.value();
+	num = this.value();
 }
 
 function pattern() {
 	background('plum');
 	noStroke();
 	fill('lightblue');
-	var w = width / columns;
+	var w = width / num;
 	for (let x = 0; x <= width; x += w) {
 		ellipse(x, random(height), random(100));
 	}
@@ -216,10 +194,12 @@ function saveImage() {
 </div>
 
 <div class="slide">
-	<div class="ex">var columns = 8;
+	<div class="ex" data-preview>var num = 8;
 var b = 127;
 function setup() {
-	createDiv('Columns');
+	createCanvas(640, 360);
+	
+	createDiv('Number');
 	var slider = createSlider(1, 32, 8, 1);
 	slider.input(updateColumns);
 	

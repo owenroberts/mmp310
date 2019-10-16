@@ -39,6 +39,25 @@ title: Schedule
 	- Use a loop to draw a series of shape variations
 	- Use a click event to generate new variations
 
+## Week 5 **Interactive Patterns**
+- [DOM Library](notes/dom)
+- **Assignment 5: Character Customizer**
+	- Use DOM elements allow a user to customize a character
+	- Customize at least three visual components of the character
+
+<!-- 
+
+	maybe
+- just go to objects
+	- classes
+	- inheritance
+- then arrays
+- then work on game
+- sound
+- graphics, animations
+- saving data as levels
+
+
 ## Week 5 **Grid**
 - [Grid](notes/grid)
 - [Save image](notes/save)
@@ -51,11 +70,6 @@ title: Schedule
 	- [Libs Elliott: Generated quilt design](http://themakersnation.com/maker-spotlight-libs-elliott/){:target="blank"}
 	- [Generative Patterns Google Image Search](https://www.google.com/search?q=generative+patterns&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiA-OPl3fbWAhWD6iYKHTihD7EQ_AUICigB&biw=1897&bih=984#imgrc=_){:target="blank"}
 
-## Week 6 **Interactive Patterns**
-- [DOM Library](notes/dom)
-- **Assignment 6: Interactive Pattern**
-	- Using the grid design from Assignment 5, add a DOM based interface
-	- Give the user the ability to change attributes of the design such as the number of columns and rows, the colors, the type of shapes, the amount of randomness
 
 ## Project 3 **Data Visualization**
 - Using an external data source, create a visualization of the data with p5 shapes and color

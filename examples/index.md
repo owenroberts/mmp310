@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main
 title: MMP 310 - Examples
 ---
 - [Spring 2016](16s/){:target="blank"}
