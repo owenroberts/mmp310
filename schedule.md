@@ -29,8 +29,8 @@ title: Schedule
 	- Create a story with at least three parts, beginning, middle and end
 	- Use text for narration and interaction instructions
 
-## Project 2 **Generative Patterns**
-- Use loops to create patterns that change 
+<!-- ## Project 2 **Generative Patterns**
+- Use loops to create patterns that change  -->
 
 ## Week 4 **Loop**
 - [Loops](notes/loop)
@@ -39,11 +39,27 @@ title: Schedule
 	- Use a loop to draw a series of shape variations
 	- Use a click event to generate new variations
 
-## Week 5 **Interactive Patterns**
+## Week 5 **User Interface**
 - [DOM Library](notes/dom)
 - **Assignment 5: Character Customizer**
 	- Use DOM elements allow a user to customize a character
 	- Customize at least three visual components of the character
+
+## Week 6 **Arrays**
+- [Arrays](notes/array)
+- [Drawing with Arrays](notes/array/animation)
+- **Assignment 7: Array Animation**
+	- Using an array, create an animation
+	- Add one other component to the data in the array, color, size or shape
+
+## Week 7 **Objects**
+- [Objects](notes/objects)
+- [Class](notes/class)
+- **Assignment 9: Game Graphics**
+	- Create custom graphics for the spaceship and asteroids
+	- Can use a new theme
+	- Randomize one property of asteroids
+	- Add one new property to the spaceship
 
 <!-- 
 
