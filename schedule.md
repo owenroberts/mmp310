@@ -48,18 +48,16 @@ title: Schedule
 ## Week 6 **Arrays**
 - [Arrays](notes/array)
 - [Drawing with Arrays](notes/array/animation)
-- **Assignment 7: Array Animation**
+- **Assignment 6: Array Animation**
 	- Using an array, create an animation
 	- Add one other component to the data in the array, color, size or shape
 
 ## Week 7 **Objects**
 - [Objects](notes/objects)
 - [Class](notes/class)
-- **Assignment 9: Game Graphics**
-	- Create custom graphics for the spaceship and asteroids
-	- Can use a new theme
-	- Randomize one property of asteroids
-	- Add one new property to the spaceship
+- **Assignment 7: Game Graphics**
+	- Add a new property to the class
+	- Randomize one property
 
 <!-- 
 
