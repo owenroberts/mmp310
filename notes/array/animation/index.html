@@ -128,7 +128,7 @@ function draw() {
 </div>
 
 <div class="slide">
-	<div class="ex" data-preview>var cats = []; // array to save xy points of each cat
+	<div class="ex" data-preview>var catPositions = []; // array to save xy points of each cat
 function setup() {
 	createCanvas(640, 360);
 	noStroke();
@@ -137,18 +137,18 @@ function setup() {
 function draw() {
 	background(51);
 
-	for (let i = 0; i < cats.length; i++) {
-		let x = cats[i][0];
-		let y = cats[i][1]; 
+	for (let i = 0; i < catPositions.length; i++) {
+		let x = catPositions[i][0];
+		let y = catPositions[i][1]; 
 		fill('plum');
 		cat(x, y, 50);
-		cats[i][0]++;
+		catPositions[i][1]++;
 	}
 }
 
 // push one cat per mouse click
 function mouseClicked() {
-	cats.push([mouseX, mouseY]);
+	catPositions.push([mouseX, mouseY]);
 }
 
 function cat(x, y, s) {
