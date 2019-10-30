@@ -1,0 +1,121 @@
+---
+layout: slides
+title: Collision
+week: 7
+---
+
+<div class="slide">
+	<p>Currently, it's possible for the asteroids to fly off the right or left side of the screen.</p>
+	<p>We can add some basic edge detection to make the asteroids bounce back toward the inside of the canvas.</p>
+	<pre><code>update() {
+	this.x += this.speed.x;
+	this.y += this.speed.y;
+
+	// if x goes off left or right
+	if (this.x < 0 || this.x > width) {
+		// reverse x speed
+		this.x *= -1;
+	}
+}</code></pre>
+</div>
+
+
+
+<div class="slide">
+	<h2>Collision</h2>
+	<p>Now we're ready to bring the player back into the sketch.</p>
+	<p>The asteroids are the "enemies", so if the player gets hit by an asteroid they should lose the game.  In the future, we'll code a more sophisticated to deal with this.  For now, let's just write "You died" and turn the game loop off.</p>
+</div>
+
+<div class="slide">
+	<div class="ex" data-preview>class Asteroid {
+	constructor() {
+		this.size = 100;
+		this.x = random(width);
+		this.y = random(-height);
+		this.speed = {
+			x: random(-1, 1),
+			y: random(1, 5)
+		}; 
+	}
+	display() {
+		fill(0);
+		noStroke();
+		ellipse(this.x, this.y, this.size);
+	}
+	update() {
+		this.x += this.speed.x;
+		this.y += this.speed.y;
+
+		if (this.x < 0 || this.x > width) {
+			this.x *= -1;
+		}
+	}
+	collide(other) {
+		// if distance between the spaceship and asteroid is smaller than size of asteroid
+		var d = dist(this.x, this.y, spaceship.x, spaceship.y);
+		if (d < this.size / 2) {
+			// game is over
+			textSize(150);
+			fill('orange');
+			textAlign(CENTER, CENTER);
+			text("YOU DIED", width/2, height/2);
+			noLoop(); // kills the draw loop
+		}
+	}
+}
+
+var asteroids = []; 
+
+var spaceship = {
+	x: 320,
+	y: 200,
+	size: 100,
+	speed: 5,
+	display: function() {
+		fill('white');
+		noStroke();
+		triangle(this.x, this.y, this.x + this.size/2, this.y + this.size, this.x - this.size/2, this.y + this.size);
+	},
+	update: function() {
+		if (keyIsDown(LEFT_ARROW)) {
+			this.x -= this.speed;
+		}
+		if (keyIsDown(RIGHT_ARROW)) {
+			this.x += this.speed;
+		}
+	}
+};
+
+function draw() {
+	background(51);
+	
+	if (random(100) > 99) {
+		asteroids.push(new Asteroid());
+	}
+
+	// display and update spaceship
+	spaceship.display();
+	spaceship.update();
+
+	for (let i = 0; i < asteroids.length; i++) {
+		asteroids[i].display();
+		asteroids[i].update();
+
+		// detect collision with spaceship
+		asteroids[i].collide();
+	}
+}</div>
+</div>
+
+<div class="slide">
+	<p>The <code>collide()</code> function calculates the distance between the position of <code>spaceshp</code> and <code>this</code>, referencing the current asteroid.</p>
+	<p>If that distances is smaller than half the asteroid, we know the asteroid and spaceship have entered the same space.</p>
+</div>
+
+
+<div class="slide">
+	<p>Next we will add mobile touch controls for the spaceship, more structured classes and scenes for the game.</p>
+	<p>For now, try designing the asteroids for your own game.  Update the design and randomize one component of the asteroids visuals so there is some variety.</p>
+	<p>For a challenge, try detecting when the asteroids collide with each other.  Use a visual change to show the asteroids have collided.</p>
+</div>

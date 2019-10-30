@@ -53,11 +53,11 @@ title: Schedule
 	- Add one other component to the data in the array, color, size or shape
 
 ## Week 7 **Objects**
-- [Objects](notes/objects)
 - [Class](notes/class)
+<!-- - [Class Inheritence](notes/class/inheritance) -->
 - **Assignment 7: Game Graphics**
-	- Add a new property to the class
-	- Randomize one property
+	- Create the display function for the Asteroid and Spaceship class
+	- Using p5 color and shapes
 
 <!-- 
 
