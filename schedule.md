@@ -54,7 +54,7 @@ title: Schedule
 
 ## Week 7 **Objects**
 - [Class](notes/class)
-<!-- - [Class Inheritence](notes/class/inheritance) -->
+- [Class Inheritence](notes/class/inheritance)
 - **Assignment 7: Game Graphics**
 	- Create the display function for the Asteroid and Spaceship class
 	- Using p5 color and shapes

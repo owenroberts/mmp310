@@ -5,261 +5,129 @@ week: 7
 ---
 
 <div class="slide">
-	<p>Last week we looked at created objects and classes in JavaScript.</p>
+	<p>Last week we created a <code>Thing</code> class and then made an <code>Asteroid</code> class based on the generic <code>Thing</code>.</p>
 	<p>In object oriented programming, one of the most important and fundamental concepts is <note>class inheritance</note>, which is the ability to create an class based on an existing class.</p>
 	<p>Class inheritance can be used to simplify our code by looking at what properties and methods objects share and combining those into a base class.</p>
 </div>
 
 <div class="slide">
-	<p>Consider the components of the spaceship game we are building.  So far we have a spaceship and asteroids.  This week we will add lasers for the spaceship.  That gives our game three components.</p>
-	<p>What properties do each component share?</p>
-	<p>How are the different?</p>
+	<p>In this example game, we have a spaceship and asteroids.  They have similarities, they can both move, they are drawn with p5 graphics, the have a size and speed and position.</p>
+	<p>What properties do they share?</p>
+	<p>How are they different?</p>
 </div>
+
+<div class="slide">
+	<p>Let's create a <code>Spaceship</code> class and then compare to our <code>Asteroid</code> class.</p>
+</div>
+
 
 <div class="slide">
 	<p>Let's start by comparing our <code>spaceship</code> object and our <code>Asteroid</code> class and seeing what properties are the same.</p>
 </div>
 
 <div class="slide">
-	<div class="side-by-side">
-		<div class="ex" data-nogutter>var spaceship = {
-	x: 0,
-	y: 200,
-	size: 100,
-	speed: 5,
-	display: function() {
-		// draws spaceship
-	},
-	update: function() {
-		// moves spaceship
-	}
-};</div>
-		<div class="ex" data-nogutter>class Asteroid {
+	<img src="inheritance.png">
+</div>
+
+<div class="slide">
+	<p>We created the <code>Asteroid</code> class already, so let's add the <code>Spaceship</code> class.</p>
+	<p>We need a new <code>display</code> method to draw the spaceship, and a <code>move</code> method to look for player input and update the spaceship position.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">class Spaceship extends Thing {
 	constructor() {
-		this.size = 100;
-		this.x = random(width);
-		this.y = random(-height);
-		this.speed = {
-			x: random(-1, 1),
-			y: random(1, 5)
-		}; 
+		super(width/2, height - 100, 100, 0, 0);
 	}
+
 	display() {
-		// draws asteroid
+		noStroke();
+		fill(255, 0, 255);
+		ellipse(this.x, this.y, this.size);
 	}
-	update() {
-		// move asteroid
-	}
-}</div>
-</div>
-</div>
 
-<div class="slide">
-	<p>Notice that they have the exact same properties and methods.  (We're ignoring the collide method for now).</p>
-	<p>But there are differences between those properties and methods.</p>
-	<p>The trick of class inheritance is creating a base class that can easily be extended to create different classes.</p>
-</div>
+	move() {
+		if (keyIsDown(RIGHT_ARROW)) {
+			this.speedX = 5;
+		} else if (keyIsDown(LEFT_ARROW)) {
+			this.speedX = -5;
+		} else {
+			this.speedX = 0;
+		}
 
-<div class="slide">
-	<p>Let's try combining those properties.</p>
-	<p>We'll create a base class, or <code>super</code> class, which the spaceship and asteroids will extend.</p>
-	<p>This class will be call <code>Entity</code>, "a thing with distinct and independent existence", or a generic thing.</p>
-	<p>Let's start simple with x, y and size.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">class Entity {
-	// constructor takes x,y arguments because they differ in spaceship and asteroid
-	constructor(x, y) {
-		this.x = x;
-		this.y = y;
-		this.size = 100;  // same in both
-	}
-}</div>
-</div>
-
-<div class="slide">
-	<p>No let's create the <code>Asteroid</code> and <code>Spaceship</code> sub classes.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">class Spaceship extends Entity {
-	constructor() {
-		super(width/2, height - 200);
-	}
-}</div>
-</div>
-
-<div class="slide">
-	<p>The <code>super</code> function is used to call the <code>constructor</code> of the base class.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">class Asteroid extends Entity {
-	constructor() {
-		super(random(width), random(-100));
-	}
-}</div>
-</div>
-
-<div class="slide">
-	<p>These look similar, except for the actual values passed to the <code>x</code> and <code>y</code> coordinates of each component.</p>
-	<p>However, the speed component is different for each element. Here we can decide to either make the speed part of the super class or part of the subclass.</p>
-	<p>Because the speed will be important to updating each object, it's a good idea to put it in the super class, so we can't create sub classes that don't have a speed property.</p>
-</div>
-
-
-<div class="slide">
-	<div class="ex">class Entity {
-	// constructor takes x,y arguments because they differ in spaceship and asteroid
-	constructor(x, y) {
-		this.x = x;
-		this.y = y;
-		this.size = 100;  // same in both
-		this.speed = {
-			x: 0,
-			y: 0
+		if (keyIsDown(UP_ARROW)) {
+			this.speedY = -5;
+		} else if (keyIsDown(DOWN_ARROW)) {
+			this.speedY = 5;
+		} else {
+			this.speedY = 0;
 		}
 	}
 }</div>
 </div>
 
 <div class="slide">
-	<div class="ex">class Spaceship extends Entity {
-	constructor() {
-		super(width/2, height - 200);
-	}
+	<p>The <code>move()</code> method looks for use input and then changes the speed of the spaceship based on the input.</p>
+	<p>The <code>display()</code> method draws the spaceship on the canvas.</p>
+	<p>The spaceship will use the <code>update()</code> method from the <code>Thing</code> class to change the position of the spaceship on the canvas.</p>
+</div>
+
+<div class="slide">
+	<p>Unlike the asteroids, we only have one spaceship on the canvas.  So we can declare the spaceship variable, create the spaceship in <code>setup</code> and then update the spaceship in <code>draw</code>.</p>
+</div>
+
+<div class="slide">
+	<div class="ex">var spaceship;
+		
+function setup() {
+	spaceship = new Spaceship();
+}
+
+function draw() {
+	spaceship.move();
+	spaceship.update();
+	spaceship.display();
 }</div>
 </div>
 
 <div class="slide">
-	<div class="ex">class Asteroid extends Entity {
-	constructor() {
-		super(random(width), random(-100));
-		this.speed.x = random(-1, 1);
-		this.speed.y = random(5);
-	}
-}</div>
+	<p>Notice how the spaceship also has the <code>move()</code> method called in <code>draw</code>, for user input.  The asteroids don't have this method.</p>
 </div>
 
-<div class="slide">
-	<p>This establishes a default speed applied to any object.  If a sub class needs to have a different speed it can be set after the <code>super</code> function creates a default object.</p>
-	<p>For spaceships and asteroids their <code>display</code> and <code>update</code> functions are mostly different, so we can define them within the sub classes.</p>
-	<p>We will add one more method to the super class <code>Entity</code>, the <code>collide</code> method, but first let's do a little challenge.</p>
-</div>
 
-<div class="slide">
-	<h2>Lasers</h2>
-	<p>Now that we have a base class for spaceships and asteroids, try making a class for lasers.</p>
-	<p>Lasers should be created when the user hits a button, and then travel toward the asteroids. (We'll work on collisions later).</p>
-	<p>Create a <code>Laser</code> class and try to create your own lasers.</p>
-	<p>We'll cover a possible solution for lasers in the next class.</p>
-</div>
 
 <div class="slide">
 	<h2>Collision</h2>
-	<p>Now that you have an awesome <code>Laser</code> class you will have realized that in order for lasers to destroy the asteroids, you will need to detect collisions between lasers and asteroids, not just asteroids and the spaceship.</p>
-	<p>Our original <code>collide()</code> function can't do it because it has the position of the <code>spaceship</code> hard coded into the <code>dist()</code> function.</p>
+	<p>To detect collisions between the Asteroids and Spaceship, we can add to our <code>Thing</code> class a new method, <code>collide</code>.</p>
+	<p>This will take another object as a argument, calculate the size of the two objects and compare that to their distance.  This is very simple collision detection that will only work with two circle shaped objects.  For now, it's good enough to demonstrate for the example.</p>
 </div>
 
-<div class="slide">
-	<p>How can we update the <code>collide</code> function to account for multiple different classes?</p>
-	<p>One approach is to add an argument to the function and pass in the other objects themselves.</p>
-</div>
 
 <div class="slide">
-	<div class="ex">class Entity {
+	<div class="ex">class Thing {
+	
 	collide(other) {
 		// calculate distance between the two
 		var d = dist(this.x, this.y, other.x, other.y);
-		// get the larger size between the two
-		var s;
-		if (this.size > other.size) {
-			s = this.size;
-		} else {
-			s = other.size;
+		
+		// get the total size of both
+		var s = this.size + other.size;
+		
+		/* if the distance between them is less than half their total size
+			then they are collidiing */
+		if (d < s/2) {
+			textAlign(CENTER, CENTER);
+			textSize(100);
+			text("YOU DIED", width/2, height/2);
+			noLoop();
 		}
-		// if distance is less than half the size, the entities overlap
-		if (d < s / 2) {
-			return true; // collision is happening
-		} else {
-			return false; // collision is not happening
-		}
 	}
+
 }</div>
 </div>
 
 <div class="slide">
-	<p>The <code>collide()</code> function of the <code>Entity</code> takes an argument, <code>other</code>.  The <code>other</code> is whatever object is being tested for collision.</p>
-	<p>Once we determine that a collision is happening we don't want to just end the game because it might be a laser hitting an asteroid, rather than an asteroid hitting the spaceship.</p>
-	<p>Instead the function will just tell our main program whether the collision occurred and the main program can decide what to do.</p>
-	<p>Let's take a look at the for loop that handles the asteroids and update it.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">for (let i = 0; i < asteroids.length; i++) {
-	asteroids[i].display();
-	asteroids[i].update();
-
-	// detect collision with spaceship
-	if (asteroids[i].collide(spaceship)) {
-		// end game
-	}	
-
-	// loop over all of the lasers
-	for (let j = 0; j < lasers.length; j++) {
-		if (lasers[j].collide(asteroids[i])) {
-			// mark objects to be removed later 
-			asteroids[i].died = true;
-			lasers[j].died = true;
-		}
-	}	
-}</div>
-</div>
-
-<div class="slide">
-	<p>Finally, we need to add another method to the <code>Entity</code> class to remove the instance from the array.</p>
-	<p>However, because asteroids and lasers are part of different arrays we need to pass in the specific list for each to the remove function.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">class Entity {
-	remove(list) {
-		// get the index of the entity in the array (list)
-		// this refers to the entity
-		const index = list.indexOf(this);
-		// splice the entity out of list
-		list.splice(index, 1);
-	}
-}</div>
-</div>
-
-<div class="slide">
-	<p>Once we've run through the updates of all the objects in the game, we can loop through them again to clean up and remove objects that have collided with other objects.</p>
-	<p>By separating these events we can add support for animations or other events later.  We also avoid breaking for loop by chaning the order of elements in the array as we loop over it.</p>
-</div>
-
-<div class="slide">
-	<div class="ex">for (let i = 0; i < asteroids.length; i++) {
-	asteroids[i].display();
-	asteroids[i].update();
-}
-
-for (let i = 0; i < lasers.length; i++) {
-	lasers[i].display();
-	lasers[i].update();
-}
-
-for (let i = 0; i < lasers.length; i++) {
-	if (lasers[i].died) {
-		lasers[i].remove(lasers);
-	}
-}
-
-for (let i = 0; i < asteroids.length; i++) {
-	if (asteroids[i].died) {
-		asteroids[i].remove(asteroids);
-	}
-}</div>
+	<p>For now we will just end the game.</p>
+	<p>From here, imagine how you might add other components to the game, like a laser for the spaceship, or a power up.</p>
 </div>
 
