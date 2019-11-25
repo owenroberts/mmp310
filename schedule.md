@@ -61,6 +61,21 @@ title: Schedule
 
 <!-- 
 
+modules-
+map
+animated sprites
+paralax
+sound
+data
+
+i need to add
+- support for p5.play sprites
+- p5.play collisions
+- data for obstacles, scenery, characters
+- moving map
+- sound triggers, bg sound
+- exit function for changing scenes ....
+
 	maybe
 - just go to objects
 	- classes
