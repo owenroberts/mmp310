@@ -48,4 +48,9 @@ title: MMP 310 - Student Work
 - [Trinity Force](https://itsanerin.github.io/MMP310/space%20plot/index.html){:target="_blank"} by Erin Brady
 
 
-
+## Fall 2019
+- [Story](https://koheiro.github.io/MMP310/assignment3/){:target="_blank"} by Ekaterina Abromovich
+- [Story](https://marsii.github.io/MMP310/loop/index.html){:target="_blank"} by Naomi Marshall
+- [Interface](https://marsii.github.io/MMP310/interface/index.html){:target="_blank"} by Naomi Marshall
+- [Asteroids](https://nicholasramdin.github.io/mmp310/class/){:target="_blank"} by Nicholas Ramdin
+- [Group Project Final](https://owenbmcc.github.io/final/){:target="_blank"} by Ekaterina Abromovich, Nelson Bruno, Naomi Marshall, Jonathan Peralta, Nicholas Ramdin and Adonis Rosemond
