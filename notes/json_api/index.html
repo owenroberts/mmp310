@@ -7,7 +7,7 @@ week: 8
 <div class="slide">
 	<p>API stands for <note>Application Programming Interface</note>.</p>
 	<p>APIs are used to provide a set of protocols and patterns for building software and applications.  Often they allow programmers to interact with a specific database, hardware or software.</p>
-	<p>We're going to look at a simple API today, the <a href="https://developers.giphy.com/" target="blank">Giphy API</a> which requires signing up for a user key but is still free to use.</p>
+	<p>We're going to look at a simple API today, the <a href="https://developers.giphy.com/" target="_blank">Giphy API</a> which requires signing up for a user key but is still free to use.</p>
 </div>
 
 <div class="slide">
@@ -34,17 +34,17 @@ query.addEventListener('keydown', function(event) {
 
 <div class="slide">
 	<p>Once we have the query, we can use our user key, the Giphy API string and <code>fecth</code> to get results.  
-	<p><code>fecth</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="blank">JavaScript function</a> for the browser API which gets external resources and returns then to the browser.</p>
+	<p><code>fecth</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">JavaScript function</a> for the browser API which gets external resources and returns then to the browser.</p>
 </div>
 
 <div class="slide">
-	<p><code>fetch</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="blank">Promise</a> which an object that represents the eventual completion of an asynchronous operation, or failure. </p>
+	<p><code>fetch</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise</a> which an object that represents the eventual completion of an asynchronous operation, or failure. </p>
 	<p>Asynchronous operations are used when we don't know how long something will take. They happen outside of the main JavaScript thread so they won't pause other parts of the browser code.</p>
 </div>
 
 <div class="slide">
 	<p>Next we have to create the request URL.  The URL is built using the giphy server address, the search term and the api key, all stuck together in one big string.</p>
-	<p>To build that we're going to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="blank">template literal</a>, which allows us to include variable values inside of the string using the <code>${}</code> syntax.</p>
+	<p>To build that we're going to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" target="_blank">template literal</a>, which allows us to include variable values inside of the string using the <code>${}</code> syntax.</p>
 </div>
 
 <div class="slide">
