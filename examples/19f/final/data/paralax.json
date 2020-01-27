@@ -1,0 +1,54 @@
+{
+	"scenery": {
+		"kite": {
+			"img": "images/paralax/kite.png",
+			"width": 128,
+			"height": 128,
+			"frames": 1,
+			"positions": [
+				{ "x": -400, "y": 20 },
+				{ "x": -320, "y": -30 },
+				{ "x": -200, "y": 50 },
+				{ "x": -120, "y": -50 },
+				{ "x": 100, "y": 30 },
+				{ "x": 120, "y": -20 },
+				{ "x": 200, "y": 40 },
+				{ "x": 420, "y": -50 },
+				{ "x": 300, "y": 30 },
+				{ "x": 520, "y": -70 }
+			],
+			"speed": 0.05
+		},
+		"cloud1": {
+			"img": "images/paralax/cloud.png",
+			"width": 96,
+			"height": 56,
+			"frames": 1,
+			"positions": [
+				{ "x": -120, "y": 200 }
+			],
+			"speed": 0.02	
+		},
+		"cloud2": {
+			"img": "images/paralax/cloud.png",
+			"width": 96,
+			"height": 56,
+			"frames": 1,
+			"positions": [
+				{ "x": 120, "y": 100 }
+			],
+			"speed": 0.03	
+		},
+		"balloon": {
+			"img": "images/paralax/balloon.png",
+			"width": 128,
+			"height": 128,
+			"frames": 1,
+			"positions": [
+				{ "x": 100, "y": 300 },
+				{ "x": 200, "y": 400 }
+			],
+			"speed": 0.025
+		}
+	}
+}

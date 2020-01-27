@@ -1,0 +1,17 @@
+{
+	"obstacles": {
+        "startline": {
+			"img": "images/ekaterina/startline.png",
+			"width": 140,
+			"height": 978,
+			"frames": 1,
+			"positions": [
+                { "x": -10200, "y": 380 }
+			]
+		}
+	}
+}
+
+
+
+

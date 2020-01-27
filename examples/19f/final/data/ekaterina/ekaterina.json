@@ -1,0 +1,22 @@
+{   
+    "scenery": 
+    {
+        "background": {
+			"img":	"images/ekaterina/Background.png",
+			"width": 23300,
+			"height": 1200,
+			"frames": 1,
+			"positions": [
+				{ "x": 0, "y": 320 }
+			]
+		}
+    }
+}
+
+
+
+
+
+
+
+

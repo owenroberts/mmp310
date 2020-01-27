@@ -1,0 +1,175 @@
+{   
+    "scenery": {
+        "background": {
+            "img": "images/marsii/testmap.png",
+            "width": 4830,
+            "height": 3150,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -900,
+                    "y": 425
+                }
+			]
+        }
+    },
+    
+    "obstacles": {
+        "ufo": {
+            "img": "images/marsii/scenery/ufo.png",
+            "width": 359,
+            "height": 224,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -2420,
+                    "y": 370
+                }
+			]
+        },
+        "crashtrail": {
+            "img": "images/marsii/scenery/crashtrail.png",
+            "width": 496,
+            "height": 90,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "pond": {
+            "img": "images/marsii/scenery/pond.png",
+            "width": 848,
+            "height": 810,
+            "frames": 5,
+            "positions": [
+                {
+                    "x": -370,
+                    "y": 1192
+                }
+			]
+        },
+        "watertree": {
+            "img": "images/marsii/scenery/watertree.png",
+            "width": 470,
+            "height": 640,
+            "frames": 6,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+         "pondtree": {
+            "img": "images/marsii/scenery/pondtree.png",
+            "width": 200,
+            "height": 460,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 370,
+                    "y": 1000
+                }
+			]
+        },
+        "bush2trees": {
+            "img": "images/marsii/scenery/bush2trees.png",
+            "width": 306,
+            "height": 410,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "bbush": {
+            "img": "images/marsii/scenery/bbush.png",
+            "width": 126,
+            "height": 65,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        }, 
+        "ptrees2": {
+            "img": "images/marsii/scenery/ptrees2.png",
+            "width": 220,
+            "height": 287,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "trees2": {
+            "img": "images/marsii/scenery/trees2.png",
+            "width": 535,
+            "height": 586,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "treem": {
+            "img": "images/marsii/scenery/treem.png",
+            "width": 294,
+            "height": 366,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -200,
+                    "y": 87
+                }
+			]
+        },
+        "pbush": {
+            "img": "images/marsii/scenery/pbush.png",
+            "width": 120,
+            "height": 103,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },        
+        "2bushes": {
+            "img": "images/marsii/scenery/2bushes.png",
+            "width": 176,
+            "height": 110,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },        
+        "bushrocks": {
+            "img": "images/marsii/scenery/bushrocks.png",
+            "width": 397,
+            "height": 118,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 468,
+                    "y": 787
+                }
+			]
+        }
+    }
+}

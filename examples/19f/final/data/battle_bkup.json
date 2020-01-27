@@ -1,0 +1,35 @@
+{
+    "scenery": {
+        "thundercloud": {
+            "img": "images/nick/thundercloud.png",
+            "width": 66,
+            "height": 60,
+            "frames": 6,
+            "positions": [
+                { "x": 150, "y": 150},
+                { "x": 500, "y": 90},
+                { "x": 1300, "y": 120}
+            ]
+		},
+		"crow": {
+			"img":	"images/nick/crow.png",
+			"width": 84,
+			"height": 48,
+			"frames": 22,
+			"positions": [
+				{ "x": 700, "y": 100 },
+				{ "x": 1400, "y": 160 }
+			]
+        },
+        "crow2": {
+            "img":	"images/nick/crow2.png",
+			"width": 84,
+			"height": 48,
+			"frames": 22,
+			"positions": [
+				{ "x": 400, "y": 160 },
+				{ "x": 1200, "y": 120 }
+			]
+        }
+    }
+}

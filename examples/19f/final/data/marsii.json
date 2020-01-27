@@ -1,0 +1,397 @@
+{
+    "scenery": {
+        "background": {
+            "img": "images/marsii/testmap.png",
+            "width": 4830,
+            "height": 3150,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -900,
+                    "y": 425
+                }
+			]
+        }
+    },
+
+    "obstacles": {
+        "crashtrail": {
+            "img": "images/marsii/scenery/crashtrail.png",
+            "width": 546,
+            "height": 90,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 1158,
+                    "y": 540
+                }
+			]
+        },
+        "pond": {
+            "img": "images/marsii/scenery/pond.png",
+            "width": 848,
+            "height": 810,
+            "frames": 5,
+            "positions": [
+                {
+                    "x": 0,
+                    "y": 1692
+                }
+			]
+        },
+        "watertree": {
+            "img": "images/marsii/scenery/watertree.png",
+            "width": 470,
+            "height": 640,
+            "frames": 6,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": 1230
+                }
+			]
+        },
+        "pondtree": {
+            "img": "images/marsii/scenery/pondtree.png",
+            "width": 200,
+            "height": 460,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -170,
+                    "y": 1000
+                }
+			]
+        },
+        "bush2trees": {
+            "img": "images/marsii/scenery/bush2trees.png",
+            "width": 306,
+            "height": 410,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "bbush": {
+            "img": "images/marsii/scenery/bbush.png",
+            "width": 126,
+            "height": 65,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "ptrees2": {
+            "img": "images/marsii/scenery/ptrees2.png",
+            "width": 220,
+            "height": 287,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 700,
+                    "y": -100
+                }
+			]
+        },
+        "trees2": {
+            "img": "images/marsii/scenery/trees2.png",
+            "width": 535,
+            "height": 586,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 700,
+                    "y": -100
+                }
+			]
+        },
+        "treem": {
+            "img": "images/marsii/scenery/treem.png",
+            "width": 294,
+            "height": 366,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -200,
+                    "y": 177
+                }
+			]
+        },
+        "pbush": {
+            "img": "images/marsii/scenery/pbush.png",
+            "width": 120,
+            "height": 103,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "2bushes": {
+            "img": "images/marsii/scenery/2bushes.png",
+            "width": 176,
+            "height": 110,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 600,
+                    "y": -300
+                }
+			]
+        },
+        "bushrocks": {
+            "img": "images/marsii/scenery/bushrocks.png",
+            "width": 397,
+            "height": 118,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 648,
+                    "y": 790
+                }
+			]
+        },
+        "barrier": {
+            "img": "images/marsii/scenery/barrier.png",
+            "width": 600,
+            "height": 100,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 350,
+                    "y": -470
+                },
+                {
+                    "x": 950,
+                    "y": -420
+                },
+                {
+                    "x": -700,
+                    "y": -380
+                },
+                {
+                    "x": -1300,
+                    "y": -380
+                },
+                
+                {
+                    "x": -500,
+                    "y": -760
+                },
+                {
+                    "x": -100,
+                    "y": -770
+                },
+                {
+                    "x": 500,
+                    "y": -770
+                },
+                {
+                    "x": 800,
+                    "y": 100
+                },
+                {
+                    "x": 1350,
+                    "y": 170
+                },
+                {
+                    "x": 1600,
+                    "y": 240
+                },
+                {
+                    "x": -2200,
+                    "y": 220
+                },
+                {
+                    "x": -1200,
+                    "y": 250
+                },
+                {
+                    "x": -1000,
+                    "y": 460
+                },
+                {
+                    "x": -400,
+                    "y": 280
+                },
+                {
+                    "x": 1280,
+                    "y": 780
+                },
+                {
+                    "x": 1280,
+                    "y": 680
+                },
+                {
+                    "x": -250,
+                    "y": 720
+                },
+                {
+                    "x": 550,
+                    "y": -50
+                },
+                {
+                    "x": -1280,
+                    "y": 1300
+                }, {
+                    "x": -1880,
+                    "y": 1300
+                }, {
+                    "x": -1980,
+                    "y": 1100
+                },
+                {
+                    "x": -750,
+                    "y": 920
+                },
+                {
+                    "x": -400,
+                    "y": 820
+                },
+                {
+                    "x": -1580,
+                    "y": 1000
+                },
+                {
+                    "x": -2750,
+                    "y": 850
+                },
+                {
+                    "x": -2600,
+                    "y": 850
+                },
+                {
+                    "x": -2950,
+                    "y": 950
+                },
+                {
+                    "x": -2900,
+                    "y": 1600
+                },
+                {
+                    "x": -2600,
+                    "y": 1750
+                },
+                {
+                    "x": -2000,
+                    "y": 1950
+                },
+                {
+                    "x": -1400,
+                    "y": 1950
+                },
+                {
+                    "x": -800,
+                    "y": 1950
+                },
+                {
+                    "x": -2180,
+                    "y": -430
+                },
+                {
+                    "x": -2300,
+                    "y": -740
+                },
+                {
+                    "x": -1700,
+                    "y": -770
+                },
+                {
+                    "x": -1100,
+                    "y": -740
+                },
+                {
+                    "x": -2780,
+                    "y": -840
+                },
+                {
+                    "x": -2780,
+                    "y": -340
+                }
+
+        ]
+        },
+        "barriervert": {
+            "img": "images/marsii/scenery/barrierv.png",
+            "width": 100,
+            "height": 400,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": -270,
+                    "y": 0
+                },
+                {
+                    "x": -370,
+                    "y": -200
+                },
+                {
+                    "x": 170,
+                    "y": -350
+                },
+                {
+                    "x": 1470,
+                    "y": 250
+                },
+                {
+                    "x": -20,
+                    "y": 810
+                },
+                {
+                    "x": 870,
+                    "y": -620
+                },
+                {
+                    "x": -2600,
+                    "y": 400
+                },
+                {
+                    "x": -2850,
+                    "y": 1300
+                },
+                {
+                    "x": -900,
+                    "y": 1400
+                },
+                {
+                    "x": -850,
+                    "y": 1800
+                },
+                {
+                    "x": -2050,
+                    "y": 1200
+                },
+                {
+                    "x": -1550,
+                    "y": -330
+                },
+                {
+                    "x": -1550,
+                    "y": 30
+                },
+                {
+                    "x": -1880,
+                    "y": -330
+                },
+                {
+                    "x": -1880,
+                    "y": 30
+                },
+                {
+                    "x": -2780,
+                    "y": -550
+                }
+			]
+        }
+
+
+    }
+}

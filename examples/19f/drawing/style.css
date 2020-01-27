@@ -1,0 +1,77 @@
+body {
+	margin: 0;	
+}
+
+p {
+	font-size: 2em;
+	font-family: monospace;
+	color: white;
+	margin: 0;
+	position: absolute;
+}
+
+input {
+	position: absolute;
+}
+
+canvas {
+	position: fixed;
+	z-index: -1;
+}
+
+/* styling range input */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range] {
+	width: 100px;
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	margin-top: -5px;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+	background-color: red;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	background-color: white;
+	width: 100px;
+	height: 10px;
+	
+}
+
+
+
+
+
+
+
+
+

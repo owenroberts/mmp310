@@ -1,0 +1,19 @@
+{
+    "scenery": {
+            "sky": {
+			"img":	"images/ekaterina/Sky.png",
+			"width": 1550,
+			"height": 735,
+			"frames": 1,
+			"positions": [
+				{ "x": 740, "y": 300 }
+			]
+		}
+	}
+}
+
+
+
+
+
+

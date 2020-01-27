@@ -1,0 +1,126 @@
+{
+    "scenery": {
+        "house": {
+            "img": "images/nick/house.png",
+            "width": 88,
+            "height": 112,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 50,
+                    "y": 300
+                },
+                {
+                    "x": 950,
+                    "y": 450
+                },
+                {
+                    "x": 500,
+                    "y": 700
+                },
+                {
+                    "x": 700,
+                    "y": 500
+                },
+                {
+                    "x": 1000,
+                    "y": 700
+                },
+                {
+                    "x": 1000,
+                    "y": 200
+                }
+			]
+        },
+        "aptbuilding": {
+            "img": "images/nick/aptbuilding.png",
+            "width": 96,
+            "height": 165,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 200,
+                    "y": 100
+                },
+                {
+                    "x": 300,
+                    "y": 600
+                },
+                {
+                    "x": 650,
+                    "y": 200
+                },
+                {
+                    "x": 1200,
+                    "y": 850
+                }
+
+			]
+        },
+        "tree": {
+            "img": "images/nick/tree.png",
+            "width": 88,
+            "height": 112,
+            "frames": 1,
+            "positions": [
+                {
+                    "x": 1200,
+                    "y": 300
+                },
+                {
+                    "x": 1150,
+                    "y": 700
+                },
+                {
+                    "x": 600,
+                    "y": 600
+                },
+                {
+                    "x": 300,
+                    "y": 400
+                }
+			]
+        }
+    },
+
+    "npc": {
+        "ben": {
+            "img": "images/nick/ben.png",
+            "width": 48,
+            "height": 64,
+            "frames": 1,
+            "x": 400,
+            "y": 200,
+            "dialog": "Hey! Let's Battle!"
+        },
+        "sam": {
+            "img": "images/nick/sam.png",
+            "width": 48,
+            "height": 64,
+            "frames": 1,
+            "x": 1300,
+            "y": 600,
+            "dialog": "Ugly Outfit! Battle me!"
+        },
+
+        "ella": {
+            "img": "images/nick/ella.png",
+            "width": 48,
+            "height": 64,
+            "frames": 1,
+            "x": 100,
+            "y": 600,
+            "dialog": "All the boys in this town are wimps!"
+        },
+
+        "joe": {
+            "img": "images/nick/joe.png",
+            "width": 48,
+            "height": 64,
+            "frames": 1,
+            "x": 1100,
+            "y": 500,
+            "dialog": "I'm the toughest one."
+        }
+    }
+}

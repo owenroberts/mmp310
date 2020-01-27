@@ -3,14 +3,15 @@ layout: main
 title: Schedule
 ---
 
-## Project 1 **Interactive story**
+<!-- ## Project 1 **Interactive story**
 - While reviewing variables, logic and functions, we will create an interactive story using p5
 - Story elements: character, setting, plot
-- [Interactive story inspiration](inspiration/interactive_story/)
+ -->
 
 ## Week 1 **Review**
 - [GitHub Review](notes/github)
 - [JavaScript Variables](notes/variables)
+- [Interactive story inspiration](inspiration/interactive_story/)
 - **Assignment 1: Characters**
 	- Design two characters using p5 shape and color functions
 	- Use p5 `text` with variables for the narration

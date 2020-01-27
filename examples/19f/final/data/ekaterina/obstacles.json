@@ -1,0 +1,57 @@
+{
+	 "obstacles": {
+		"cactus1": {
+			"img": "images/ekaterina/cactus1.png",
+			"width": 150,
+			"height": 291,
+			"frames": 1,
+			"positions": [
+                { "x": -6000, "y": 500 },
+                { "x": 1200, "y": 500 },
+                { "x": 3700, "y": 500 }
+			]
+		}, 
+        
+        "cactus2": {
+			"img": "images/ekaterina/cactus2.png",
+			"width": 150,
+			"height": 200,
+			"frames": 1,
+			"positions": [
+                { "x": -7000, "y": 500 },
+                { "x": -5200, "y": 500 },
+                { "x": -1600, "y": 500 },
+                { "x": 0, "y": 500 },
+                { "x": 4400, "y": 500 },
+                { "x": 7200, "y": 500 }
+			]
+		}, 
+        
+        "cactus3": {
+			"img": "images/ekaterina/cactus3.png",
+			"width": 180,
+			"height": 351,
+			"frames": 1,
+			"positions": [
+                { "x": -8100, "y": 450 },
+                { "x": -4000, "y": 450 },
+                { "x": 5750, "y": 450 }
+			]
+		},
+        
+        "cactuses": {
+			"img": "images/ekaterina/obstacles.png",
+			"width": 500,
+			"height": 574,
+			"frames": 1,
+			"positions": [
+                { "x": 11100, "y": 380 },
+                { "x": -11100, "y": 380 }
+			]
+		}
+	}
+}
+
+
+
+

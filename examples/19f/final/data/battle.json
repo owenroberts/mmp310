@@ -1,0 +1,15 @@
+{
+    "scenery": {
+        "thundercloud": {
+            "img": "images/nick/thundercloud.png",
+            "width": 66,
+            "height": 60,
+            "frames": 6,
+            "positions": [
+                { "x": 150, "y": 150},
+                { "x": 500, "y": 90},
+                { "x": 1300, "y": 120}
+            ]
+		}
+	}
+}
