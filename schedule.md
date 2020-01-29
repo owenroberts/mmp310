@@ -13,9 +13,9 @@ title: Schedule
 - [JavaScript Variables](notes/variables)
 - [Interactive story inspiration](inspiration/interactive_story/)
 - **Assignment 1: Characters**
-	- Design two characters using p5 shape and color functions
+	- Design two characters and add with `image` function
 	- Use p5 `text` with variables for the narration
-	- Use `x`, `y`, and `size` variables to position the characters
+	- Use `x` & `y` variables to position the characters
 
 ## Week 2 **Logic**
 - [Logic](notes/logic)
