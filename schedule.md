@@ -48,19 +48,20 @@ title: Schedule
 	- Using an array, create an animation
 	- Add one other component to the data in the array, color, size or shape
 
-## Week 6 **User Interface**
+
+## Week 6 **Objects**
+- [Class](notes/class)
+- [Class Inheritence](notes/class/inheritance)
+- **Assignment 6: Objects**
+	- Recreate the array animation with classes
+	- Add a new class of objects to the animation
+
+## Week 7 **User Interface**
 - [DOM Library](notes/dom)
-- **Assignment 6: Character Customizer**
+- **Assignment 7: Character Customizer**
 	- Use DOM elements allow a user to customize a character
 	- Customize at least three visual components of the character
 
-
-## Week 7 **Objects**
-- [Class](notes/class)
-- [Class Inheritence](notes/class/inheritance)
-- **Assignment 7: Game Graphics**
-	- Create the display function for the Asteroid and Spaceship class
-	- Using p5 color and shapes
 
 <!-- 
 
