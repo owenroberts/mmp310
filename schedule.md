@@ -58,9 +58,9 @@ title: Schedule
 
 ## Week 7 **User Interface**
 - [DOM Library](notes/dom)
-- **Assignment 7: Character Customizer**
-	- Use DOM elements allow a user to customize a character
-	- Customize at least three visual components of the character
+- **Assignment 7: User Interface**
+	- Use DOM elements allow a user to customize three components of a scene
+	- This could adjust the number of elements in a scene, the position on the page or any other attribute defined by a number
 
 
 <!-- 
