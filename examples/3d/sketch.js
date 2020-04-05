@@ -58,11 +58,11 @@ function draw() {
 	// let dirX = (mouseX / width - 0.5) * 2;
   // let dirY = (mouseY / height - 0.5) * 2;
   // console.log(dirX, dirY);
-  	// directionalLight(250, 250, 0, 1, 1, -1);
+  	directionalLight(250, 250, 250, 1, 1, -1);
 
-  	// pointLight(200, 200, 255, mouseX - width/2, mouseY - height/2, 200);
+  	pointLight(200, 200, 255, mouseX - width/2, mouseY - height/2, 200);
 
-	// ambientMaterial(255);
+	ambientMaterial(255);
 
 	push();
 	translate(0, 300, 0);
