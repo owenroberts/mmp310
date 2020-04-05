@@ -52,15 +52,55 @@ title: Schedule
 ## Week 6 **Objects**
 - [Class](notes/class)
 - [Class Inheritence](notes/class/inheritance)
+- [YouTube Lecture](https://www.youtube.com/watch?v=P3R9Q4Qidwg){:target="_blank"}
 - **Assignment 6: Objects**
 	- Recreate the array animation with classes
 	- Add a new class of objects to the animation
 
 ## Week 7 **User Interface**
 - [DOM Library](notes/dom)
+- [YouTube Lecture Part 1](https://www.youtube.com/watch?v=hW3nChrIwaA){:target="_blank"}
+- [YouTube Lecture Part 2](https://www.youtube.com/watch?v=4Z57Bzg1ZOI){:target="_blank"}
 - **Assignment 7: User Interface**
 	- Use DOM elements allow a user to customize three components of a scene
 	- This could adjust the number of elements in a scene, the position on the page or any other attribute defined by a number
+
+## Week 8 **3D Graphics**
+- Introduction to 3D Graphics
+- **Assignment 8: 3D composition**
+	- Using p5 3d shapes, materials and lights, create a composition
+	- Make anything you think would look good in 3D, such as a character, object, scene
+	- Include scene controls to view the scene
+
+## Week 9 **3D Particles**
+- Creating a particle system in 3D
+- **Assignment 9: 3D Particle System**
+	- Design the particles for the particle system and implement then using a class
+	- Add animation to size, shape, color, rotation or other components
+
+## Week 10 **Sound**
+- Adding sound assets
+
+## Week 11 **Final Project Pitch**
+- Make a short presentation describing your idea for a final project
+- The project must include at least 3/5 of the following:
+	- Custom function
+	- Loop
+	- Array
+	- Class/Object
+	- User interface
+- Your presentation must include the following information
+	- How will the user interact with your project?
+	- What is the theme of your project?
+	- How will you create graphics for the project?
+- The project can be anything you are interested in making, such as, as interactive scene or story, a simple video game, an abstract visualization, design or pattern, etc.
+
+## Week 12 - 14 **Final Project Workshop**
+- Set goals for the week
+- Turn in a work in progress site each week
+
+## Week 15
+- Final project due
 
 
 <!-- 
