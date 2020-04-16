@@ -80,6 +80,10 @@ title: Schedule
 
 ## Week 10 **Sound**
 - Adding sound assets
+- **Assignment 10: Sound**
+	- Add sounds to the particle system
+	- Sound effects for the particles
+	- Background sound
 
 ## Week 11 **Final Project Pitch**
 - Make a short presentation describing your idea for a final project
