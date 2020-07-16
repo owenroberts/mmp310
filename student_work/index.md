@@ -3,6 +3,11 @@ layout: main
 title: MMP 310 - Student Work
 ---
 
+## Spring 2020
+- [Final Project](https://thero6th.github.io/mmp310/final-presentation/index.html){:target="_blank"} by Anthony Ortiz
+- [3d Composition](https://thero6th.github.io/mmp310/3d-donut/index.html){:target="_blank"} by Anthony Ortiz
+
+
 ## Fall 2019
 - [Story](https://koheiro.github.io/MMP310/assignment3/){:target="_blank"} by Ekaterina Abromovich
 - [Story](https://marsii.github.io/MMP310/loop/index.html){:target="_blank"} by Naomi Marshall
