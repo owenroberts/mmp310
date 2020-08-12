@@ -1,7 +1,7 @@
 description: mmp 310 class website
 class: MMP 310
 semester: s18
-baseurl: /mmp310
+baseurl: /
 layouts_dir: slides/_jeks/layouts
 includes_dir: slides/_jeks/includes
 exclude:

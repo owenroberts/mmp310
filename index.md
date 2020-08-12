@@ -13,16 +13,6 @@ The class notes, schedule and assignments are all found here.
 - [Class Examples](examples/)
 - [Public Pad](pad)
 
-## Spring 2020
-
-- Instructor: Owen Roberts
-- email: oroberts AT bmcc DOT cuny DOT edu
-- Office: S622J
-- Office extension: 8057
-- Office hours: Tuesday 4pm - 6pm, Thursday 4pm - 5pm, Wednesday by appointment
-- Class meeting time: Monday/Wednesday 5:30 - 7:10 pm
-- Room: Fiterman 1006
-
 ## Turning in assignments
 - Assignments turned in on Blackboard
 - Late assignments are 25 points off
