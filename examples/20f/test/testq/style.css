@@ -1,0 +1,62 @@
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.question-container {
+	margin: 1em 0;
+}
+
+.question {
+    font-size: 2em;
+}
+
+.answers {
+	display: flex;
+	justify-content: space-between;
+	/*margin: 1em;*/
+	align-items: center;
+}
+
+.option {
+	height: 200px;
+	background: orange;
+	border: 7px solid blue;
+
+	flex-basis: 200px;
+	font-size: 2em;
+	border-radius: 10px;
+	color: white;
+	font-family: menlo;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	transition: background-color 200ms ease-in;
+}
+
+.option:hover {
+	background-color: purple;
+}
+
+.option.wrong {
+	border-color: red;
+}
+
+.option.right {
+	border-color: green;
+}
+
+#next.disabled {
+	background-color: darkgray;
+	border-color: lightgray;
+	color: gray;
+}
+
+#next.active {
+	background-color: lightgray;
+	border-color: green;
+	color: green;
+}

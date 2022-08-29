@@ -1,0 +1,44 @@
+#container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#game {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1em;
+	grid-auto-rows: 1fr;
+}
+
+#game .card {
+	display: flex;
+	align-items: center;
+	background: lightblue;
+	position: relative;
+	cursor: pointer;
+}
+
+#game .card img {
+	width: 100%;
+	opacity: 0;
+}
+
+#game .card .timer {
+	width: 100%;
+	opacity: 0;
+
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 100%;
+	bottom: 0;
+
+	background-color: pink;
+	transition: top 2000ms;
+}
+
+#game .card .timer.visible {
+	opacity: 1;
+	top: 0;
+}

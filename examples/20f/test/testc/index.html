@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Memory Game</title>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Memory Game</h1>
+		</div>
+		<div id="interface">
+			<input type="text" id="query" placeholder="Enter search query">
+			<label>Number of cards:</label>
+			<select name="" id="num-cards">
+				<option value="8">8</option>
+				<option value="12">12</option>
+				<option value="16">16</option>
+				<option value="20">20</option>
+			</select>
+			
+			<button id="submit">Start Game</button>
+			<p id="error-message"></p>
+		</div>
+		<div id="game">
+			
+		</div>
+	</div>
+	<script src="Card.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
