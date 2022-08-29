@@ -29,11 +29,11 @@ The class notes, schedule and assignments are all found here.
 ```
 
 ## Software
-- Text Editor: [Brackets](http://brackets.io/){:target="_blank"}
-- Text Editor: [Sublime](https://www.sublimetext.com/){:target="_blank"}
+<!-- - Text Editor: [Brackets](http://brackets.io/){:target="_blank"} -->
+<!-- - Text Editor: [Sublime](https://www.sublimetext.com/){:target="_blank"} -->
 - Browser: [Chrome](https://www.google.com/chrome/){:target="_blank"}
-- [GitHub](https://github.com/){:target="_blank"}
-- [GitHub Desktop](https://desktop.github.com/){:target="_blank"}
+<!-- - [GitHub](https://github.com/){:target="_blank"} -->
+<!-- - [GitHub Desktop](https://desktop.github.com/){:target="_blank"} -->
 
 ## Computer Labs
 Computers are available for student usage in the locations listed on [http://www.bmcc.cuny.edu/it](http://www.bmcc.cuny.edu/it)

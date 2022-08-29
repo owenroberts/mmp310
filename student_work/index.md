@@ -39,10 +39,10 @@ title: MMP 310 - Student Work
 
 
 ## Fall 2018
-- [Interactive Story](https://ailishmyers.github.io/mmp310/group-project/index.html){:target="_blank"} by Ailish Myers
+- [Interactive Story](18f/ailish_myers_interactive_story){:target="_blank"} by Ailish Myers
 
 ## Spring 2018
-- [Pokemon API](http://torralbajose.com/Pokemon-API/){:target="_blank"} by Jose Torralba
+- [Pokemon API](18s/jose_torralba_pokemon_api){:target="_blank"} by Jose Torralba
 - [Solar System](https://judith8181.github.io/mmp310final/solar-system/empty-example/index.html){:target="_blank"} by Judith Paredes
 - [Rick and Morty Magic 8 Ball](https://alyonatiki.github.io/Magic8ball_usingAPI/){:target="_blank"} by Alyona Karmazin
 - [Madlibs](https://alyonatiki.github.io/madlibs_GiphyAPI/){:target="_blank"} by Alyona Karmazin
