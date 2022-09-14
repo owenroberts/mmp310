@@ -1,0 +1,101 @@
+/*generic selector*/
+
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+	margin: 0;
+	
+	
+
+}
+
+h1{
+	font-size: 4em;
+	
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #ffd54f;
+}
+
+a:hover {
+	color: white;
+}
+
+img {
+	width: 100%;
+}
+
+
+
+#cointainer {
+	max-width: 960px;
+	min-width: 320px;
+	margin: 0 auto;	
+}
+
+#header{
+	display: flex; 
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+
+/* nested selector */
+#header ul {
+	display: flex;
+}
+
+#header li {
+	margin: 1em;
+}
+
+#header a {
+	font-size: 1.75em;
+}
+
+#portfolio{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1em;
+}
+
+.project{
+	padding: 20px;
+	background-color: transparent;
+	transition: background-color 200ms ease-in;
+}
+
+.project:hover{
+	background-color: #867eff6b; 
+}
+
+.project a{
+	font-size: 1.5em;
+}
+
+
+/*about*/
+
+#portrait{
+	width: 40%;
+	float: left;
+	padding: 10px;
+	margin-left: 100px;
+}
+
+#about p{
+	font-size: 2em;
+	padding: 10px;
+}
+

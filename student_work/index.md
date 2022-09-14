@@ -3,10 +3,24 @@ layout: main
 title: MMP 310 - Student Work
 ---
 
+## Fall 2020
+- [Final Project](20f/calvin_garcia/finalproject310/){:target="_blank"} by Calvin Garcia
+- [Interactive Story](20f/raja-ee_loney/project1e/){:target="_blank"} by Raja'ee Loney
+- [Final Project](20f/raja-ee_loney/finalproject/){:target="_blank"} by Raja'ee Loney
+- [Dorohedoro Game](20f/miranda_shytaj/finalproject_dorohedoro/){:target="_blank"} by Miranda Shytaj
+- [JavaScript Quiz](20f/miranda_shytaj/projecttwo_two/){:target="_blank"} by Miranda Shytaj
+- [Battleship Game](20f/oksana_weigand_suminski/project7){:target="_blank"} by Oksana Weigand Suminski
+- [Cybersecurity Quiz](20f/oksana_weigand_suminski/project3-2){:target="_blank"} by Oksana Weigand Suminski
+- [Final Project](20f/harry_garcia/Final-project/){:target="_blank"} by Harry Garcia
+- [Final Project](20f/spencer_ayvas/Final_Project/){:target="_blank"} by Spencer Ayvas
+- [](){:target="_blank"}
+- [](){:target="_blank"}
+- [](){:target="_blank"}
+
+
 ## Spring 2020
 - [Final Project](https://thero6th.github.io/mmp310/final-presentation/index.html){:target="_blank"} by Anthony Ortiz
 - [3d Composition](https://thero6th.github.io/mmp310/3d-donut/index.html){:target="_blank"} by Anthony Ortiz
-
 
 ## Fall 2019
 - [Story](https://koheiro.github.io/MMP310/assignment3/){:target="_blank"} by Ekaterina Abromovich
@@ -37,7 +51,6 @@ title: MMP 310 - Student Work
 - [Story](https://nathanjohn12.github.io/mmp310/Story%20Final/){:target="_blank"} by Nathan John
 - [Trinity Force](https://itsanerin.github.io/MMP310/space%20plot/index.html){:target="_blank"} by Erin Brady
 
-
 ## Fall 2018
 - [Interactive Story](18f/ailish_myers_interactive_story){:target="_blank"} by Ailish Myers
 
@@ -47,11 +60,9 @@ title: MMP 310 - Student Work
 - [Rick and Morty Magic 8 Ball](https://alyonatiki.github.io/Magic8ball_usingAPI/){:target="_blank"} by Alyona Karmazin
 - [Madlibs](https://alyonatiki.github.io/madlibs_GiphyAPI/){:target="_blank"} by Alyona Karmazin
 
-
 ## Fall 2017
 - [Memory Game](https://lanagaballa7.github.io/310/midterm-1/){:target="_blank"} by Lana Gaballa  
 - [Whos that Pokemon?](https://philip177.github.io/MMP310-classwork/Finals/){:target="_blank"} by Philip Cohen  
-
 
 ## Spring 2016
 - [Final Game](16s/han_siyu/){:target="_blank"} by Han Siyu
