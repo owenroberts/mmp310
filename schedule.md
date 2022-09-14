@@ -3,16 +3,6 @@ layout: main
 title: Schedule
 ---
 
-
-## Week 1 **Review**
-- [GitHub Review](notes/github)
-- [JavaScript Variables](notes/variables)
-- [Interactive story inspiration](inspiration/interactive_story/)
-- **Assignment 1: Characters**
-	- Design two characters and add with `image` function
-	- Use p5 `text` with variables for the narration
-	- Use `x` & `y` variables to position the characters
-
 ## Week 1 **Introduction**
 - [Class Overview](https://www.youtube.com/watch?v=1MTbtRfPW1o){:target="_blank"}
 - [Project Options](https://www.youtube.com/watch?v=-G4ckoUic2E_){:target="_blank"}
