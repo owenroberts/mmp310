@@ -13,10 +13,6 @@ title: MMP 310 - Student Work
 - [Cybersecurity Quiz](20f/oksana_weigand_suminski/project3-2){:target="_blank"} by Oksana Weigand Suminski
 - [Final Project](20f/harry_garcia/Final-project/){:target="_blank"} by Harry Garcia
 - [Final Project](20f/spencer_ayvas/Final_Project/){:target="_blank"} by Spencer Ayvas
-- [](){:target="_blank"}
-- [](){:target="_blank"}
-- [](){:target="_blank"}
-
 
 ## Spring 2020
 - [Final Project](https://thero6th.github.io/mmp310/final-presentation/index.html){:target="_blank"} by Anthony Ortiz
