@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto&display=swap');
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  canvas {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+  }
+  .text-box {
+    /* font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 7px;
+    word-spacing: 12px;
+    text-transform: uppercase;
+    color:rgb(238, 238, 238); */
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(238, 238, 238);
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+  }
+  .button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    /* margin-left:20px;
+    margin-right:20px; */
+    word-spacing: normal;
+    letter-spacing: 5px;
+    border: 1px solid white;
+    background: black;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+  }
+  a{
+      color: white;
+      text-decoration: none;
+  }
+  .button a:hover{
+    color:#353a3f;
+  }
+  h1 {
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 0;
+    letter-spacing: 50px;
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+}
+#subtitle {
+    color:#353a3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    letter-spacing: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+#resources {
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    letter-spacing: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+#resources a:hover{
+    color: #353a3f;
+}
+#message{
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}

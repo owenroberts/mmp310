@@ -1,0 +1,233 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "27F3B063-266A-4CD3-AB3F-D84594703BDC",
+			"type": "BoxBufferGeometry",
+			"width": 1,
+			"height": 1,
+			"depth": 1,
+			"widthSegments": 1,
+			"heightSegments": 1,
+			"depthSegments": 1
+		},
+		{
+			"uuid": "7588DFCA-687F-4E4F-8197-36258EF3FBAD",
+			"type": "CylinderBufferGeometry",
+			"radiusTop": 1,
+			"radiusBottom": 1,
+			"height": 1,
+			"radialSegments": 8,
+			"heightSegments": 1,
+			"openEnded": false,
+			"thetaStart": 0,
+			"thetaLength": 6.283185
+		},
+		{
+			"uuid": "1AB156DE-41A6-4918-B478-73BCEA026BD1",
+			"type": "LatheBufferGeometry",
+			"points": [
+				{
+					"x": 0,
+					"y": 0
+				},
+				{
+					"x": 0.4,
+					"y": 0
+				},
+				{
+					"x": 0.35,
+					"y": 0.05
+				},
+				{
+					"x": 0.1,
+					"y": 0.075
+				},
+				{
+					"x": 0.08,
+					"y": 0.1
+				},
+				{
+					"x": 0.08,
+					"y": 0.4
+				},
+				{
+					"x": 0.1,
+					"y": 0.42
+				},
+				{
+					"x": 0.14,
+					"y": 0.48
+				},
+				{
+					"x": 0.2,
+					"y": 0.5
+				},
+				{
+					"x": 0.25,
+					"y": 0.54
+				},
+				{
+					"x": 0.3,
+					"y": 1.2
+				}],
+			"segments": 12,
+			"phiStart": 0,
+			"phiLength": 6.283185
+		},
+		{
+			"uuid": "F23388D1-3802-44BE-8877-CCEB6AA64D60",
+			"type": "CylinderBufferGeometry",
+			"radiusTop": 1,
+			"radiusBottom": 1,
+			"height": 1,
+			"radialSegments": 8,
+			"heightSegments": 1,
+			"openEnded": false,
+			"thetaStart": 0,
+			"thetaLength": 6.283185
+		}],
+	"materials": [
+		{
+			"uuid": "6FD3572E-8DAF-4C34-A0E7-54AA7CD488A0",
+			"type": "MeshStandardMaterial",
+			"color": 9408399,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		},
+		{
+			"uuid": "0CF2AA8E-6FB0-4114-A417-3228D395D2D6",
+			"type": "MeshStandardMaterial",
+			"color": 25492,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		},
+		{
+			"uuid": "B0C78CB5-CB2B-4182-96F9-A5FC6F5716C6",
+			"type": "MeshStandardMaterial",
+			"color": 19312,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"side": 2,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		},
+		{
+			"uuid": "0B86928D-A187-463D-9DB0-BBFF9A4F810F",
+			"type": "MeshStandardMaterial",
+			"color": 16711680,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		}],
+	"object": {
+		"uuid": "31517222-A9A7-4EAF-B5F6-60751C0BABA3",
+		"type": "Scene",
+		"name": "Scene",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "0ECCB088-7026-40FD-A3DE-6F64905AB8D1",
+				"type": "Group",
+				"name": "Group",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-3.532313,0,0,1],
+				"children": [
+					{
+						"uuid": "FF3EF58A-21DB-47BA-96E6-1F5B24453373",
+						"type": "Mesh",
+						"name": "Box",
+						"castShadow": true,
+						"receiveShadow": true,
+						"layers": 1,
+						"matrix": [0.5,0,0,0,0,0.167856,0,0,0,0,0.5,0,0.006458,1.191092,-0.038459,1],
+						"geometry": "27F3B063-266A-4CD3-AB3F-D84594703BDC",
+						"material": "6FD3572E-8DAF-4C34-A0E7-54AA7CD488A0"
+					},
+					{
+						"uuid": "9926CAB3-8A9C-4C07-8826-857DDCD7DF94",
+						"type": "Mesh",
+						"name": "Cylinder",
+						"castShadow": true,
+						"receiveShadow": true,
+						"layers": 1,
+						"matrix": [1,0,0,0,0,0.4,0,0,0,0,1,0,0,0.978166,0,1],
+						"geometry": "7588DFCA-687F-4E4F-8197-36258EF3FBAD",
+						"material": "0CF2AA8E-6FB0-4114-A417-3228D395D2D6"
+					},
+					{
+						"uuid": "F12E5242-DEB5-4A6B-8528-C90B665B74D3",
+						"type": "Mesh",
+						"name": "Lathe",
+						"castShadow": true,
+						"receiveShadow": true,
+						"layers": 1,
+						"matrix": [1,0,0,0,0,0.76,0,0,0,0,1,0,0.028627,0,0,1],
+						"geometry": "1AB156DE-41A6-4918-B478-73BCEA026BD1",
+						"material": "B0C78CB5-CB2B-4182-96F9-A5FC6F5716C6"
+					},
+					{
+						"uuid": "FA98638D-BEEF-485D-91F1-D5580B2C6200",
+						"type": "Mesh",
+						"name": "Cylinder",
+						"castShadow": true,
+						"receiveShadow": true,
+						"layers": 1,
+						"matrix": [0.15,0,0,0,0,0.128976,0,0,0,0,0.15,0,0.000942,1.327587,-0.028414,1],
+						"geometry": "F23388D1-3802-44BE-8877-CCEB6AA64D60",
+						"material": "0B86928D-A187-463D-9DB0-BBFF9A4F810F"
+					}]
+			}],
+		"background": 9079434
+	}
+}

@@ -1,0 +1,139 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "1AB156DE-41A6-4918-B478-73BCEA026BD1",
+			"type": "LatheBufferGeometry",
+			"points": [
+				{
+					"x": 0,
+					"y": 0
+				},
+				{
+					"x": 0.4,
+					"y": 0
+				},
+				{
+					"x": 0.35,
+					"y": 0.05
+				},
+				{
+					"x": 0.1,
+					"y": 0.075
+				},
+				{
+					"x": 0.08,
+					"y": 0.1
+				},
+				{
+					"x": 0.08,
+					"y": 0.4
+				},
+				{
+					"x": 0.1,
+					"y": 0.42
+				},
+				{
+					"x": 0.14,
+					"y": 0.48
+				},
+				{
+					"x": 0.2,
+					"y": 0.5
+				},
+				{
+					"x": 0.25,
+					"y": 0.54
+				},
+				{
+					"x": 0.3,
+					"y": 1.2
+				}],
+			"segments": 12,
+			"phiStart": 0,
+			"phiLength": 6.283185
+		},
+		{
+			"uuid": "7588DFCA-687F-4E4F-8197-36258EF3FBAD",
+			"type": "CylinderBufferGeometry",
+			"radiusTop": 1,
+			"radiusBottom": 1,
+			"height": 1,
+			"radialSegments": 8,
+			"heightSegments": 1,
+			"openEnded": false,
+			"thetaStart": 0,
+			"thetaLength": 6.283185
+		}],
+	"materials": [
+		{
+			"uuid": "B0C78CB5-CB2B-4182-96F9-A5FC6F5716C6",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 19312,
+			"side": 2,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		},
+		{
+			"uuid": "0CF2AA8E-6FB0-4114-A417-3228D395D2D6",
+			"type": "MeshStandardMaterial",
+			"color": 13045519,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 25492,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680
+		}],
+	"object": {
+		"uuid": "31517222-A9A7-4EAF-B5F6-60751C0BABA3",
+		"type": "Scene",
+		"name": "Scene",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "F12E5242-DEB5-4A6B-8528-C90B665B74D3",
+				"type": "Mesh",
+				"name": "Lathe",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,0.76,0,0,0,0,1,0,0.028627,0,0,1],
+				"geometry": "1AB156DE-41A6-4918-B478-73BCEA026BD1",
+				"material": "B0C78CB5-CB2B-4182-96F9-A5FC6F5716C6"
+			},
+			{
+				"uuid": "9926CAB3-8A9C-4C07-8826-857DDCD7DF94",
+				"type": "Mesh",
+				"name": "Cylinder",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,0.4,0,0,0,0,1,0,0,0.978166,0,1],
+				"geometry": "7588DFCA-687F-4E4F-8197-36258EF3FBAD",
+				"material": "0CF2AA8E-6FB0-4114-A417-3228D395D2D6"
+			}],
+		"background": 9079434
+	}
+}

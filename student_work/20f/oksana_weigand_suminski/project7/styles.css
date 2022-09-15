@@ -1,0 +1,86 @@
+* {
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  color:whitesmoke;
+  background: black;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+}
+
+h1{
+  margin: 4%;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+li{
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  background-color:rgba(0, 0, 0, 0.70); 
+  border: none;
+  color: whitesmoke;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: black;
+  color: whitesmoke;
+  border: solid;
+}
+
+.square{
+  color: whitesmoke;
+  margin: 1%;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+}
+
+.game{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player{
+  padding: 4%;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+.player_information{
+  margin: 10% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bg {
+  background-image: url("bg5.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
