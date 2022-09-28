@@ -32,3 +32,12 @@ title: Schedule
 	- Create a scene using three.js with the Glitch editor
 	- The scene should have 3d objects, a camera, lighting and materials
 	- The scene should have a cohesive design and theme
+
+## Week 4
+- Shader example (Adding Sky Sahder)
+- Loading External Models
+
+
+## Week 5
+- Adding Controls
+- **Assignment 2**: 
