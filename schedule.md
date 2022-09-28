@@ -34,10 +34,13 @@ title: Schedule
 	- The scene should have a cohesive design and theme
 
 ## Week 4
-- Shader example (Adding Sky Sahder)
+- Shader example (Adding Sky Shader)
 - Loading External Models
-
 
 ## Week 5
 - Adding Controls
-- **Assignment 2**: 
+- **Assignment 2**: Three.js Maze Scene
+	- Create a "maze" in three.js
+	- User can navigate around the scene with basic controls
+	- Use scenery and objects to direct the user through the scene
+
