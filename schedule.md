@@ -63,6 +63,17 @@ title: Schedule
 	- Create a site that allows a user to trigger sounds using their keyboard
 	- Add visuals to correspond with sounds
 
+## Week 8
+- Sequencing
+- Rhythm and Melody
+
+## Week 9
+- Harmony
+- Generative sound
+- **Assignment 4**: Generative sound
+	- Create site using Tone.js that generates sound
+	- Use synth or sampler and Tone.Loop or another sequencer
+	- Parameters should change the output of the sequence on each play
 
 
 <!-- 
