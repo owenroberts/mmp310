@@ -51,40 +51,76 @@ title: Schedule
 ## Week 6 **Project 2**
 - New Project! We will do 2 assignments, one on interactive sound, one on generative sound
 - Trying a new Online IDE! [Replit](https://replit.com/){:target="_blank"}
+	- [Replit overview](https://www.youtube.com/watch?v=Kq_2PQJh91o&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=18){:target="_blank"}
 - [JavaScript objects](notes/objects)
+	- [JavaScript Objects Video](https://www.youtube.com/watch?v=aiLXm80_lUw&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=21){:target="_blank"}
 - Intro to [Tone.js](https://tonejs.github.io/){:target="_blank"}
-	- Creating synths
-	- Adding user interaction
+	- Creating synths 
+	- [Tone Intro 1](https://www.youtube.com/watch?v=fTpE3KOuo8M&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=19){:target="_blank"}
+	- [Tone Intro 2](https://www.youtube.com/watch?v=Hlv6tiA4tVE&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=20){:target="_blank"}
+	- [Adding user interaction](https://www.youtube.com/watch?v=gL7tojICFHc&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=22){:target="_blank"}
 
 ## Week 7
-- Adding visuals
-- Effects
+- [Adding visuals](https://www.youtube.com/watch?v=MzKOR6SgewE&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=23){:target="_blank"}
+- [Effects](https://www.youtube.com/watch?v=P1hopCL1y9Q&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=24){:target="_blank"}
 - **Assignment 3**: Interactive sounds
 	- Create a site that allows a user to trigger sounds using their keyboard
 	- Add visuals to correspond with sounds
 
 ## Week 8
-- Sequencing
-- Rhythm and Melody
+- [Sequencing](https://www.youtube.com/watch?v=r31UUd9Mxz4&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=25){:target="_blank"}
+- [Rhythm and Melody](https://www.youtube.com/watch?v=15aYOIlb6n4&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=26){:target="_blank"}
 
 ## Week 9
-- Harmony
-- Generative sound
+- [Harmony](https://www.youtube.com/watch?v=vNnWMXc_-58&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=27){:target="_blank"}
+- [Generative sound](https://www.youtube.com/watch?v=lZVfNekm0lw&list=PLSqAxglrKGAxD9hlr_i3kZdC5yNReZw5a&index=28){:target="_blank"}
 - **Assignment 4**: Generative sound
 	- Create site using Tone.js that generates sound
 	- Use synth or sampler and Tone.Loop or another sequencer
 	- Parameters should change the output of the sequence on each play
 
+## Week 10 **Project 3**
+- Web app/interactive story
+- This project will combine elements of building a web app in JavaScript with creating an interactive story
+- JavaScript Events and Input
+- JavaScript Objects and Arrays
 
-<!-- 
-	questions
-	projects
-		- interactive
-			- use p5?
-			- or just dom stuff ???
-		- generative
-			- use teoria?
-	editor
-		- p5 - use visuals and dom stuff, existing tone examples
-		- glitch - continue with what we were using, add p5
- -->
+## Week 11
+- JavaScript and Document Object Model
+- JavaScript and CSS
+
+## Week 12
+- JavaScript data
+- **Assignment 5**: Web app (interactive story)
+	- Using JavaScript, HTML and CSS, create an interactive story
+	- Page should record user input
+	- User has choices to go to different branches of story 
+
+## Week 13
+- Final project pitch
+	- Create an Open Lab post with a pitch for your final project
+	- Identify the type of project you want to work on, something based on one of our previous projects, or a new concept
+		- A website using three.js and 3d rendering
+		- A website using Tone.js and web audio
+		- A website application/interactive story using JavaScript
+		- A website using interaction and JavaScript
+	- Describe the user interaction
+		- How does the user interact with the website?
+		- What is the expected experience of the site?
+	- Describe the visuals and/or media 
+		- Using screen shots, mock ups, or text, describe what the site will look like
+		- Will the site use images, rendered graphics, text, audio or other media?
+
+## Week 14 - 15
+- Final project workshop
+- Final project requirements
+	- Must be a website created with HTML, CSS and JavaScript
+	- JavaScript libraries (like Three.js, Tone.js, p5.js, etc) can be used but are not required
+	- The site must be published online, and the code must be available for review through a web based platform, such as Replit, Glitch or another web IDE
+	- Must have user interaction
+		- The user should be able to control the interface using a keyboard and mouse or other input
+	- Documentation
+		- Open Lab post with a link to the project and code
+		- Multiple screen shots of the site and descriptions of the project
+
+
